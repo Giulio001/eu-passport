@@ -26,9 +26,10 @@ Features include:
 * Supplier proposal links with expiration and revocation, followed by editorial review.
 * Author, reviewer and publisher capabilities checked on the server.
 * Optional WooCommerce product acquisition and explicit review of suggested updates.
+* Four ready-made visual templates and a blank starting point, reusable custom designs, a simple section editor and live desktop/tablet/phone preview. Existing sheets keep their classic layout until explicitly changed.
 * A shortcode and a Gutenberg block for a public sheet, QR code or link.
 
-The admin panel starts in Italian and offers an English catalogue for the main workflow. Some server errors and specialist guidance remain in Italian. Product content and document translations are supplied by the operator; changing the panel language does not translate product data.
+The admin panel starts in Italian and offers an English catalogue for the main workflow. The visual designer, some server errors and specialist guidance remain in Italian. Product content and document translations are supplied by the operator; changing the panel language does not translate product data.
 
 == Installation ==
 

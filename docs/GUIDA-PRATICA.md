@@ -2,7 +2,7 @@
 
 Giuliomax Product Passport serve a mettere le informazioni utili di un prodotto in un posto stabile: il cliente scansiona un QR e trova manuale, manutenzione, materiali, ricambi e assistenza. Il vantaggio principale è organizzare informazioni che altrimenti finiscono in PDF sparsi, email e pagine commerciali destinate a cambiare.
 
-La release 1.0.1 è un gestore di **schede digitali volontarie**. Non trasforma automaticamente un catalogo in passaporti regolamentati, non certifica la sostenibilità e non registra dati nel registro europeo.
+La release 1.1.0 è un gestore di **schede digitali volontarie**. Non trasforma automaticamente un catalogo in passaporti regolamentati, non certifica la sostenibilità e non registra dati nel registro europeo.
 
 ## Esempio concreto: un’azienda che vende sedie
 
@@ -69,4 +69,8 @@ La lingua del pannello si sceglie nelle impostazioni ed è italiana inizialmente
 
 ## Installazione e WordPress.org
 
-Scarica lo ZIP runtime `giuliomax-product-passport-1.0.1.zip`, non lo ZIP generale del repository GitHub. Lo ZIP runtime contiene la cartella del solo plugin ed è caricabile da WordPress. Il readme della directory è inglese, come richiesto da WordPress.org; la guida d’uso resta italiana. L’approvazione della directory richiede una revisione manuale separata e non è stata ottenuta con il push su GitHub.
+Scarica lo ZIP runtime `giuliomax-product-passport-1.1.0.zip`, non lo ZIP generale del repository GitHub. Lo ZIP runtime contiene la cartella del solo plugin ed è caricabile da WordPress. Il readme della directory è inglese, come richiesto da WordPress.org; la guida d’uso resta italiana. L’approvazione della directory richiede una revisione manuale separata e non è stata ottenuta con il push su GitHub.
+
+## Personalizzare l’aspetto
+
+In ogni prodotto trovi Design della scheda: scegli un template e usa Personalizza il design per colori, tipografia e sezioni. Applica alla bozza e pubblica una revisione. Per partire da zero o salvare template riutilizzabili apri Design e template. La guida dedicata DESIGN-STUDIO.md spiega tutti i passaggi e la distinzione fra template e dati del prodotto.

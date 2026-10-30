@@ -40,9 +40,13 @@ final class Admin
         if ($designer) {
             wp_enqueue_style('gmpp-designer', plugins_url('assets/designer.css', GMPP_FILE), [], GMPP_VERSION);
         }
-        wp_enqueue_script('gmpp-admin', plugins_url($designer ? 'assets/designer.js' : 'assets/admin.js', GMPP_FILE), ['wp-i18n'], GMPP_VERSION, true);
+        $media = current_user_can('upload_files');
+        if ($media) {
+            wp_enqueue_media();
+        }
+        wp_enqueue_script('gmpp-admin', plugins_url($designer ? 'assets/designer.js' : 'assets/admin.js', GMPP_FILE), $media ? ['wp-i18n','media-views'] : ['wp-i18n'], GMPP_VERSION, true);
         wp_set_script_translations('gmpp-admin', 'giuliomax-product-passport', GMPP_DIR . 'languages');
-        wp_localize_script('gmpp-admin', 'GMPP', ['version' => GMPP_VERSION,'ui_language' => Store::settings()['ui_language'], 'english' => Store::decode((string)file_get_contents(GMPP_DIR . 'languages/en.json')), 'api' => rest_url('gmpp/v1/'),'nonce' => wp_create_nonce('wp_rest'),'preview_nonce' => wp_create_nonce('gmpp_preview'),'download_nonce' => wp_create_nonce('gmpp_download'),'admin' => admin_url('admin-post.php'),'home' => home_url('/'),'page' => sanitize_key(wp_unslash($_GET['page'] ?? 'gmpp')),'settings' => array_intersect_key(Store::settings(), array_flip(['company','language','sector','mode','accent'])),'labels' => self::labels(),'caps' => ['manage' => current_user_can('gmpp_manage'),'review' => current_user_can('gmpp_review'),'publish' => current_user_can('gmpp_publish')],'wc' => absint($_GET['wc'] ?? 0)]); // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only admin routing and product selector; all writes use REST nonce and capability checks.
+        wp_localize_script('gmpp-admin', 'GMPP', ['version' => GMPP_VERSION,'ui_language' => Store::settings()['ui_language'], 'english' => Store::decode((string)file_get_contents(GMPP_DIR . 'languages/en.json')), 'api' => rest_url('gmpp/v1/'),'nonce' => wp_create_nonce('wp_rest'),'preview_nonce' => wp_create_nonce('gmpp_preview'),'download_nonce' => wp_create_nonce('gmpp_download'),'admin' => admin_url('admin-post.php'),'home' => home_url('/'),'page' => sanitize_key(wp_unslash($_GET['page'] ?? 'gmpp')),'settings' => array_intersect_key(Store::settings(), array_flip(['company','language','sector','mode','accent'])),'labels' => self::labels(),'caps' => ['upload' => $media,'manage' => current_user_can('gmpp_manage'),'review' => current_user_can('gmpp_review'),'publish' => current_user_can('gmpp_publish')],'wc' => absint($_GET['wc'] ?? 0)]); // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only admin routing and product selector; all writes use REST nonce and capability checks.
     }
     public function page(): void
     {
