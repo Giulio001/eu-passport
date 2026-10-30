@@ -1,12 +1,12 @@
 # Collaudo Design Studio 1.1.0 — 30 ottobre 2026
 
-La suite completa di riferimento è [41043578061](https://github.com/Giulio001/eu-passport/actions/runs/41043578061), superata su entrambe le combinazioni. I rapporti sintetici sono in `docs/qa-1.1.0/`; i risultati grezzi e le schermate sono negli artifact della CI. Il pacchetto finale viene nuovamente rigenerato, confrontato e installato dal workflow prima della consegna.
+La suite finale aggiunge alla precedente un controllo specifico sul design delle varianti: un template sostituisce la configurazione come unità, può tornare a ereditare dal padre oppure scegliere il layout classico. I 46 controlli della suite completa di riferimento sono documentati nell’esecuzione [41043578061](https://github.com/Giulio001/eu-passport/actions/runs/41043578061), superata su entrambe le combinazioni. Il nuovo controllo porta il totale funzionale a 47 prima della consegna. I rapporti sintetici sono in `docs/qa-1.1.0/`; i risultati grezzi e le schermate sono negli artifact della CI. Il pacchetto finale viene nuovamente rigenerato, confrontato e installato dal workflow prima della consegna.
 
 ## Verifiche
 
 | Area | Esito osservato |
 |---|---|
-| PHP nativo + MariaDB 11.4.13 | 46 controlli su WordPress 6.8.3 / PHP 8.2.35 e WordPress 7.1.4 / PHP 8.3.36 |
+| PHP nativo + MariaDB 11.4.13 | 47 controlli nella suite finale su WordPress 6.8.3 / PHP 8.2.35 e WordPress 7.1.4 / PHP 8.3.36 |
 | WooCommerce / Action Scheduler | Sei scenari per ciascuna combinazione, WooCommerce 10.3.6 e 11.0.0 |
 | Plugin Check 2.1.0 | Zero errori. 104 avvisi: 53 sulle query dirette delle tabelle proprie/opzione con controllo concorrenza, 51 sulla cache, motivati nella revisione WordPress.org |
 | Interfaccia | Galleria, scelta preset, font, nome, blocco di testo personalizzato, riordino, salvataggio, scelta prodotto e applicazione alla bozza |

@@ -146,7 +146,7 @@ final class Passport
         }
         // Document arrays replace rather than merge by numeric index.
         $own = is_array($row['data']) ? $row['data'] : Store::decode($row['data']);
-        foreach (['documents','compatible'] as $key) {
+        foreach (['documents','compatible','design'] as $key) {
             if (array_key_exists($key, $own)) {
                 $data[$key] = $own[$key];
             }
