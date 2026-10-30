@@ -163,7 +163,7 @@
   const actions = {
     'pick-image':()=>{const picker=wp.media({title:'Scegli la foto del prodotto',button:{text:'Usa questa immagine'},library:{type:'image'},multiple:false});picker.on('select',()=>{document.getElementById('f-image').value=picker.state().get('selection').first().toJSON().url;setDirty(true);});picker.open();},
     'apply-design':()=>{const id=document.getElementById('visual-design').value;if(id==='current')return;current.data.design=id==='legacy'?null:JSON.parse(JSON.stringify(visualDesigns.find(v=>v.library_id===id)));setDirty(true);notice('Template scelto. Salva la bozza o personalizza il design prima di pubblicare.');},
-    'edit-design':async()=>{const choice=document.getElementById('visual-design').value;if(choice!=='current')current.data.design=choice==='legacy'?null:JSON.parse(JSON.stringify(visualDesigns.find(v=>v.library_id===choice)));await save();location.href='admin.php?page=gmpp-designs&passport='+current.id;},
+    'edit-design':async()=>{const choice=document.getElementById('visual-design').value;if(choice!=='current'&&choice!==((current.data.design??current.effective.design)?.library_id||'legacy'))current.data.design=choice==='legacy'?null:JSON.parse(JSON.stringify(visualDesigns.find(v=>v.library_id===choice)));await save();location.href='admin.php?page=gmpp-designs&passport='+current.id;},
     list:tableView,new:newView,import:importView,settings:settingsView,documents:documentView,
     'parent-search':parentChoices,
     'compatible-search':()=>renderCompatibility(document.getElementById('compatible-search').value),
