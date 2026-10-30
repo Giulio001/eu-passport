@@ -10,11 +10,11 @@ final class Schema
     {
         foreach (['mbstring','fileinfo','iconv','zlib','zip'] as $extension) {
             if (!extension_loaded($extension)) {
-                wp_die(esc_html('Giuliomax Product Passport richiede l’estensione PHP ' . $extension . '. Chiedi al tuo hosting di abilitarla, poi riattiva il plugin.'));
+                wp_die(esc_html(__('Giuliomax Product Passport requires the PHP extension ', 'giuliomax-product-passport') . $extension . __('. Ask your host to enable it, then reactivate the plugin.', 'giuliomax-product-passport')));
             }
         }
         if (is_multisite()) {
-            wp_die(esc_html('Questa versione supporta installazioni WordPress singole. Il multisito richiede una migrazione dedicata per ogni sito.'));
+            wp_die(esc_html(__('This version supports single-site WordPress installations. Multisite requires a separate migration for each site.', 'giuliomax-product-passport')));
         }
         global $wpdb;
         require_once ABSPATH . 'wp-admin/includes/upgrade.php';
@@ -120,9 +120,9 @@ KEY passport_id (passport_id,id)
         update_option('gmpp_schema', self::VERSION, false);
         add_option('gmpp_origin', home_url('/'), '', false);
         $caps = ['read' => true, 'gmpp_edit' => true, 'upload_files' => true];
-        add_role('gmpp_author', 'Compilatore passaporti', $caps);
-        add_role('gmpp_reviewer', 'Revisore passaporti', $caps + ['gmpp_edit_others' => true, 'gmpp_review' => true]);
-        add_role('gmpp_publisher', 'Responsabile passaporti', $caps + ['gmpp_edit_others' => true, 'gmpp_review' => true, 'gmpp_publish' => true]);
+        add_role('gmpp_author', __('Passport author', 'giuliomax-product-passport'), $caps);
+        add_role('gmpp_reviewer', __('Passport reviewer', 'giuliomax-product-passport'), $caps + ['gmpp_edit_others' => true, 'gmpp_review' => true]);
+        add_role('gmpp_publisher', __('Passport publisher', 'giuliomax-product-passport'), $caps + ['gmpp_edit_others' => true, 'gmpp_review' => true, 'gmpp_publish' => true]);
         $admin = get_role('administrator');
         foreach (['gmpp_edit','gmpp_edit_others','gmpp_review','gmpp_publish','gmpp_manage'] as $cap) {
             if ($admin) {

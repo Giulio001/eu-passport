@@ -23,10 +23,10 @@ final class Documents
     public static function upload(array $file, array $input): array
     {
         if (!current_user_can('gmpp_edit') || !current_user_can('upload_files')) {
-            throw new \DomainException('Non puoi caricare documenti.');
+            throw new \DomainException(__('You cannot upload documents.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
         }
         if (($file['error'] ?? UPLOAD_ERR_NO_FILE) !== UPLOAD_ERR_OK || !is_uploaded_file($file['tmp_name'])) {
-            throw new \InvalidArgumentException('Caricamento non valido.');
+            throw new \InvalidArgumentException(__('Invalid upload.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
         }
         return self::store_bytes((string)file_get_contents($file['tmp_name']), $file['name'], $input);
     }
@@ -34,32 +34,32 @@ final class Documents
     {
         $name = sanitize_file_name(wp_basename($name));
         if (strlen($bytes) > self::MAX_BYTES || !$bytes) {
-            throw new \InvalidArgumentException('Usa un file non vuoto di massimo 10 MB.');
+            throw new \InvalidArgumentException(__('Choose a non-empty file up to 10 MB.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
         }
         $mime = (new \finfo(FILEINFO_MIME_TYPE))->buffer($bytes);
         $ext = strtolower(pathinfo($name, PATHINFO_EXTENSION));
         $allowed = ['pdf' => 'application/pdf','png' => 'image/png','jpg' => 'image/jpeg','jpeg' => 'image/jpeg','txt' => 'text/plain'];
         if (!isset($allowed[$ext]) || $allowed[$ext] !== $mime) {
-            throw new \InvalidArgumentException('Formato non valido: usa PDF, PNG, JPG o testo semplice con estensione e contenuto coerenti.');
+            throw new \InvalidArgumentException(__('Invalid format: use PDF, PNG, JPG or plain text with matching extension and content.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
         }
         if ($mime === 'application/pdf' && !str_starts_with($bytes, '%PDF-')) {
-            throw new \InvalidArgumentException('PDF non valido.');
+            throw new \InvalidArgumentException(__('Invalid PDF.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
         }
         if (($input['visibility'] ?? '') === 'private' && !current_user_can('gmpp_review')) {
-            throw new \DomainException('Solo un revisore può caricare documenti riservati.');
+            throw new \DomainException(__('Only a reviewer can upload private documents.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
         }
         $id = absint($input['document_id'] ?? 0);
         $existing = $id ? Store::one('documents', $id) : null;
         $expected = absint($input['expected_version'] ?? ($existing['current_version'] ?? 0));
         if ($id && !Store::one('documents', $id)) {
-            throw new \InvalidArgumentException('Documento non trovato.');
+            throw new \InvalidArgumentException(__('Document not found.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
         }
         if ($id && !current_user_can('gmpp_review')) {
-            throw new \DomainException('Un revisore deve aggiornare i documenti condivisi.');
+            throw new \DomainException(__('A reviewer must update shared documents.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
         }
         $title = sanitize_text_field($input['title'] ?? $name);
         if ($title === '' || mb_strlen($title) > 255) {
-            throw new \InvalidArgumentException('Inserisci un titolo del documento di massimo 255 caratteri.');
+            throw new \InvalidArgumentException(__('Enter a document title up to 255 characters.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
         }
         Store::begin();
         try {
@@ -70,7 +70,7 @@ final class Documents
             $v = Store::insert('document_versions', ['document_id' => $id,'metadata' => Store::json($metadata),'storage_path' => 'database','content' => $bytes,'digest' => hash('sha256', $bytes),'created_at' => current_time('mysql', true)]);
             global $wpdb;
             if ($wpdb->update(Store::table('documents'), ['current_version' => $v,'title' => $title], ['id' => $id,'current_version' => $expected]) !== 1) {
-                throw new \RuntimeException('Il documento è stato aggiornato da un altro utente. Ricarica prima di caricare una nuova versione.');
+                throw new \RuntimeException(__('Another user updated this document. Reload before uploading a new version.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
             }
             Store::commit();
         } catch (\Throwable $e) {
@@ -101,7 +101,7 @@ final class Documents
         }
         global $wpdb;
         $like = '%' . $wpdb->esc_like('"version_id":' . $version . ',') . '%';
-        return (bool)$wpdb->get_var($wpdb->prepare('SELECT r.id FROM %i r INNER JOIN %i p ON p.published_revision=r.id WHERE r.snapshot LIKE %s LIMIT 1', Store::table('revisions'), Store::table('passports'), $like));
+        return (bool)$wpdb->get_var($wpdb->prepare('SELECT r.id FROM %i r INNER JOIN %i p ON p.published_revision=r.id WHERE r.snapshot LIKE %s LIMIT 1', Store::table(__('revisions', 'giuliomax-product-passport')), Store::table('passports'), $like));
     }
     public static function can_read(int $id): bool
     {

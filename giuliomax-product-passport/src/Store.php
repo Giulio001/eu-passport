@@ -12,7 +12,7 @@ final class Store
         $level = self::$depth;
         $result = $level === 0 ? $wpdb->query('START TRANSACTION') : $wpdb->query($wpdb->prepare('SAVEPOINT %i', 'gmpp_tx_' . $level));
         if ($result === false) {
-            throw new \RuntimeException('Il database non ha potuto avviare un salvataggio sicuro. Riprova.');
+            throw new \RuntimeException(__('The database could not start a safe save. Try again.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
         }
         self::$depth++;
     }
@@ -21,11 +21,11 @@ final class Store
         global $wpdb;
         $level = self::$depth - 1;
         if ($level < 0) {
-            throw new \LogicException('Nessuna transazione aperta.');
+            throw new \LogicException(__('No open transaction.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
         }
         $result = $level === 0 ? $wpdb->query('COMMIT') : $wpdb->query($wpdb->prepare('RELEASE SAVEPOINT %i', 'gmpp_tx_' . $level));
         if ($result === false) {
-            throw new \RuntimeException('Il database non ha confermato il salvataggio. Ricarica prima di riprovare.');
+            throw new \RuntimeException(__('The database did not confirm the save. Reload before trying again.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
         }
         self::$depth--;
     }
@@ -44,8 +44,8 @@ final class Store
     public static function table(string $name): string
     {
         global $wpdb;
-        if (!in_array($name, ['passports','revisions','documents','document_versions','requests','jobs','events'], true)) {
-            throw new \InvalidArgumentException('Tabella non supportata.');
+        if (!in_array($name, ['passports',__('revisions', 'giuliomax-product-passport'),'documents','document_versions','requests','jobs','events'], true)) {
+            throw new \InvalidArgumentException(__('Unsupported table.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
         }
         return $wpdb->prefix . 'gmpp_' . $name;
     }
@@ -67,7 +67,7 @@ final class Store
         $ok = $wpdb->insert(self::table($table), $data);
         $wpdb->suppress_errors($old);
         if (!$ok) {
-            throw new \RuntimeException(esc_html__('Impossibile salvare: identificatore duplicato o dati non validi.', 'giuliomax-product-passport'));
+            throw new \RuntimeException(esc_html__('Unable to save: duplicate identifier or invalid data.', 'giuliomax-product-passport'));
         } return (int)$wpdb->insert_id;
     }
     public static function event(int $id, string $action, string $detail = ''): void
@@ -89,7 +89,7 @@ final class Store
     }
     public static function settings(): array
     {
-        return (array)get_option('gmpp_settings', []) + ['company' => '','email' => '','phone' => '','address' => '','role' => 'manufacturer','logo' => '','accent' => '#135f54','ui_language' => 'it','language' => 'it','sector' => 'generic','mode' => 'standalone','label_width' => 70,'label_height' => 45,'label_margin' => 8,'email_enabled' => false];
+        return (array)get_option('gmpp_settings', []) + ['company' => '','email' => '','phone' => '','address' => '','role' => 'manufacturer','logo' => '','accent' => '#135f54','language' => 'en','sector' => 'generic','mode' => 'standalone','label_width' => 70,'label_height' => 45,'label_margin' => 8,'email_enabled' => false];
     }
     public static function is_clone(): bool
     {

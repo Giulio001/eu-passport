@@ -1,0 +1,357 @@
+{
+  "domain": "giuliomax-product-passport",
+  "locale_data": {
+    "messages": {
+      "": {
+        "domain": "giuliomax-product-passport",
+        "lang": "it_IT",
+        "plural-forms": "nplurals=2; plural=(n != 1);"
+      },
+      " saved · reusable across your products": [
+        " salvati · riutilizzabili sui tuoi prodotti"
+      ],
+      " · unpublished draft": [
+        " · bozza non pubblicata"
+      ],
+      ". Publish a revision from the product editor to show it to customers.": [
+        ". Pubblica una revisione dal prodotto per mostrarlo ai clienti."
+      ],
+      "01 / STYLE": [
+        "01 / STILE"
+      ],
+      "02 / SECTIONS": [
+        "02 / SEZIONI"
+      ],
+      "03 / PREVIEW CONTENT": [
+        "03 / CONTENUTI IN ANTEPRIMA"
+      ],
+      "A sheet that feels like your brand.": [
+        "Una scheda che ti somiglia."
+      ],
+      "A story, a detail, something useful…": [
+        "Una storia, un dettaglio, un’informazione utile…"
+      ],
+      "A template can contain up to 20 sections.": [
+        "Massimo 20 sezioni per template."
+      ],
+      "Accent": [
+        "Accento"
+      ],
+      "Add a section": [
+        "Aggiungi una sezione"
+      ],
+      "All changes saved": [
+        "Tutto salvato"
+      ],
+      "Always available": [
+        "Sempre disponibile"
+      ],
+      "Apply saves only the design to this product draft.": [
+        "Il pulsante Applica salva solo il design nella bozza di questo prodotto."
+      ],
+      "Apply to draft": [
+        "Applica alla bozza"
+      ],
+      "Automatic heading": [
+        "Titolo automatico"
+      ],
+      "Back to product →": [
+        "Torna al prodotto →"
+      ],
+      "Background": [
+        "Sfondo"
+      ],
+      "Care and maintenance": [
+        "Cura e manutenzione"
+      ],
+      "Choose product photo": [
+        "Scegli foto prodotto"
+      ],
+      "Choose the product photo": [
+        "Scegli la foto del prodotto"
+      ],
+      "Choose your starting point": [
+        "Scegli il punto di partenza"
+      ],
+      "Close": [
+        "Chiudi"
+      ],
+      "Compact": [
+        "Compatta"
+      ],
+      "Compact header": [
+        "Testata compatta"
+      ],
+      "Contemporary": [
+        "Contemporanei"
+      ],
+      "Content comes from product data. Empty sections are hidden on the public page.": [
+        "Il contenuto arriva dai dati del prodotto. Le sezioni vuote non vengono mostrate al pubblico."
+      ],
+      "Corners": [
+        "Angoli"
+      ],
+      "Custom text": [
+        "Testo personalizzato"
+      ],
+      "Customize": [
+        "Personalizza"
+      ],
+      "Customize a template and save it here to reuse it.": [
+        "Personalizza un template e salvalo qui per riutilizzarlo."
+      ],
+      "Delete": [
+        "Elimina"
+      ],
+      "Delete from library": [
+        "Elimina dalla libreria"
+      ],
+      "Delete this template?": [
+        "Eliminare il template?"
+      ],
+      "Description": [
+        "Descrizione"
+      ],
+      "Design applied to the draft for ": [
+        "Design applicato alla bozza di "
+      ],
+      "Design changes the appearance. You stay in control of data, documents and publishing.": [
+        "Il design cambia l’aspetto. Dati, documenti e pubblicazione rimangono sotto il tuo controllo."
+      ],
+      "Desktop": [
+        "Desktop"
+      ],
+      "Draft photo updated. The published sheet is unchanged.": [
+        "Foto aggiornata nella bozza. La scheda pubblicata è invariata."
+      ],
+      "Drag": [
+        "Trascina"
+      ],
+      "Drag to reorder": [
+        "Trascina per riordinare"
+      ],
+      "Drag to reorder or use the arrows. Click a section to customize it.": [
+        "Trascina per riordinare o usa le frecce. Clicca una sezione per personalizzarla."
+      ],
+      "Editorial": [
+        "Editoriali"
+      ],
+      "End of life": [
+        "Una seconda vita"
+      ],
+      "Environmental data": [
+        "Dati ambientali"
+      ],
+      "Give your template a name.": [
+        "Dai un nome al template."
+      ],
+      "Go to products ↗": [
+        "Vai ai prodotti ↗"
+      ],
+      "Headings": [
+        "Titoli"
+      ],
+      "Image alongside the title": [
+        "Immagine affiancata"
+      ],
+      "Image below the title": [
+        "Immagine sotto al titolo"
+      ],
+      "Live preview": [
+        "Anteprima dal vivo"
+      ],
+      "Logo, photos, contacts and manuals come from your product content. The template adapts to the available data.": [
+        "Logo, foto, contatti e manuali arrivano dai contenuti del prodotto. Il template si adatta ai dati disponibili."
+      ],
+      "Manuals and documents": [
+        "Manuali e documenti"
+      ],
+      "Manuals, warnings and support remain available when present.": [
+        "Manuali, avvertenze e assistenza rimangono raggiungibili quando sono presenti."
+      ],
+      "Materials": [
+        "Materiali"
+      ],
+      "Move down": [
+        "Sposta giù"
+      ],
+      "Move up": [
+        "Sposta su"
+      ],
+      "Name or reference": [
+        "Nome o riferimento"
+      ],
+      "Open and customize": [
+        "Apri e personalizza"
+      ],
+      "Page opening": [
+        "Apertura della pagina"
+      ],
+      "Phone": [
+        "Telefono"
+      ],
+      "Preview": [
+        "Anteprima"
+      ],
+      "Preview content": [
+        "Mostra in anteprima"
+      ],
+      "Preview size": [
+        "Dimensione anteprima"
+      ],
+      "Preview unavailable": [
+        "Anteprima non disponibile"
+      ],
+      "Preview updated": [
+        "Anteprima aggiornata"
+      ],
+      "Redo change": [
+        "Ripristina modifica"
+      ],
+      "Remove section": [
+        "Rimuovi sezione"
+      ],
+      "Responsive. No code or external fonts required.": [
+        "Responsive, senza codice e senza font esterni."
+      ],
+      "Rounded": [
+        "Arrotondati"
+      ],
+      "Safety": [
+        "Sicurezza"
+      ],
+      "Sample content": [
+        "Contenuti di esempio"
+      ],
+      "Sample content is not added to your catalogue.": [
+        "I testi di esempio non vengono aggiunti al catalogo."
+      ],
+      "Sample content · no changes to products": [
+        "Contenuti di esempio · nessuna modifica ai prodotti"
+      ],
+      "Save a copy": [
+        "Salva una copia"
+      ],
+      "Save as template": [
+        "Salva come template"
+      ],
+      "Save template": [
+        "Salva template"
+      ],
+      "Search products": [
+        "Cerca un prodotto"
+      ],
+      "Section heading": [
+        "Titolo della sezione"
+      ],
+      "Section text": [
+        "Testo della sezione"
+      ],
+      "Sheet preview": [
+        "Anteprima della scheda"
+      ],
+      "Sheets that already use this template keep their design.": [
+        "Le schede a cui è già stato applicato mantengono il proprio design."
+      ],
+      "Slightly rounded": [
+        "Appena morbidi"
+      ],
+      "Soft": [
+        "Morbidi"
+      ],
+      "Spacing": [
+        "Spaziatura"
+      ],
+      "Spacious": [
+        "Ariosa"
+      ],
+      "Spare parts": [
+        "Ricambi"
+      ],
+      "Specifications": [
+        "Caratteristiche"
+      ],
+      "Square": [
+        "Netti"
+      ],
+      "Start with a ready-made design or a blank page. Your content does the rest.": [
+        "Parti da un design pronto o da una pagina vuota. Al resto pensano i tuoi contenuti."
+      ],
+      "Support": [
+        "Assistenza"
+      ],
+      "Surfaces": [
+        "Superfici"
+      ],
+      "Tablet": [
+        "Tablet"
+      ],
+      "Template deleted. Existing sheets keep their design.": [
+        "Template eliminato. Le schede esistenti conservano il proprio design."
+      ],
+      "Template name": [
+        "Nome del template"
+      ],
+      "Template saved. Published sheets are unchanged.": [
+        "Template salvato. Le schede pubblicate sono rimaste invariate."
+      ],
+      "Template saved. You still have new unsaved changes.": [
+        "Template salvato. Restano nuove modifiche da salvare."
+      ],
+      "Text contrast automatically adapts to your selected colors.": [
+        "Il contrasto del testo si adatta automaticamente ai colori scelti."
+      ],
+      "The PDF remains a text copy. This editor customizes the web page.": [
+        "Il PDF rimane una copia testuale. Questo editor personalizza la pagina web."
+      ],
+      "The operation could not be completed.": [
+        "Operazione non riuscita."
+      ],
+      "Undo change": [
+        "Annulla modifica"
+      ],
+      "Unsaved changes": [
+        "Modifiche da salvare"
+      ],
+      "Updating preview…": [
+        "Aggiornamento anteprima…"
+      ],
+      "Use existing product data or add a text block.": [
+        "Usa i dati già inseriti o aggiungi un blocco di testo."
+      ],
+      "Use this image": [
+        "Usa questa immagine"
+      ],
+      "Very rounded": [
+        "Molto arrotondati"
+      ],
+      "Workspace": [
+        "Area di lavoro"
+      ],
+      "You have unsaved changes. Discard them?": [
+        "Ci sono modifiche non salvate. Vuoi abbandonarle?"
+      ],
+      "Your": [
+        "Il tuo"
+      ],
+      "Your next design starts here.": [
+        "Il prossimo design sarà il tuo."
+      ],
+      "Your templates": [
+        "I tuoi template"
+      ],
+      "product.": [
+        "prodotto."
+      ],
+      "selected": [
+        "selezionati"
+      ],
+      "← Templates": [
+        "← Template"
+      ],
+      "＋ Add": [
+        "＋ Aggiungi"
+      ]
+    }
+  }
+}

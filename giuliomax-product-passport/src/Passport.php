@@ -18,7 +18,7 @@ final class Passport
         }
         foreach (['name' => 255,'sku' => 190,'serial' => 190,'batch' => 190] as $field => $limit) {
             if (isset($out[$field]) && mb_strlen($out[$field]) > $limit) {
-                throw new \InvalidArgumentException(esc_html((Admin::labels()[$field] ?? $field) . ': usa al massimo ' . $limit . ' caratteri.'));
+                throw new \InvalidArgumentException(esc_html((Admin::labels()[$field] ?? $field) . __(': use at most ', 'giuliomax-product-passport') . $limit . __(' characters.', 'giuliomax-product-passport'))); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
             }
         }
         foreach (self::URL as $key) {
@@ -67,11 +67,11 @@ final class Passport
                 }
                 $state = in_array($entry['state'] ?? '', ['missing','present','review','na','internal'], true) ? $entry['state'] : 'review';
                 if ($state === 'internal' && !current_user_can('gmpp_review')) {
-                    throw new \DomainException('Solo un revisore può dichiarare un dato verificato internamente.');
+                    throw new \DomainException(__('Only a reviewer can mark data as internally verified.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
                 }
                 $reason = sanitize_textarea_field($entry['reason'] ?? '');
                 if ($state === 'na' && $reason === '') {
-                    throw new \InvalidArgumentException('Indica il motivo del dato non applicabile.');
+                    throw new \InvalidArgumentException(__('Explain why the data is not applicable.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
                 }
                 $out['quality'][$field] = ['state' => $state,'reason' => $reason,'source' => sanitize_text_field($entry['source'] ?? ''),'date' => sanitize_text_field($entry['date'] ?? ''),'responsible' => sanitize_text_field($entry['responsible'] ?? ''),'evidence' => absint($entry['evidence'] ?? 0)];
             }
@@ -80,7 +80,7 @@ final class Passport
     }
     public static function language($lang): string
     {
-        return preg_match('/^[a-z]{2}(?:-[A-Z]{2})?$/D', (string)$lang) ? (string)$lang : 'it';
+        return preg_match('/^[a-z]{2}(?:-[A-Z]{2})?$/D', (string)$lang) ? (string)$lang : 'en';
     }
     private static function identity(array $data, string $kind, int $parent, string $uuid): string
     {
@@ -100,7 +100,7 @@ final class Passport
         $data['template'] = $profile['id'];
         $uuid = $uuid ?: wp_generate_uuid4();
         if (!wp_is_uuid($uuid)) {
-            throw new \InvalidArgumentException('Identificatore non valido.');
+            throw new \InvalidArgumentException(__('Invalid identifier.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
         }
         $title = $data['name'] ?? (($inherited['name'] ?? '') . (!empty($data['serial']) ? ' · ' . $data['serial'] : (!empty($data['batch']) ? ' · ' . $data['batch'] : '')));
         $id = Store::insert('passports', ['uuid' => $uuid,'identity_key' => self::identity($data, $kind, $parent, $uuid),'title' => mb_substr($title, 0, 255), 'sku' => $data['sku'] ?? '', 'kind' => $kind, 'parent_id' => $parent, 'wc_id' => !empty($input['wc_id']) ? absint($input['wc_id']) : null,'owner' => get_current_user_id(),'data' => Store::json($data),'updated_at' => current_time('mysql', true)]);
@@ -110,13 +110,13 @@ final class Passport
     private static function validate_parent(string $kind, int $parent): void
     {
         if ($kind === 'model' && $parent) {
-            throw new \InvalidArgumentException('Un modello non può ereditare da un altro passaporto.');
+            throw new \InvalidArgumentException(__('A model cannot inherit from another passport.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
         }
         if ($kind !== 'model') {
             $row = Store::one('passports', $parent);
             $allowed = ['variant' => ['model'],'batch' => ['model','variant'],'item' => ['model','variant','batch']];
             if (!$row || !Store::can($row) || !in_array($row['kind'], $allowed[$kind], true)) {
-                throw new \InvalidArgumentException('Seleziona un genitore accessibile del tipo corretto.');
+                throw new \InvalidArgumentException(__('Select an accessible parent of the correct type.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
             }
         }
     }
@@ -124,7 +124,7 @@ final class Passport
     {
         $row = Store::one('passports', $id);
         if (!$row) {
-            throw new \OutOfBoundsException('Passaporto non trovato.');
+            throw new \OutOfBoundsException(__('Passport not found.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
         }
         $row['data'] = Store::decode($row['data']);
         $row['effective'] = self::effective($row);
@@ -135,7 +135,7 @@ final class Passport
     public static function effective(array $row, int $depth = 0): array
     {
         if ($depth > 4) {
-            throw new \RuntimeException('Relazione di eredità non valida.');
+            throw new \RuntimeException(__('Invalid inheritance relationship.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
         }
         $data = is_array($row['data']) ? $row['data'] : Store::decode($row['data']);
         if ((int)$row['parent_id']) {
@@ -158,7 +158,7 @@ final class Passport
         global $wpdb;
         $row = self::get($id);
         if (!Store::can($row)) {
-            throw new \DomainException('Non puoi modificare questo passaporto.');
+            throw new \DomainException(__('You cannot edit this passport.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
         }
         $incoming = self::clean($input['data'] ?? $input);
         $data = array_replace($row['data'], $incoming);
@@ -178,7 +178,7 @@ final class Passport
         }
         $result = $wpdb->query($wpdb->prepare('UPDATE %i SET data=%s,title=%s,sku=%s,identity_key=%s,lock_version=lock_version+1,updated_at=%s WHERE id=%d AND lock_version=%d', Store::table('passports'), Store::json($data), $data['name'] ?? $row['title'], $data['sku'] ?? '', self::identity($data, $row['kind'], (int)$row['parent_id'], $row['uuid']), current_time('mysql', true), $id, $version));
         if (!$result) {
-            throw new \RuntimeException('Conflitto: la scheda è stata modificata oppure il riferimento è già utilizzato. Ricarica prima di salvare.');
+            throw new \RuntimeException(__('Conflict: the sheet has changed or the reference is already in use. Reload before saving.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
         }
         Store::event($id, 'draft_saved', sanitize_text_field($input['reason'] ?? ''));
         return self::get($id);
@@ -187,19 +187,19 @@ final class Passport
     {
         $issues = [];
         if (empty($data['name'])) {
-            $issues[] = ['field' => 'name','message' => 'Inserisci il nome del prodotto.','blocking' => true];
+            $issues[] = ['field' => 'name','message' => __('Enter the product name.', 'giuliomax-product-passport'),'blocking' => true];
         }
         $profile = Profiles::get($data['template'] ?? 'generic');
         foreach ($profile['required'] as $key) {
             if ($key !== 'name' && (!isset($data[$key]) || $data[$key] === '')) {
-                $issues[] = ['field' => $key,'message' => 'Completa il dato richiesto dal tuo modello: ' . (Admin::labels()[$key] ?? $key) . '.','blocking' => true];
+                $issues[] = ['field' => $key,'message' => __('Complete the data required by your template: ', 'giuliomax-product-passport') . (Admin::labels()[$key] ?? $key) . '.','blocking' => true];
             }
         }
         if (empty(Store::settings()['company'])) {
-            $issues[] = ['field' => 'company','message' => 'Inserisci il nome dell’azienda nelle impostazioni.','blocking' => true];
+            $issues[] = ['field' => 'company','message' => __('Enter your company name in Settings.', 'giuliomax-product-passport'),'blocking' => true];
         }
         if (empty($data['care'])) {
-            $issues[] = ['field' => 'care','message' => 'Aggiungi le istruzioni di cura, se disponibili.','blocking' => false];
+            $issues[] = ['field' => 'care','message' => __('Add care instructions if available.', 'giuliomax-product-passport'),'blocking' => false];
         }
         $manual = false;
         foreach ($data['documents'] ?? [] as $id) {
@@ -209,7 +209,7 @@ final class Passport
             }
         }
         if (!$manual) {
-            $issues[] = ['field' => 'documents','message' => 'Manca un manuale nella lingua principale della scheda.','blocking' => false];
+            $issues[] = ['field' => 'documents','message' => __('A manual in the main sheet language is missing.', 'giuliomax-product-passport'),'blocking' => false];
         }
         return $issues;
     }
@@ -230,7 +230,7 @@ final class Passport
         foreach ($row['effective']['compatible'] ?? [] as $id) {
             $other = Store::one('passports', (int)$id);
             if ($other && $other['published_revision']) {
-                $rev = Store::one('revisions', (int)$other['published_revision']);
+                $rev = Store::one(__('revisions', 'giuliomax-product-passport'), (int)$other['published_revision']);
                 $snap = Store::decode($rev['snapshot']);
                 $compatible[] = ['name' => $snap['data']['name'] ?? '', 'url' => self::url($other['uuid'])];
             }
@@ -248,10 +248,10 @@ final class Passport
         try {
             $row = self::get($id);
             if (!Store::can($row, 'gmpp_publish')) {
-                throw new \DomainException('Permesso di pubblicazione richiesto.');
+                throw new \DomainException(__('Publishing permission is required.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
             }
             if (!trim($reason)) {
-                throw new \InvalidArgumentException('Indica una motivazione per la revisione.');
+                throw new \InvalidArgumentException(__('Enter a reason for this revision.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
             }
             foreach ($row['checks'] as $check) {
                 if ($check['blocking']) {
@@ -259,10 +259,10 @@ final class Passport
                 }
             }
             $json = Store::json(self::snapshot($row));
-            $rev = Store::insert('revisions', ['passport_id' => $id,'snapshot' => $json,'digest' => hash('sha256', $json),'author' => get_current_user_id(),'reason' => sanitize_textarea_field($reason),'created_at' => current_time('mysql', true)]);
+            $rev = Store::insert(__('revisions', 'giuliomax-product-passport'), ['passport_id' => $id,'snapshot' => $json,'digest' => hash('sha256', $json),'author' => get_current_user_id(),'reason' => sanitize_textarea_field($reason),'created_at' => current_time('mysql', true)]);
             $ok = $wpdb->query($wpdb->prepare('UPDATE %i SET published_revision=%d,state=\'published\',lock_version=lock_version+1 WHERE id=%d AND lock_version=%d', Store::table('passports'), $rev, $id, $version));
             if (!$ok) {
-                throw new \RuntimeException('Conflitto: ricarica la scheda prima di pubblicare.');
+                throw new \RuntimeException(__('Conflict: reload the sheet before publishing.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
             }
             Store::event($id, 'published', $reason);
             Store::commit();
@@ -276,13 +276,13 @@ final class Passport
     {
         $existing = self::get($id);
         if (!Store::can($existing, 'gmpp_publish')) {
-            throw new \DomainException('Permesso di pubblicazione richiesto.');
+            throw new \DomainException(__('Publishing permission is required.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
         }
         Store::begin();
         try {
-            $notice = trim(($existing['effective']['notice'] ?? '') . "\n\n" . __('Prodotto fuori produzione. Le informazioni di assistenza restano disponibili.', 'giuliomax-product-passport'));
+            $notice = trim(($existing['effective']['notice'] ?? '') . "\n\n" . __('Product discontinued. Support information remains available.', 'giuliomax-product-passport'));
             $row = self::save($id, ['notice' => $notice], $version);
-            $row = self::publish($id, (int)$row['lock_version'], 'Archiviazione commerciale');
+            $row = self::publish($id, (int)$row['lock_version'], __('Commercial archive', 'giuliomax-product-passport'));
             global $wpdb;
             if ($wpdb->update(Store::table('passports'), ['state' => 'archived'], ['id' => $id,'lock_version' => $row['lock_version']]) !== 1) {
                 throw new \RuntimeException('Impossibile confermare l’archiviazione.');
@@ -296,9 +296,9 @@ final class Passport
     }
     public static function restore(int $id, int $revision, int $version): array
     {
-        $rev = Store::one('revisions', $revision);
+        $rev = Store::one(__('revisions', 'giuliomax-product-passport'), $revision);
         if (!$rev || (int)$rev['passport_id'] !== $id) {
-            throw new \InvalidArgumentException('Revisione non valida.');
+            throw new \InvalidArgumentException(__('Invalid revision.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
         }
         Store::begin();
         try {
@@ -308,16 +308,16 @@ final class Passport
             $data['documents'] = array_column($data['documents'], 'document_id');
             $data['compatible'] = [];
         // A restore is a tracked draft; publication must be explicitly reviewed again.
-            $row = self::save($id, ['data' => $data,'reason' => 'Ripristino revisione ' . $revision], $version);
+            $row = self::save($id, ['data' => $data,'reason' => __('Restore revision ', 'giuliomax-product-passport') . $revision], $version);
             $draft = $row['data'];
             $draft['_document_pins'] = array_column($snap['data']['documents'], 'version_id', 'document_id');
             $draft['_company_snapshot'] = $snap['company'];
             $draft['_compatible_snapshot'] = $snap['data']['compatible'] ?? [];
             global $wpdb;
             if ($wpdb->update(Store::table('passports'), ['data' => Store::json($draft)], ['id' => $id,'lock_version' => $row['lock_version']]) === false) {
-                throw new \RuntimeException('Ripristino non confermato.');
+                throw new \RuntimeException(__('Restore not confirmed.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
             }
-            Store::event($id, 'restored', 'Revisione ' . $revision . '; dati aziendali e versioni dei documenti conservati.');
+            Store::event($id, 'restored', __('Revision ', 'giuliomax-product-passport') . $revision . __('; company details and document versions preserved.', 'giuliomax-product-passport'));
             Store::commit();
             return self::get($id);
         } catch (\Throwable $e) {
@@ -335,7 +335,7 @@ final class Passport
         if (!$row || !$row['published_revision']) {
             return null;
         }
-        $rev = Store::one('revisions', (int)$row['published_revision']);
+        $rev = Store::one(__('revisions', 'giuliomax-product-passport'), (int)$row['published_revision']);
         $snap = Store::decode($rev['snapshot']);
         $snap['revision'] = (int)$rev['id'];
         return $snap;

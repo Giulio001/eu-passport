@@ -75,12 +75,12 @@ jobs:
         if: always()
         run: |
           python3 scripts/package.py
-          if git ls-files --error-unmatch dist/giuliomax-product-passport-1.1.0.zip > /dev/null 2>&1; then
-            git diff --exit-code -- dist/giuliomax-product-passport-1.1.0.zip dist/SHA256SUMS
+          if git ls-files --error-unmatch dist/giuliomax-product-passport-1.1.1.zip > /dev/null 2>&1; then
+            git diff --exit-code -- dist/giuliomax-product-passport-1.1.1.zip dist/SHA256SUMS
           fi
           wp plugin deactivate giuliomax-product-passport --path="$RUNNER_TEMP/wp"
           wp plugin delete giuliomax-product-passport --path="$RUNNER_TEMP/wp"
-          wp plugin install dist/giuliomax-product-passport-1.1.0.zip --activate --path="$RUNNER_TEMP/wp"
+          wp plugin install dist/giuliomax-product-passport-1.1.1.zip --activate --path="$RUNNER_TEMP/wp"
       - name: WooCommerce and Action Scheduler regressions
         if: always()
         env:
@@ -114,5 +114,6 @@ jobs:
             test-results/browser.json
             test-results/qr-decode.json
             test-results/design.json
+            test-results/i18n.json
             test-results/*design*.png
             test-results/gallery*.png

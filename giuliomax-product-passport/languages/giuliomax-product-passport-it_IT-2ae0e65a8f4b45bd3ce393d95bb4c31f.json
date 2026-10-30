@@ -1,0 +1,30 @@
+{
+  "domain": "giuliomax-product-passport",
+  "locale_data": {
+    "messages": {
+      "": {
+        "domain": "giuliomax-product-passport",
+        "lang": "it_IT",
+        "plural-forms": "nplurals=2; plural=(n != 1);"
+      },
+      "Button": [
+        "Pulsante"
+      ],
+      "Display": [
+        "Mostra"
+      ],
+      "Full sheet": [
+        "Scheda completa"
+      ],
+      "Giuliomax product sheet": [
+        "Scheda prodotto Giuliomax"
+      ],
+      "QR code": [
+        "QR code"
+      ],
+      "Sheet identifier (UUID)": [
+        "Identificatore della scheda (UUID)"
+      ]
+    }
+  }
+}

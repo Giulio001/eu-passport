@@ -8,10 +8,10 @@ final class Jobs
     public static function csv(string $csv, array $map, string $mode, string $key, bool $clear): array
     {
         if (strlen($csv) > 12 * 1024 * 1024 || !mb_check_encoding($csv, 'UTF-8')) {
-            throw new \InvalidArgumentException('Usa CSV UTF-8 fino a 12 MB.');
+            throw new \InvalidArgumentException(__('Use a UTF-8 CSV file up to 12 MB.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
         }
         if (!in_array($mode, ['create','update','upsert'], true) || !in_array($key, ['sku','uuid'], true)) {
-            throw new \InvalidArgumentException('Scegli modalità e chiave di riconciliazione.');
+            throw new \InvalidArgumentException(__('Select an import mode and reconciliation key.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
         }
         $csv = preg_replace('/^\xEF\xBB\xBF/', '', $csv);
         $first = strtok($csv, "\r\n") ?: '';
@@ -28,11 +28,11 @@ final class Jobs
         rewind($stream);
         $headers = fgetcsv($stream, 0, $delimiter, '"', '');
         if (!$headers) {
-            throw new \InvalidArgumentException('CSV senza intestazioni.');
+            throw new \InvalidArgumentException(__('CSV headers are missing.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
         }
         if (count(array_unique($headers)) !== count($headers)) {
             fclose($stream); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fclose -- In-memory CSV stream; no filesystem path is opened.
-            throw new \InvalidArgumentException('Le intestazioni CSV devono essere univoche.');
+            throw new \InvalidArgumentException(__('CSV headers must be unique.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
         }
         $map = $map ?: array_combine($headers, $headers);
         $allowed = array_merge(Passport::TEXT, Passport::URL, ['language','template','uuid','kind','parent_uuid','documents']);
@@ -56,11 +56,11 @@ final class Jobs
                 }
             }
             if (!isset($row[$key]) || trim((string)$row[$key]) === '') {
-                $error = 'Chiave ' . $key . ' mancante.';
+                $error = __('Key ', 'giuliomax-product-passport') . $key . __(' missing.', 'giuliomax-product-passport');
             }
             $identity = mb_strtolower(trim($row[$key] ?? ''));
             if (isset($seen[$identity])) {
-                $error = 'Chiave ripetuta nel file.';
+                $error = __('Duplicate key in the file.', 'giuliomax-product-passport');
             } $seen[$identity] = true;
             $existing = null;
             try {
@@ -69,26 +69,26 @@ final class Jobs
                 }
                 Passport::clean($row);
                 if (count($values) !== count($headers)) {
-                    throw new \InvalidArgumentException('Numero di colonne diverso dall’intestazione.');
+                    throw new \InvalidArgumentException(__('The column count does not match the header.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
                 }
             } catch (\Throwable $e) {
                 $error = $e->getMessage();
             }
             if ($existing && !Store::can($existing)) {
-                $error = 'Passaporto non accessibile.';
+                $error = __('Passport is not accessible.', 'giuliomax-product-passport');
             }
             if ($mode === 'create' && $existing) {
-                $error = 'La scheda esiste già.';
+                $error = __('The sheet already exists.', 'giuliomax-product-passport');
             }
             if ($mode === 'update' && !$existing) {
-                $error = 'Scheda da aggiornare non trovata.';
+                $error = __('The sheet to update was not found.', 'giuliomax-product-passport');
             }
             if (isset($row['documents'])) {
                 $row['documents'] = array_filter(array_map('absint', explode('|', $row['documents'])));
             }
             $rows[] = ['line' => $line,'data' => $row,'id' => $existing ? (int)$existing['id'] : 0,'version' => $existing ? (int)$existing['lock_version'] : 0,'error' => $error];
             if (count($rows) > 20000) {
-                throw new \InvalidArgumentException('Massimo 20.000 righe per file.');
+                throw new \InvalidArgumentException(__('A file can contain up to 20,000 rows.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
             }
         }
         fclose($stream); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fclose -- In-memory CSV stream; no filesystem path is opened.
@@ -102,7 +102,7 @@ final class Jobs
         global $wpdb;
         $rows = $wpdb->get_results($wpdb->prepare('SELECT * FROM %i WHERE sku=%s LIMIT 2', Store::table('passports'), $value), ARRAY_A);
         if (count($rows) > 1) {
-            throw new \InvalidArgumentException('SKU ambiguo: usa UUID come chiave di riconciliazione.');
+            throw new \InvalidArgumentException(__('Ambiguous SKU: use UUID as the reconciliation key.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
         }
         return $rows[0] ?? null;
     }
@@ -152,12 +152,12 @@ final class Jobs
                         $wpdb->query($wpdb->prepare("UPDATE %i SET updated_at=%s WHERE id=%d AND lease_token=%s AND state='running'", $table, gmdate('Y-m-d H:i:s'), $id, $lease));
                         $live = Store::one('jobs', (int)$id);
                         if (!$live || $live['lease_token'] !== $lease || $live['state'] !== 'running' || (int)$live['cursor'] !== $cursor) {
-                            throw new \RuntimeException('Operazione acquisita da un altro processo.');
+                            throw new \RuntimeException(__('Another worker acquired this job.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
                         }
                         $wpdb->query('SAVEPOINT gmpp_row');
                         try {
                             if (!current_user_can('gmpp_edit')) {
-                                throw new \DomainException('Permessi revocati.');
+                                throw new \DomainException(__('Permissions revoked.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
                             }
                             $item = $payload['rows'][$cursor];
                             if (!empty($item['error'])) {
@@ -169,7 +169,7 @@ final class Jobs
                                     Passport::save($item['id'], ['data' => $data], $item['version']);
                                 } else {
                                     if (self::find($payload['key'], $data[$payload['key']])) {
-                                        throw new \RuntimeException('La chiave è stata creata dopo l’anteprima: rivedi l’importazione.');
+                                        throw new \RuntimeException(__('The key was created after preview: review the import again.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
                                     }
                                     $parent = !empty($data['parent_uuid']) ? Store::uuid($data['parent_uuid']) : null;
                                     Passport::create(['data' => $data,'kind' => $data['kind'] ?? 'model','parent_id' => $parent['id'] ?? 0], $data['uuid'] ?? null);
@@ -184,12 +184,12 @@ final class Jobs
                                 } elseif ($payload['action'] === 'review') {
                                     $row = Passport::get($item['id']);
                                     if (!Store::can($row, 'gmpp_review')) {
-                                        throw new \DomainException('Permesso di revisione richiesto.');
+                                        throw new \DomainException(__('Review permission is required.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
                                     }
-                                    Passport::save($item['id'], ['reason' => 'Revisione documento condiviso'], $item['version']);
+                                    Passport::save($item['id'], ['reason' => __('Shared document review', 'giuliomax-product-passport')], $item['version']);
                                 }
                             } else {
-                                throw new \InvalidArgumentException('Tipo di operazione non supportato.');
+                                throw new \InvalidArgumentException(__('Unsupported job type.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
                             }
                             $entry = ['row' => $item['line'] ?? $cursor + 1,'ok' => true];
                         } catch (\Throwable $e) {
@@ -199,7 +199,7 @@ final class Jobs
                         $report[] = $entry;
                         $ok = $wpdb->update($table, ['cursor' => $cursor + 1,'report' => Store::json($report),'updated_at' => gmdate('Y-m-d H:i:s')], ['id' => $id,'lease_token' => $lease,'state' => 'running']);
                         if ($ok !== 1) {
-                            throw new \RuntimeException('Avanzamento non salvato: il lotto verrà ripreso.');
+                            throw new \RuntimeException(__('Progress not saved: this batch will be resumed.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
                         }
                         Store::commit();
                     } catch (\Throwable $e) {

@@ -10,11 +10,11 @@ final class Suppliers
     {
         $row = Passport::get($passport);
         if (!Store::can($row, 'gmpp_review')) {
-            throw new \DomainException('Permesso di revisione richiesto.');
+            throw new \DomainException(__('Review permission is required.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
         }
         $fields = array_values(array_intersect(self::FIELDS, array_map('sanitize_key', $fields)));
         if (!$fields) {
-            throw new \InvalidArgumentException('Scegli almeno un campo da richiedere.');
+            throw new \InvalidArgumentException(__('Select at least one field to request.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
         }
         $token = bin2hex(random_bytes(32));
         $id = Store::insert('requests', ['token_hash' => hash('sha256', $token),'passport_id' => $passport,'fields' => Store::json($fields),'proposal' => '{}','state' => 'open','expires_at' => gmdate('Y-m-d H:i:s', time() + max(1, min(30, $days)) * DAY_IN_SECONDS),'created_at' => current_time('mysql', true)]);
@@ -33,18 +33,18 @@ final class Suppliers
     {
         $row = self::by_token($token);
         if (!$row) {
-            throw new \InvalidArgumentException('Collegamento scaduto, revocato o già utilizzato.');
+            throw new \InvalidArgumentException(__('This link has expired, been revoked or already been used.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
         }
         $key = 'gmpp_rate_' . substr(hash('sha256', $token), 0, 32);
         if ((int)get_transient($key) >= 5) {
-            throw new \RuntimeException('Attendi prima di riprovare.');
+            throw new \RuntimeException(__('Wait before trying again.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
         }
         set_transient($key, (int)get_transient($key) + 1, HOUR_IN_SECONDS);
         $values = array_intersect_key(Passport::clean($values), array_flip(Store::decode($row['fields'])));
         global $wpdb;
         $ok = $wpdb->query($wpdb->prepare('UPDATE %i SET proposal=%s,state=\'answered\' WHERE id=%d AND state=\'open\'', Store::table('requests'), Store::json($values), (int)$row['id']));
         if (!$ok) {
-            throw new \RuntimeException('Risposta già acquisita.');
+            throw new \RuntimeException(__('Response already received.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
         }
         Store::event((int)$row['passport_id'], 'supplier_answered');
     }
@@ -52,17 +52,17 @@ final class Suppliers
     {
         $request = Store::one('requests', $id);
         if (!$request) {
-            throw new \OutOfBoundsException('Richiesta non trovata.');
+            throw new \OutOfBoundsException(__('Request not found.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
         }
         $passport = Passport::get((int)$request['passport_id']);
         if (!Store::can($passport, 'gmpp_review')) {
-            throw new \DomainException('Permesso di revisione richiesto.');
+            throw new \DomainException(__('Review permission is required.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
         }
         if ($request['state'] !== 'answered') {
-            throw new \InvalidArgumentException('La proposta è già stata gestita o non è ancora disponibile.');
+            throw new \InvalidArgumentException(__('The proposal was already handled or is not available yet.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
         }
         if ($accept) {
-            $passport = Passport::save((int)$passport['id'], ['data' => Store::decode($request['proposal']),'reason' => 'Proposta fornitore ' . $id], $version);
+            $passport = Passport::save((int)$passport['id'], ['data' => Store::decode($request['proposal']),'reason' => __('Supplier proposal ', 'giuliomax-product-passport') . $id], $version);
         }
         global $wpdb;
         $wpdb->update(Store::table('requests'), ['state' => $accept ? 'accepted' : 'rejected'], ['id' => $id,'state' => 'answered']);
@@ -72,17 +72,18 @@ final class Suppliers
     public static function email(int $id, string $recipient, string $url): bool
     {
         if (!Store::settings()['email_enabled'] || Store::is_clone()) {
-            throw new \DomainException('Abilita esplicitamente l’email aziendale su un sito di produzione verificato.');
+            throw new \DomainException(__('Explicitly enable company email on a verified production site.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
         }
         if (!is_email($recipient)) {
-            throw new \InvalidArgumentException('Email non valida.');
+            throw new \InvalidArgumentException(__('Invalid email address.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
         }
         $token = (string)wp_parse_url($url, PHP_URL_QUERY);
         parse_str($token, $args);
         $req = self::by_token($args['gmpp_supplier'] ?? '');
         if (!$req || (int)$req['id'] !== $id) {
-            throw new \InvalidArgumentException('Collegamento della richiesta non valido.');
+            throw new \InvalidArgumentException(__('Invalid request link.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
         }
-        return wp_mail($recipient, __('Richiesta informazioni prodotto', 'giuliomax-product-passport'), "Completa le informazioni richieste entro la scadenza:\n" . add_query_arg('gmpp_supplier', $args['gmpp_supplier'], home_url('/')));
+        return wp_mail($recipient, __('Product information request', 'giuliomax-product-passport'), __('Complete the requested information before the deadline:
+', 'giuliomax-product-passport') . add_query_arg('gmpp_supplier', $args['gmpp_supplier'], home_url('/')));
     }
 }

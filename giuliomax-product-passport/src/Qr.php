@@ -8,7 +8,7 @@ final class Qr
     public static function matrix(string $url): array
     {
         if (strlen($url) > 500) {
-            throw new \InvalidArgumentException('Indirizzo troppo lungo per un’etichetta leggibile. Usa un dominio resolver più breve.');
+            throw new \InvalidArgumentException(__('The address is too long for a readable label. Use a shorter resolver domain.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
         }
         require_once GMPP_DIR . 'vendor/qrcode.php';
         $qr = new Vendor\QRCode();

@@ -25,11 +25,11 @@ final class Profiles
     public static function save(string $id, array $input): array
     {
         if (!in_array($id, ['generic','furniture','textile'], true)) {
-            throw new \InvalidArgumentException('Modello non disponibile.');
+            throw new \InvalidArgumentException(__('Template not available.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
         }
         $current = self::get($id);
         if (($input['version'] ?? '') !== $current['version']) {
-            throw new \RuntimeException('Il modello è stato aggiornato. Ricarica prima di salvare.');
+            throw new \RuntimeException(__('The template has changed. Reload before saving.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
         }
         $required = array_values(array_unique(array_merge(['name'], array_intersect(Passport::TEXT, (array)($input['required'] ?? [])))));
         $defaults = array_intersect_key(Passport::clean((array)($input['defaults'] ?? [])), array_flip(['materials','care','safety','end_of_life','spares','support']));
@@ -39,6 +39,6 @@ final class Profiles
         global $wpdb;
         $like = '%' . $wpdb->esc_like('"template":"' . $id . '"') . '%';
         $affected = $wpdb->get_results($wpdb->prepare('SELECT id,title,lock_version FROM %i WHERE data LIKE %s', Store::table('passports'), $like), ARRAY_A);
-        return ['profile' => self::get($id),'affected' => $affected,'previous' => $current,'message' => 'Modello aggiornato. Le revisioni pubblicate conservano i dati precedenti; verifica le nuove richieste prima di ripubblicare.'];
+        return ['profile' => self::get($id),'affected' => $affected,'previous' => $current,'message' => __('Template updated. Published revisions keep their previous data; review new requirements before republishing.', 'giuliomax-product-passport')];
     }
 }

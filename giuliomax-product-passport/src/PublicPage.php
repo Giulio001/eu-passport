@@ -17,11 +17,12 @@ final class PublicPage
             }
         });
         add_action('init', function () {
-            wp_register_script('gmpp-block', plugins_url('assets/block.js', GMPP_FILE), ['wp-blocks','wp-element','wp-block-editor','wp-components'], GMPP_VERSION, true);
+            wp_register_script('gmpp-block', plugins_url('assets/block.js', GMPP_FILE), ['wp-blocks','wp-element','wp-block-editor','wp-components','wp-i18n'], GMPP_VERSION, true);
+            wp_set_script_translations('gmpp-block', 'giuliomax-product-passport', GMPP_DIR . 'languages');
             register_block_type('giuliomax/product-passport', ['api_version' => 3,'editor_script' => 'gmpp-block','attributes' => ['uuid' => ['type' => 'string','default' => ''],'view' => ['type' => 'string','default' => 'button']],'render_callback' => fn($a)=>$this->shortcode($a)]);
         });
     }
-    private function document(string $title, string $body, string $language = 'it', string $accent = '#135f54'): void
+    private function document(string $title, string $body, string $language = 'en', string $accent = '#135f54'): void
     {
         status_header(200);
         header('Content-Type: text/html; charset=UTF-8');
@@ -60,7 +61,7 @@ final class PublicPage
         }
         if (!$snapshot) {
             status_header(404);
-            echo esc_html__('Scheda non ancora disponibile.', 'giuliomax-product-passport');
+            echo esc_html__('Sheet not available yet.', 'giuliomax-product-passport');
             exit;
         }
         $format = sanitize_key(wp_unslash($_GET['format'] ?? ''));
@@ -71,24 +72,28 @@ final class PublicPage
             echo $format === 'svg' ? Qr::svg(Passport::url($uuid)) : Qr::png(Passport::url($uuid)); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Generated binary/SVG, no user markup.
             exit;
         }
-        $lang = Passport::language(sanitize_text_field(wp_unslash($_GET['lang'] ?? $snapshot['data']['language'] ?? 'it')));
+        $lang = Passport::language(sanitize_text_field(wp_unslash($_GET['lang'] ?? $snapshot['data']['language'] ?? 'en')));
         if ($format === 'pdf') {
             if (!empty($snapshot['data']['translations'][$lang])) {
                 $snapshot['data'] = array_replace($snapshot['data'], $snapshot['data']['translations'][$lang]);
             }
             header('Content-Type: application/pdf');
             header('Content-Disposition: attachment; filename="product-' . $uuid . '.pdf"');
-            echo Pdf::render($snapshot); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Generated PDF bytes, sent with application/pdf; not HTML.
+            echo Pdf::render($snapshot, $lang); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Generated PDF bytes, sent with application/pdf; not HTML.
             exit;
         } // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
         $body = $this->body($snapshot, $lang, true);
         if (isset($_GET['preview'])) {
-            $body = '<div class="gmpp-preview-note">' . esc_html__('Anteprima della bozza · visibile solo agli utenti autorizzati', 'giuliomax-product-passport') . '</div>' . $body;
+            $body = '<div class="gmpp-preview-note">' . esc_html__('Draft preview · visible only to authorized users', 'giuliomax-product-passport') . '</div>' . $body;
         }
         $this->document($snapshot['data']['name'], $body, $lang, $snapshot['company']['accent'] ?? '#135f54');
         exit;
     }
     public function body(array $snap, string $lang, bool $full = false): string
+    {
+        return I18n::with_language($lang, fn()=>$this->render_body($snap, $lang, $full));
+    }
+    private function render_body(array $snap, string $lang, bool $full): string
     {
         if (is_array($snap['data']['design'] ?? null)) {
             Designs::assets();
@@ -96,13 +101,12 @@ final class PublicPage
         }
         $d = $snap['data'];
         $company = $snap['company'];
-        $base = $d['language'] ?? 'it';
+        $base = $d['language'] ?? 'en';
         $fallback = $lang !== $base;
         if (!empty($d['translations'][$lang])) {
             $d = array_replace($d, $d['translations'][$lang]);
         }
-        $english = str_starts_with($lang, 'en');
-        $t = static fn($it, $en)=>$english ? $en : $it;
+
         ob_start();
         ?>
         <main class="gmpp-sheet" id="product-info">
@@ -110,49 +114,49 @@ final class PublicPage
                 ?><img class="gmpp-company-logo" src="<?php echo esc_url($company['logo']); ?>" alt=""><?php
                                             else :
                                                 ?><span class="gmpp-mark" aria-hidden="true">P</span><?php
-                                            endif; ?><span><?php echo esc_html($company['company']); ?></span><span class="gmpp-subtle"><?php echo esc_html($t('Informazioni prodotto', 'Product information')); ?></span></header>
+                                            endif; ?><span><?php echo esc_html($company['company']); ?></span><span class="gmpp-subtle"><?php echo esc_html(__('Product information', 'giuliomax-product-passport')); ?></span></header>
           <?php if ($fallback) :
-                ?><p class="gmpp-message"><?php echo esc_html($t('Le informazioni non tradotte restano nella lingua originale: ', 'Untranslated information remains in the original language: ') . $base); ?></p><?php
+                ?><p class="gmpp-message"><?php echo esc_html(__('Untranslated information remains in the original language: ', 'giuliomax-product-passport') . $base); ?></p><?php
           endif; ?>
-          <nav class="gmpp-languages" aria-label="Lingue / Languages"><?php foreach (array_unique(array_merge([$base], array_keys($d['translations'] ?? []))) as $language) :
+          <nav class="gmpp-languages" aria-label="<?php echo esc_attr__('Languages', 'giuliomax-product-passport'); ?>"><?php foreach (array_unique(array_merge([$base], array_keys($d['translations'] ?? []))) as $language) :
                 ?><a href="<?php echo esc_url(add_query_arg('lang', $language, Passport::url($snap['uuid']))); ?>" lang="<?php echo esc_attr($language); ?>"><?php echo esc_html(strtoupper($language)); ?></a><?php
-                                                                      endforeach; ?></nav>
+                                                  endforeach; ?></nav>
           <?php if (!empty($d['notice'])) :
-                ?><aside class="gmpp-alert" role="note"><strong><?php echo esc_html($t('Avviso sul prodotto', 'Product notice')); ?></strong><p><?php echo nl2br(esc_html($d['notice'])); ?></p></aside><?php
+                ?><aside class="gmpp-alert" role="note"><strong><?php echo esc_html(__('Product notice', 'giuliomax-product-passport')); ?></strong><p><?php echo nl2br(esc_html($d['notice'])); ?></p></aside><?php
           endif; ?>
           <section class="gmpp-hero">
             <?php if (!empty($d['image'])) :
                 ?><img class="gmpp-product-image" src="<?php echo esc_url($d['image']); ?>" alt="<?php echo esc_attr($d['name']); ?>"><?php
             endif; ?>
-            <div><p class="gmpp-eyebrow"><?php echo esc_html($t('La storia del tuo prodotto', 'Your product, documented')); ?></p><h1><?php echo esc_html($d['name']); ?></h1><?php if (!empty($d['description'])) :
+            <div><p class="gmpp-eyebrow"><?php echo esc_html(__('Your product, documented', 'giuliomax-product-passport')); ?></p><h1><?php echo esc_html($d['name']); ?></h1><?php if (!empty($d['description'])) :
                 ?><p class="gmpp-description"><?php echo nl2br(esc_html($d['description'])); ?></p><?php
                                          endif; ?>
-            <dl class="gmpp-identifiers"><?php foreach (['sku' => 'Riferimento / SKU','gtin' => 'GTIN','batch' => 'Lotto / Batch','serial' => 'Seriale / Serial'] as $key => $label) :
+            <dl class="gmpp-identifiers"><?php foreach (['sku' => __('Reference / SKU', 'giuliomax-product-passport'),'gtin' => 'GTIN','batch' => __('Batch', 'giuliomax-product-passport'),'serial' => __('Serial', 'giuliomax-product-passport')] as $key => $label) :
                 if (!empty($d[$key])) :
                     ?><div><dt><?php echo esc_html($label); ?></dt><dd><?php echo esc_html($d[$key]); ?></dd></div><?php
                 endif;
                                          endforeach; ?></dl></div>
           </section>
           <?php if (!empty($d['attributes'])) :
-                ?><section class="gmpp-section"><h2><?php echo esc_html($t('Caratteristiche', 'Specifications')); ?></h2><dl class="gmpp-identifiers"><?php foreach ($d['attributes'] as $name => $value) :
+                ?><section class="gmpp-section"><h2><?php echo esc_html(__('Specifications', 'giuliomax-product-passport')); ?></h2><dl class="gmpp-identifiers"><?php foreach ($d['attributes'] as $name => $value) :
     ?><div><dt><?php echo esc_html($name); ?></dt><dd><?php echo esc_html($value); ?></dd></div><?php
                 endforeach; ?></dl></section><?php
           endif; ?>
-          <nav class="gmpp-actions" aria-label="<?php echo esc_attr($t('Informazioni utili', 'Useful information')); ?>">
+          <nav class="gmpp-actions" aria-label="<?php echo esc_attr(__('Useful information', 'giuliomax-product-passport')); ?>">
             <?php $manuals = array_values(array_filter($d['documents'] ?? [], static fn($doc)=>$doc['type'] === 'manual')); if ($manuals) :
-                ?><a href="#documents"><span aria-hidden="true">↗</span><?php echo esc_html($t('Manuale', 'Manual')); ?></a><?php
+                ?><a href="#documents"><span aria-hidden="true">↗</span><?php echo esc_html(__('Manual', 'giuliomax-product-passport')); ?></a><?php
             endif; ?>
             <?php if (!empty($d['care'])) :
-                ?><a href="#care"><span aria-hidden="true">↗</span><?php echo esc_html($t('Cura del prodotto', 'Product care')); ?></a><?php
+                ?><a href="#care"><span aria-hidden="true">↗</span><?php echo esc_html(__('Product care', 'giuliomax-product-passport')); ?></a><?php
             endif; ?>
             <?php if (!empty($d['spares']) || !empty($d['compatible'])) :
-                ?><a href="#spares"><span aria-hidden="true">↗</span><?php echo esc_html($t('Ricambi', 'Spare parts')); ?></a><?php
+                ?><a href="#spares"><span aria-hidden="true">↗</span><?php echo esc_html(__('Spare parts', 'giuliomax-product-passport')); ?></a><?php
             endif; ?>
             <?php if (!empty($d['support']) || !empty($company['email']) || !empty($d['support_url'])) :
-                ?><a href="#support"><span aria-hidden="true">↗</span><?php echo esc_html($t('Assistenza', 'Support')); ?></a><?php
+                ?><a href="#support"><span aria-hidden="true">↗</span><?php echo esc_html(__('Support', 'giuliomax-product-passport')); ?></a><?php
             endif; ?>
           </nav>
-          <?php $labels = ['materials' => $t('Materiali e composizione', 'Materials and composition'),'care' => $t('Cura del prodotto', 'Product care'),'safety' => $t('Sicurezza', 'Safety'),'end_of_life' => $t('Una seconda vita', 'End of life'),'spares' => $t('Ricambi e compatibilità', 'Spare parts and compatibility'),'support' => $t('Assistenza', 'Support')]; foreach ($labels as $key => $label) :
+          <?php $labels = ['materials' => __('Materials and composition', 'giuliomax-product-passport'),'care' => __('Product care', 'giuliomax-product-passport'),'safety' => __('Safety', 'giuliomax-product-passport'),'end_of_life' => __('End of life', 'giuliomax-product-passport'),'spares' => __('Spare parts and compatibility', 'giuliomax-product-passport'),'support' => __('Support', 'giuliomax-product-passport')]; foreach ($labels as $key => $label) :
                 if (!empty($d[$key]) || ($key === 'support' && (!empty($company['email']) || !empty($d['support_url']))) || ($key === 'spares' && !empty($d['compatible']))) : ?>
           <section class="gmpp-section" id="<?php echo esc_attr($key); ?>"><h2><?php echo esc_html($label); ?></h2><?php if (!empty($d[$key])) :
                 ?><p><?php echo nl2br(esc_html($d[$key])); ?></p><?php
@@ -161,7 +165,7 @@ final class PublicPage
                         ?><?php if (!empty($company['email'])) :
     ?><a href="mailto:<?php echo esc_attr($company['email']); ?>"><?php echo esc_html($company['email']); ?></a><?php
                         endif; ?><?php if (!empty($d['support_url'])) :
-    ?> <a href="<?php echo esc_url($d['support_url']); ?>"><?php echo esc_html($t('Contatta l’assistenza', 'Contact support')); ?></a><?php
+    ?> <a href="<?php echo esc_url($d['support_url']); ?>"><?php echo esc_html(__('Contact support', 'giuliomax-product-passport')); ?></a><?php
                         endif; ?><?php
                     endif; ?>
                     <?php if ($key === 'spares') :
@@ -172,27 +176,27 @@ final class PublicPage
                 <?php endif;
           endforeach; ?>
           <?php if (isset($d['environmental_value']) && $d['environmental_value'] !== '') :
-                ?><section class="gmpp-section"><h2><?php echo esc_html($t('Informazioni ambientali dichiarate', 'Declared environmental information')); ?></h2><p><?php echo esc_html($d['environmental_value'] . ' ' . ($d['unit'] ?? '')); ?></p><?php foreach (['method' => 'Metodo / Method','source' => 'Fonte / Source','data_date' => 'Data / Date'] as $key => $label) :
+                ?><section class="gmpp-section"><h2><?php echo esc_html(__('Declared environmental information', 'giuliomax-product-passport')); ?></h2><p><?php echo esc_html($d['environmental_value'] . ' ' . ($d['unit'] ?? '')); ?></p><?php foreach (['method' => __('Method', 'giuliomax-product-passport'),'source' => __('Source', 'giuliomax-product-passport'),'data_date' => __('Date', 'giuliomax-product-passport')] as $key => $label) :
     if (!empty($d[$key])) :
         ?><p><?php echo esc_html($label . ': ' . $d[$key]); ?></p><?php
     endif;
                 endforeach; ?></section><?php
           endif; ?>
           <?php if (!empty($d['documents'])) :
-                ?><section class="gmpp-section" id="documents"><h2><?php echo esc_html($t('Documenti del prodotto', 'Product documents')); ?></h2><div class="gmpp-doc-grid"><?php foreach ($d['documents'] as $doc) :
+                ?><section class="gmpp-section" id="documents"><h2><?php echo esc_html(__('Product documents', 'giuliomax-product-passport')); ?></h2><div class="gmpp-doc-grid"><?php foreach ($d['documents'] as $doc) :
     ?><a class="gmpp-doc-card" href="<?php echo esc_url(Documents::url((int)$doc['version_id'])); ?>"><strong><?php echo esc_html($doc['title']); ?></strong><span><?php echo esc_html(strtoupper($doc['language']) . ' · v' . $doc['version'] . ' · ' . strtoupper(pathinfo($doc['filename'], PATHINFO_EXTENSION))); ?></span><?php if (!empty($doc['expires']) && $doc['expires'] < gmdate('Y-m-d')) :
-    ?><span><?php echo esc_html($t('Data di scadenza superata', 'Expiry date passed')); ?></span><?php
+    ?><span><?php echo esc_html(__('Expiry date passed', 'giuliomax-product-passport')); ?></span><?php
     endif; ?></a><?php
                 endforeach; ?></div></section><?php
           endif; ?>
           <?php if (!empty($d['original_url'])) :
-                ?><section class="gmpp-section"><h2><?php echo esc_html($t('Passaporto del produttore', 'Manufacturer passport')); ?></h2><a href="<?php echo esc_url($d['original_url']); ?>" rel="noopener"><?php echo esc_html($t('Consulta il passaporto originale', 'View the original passport')); ?></a></section><?php
+                ?><section class="gmpp-section"><h2><?php echo esc_html(__('Manufacturer passport', 'giuliomax-product-passport')); ?></h2><a href="<?php echo esc_url($d['original_url']); ?>" rel="noopener"><?php echo esc_html(__('View the original passport', 'giuliomax-product-passport')); ?></a></section><?php
           endif; ?>
           <?php if (!empty($d['successor_url'])) :
-                ?><p><a href="<?php echo esc_url($d['successor_url']); ?>"><?php echo esc_html($t('Consulta il prodotto successore', 'View successor product')); ?></a></p><?php
+                ?><p><a href="<?php echo esc_url($d['successor_url']); ?>"><?php echo esc_html(__('View successor product', 'giuliomax-product-passport')); ?></a></p><?php
           endif; ?>
-          <footer class="gmpp-sheet-footer"><p><?php echo esc_html($t('Scheda digitale volontaria. Le informazioni sono fornite dall’azienda.', 'Voluntary digital product sheet. Information supplied by the company.')); ?></p><p><?php echo esc_html($t('Aggiornata il ', 'Updated on ') . substr($snap['published_at'], 0, 10)); ?><?php if ($full) :
-                ?> · <a href="<?php echo esc_url(add_query_arg(['format' => 'pdf','lang' => $lang], Passport::url($snap['uuid']))); ?>"><?php echo esc_html($t('Scarica la scheda PDF', 'Download PDF')); ?></a><?php
+          <footer class="gmpp-sheet-footer"><p><?php echo esc_html(__('Voluntary digital product sheet. Information supplied by the company.', 'giuliomax-product-passport')); ?></p><p><?php echo esc_html(__('Updated on ', 'giuliomax-product-passport') . substr($snap['published_at'], 0, 10)); ?><?php if ($full) :
+                ?> · <a href="<?php echo esc_url(add_query_arg(['format' => 'pdf','lang' => $lang], Passport::url($snap['uuid']))); ?>"><?php echo esc_html(__('Download PDF', 'giuliomax-product-passport')); ?></a><?php
                                                endif; ?></p></footer>
         </main>
         <?php return (string)ob_get_clean();
@@ -206,13 +210,13 @@ final class PublicPage
         }
         wp_enqueue_style('gmpp-public', plugins_url('assets/style.css', GMPP_FILE), [], GMPP_VERSION);
         if ($a['view'] === 'sheet') {
-            return $this->body($snap, $snap['data']['language'] ?? 'it');
+            return $this->body($snap, $snap['data']['language'] ?? 'en');
         }
         $url = Passport::url($snap['uuid']);
         if ($a['view'] === 'qr') {
-            return '<a class="gmpp-inline-qr" href="' . esc_url($url) . '" aria-label="' . esc_attr__('Apri la scheda prodotto', 'giuliomax-product-passport') . '">' . Qr::svg($url) . '</a>';
+            return '<a class="gmpp-inline-qr" href="' . esc_url($url) . '" aria-label="' . esc_attr__('Open product sheet', 'giuliomax-product-passport') . '">' . Qr::svg($url) . '</a>';
         }
-        return '<a class="gmpp-public-button" href="' . esc_url($url) . '">' . esc_html__('Informazioni e manuali', 'giuliomax-product-passport') . '</a>';
+        return '<a class="gmpp-public-button" href="' . esc_url($url) . '">' . esc_html__('Information and manuals', 'giuliomax-product-passport') . '</a>';
     }
     private function supplier(string $token): void
     {
@@ -223,26 +227,26 @@ final class PublicPage
         $message = '';
         if (!$request) {
             status_header(410);
-            echo esc_html__('Collegamento scaduto, revocato o già utilizzato.', 'giuliomax-product-passport');
+            echo esc_html__('This link has expired, been revoked or already been used.', 'giuliomax-product-passport');
             return;
         }
         if (sanitize_key(wp_unslash($_SERVER['REQUEST_METHOD'] ?? '')) === 'post') {
             try {
                 if (!wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['_wpnonce'] ?? '')), 'gmpp_supplier_' . $request['id']) || !empty($_POST['website'])) {
-                    throw new \InvalidArgumentException('Ricarica la pagina prima di inviare.');
+                    throw new \InvalidArgumentException(__('Reload the page before submitting.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
                 }
                 Suppliers::respond($token, array_map('sanitize_textarea_field', (array)wp_unslash($_POST['values'] ?? [])));
-                $this->document('Risposta ricevuta', '<main class="gmpp-sheet"><h1>Grazie, risposta ricevuta.</h1><p>I dati saranno revisionati dall’azienda prima della pubblicazione.</p></main>');
+                $this->document(__('Response received', 'giuliomax-product-passport'), ('<main class="gmpp-sheet"><h1>' . esc_html__('Thank you. Your response was received.', 'giuliomax-product-passport') . '</h1><p>' . esc_html__('The company will review the information before publication.', 'giuliomax-product-passport') . '</p></main>'));
                 return;
             } catch (\Throwable $e) {
                 $message = $e->getMessage();
             }
         }
         $row = Store::one('passports', (int)$request['passport_id']);
-        ob_start(); ?><main class="gmpp-sheet"><p class="gmpp-eyebrow">Richiesta informazioni</p><h1><?php echo esc_html($row['title']); ?></h1><p>Compila solo i dati richiesti. La risposta verrà sottoposta a revisione.</p><?php if ($message) :
+        ob_start(); ?><main class="gmpp-sheet"><p class="gmpp-eyebrow"><?php echo esc_html__('Information request', 'giuliomax-product-passport'); ?></p><h1><?php echo esc_html($row['title']); ?></h1><p><?php echo esc_html__('Complete only the requested fields. Your response will be reviewed.', 'giuliomax-product-passport'); ?></p><?php if ($message) :
     ?><p role="alert"><?php echo esc_html($message); ?></p><?php
         endif; ?><form method="post"><?php wp_nonce_field('gmpp_supplier_' . $request['id']); ?><input type="text" name="website" tabindex="-1" autocomplete="off" class="gmpp-honeypot" aria-hidden="true"><?php foreach (Store::decode($request['fields']) as $field) :
     ?><label class="gmpp-field"><?php echo esc_html(Admin::labels()[$field] ?? $field); ?><textarea name="values[<?php echo esc_attr($field); ?>]" rows="4" maxlength="20000"></textarea></label><?php
-        endforeach; ?><button class="gmpp-primary" type="submit">Invia per revisione</button></form></main><?php $this->document('Richiesta informazioni', (string)ob_get_clean());
+        endforeach; ?><button class="gmpp-primary" type="submit"><?php echo esc_html__('Submit for review', 'giuliomax-product-passport'); ?></button></form></main><?php $this->document(__('Information request', 'giuliomax-product-passport'), (string)ob_get_clean());
     }
 }

@@ -16,7 +16,7 @@ final class Woo
             return ['available' => false,'products' => []];
         }
         if (!current_user_can('edit_products')) {
-            throw new \DomainException('Permesso WooCommerce richiesto.');
+            throw new \DomainException(__('WooCommerce permission is required.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
         }
         $products = wc_get_products(['limit' => 30,'status' => ['publish','draft','private'],'s' => $search,'type' => ['simple','variable','variation']]);
         return ['available' => true,'products' => array_map(static fn($p)=>['id' => $p->get_id(),'name' => $p->get_name(),'sku' => $p->get_sku(),'type' => $p->get_type(),'children' => $p->is_type('variable') ? $p->get_children() : []], $products)];
@@ -24,14 +24,14 @@ final class Woo
     public static function import(int $id): array
     {
         if (!function_exists('wc_get_product')) {
-            throw new \RuntimeException('WooCommerce non è attivo.');
+            throw new \RuntimeException(__('WooCommerce is not active.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
         }
         if (!current_user_can('edit_post', $id)) {
-            throw new \DomainException('Prodotto WooCommerce non accessibile.');
+            throw new \DomainException(__('WooCommerce product is not accessible.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
         }
         $p = wc_get_product($id);
         if (!$p) {
-            throw new \OutOfBoundsException('Prodotto non trovato.');
+            throw new \OutOfBoundsException(__('Product not found.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
         }
         $data = ['name' => $p->get_name(),'description' => wp_strip_all_tags($p->get_description()),'sku' => $p->get_sku(),'image' => wp_get_attachment_url($p->get_image_id()) ?: ''];
         $attributes = [];
@@ -48,8 +48,8 @@ final class Woo
         if ($existing) {
             $row = Passport::get((int)$existing);
             if (!Store::can($row)) {
-                throw new \DomainException('Scheda non accessibile.');
-            } return ['existing' => $row,'suggested' => $data,'message' => 'Confronta i dati commerciali: nessuna modifica viene applicata automaticamente.'];
+                throw new \DomainException(__('Sheet is not accessible.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
+            } return ['existing' => $row,'suggested' => $data,'message' => __('Compare commercial data: no changes are applied automatically.', 'giuliomax-product-passport')];
         }
         $parent = 0;
         if ($p->is_type('variation')) {
@@ -66,13 +66,13 @@ final class Woo
         }
         $row = $wpdb->get_row($wpdb->prepare('SELECT uuid,published_revision FROM %i WHERE wc_id=%d', Store::table('passports'), $product->get_id()), ARRAY_A);
         if ($row && $row['published_revision']) {
-            echo '<p><a class="button" href="' . esc_url(Passport::url($row['uuid'])) . '">' . esc_html__('Informazioni e manuali del prodotto', 'giuliomax-product-passport') . '</a></p>';
+            echo '<p><a class="button" href="' . esc_url(Passport::url($row['uuid'])) . '">' . esc_html__('Product information and manuals', 'giuliomax-product-passport') . '</a></p>';
         }
     }
     public function action(array $actions, \WP_Post $post): array
     {
         if ($post->post_type === 'product' && current_user_can('gmpp_edit')) {
-            $actions['gmpp'] = '<a href="' . esc_url(admin_url('admin.php?page=gmpp-passports&wc=' . $post->ID)) . '">' . esc_html__('Crea o collega scheda digitale', 'giuliomax-product-passport') . '</a>';
+            $actions['gmpp'] = '<a href="' . esc_url(admin_url('admin.php?page=gmpp-passports&wc=' . $post->ID)) . '">' . esc_html__('Create or link a digital sheet', 'giuliomax-product-passport') . '</a>';
         }
         return $actions;
     }

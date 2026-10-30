@@ -1,0 +1,1086 @@
+{
+  "domain": "giuliomax-product-passport",
+  "locale_data": {
+    "messages": {
+      "": {
+        "domain": "giuliomax-product-passport",
+        "lang": "it_IT",
+        "plural-forms": "nplurals=2; plural=(n != 1);"
+      },
+      "\nFictional test data.": [
+        "\nDati fittizi di collaudo."
+      ],
+      " Empty fields should clear existing values": [
+        " I campi vuoti devono cancellare i valori esistenti"
+      ],
+      " Enable real supplier email (verified production only)": [
+        " Abilita invii email aziendali reali ai fornitori (solo su produzione verificata)"
+      ],
+      " affected sheets": [
+        " schede interessate"
+      ],
+      " affected sheets; nothing published automatically.": [
+        " schede interessate; nessuna pubblicazione automatica."
+      ],
+      " documents · ": [
+        " documenti · "
+      ],
+      " existing identities preserved.": [
+        " identità già presenti conservate."
+      ],
+      " items will inherit data and documents from sheet #": [
+        " esemplari erediteranno dati e documenti dalla scheda #"
+      ],
+      " new sheets; ": [
+        " nuove schede; "
+      ],
+      " revisions": [
+        " revisioni"
+      ],
+      " rows · ": [
+        " righe · "
+      ],
+      " rows. Invalid rows will be skipped and included in the report.": [
+        " righe. Le righe con errori saranno saltate e riportate nel rapporto."
+      ],
+      " selected": [
+        " selezionati"
+      ],
+      " sheets to review.": [
+        " schede da rivalutare."
+      ],
+      " sheets · ": [
+        " schede · "
+      ],
+      " sheets? The current revision will remain in history.": [
+        " schede? La revisione attuale viene conservata nello storico."
+      ],
+      " · sheet copy": [
+        " · copia della scheda"
+      ],
+      "01 · Your company": [
+        "01 · La tua azienda"
+      ],
+      "02 · Your workflow": [
+        "02 · Come lavori"
+      ],
+      "03 · Printing and email": [
+        "03 · Stampa ed email"
+      ],
+      "A home for your manuals.": [
+        "Il posto giusto per i tuoi manuali."
+      ],
+      "A visual template for your content. The published page changes only with a new revision.": [
+        "Un template grafico per presentare i tuoi contenuti. La pagina pubblicata cambia solo con una nuova revisione."
+      ],
+      "Accent colour": [
+        "Colore di accento"
+      ],
+      "Accept into draft": [
+        "Accetta nella bozza"
+      ],
+      "Action text keeps high contrast even with a light accent.": [
+        "Il testo delle azioni resta ad alto contrasto anche con un colore chiaro."
+      ],
+      "Actions": [
+        "Azioni"
+      ],
+      "Actual file language": [
+        "Lingua reale del file"
+      ],
+      "Add what matters": [
+        "Aggiungi ciò che serve"
+      ],
+      "Address": [
+        "Indirizzo"
+      ],
+      "All": [
+        "Tutti"
+      ],
+      "An organised catalogue independent of sales pages.": [
+        "Un catalogo ordinato, indipendente dalle pagine di vendita."
+      ],
+      "Apply selected values to draft": [
+        "Applica i valori selezionati alla bozza"
+      ],
+      "Archive": [
+        "Archiviare"
+      ],
+      "Archive selected": [
+        "Archivia selezionati"
+      ],
+      "Archive too large (max 50 MB).": [
+        "Archivio troppo grande (max 50 MB)."
+      ],
+      "Available templates: generic, furniture and textile. All are voluntary; no regulated profile is operational.": [
+        "Modelli disponibili: generico, arredo e tessile. Tutti volontari; nessun profilo regolamentato è dichiarato operativo."
+      ],
+      "Back to list": [
+        "Torna all’elenco"
+      ],
+      "Batch": [
+        "Lotto"
+      ],
+      "Batch processed.": [
+        "Lotto elaborato."
+      ],
+      "Beech wood and fabric. Fictional data.": [
+        "Legno di faggio e tessuto. Dati fittizi."
+      ],
+      "Before sharing": [
+        "Prima di condividere"
+      ],
+      "Bring in your catalogue. Keep control of your data.": [
+        "Il catalogo entra. I tuoi dati restano tuoi."
+      ],
+      "Bulk update confirmed": [
+        "Aggiornamento massivo confermato"
+      ],
+      "CSV file": [
+        "File CSV"
+      ],
+      "Cancel": [
+        "Annulla"
+      ],
+      "Cancelled": [
+        "Annullato"
+      ],
+      "Catalogue SKU (when unique)": [
+        "SKU nel catalogo (se univoco)"
+      ],
+      "Changes stay in draft until a new revision is published.": [
+        "Le modifiche restano in bozza fino alla pubblicazione di una nuova revisione."
+      ],
+      "Check preview": [
+        "Controlla anteprima"
+      ],
+      "Choose a product": [
+        "Scegli il prodotto"
+      ],
+      "Choose an image from the media library": [
+        "Scegli immagine dalla libreria"
+      ],
+      "Choose the product photo": [
+        "Scegli la foto del prodotto"
+      ],
+      "Clean with a soft, slightly damp cloth.": [
+        "Pulisci con un panno morbido leggermente umido."
+      ],
+      "Close": [
+        "Chiudi"
+      ],
+      "Columns": [
+        "Colonne"
+      ],
+      "Commercial data copied to the draft.": [
+        "Dati commerciali acquisiti nella bozza."
+      ],
+      "Company name": [
+        "Nome azienda"
+      ],
+      "Compare commercial updates": [
+        "Confronta aggiornamenti commerciali"
+      ],
+      "Complete the sheet": [
+        "Completa la scheda"
+      ],
+      "Completed": [
+        "Completato"
+      ],
+      "Configure your company, appearance and workflow.": [
+        "Configura azienda, aspetto e modalità di lavoro."
+      ],
+      "Confirm impact": [
+        "Conferma impatto"
+      ],
+      "Confirm import": [
+        "Conferma importazione"
+      ],
+      "Confirm operation": [
+        "Conferma operazione"
+      ],
+      "Confirm restore": [
+        "Conferma ripristino"
+      ],
+      "Continue now": [
+        "Continua ora"
+      ],
+      "Controlled imports and portable archives, with no arbitrary remote downloads.": [
+        "Importazioni controllate e archivi portabili, senza scaricare file da indirizzi remoti."
+      ],
+      "Copy created with a new identity. Enter its reference.": [
+        "Copia creata con una nuova identità. Inserisci il suo riferimento."
+      ],
+      "Copy link": [
+        "Copia collegamento"
+      ],
+      "Copy this link and send it to the supplier. It is not stored in plain text: create a new request and revoke the previous one to replace it.": [
+        "Copia questo collegamento e invialo al fornitore. Non viene conservato in chiaro: per sostituirlo crea una nuova richiesta e revoca la precedente."
+      ],
+      "Create": [
+        "Crea"
+      ],
+      "Create a passport": [
+        "Crea un passaporto"
+      ],
+      "Create a sheet": [
+        "Crea una scheda"
+      ],
+      "Create and complete": [
+        "Crea e completa"
+      ],
+      "Create and update": [
+        "Crea e aggiorna"
+      ],
+      "Create it, import CSV or link a WooCommerce product.": [
+        "Crealo, importalo da CSV o collegalo a WooCommerce."
+      ],
+      "Create items": [
+        "Crea esemplari"
+      ],
+      "Create items in bulk": [
+        "Crea esemplari in serie"
+      ],
+      "Create only": [
+        "Solo crea"
+      ],
+      "Create private link": [
+        "Crea collegamento riservato"
+      ],
+      "Create sample catalogue data": [
+        "Crea esempi nel catalogo"
+      ],
+      "Create the first connection.": [
+        "Crea il primo collegamento."
+      ],
+      "Create useful product sheets, share documents and put support one scan away.": [
+        "Crea schede utili, condividi documenti e porta l’assistenza a una scansione di distanza."
+      ],
+      "Create your first passport": [
+        "Crea il primo passaporto"
+      ],
+      "Current classic layout": [
+        "Classico attuale"
+      ],
+      "Customize design": [
+        "Personalizza il design"
+      ],
+      "Data quality and provenance": [
+        "Qualità e provenienza dei dati"
+      ],
+      "Date": [
+        "Data"
+      ],
+      "Declaration": [
+        "Dichiarazione"
+      ],
+      "Default text for new sheets": [
+        "Testi iniziali per le nuove schede"
+      ],
+      "Define which data is required before publishing a sheet. These are internal company rules, not certification criteria.": [
+        "Definisci quali dati richiedere prima di pubblicare una scheda. Sono regole interne dell’azienda, senza valore di certificazione."
+      ],
+      "Design & templates": [
+        "Design e template"
+      ],
+      "Desktop": [
+        "Desktop"
+      ],
+      "Discontinued": [
+        "Fuori produzione"
+      ],
+      "Document": [
+        "Documento"
+      ],
+      "Document library": [
+        "Libreria documenti"
+      ],
+      "Document saved. ": [
+        "Documento conservato. "
+      ],
+      "Documents": [
+        "Documenti"
+      ],
+      "Download": [
+        "Scarica"
+      ],
+      "Download portable ZIP archive": [
+        "Scarica archivio portabile ZIP"
+      ],
+      "Draft": [
+        "Bozza"
+      ],
+      "Draft preview": [
+        "Anteprima della bozza"
+      ],
+      "Draft saved": [
+        "Bozza salvata"
+      ],
+      "Draft saved. The public version is unchanged.": [
+        "Bozza salvata. La versione pubblica è invariata."
+      ],
+      "Draft: ": [
+        "Bozza: "
+      ],
+      "Drafts to complete": [
+        "Bozze da completare"
+      ],
+      "Duplicate": [
+        "Duplica"
+      ],
+      "EXAMPLE · Alba Natural": [
+        "ESEMPIO · Alba naturale"
+      ],
+      "EXAMPLE · Alba Walnut": [
+        "ESEMPIO · Alba noce"
+      ],
+      "EXAMPLE · Alba chair": [
+        "ESEMPIO · Sedia Alba"
+      ],
+      "EXAMPLE · Manual ": [
+        "ESEMPIO · Manuale "
+      ],
+      "EXAMPLE · Spare foot": [
+        "ESEMPIO · Piedino di ricambio"
+      ],
+      "EXAMPLE — manual ": [
+        "ESEMPIO / EXAMPLE — manuale "
+      ],
+      "Editable information templates": [
+        "Modelli informativi personalizzabili"
+      ],
+      "Email handed to the company mail transport.": [
+        "Email affidata al trasporto aziendale."
+      ],
+      "Email is disabled initially. WP-Cron depends on visits: configure system cron for reliable jobs or run ": [
+        "Gli invii sono disabilitati inizialmente. WP-Cron dipende dalle visite: per code affidabili configura il cron di sistema oppure "
+      ],
+      "Enter at least one serial number.": [
+        "Inserisci almeno un seriale."
+      ],
+      "Enter available translations only. Documents always show their actual language.": [
+        "Inserisci solo le traduzioni disponibili. I documenti mantengono sempre la loro lingua effettiva."
+      ],
+      "Enter company details once. New sheets can reuse them.": [
+        "Inserisci il nome e i contatti una sola volta. Li riutilizzeremo nelle nuove schede."
+      ],
+      "Enter once. Reuse later.": [
+        "Una volta sola. Poi si riutilizza."
+      ],
+      "Enter the product name.": [
+        "Inserisci il nome del prodotto."
+      ],
+      "Environmental data and evidence": [
+        "Dati ambientali ed evidenze"
+      ],
+      "Essential information is present.": [
+        "I dati essenziali sono presenti."
+      ],
+      "Evidence": [
+        "Evidenza"
+      ],
+      "Export and transfer": [
+        "Esporta e trasferisci"
+      ],
+      "Export published content only (JSON)": [
+        "Esporta solo contenuti pubblicati (JSON)"
+      ],
+      "External connections": [
+        "Connessioni esterne"
+      ],
+      "External manufacturer passports": [
+        "Passaporti esterni del produttore"
+      ],
+      "File (max 10 MB)": [
+        "File (max 10 MB)"
+      ],
+      "Files use protected storage. Public documents are downloadable once a published revision references them.": [
+        "Il file viene conservato in un deposito protetto. I documenti pubblici sono scaricabili quando associati a una revisione pubblicata."
+      ],
+      "First publication": [
+        "Prima pubblicazione"
+      ],
+      "From WooCommerce": [
+        "Da WooCommerce"
+      ],
+      "From product to sheet in three steps": [
+        "Da prodotto a scheda, in tre passaggi"
+      ],
+      "Furniture": [
+        "Arredo"
+      ],
+      "Furniture · voluntary": [
+        "Arredo · volontario"
+      ],
+      "Generic": [
+        "Generico"
+      ],
+      "Generic product · voluntary": [
+        "Prodotto generico · volontario"
+      ],
+      "Go to field": [
+        "Vai al campo"
+      ],
+      "Guide": [
+        "Guida"
+      ],
+      "Identification and relationships": [
+        "Identificazione e relazioni"
+      ],
+      "Ignore": [
+        "Ignora"
+      ],
+      "Import / export": [
+        "Importa / esporta"
+      ],
+      "Import CSV": [
+        "Importa CSV"
+      ],
+      "Import added to the queue. Use Continue now to run it.": [
+        "Importazione aggiunta alla coda. Usa Continua ora per eseguirla."
+      ],
+      "Importer": [
+        "Importatore"
+      ],
+      "Individual item": [
+        "Singolo esemplare"
+      ],
+      "Information template": [
+        "Modello informativo"
+      ],
+      "Information that lasts": [
+        "Informazioni che restano"
+      ],
+      "Information update": [
+        "Aggiornamento informazioni"
+      ],
+      "Inherited from the parent sheet. Editing creates a local override.": [
+        "Ereditato dalla scheda padre. Una modifica crea un valore specifico."
+      ],
+      "Inherits from sheet": [
+        "Eredita dalla scheda"
+      ],
+      "Internal reviewer": [
+        "Responsabile interno"
+      ],
+      "Internally reviewed": [
+        "Verificato internamente"
+      ],
+      "Item": [
+        "Esemplare"
+      ],
+      "Job report #": [
+        "Rapporto operazione #"
+      ],
+      "Keep translation in draft": [
+        "Memorizza traduzione nella bozza"
+      ],
+      "Key": [
+        "Chiave"
+      ],
+      "Label height (mm)": [
+        "Altezza etichetta (mm)"
+      ],
+      "Label width (mm)": [
+        "Larghezza etichetta (mm)"
+      ],
+      "Language": [
+        "Lingua"
+      ],
+      "Last updated": [
+        "Ultima modifica"
+      ],
+      "Leave unknown values blank. A completed field is not a certification.": [
+        "Un valore sconosciuto va lasciato vuoto. Un dato compilato non equivale a una certificazione."
+      ],
+      "Link": [
+        "Collegamento"
+      ],
+      "Link / compare": [
+        "Collega / confronta"
+      ],
+      "Link copied.": [
+        "Collegamento copiato."
+      ],
+      "Link created": [
+        "Collegamento creato"
+      ],
+      "Link from WooCommerce": [
+        "Collega da WooCommerce"
+      ],
+      "Load sample data": [
+        "Carica dati di esempio"
+      ],
+      "Local export does not replace an external continuity service. Maintain your domain and redirects for distributed QR codes.": [
+        "L’export locale non sostituisce un servizio esterno di continuità. Mantieni dominio e redirect per i QR già distribuiti."
+      ],
+      "Logo (image URL)": [
+        "Logo (URL immagine)"
+      ],
+      "Manage library": [
+        "Gestisci la libreria"
+      ],
+      "Manual": [
+        "Manuale"
+      ],
+      "Manufacturer": [
+        "Produttore"
+      ],
+      "Map columns": [
+        "Associa colonne"
+      ],
+      "Materials and care": [
+        "Materiali e cura"
+      ],
+      "Materials, manuals, care and spare parts without repeating data.": [
+        "Materiali, manuali, cura e ricambi, senza ripetere i dati."
+      ],
+      "Missing": [
+        "Mancante"
+      ],
+      "Mobile": [
+        "Mobile"
+      ],
+      "Mode": [
+        "Modalità"
+      ],
+      "Model": [
+        "Modello"
+      ],
+      "Model variant": [
+        "Variante di un modello"
+      ],
+      "Most recent": [
+        "Più recenti"
+      ],
+      "Name": [
+        "Nome"
+      ],
+      "Needs review": [
+        "Da verificare"
+      ],
+      "New passport": [
+        "Nuovo passaporto"
+      ],
+      "New version": [
+        "Nuova versione"
+      ],
+      "New version of ": [
+        "Nuova versione di "
+      ],
+      "Next": [
+        "Successiva"
+      ],
+      "No WooCommerce or external account required.": [
+        "Non serve WooCommerce né un account esterno."
+      ],
+      "No documents available. Upload a manual to the document library.": [
+        "Nessun documento disponibile. Carica un manuale dalla libreria documenti."
+      ],
+      "No errors in the processed rows.": [
+        "Nessun errore nelle righe elaborate."
+      ],
+      "No products found": [
+        "Nessun prodotto trovato"
+      ],
+      "No products found.": [
+        "Nessun prodotto trovato."
+      ],
+      "No sheets yet": [
+        "Nessuna scheda, per ora"
+      ],
+      "Not applicable": [
+        "Non applicabile"
+      ],
+      "Not configured": [
+        "Non configurata"
+      ],
+      "One document, many products.": [
+        "Un documento, molti prodotti."
+      ],
+      "One product. All its information.": [
+        "Un prodotto. Tutte le sue informazioni."
+      ],
+      "One serial number per line": [
+        "Un numero di serie per riga"
+      ],
+      "Open": [
+        "Apri"
+      ],
+      "Open history": [
+        "Apri lo storico"
+      ],
+      "Open parent": [
+        "Apri il genitore"
+      ],
+      "Open public sheet": [
+        "Apri la scheda pubblica"
+      ],
+      "Optional expiry": [
+        "Scadenza facoltativa"
+      ],
+      "Optional sample data": [
+        "Dati di esempio facoltativi"
+      ],
+      "Overview": [
+        "Panoramica"
+      ],
+      "Page margin (mm)": [
+        "Margine foglio (mm)"
+      ],
+      "Parent product": [
+        "Prodotto padre"
+      ],
+      "Passports": [
+        "Passaporti"
+      ],
+      "Persistent UUID": [
+        "UUID persistente"
+      ],
+      "Persistent identity: ": [
+        "Identità persistente: "
+      ],
+      "Phone": [
+        "Telefono"
+      ],
+      "Prepare drafts for review": [
+        "Prepara bozze da revisionare"
+      ],
+      "Present": [
+        "Presente"
+      ],
+      "Preview": [
+        "Anteprima"
+      ],
+      "Preview and create items": [
+        "Anteprima e crea esemplari"
+      ],
+      "Previous": [
+        "Precedente"
+      ],
+      "Primary language": [
+        "Lingua principale"
+      ],
+      "Print label": [
+        "Stampa etichetta"
+      ],
+      "Print labels": [
+        "Stampa etichette"
+      ],
+      "Private": [
+        "Riservato"
+      ],
+      "Private files always require authorisation and are excluded from public sheets and PDF.": [
+        "I file riservati passano sempre dal controllo dei permessi e non vengono inseriti nella pagina pubblica o nel PDF."
+      ],
+      "Private to reviewers": [
+        "Riservato ai revisori"
+      ],
+      "Private — excluded from public content": [
+        "Riservato — escluso dalla scheda pubblica"
+      ],
+      "Product": [
+        "Prodotto"
+      ],
+      "Proposal added to the draft. Publishing requires a new revision.": [
+        "Proposta inserita nella bozza. La pubblicazione richiede una nuova revisione."
+      ],
+      "Proposals and requests": [
+        "Proposte e richieste"
+      ],
+      "Public": [
+        "Pubblico"
+      ],
+      "Publish": [
+        "Pubblicare"
+      ],
+      "Publish a new revision": [
+        "Pubblica una nuova revisione"
+      ],
+      "Publish and show QR": [
+        "Pubblica e mostra QR"
+      ],
+      "Publish revision": [
+        "Pubblica revisione"
+      ],
+      "Publish selected": [
+        "Pubblica selezionati"
+      ],
+      "Publish the first revision to activate the public link and download its QR.": [
+        "Pubblica la prima revisione per attivare il collegamento pubblico e scaricare il QR."
+      ],
+      "Publish the sheet and download the product QR.": [
+        "Pubblica la scheda e scarica il QR da applicare al prodotto."
+      ],
+      "Published": [
+        "Pubblicate"
+      ],
+      "Published revisions": [
+        "Revisioni pubblicate"
+      ],
+      "Queued": [
+        "In coda"
+      ],
+      "Queued operations": [
+        "Operazioni in coda"
+      ],
+      "Reason": [
+        "Motivazione"
+      ],
+      "Reason (required for not applicable)": [
+        "Motivazione (necessaria se non applicabile)"
+      ],
+      "Recent activity": [
+        "Attività recenti"
+      ],
+      "Recent sheets": [
+        "Ultime schede"
+      ],
+      "Recipient email": [
+        "Email destinatario"
+      ],
+      "Reconciliation key": [
+        "Chiave di riconciliazione"
+      ],
+      "Reference": [
+        "Riferimento"
+      ],
+      "Refresh progress": [
+        "Aggiorna avanzamento"
+      ],
+      "Reject": [
+        "Rifiuta"
+      ],
+      "Reload the page or check your permissions.": [
+        "Ricarica la pagina o controlla i permessi."
+      ],
+      "Replaceable feet.": [
+        "Piedini sostituibili."
+      ],
+      "Report": [
+        "Rapporto"
+      ],
+      "Representative": [
+        "Incaricato"
+      ],
+      "Request supplier data": [
+        "Richiedi dati al fornitore"
+      ],
+      "Required fields": [
+        "Campi richiesti"
+      ],
+      "Responses and requests": [
+        "Risposte e richieste"
+      ],
+      "Restore an archive": [
+        "Ripristina un archivio"
+      ],
+      "Restore inheritance for these fields": [
+        "Ripristina eredità per questi campi"
+      ],
+      "Restore prepared as a draft. Review it before publishing.": [
+        "Ripristino preparato in bozza. Verifica prima di pubblicare."
+      ],
+      "Restore to a new draft": [
+        "Ripristina in una nuova bozza"
+      ],
+      "Result": [
+        "Esito"
+      ],
+      "Retailer": [
+        "Rivenditore"
+      ],
+      "Review and share": [
+        "Controlla e condividi"
+      ],
+      "Review date": [
+        "Data del controllo"
+      ],
+      "Revision ": [
+        "Revisione "
+      ],
+      "Revision published. The QR is ready.": [
+        "Revisione pubblicata. Il QR è pronto."
+      ],
+      "Revisions and activity": [
+        "Revisioni e attività"
+      ],
+      "Revisions and requests": [
+        "Revisioni e richieste"
+      ],
+      "Revoke link": [
+        "Revoca collegamento"
+      ],
+      "Role": [
+        "Ruolo"
+      ],
+      "Row": [
+        "Riga"
+      ],
+      "Row ": [
+        "Riga "
+      ],
+      "Running": [
+        "In corso"
+      ],
+      "SKU": [
+        "SKU"
+      ],
+      "Samples created as drafts. Items are in the job queue.": [
+        "Esempi creati in bozza. Gli esemplari sono nella coda operazioni."
+      ],
+      "Save a new template version": [
+        "Salva nuova versione del modello"
+      ],
+      "Save draft": [
+        "Salva bozza"
+      ],
+      "Save settings": [
+        "Salva impostazioni"
+      ],
+      "Search": [
+        "Cerca"
+      ],
+      "Search compatible products or spare parts": [
+        "Cerca ricambi o prodotti compatibili"
+      ],
+      "Search name or reference…": [
+        "Cerca nome o riferimento…"
+      ],
+      "Search parent product": [
+        "Cerca il prodotto padre"
+      ],
+      "Search products": [
+        "Cerca un prodotto"
+      ],
+      "Sector": [
+        "Settore"
+      ],
+      "Select ": [
+        "Seleziona "
+      ],
+      "Select a ZIP archive.": [
+        "Seleziona un archivio ZIP."
+      ],
+      "Select a product": [
+        "Seleziona un prodotto"
+      ],
+      "Select all rows": [
+        "Seleziona tutte le righe"
+      ],
+      "Select at least one sheet.": [
+        "Seleziona almeno una scheda."
+      ],
+      "Select local overrides to remove, then save the draft.": [
+        "Seleziona i valori da rimuovere dalla variante, poi salva la bozza."
+      ],
+      "Select published sheets to print.": [
+        "Seleziona le schede pubblicate da stampare."
+      ],
+      "Select shared documents. Publication freezes their current exact versions.": [
+        "Seleziona i documenti condivisi. La pubblicazione conserverà la versione esatta attuale."
+      ],
+      "Send email": [
+        "Invia email"
+      ],
+      "Send using company email": [
+        "Invio tramite email aziendale"
+      ],
+      "Set up your company": [
+        "Configura l’azienda"
+      ],
+      "Settings": [
+        "Impostazioni"
+      ],
+      "Settings saved. They apply to new revisions.": [
+        "Impostazioni salvate. Si applicheranno alle nuove revisioni."
+      ],
+      "Shared document update": [
+        "Aggiornamento documento condiviso"
+      ],
+      "Sheet design": [
+        "Design della scheda"
+      ],
+      "Sheet preview": [
+        "Anteprima della scheda"
+      ],
+      "Sheet review": [
+        "Controllo della scheda"
+      ],
+      "Sort": [
+        "Ordina"
+      ],
+      "Source": [
+        "Fonte"
+      ],
+      "Spare parts and support": [
+        "Ricambi e assistenza"
+      ],
+      "Specifications": [
+        "Caratteristiche"
+      ],
+      "Standalone catalogue": [
+        "Catalogo autonomo"
+      ],
+      "Start with the essentials. Complete the sheet before publishing.": [
+        "Parti dai dati essenziali. Potrai completare la scheda prima di pubblicarla."
+      ],
+      "Start with your company": [
+        "Partiamo dalla tua azienda"
+      ],
+      "Status": [
+        "Stato"
+      ],
+      "Support email": [
+        "Email assistenza"
+      ],
+      "Template selected. Save the draft or customize the design before publishing.": [
+        "Template scelto. Salva la bozza o personalizza il design prima di pubblicare."
+      ],
+      "Template updated": [
+        "Modello aggiornato"
+      ],
+      "Test environment or site clone detected. Production submissions are blocked.": [
+        "Ambiente di prova o copia del sito rilevata. Gli invii di produzione sono bloccati."
+      ],
+      "Textile": [
+        "Tessile"
+      ],
+      "Textiles · voluntary": [
+        "Tessile · volontario"
+      ],
+      "The administrative archive contains drafts and private files. Store it securely.": [
+        "L’archivio amministrativo contiene bozze e documenti riservati: conservalo in un posto sicuro."
+      ],
+      "The operation could not be completed.": [
+        "Operazione non riuscita."
+      ],
+      "The public page keeps the files from the published revision. Prepare new drafts, review them and publish approved revisions.": [
+        "La pagina pubblica conserva i file della revisione pubblicata. Prepara le nuove bozze, controllale e pubblica le revisioni approvate."
+      ],
+      "The public version will contain the current data and documents. Previous revisions are retained.": [
+        "La versione pubblica comprenderà i dati e i documenti attuali. Le revisioni precedenti saranno conservate."
+      ],
+      "The supplier sees only the product name and selected fields. Their response remains a proposal for review.": [
+        "Il fornitore vedrà solo il nome del prodotto e i campi selezionati. La risposta resterà una proposta da revisionare."
+      ],
+      "There are unsaved changes. Leave the draft?": [
+        "Ci sono modifiche non salvate. Vuoi uscire dalla bozza?"
+      ],
+      "These sheets are voluntary. Publishing or completing fields does not establish product regulatory compliance.": [
+        "Le schede sono volontarie. La pubblicazione e la compilazione dei campi non attestano la conformità normativa del prodotto."
+      ],
+      "This creates clearly marked EXAMPLE drafts: a chair, two variants, a spare part, a batch and three serial-numbered items. Nothing is published automatically.": [
+        "Verranno create schede chiaramente contrassegnate ESEMPIO: una sedia, due varianti, un ricambio, un lotto e tre seriali. Nessuna pubblicazione automatica."
+      ],
+      "Title": [
+        "Titolo"
+      ],
+      "Total sheets": [
+        "Schede totali"
+      ],
+      "Translation language": [
+        "Lingua della traduzione"
+      ],
+      "Translation prepared. Save the draft to keep it.": [
+        "Traduzione preparata. Salva la bozza per conservarla."
+      ],
+      "Translations": [
+        "Traduzioni"
+      ],
+      "Type": [
+        "Tipo"
+      ],
+      "UTF-8 · comma, semicolon or tab · up to 20,000 rows. SKU and UUID are separate keys.": [
+        "UTF-8 · virgola, punto e virgola o tabulazione · massimo 20.000 righe. SKU e UUID sono chiavi distinte."
+      ],
+      "Unable to load the panel": [
+        "Impossibile caricare il pannello"
+      ],
+      "Unsaved changes": [
+        "Modifiche da salvare"
+      ],
+      "Untitled": [
+        "Senza titolo"
+      ],
+      "Update": [
+        "Aggiorna"
+      ],
+      "Update only": [
+        "Solo aggiorna"
+      ],
+      "Upload a document": [
+        "Carica un documento"
+      ],
+      "Upload and retain version": [
+        "Carica e conserva versione"
+      ],
+      "Upload manuals and declarations once. Previous versions remain in history.": [
+        "Carica manuali e dichiarazioni una sola volta. Le versioni precedenti restano nello storico."
+      ],
+      "Use this image": [
+        "Usa questa immagine"
+      ],
+      "Use this template": [
+        "Usa questo template"
+      ],
+      "Valid for (days)": [
+        "Validità (giorni)"
+      ],
+      "Validate archive": [
+        "Verifica archivio"
+      ],
+      "Variant": [
+        "Variante"
+      ],
+      "Variant #": [
+        "Variante #"
+      ],
+      "Variant, batch or item": [
+        "Variante, lotto o esemplare"
+      ],
+      "Version": [
+        "Versione"
+      ],
+      "View all passports": [
+        "Vedi tutti i passaporti"
+      ],
+      "View impact": [
+        "Vedi impatto"
+      ],
+      "Visibility": [
+        "Visibilità"
+      ],
+      "Visual template": [
+        "Template grafico"
+      ],
+      "Voluntary sheet · no automatic certification.": [
+        "Scheda volontaria · nessuna certificazione automatica."
+      ],
+      "WooCommerce is not active. The standalone catalogue remains available.": [
+        "WooCommerce non è attivo. Il catalogo autonomo resta disponibile."
+      ],
+      "WooCommerce: ": [
+        "WooCommerce: "
+      ],
+      "Your catalogue starts here": [
+        "Il tuo catalogo inizia qui"
+      ],
+      "Your passports": [
+        "I tuoi passaporti"
+      ],
+      "ZIP archive": [
+        "Archivio ZIP"
+      ],
+      "selected": [
+        "selezionati"
+      ],
+      "sheets": [
+        "schede"
+      ],
+      "“Internally reviewed” means a company review, not certification of truth or product compliance.": [
+        "“Verificato internamente” indica il controllo svolto dall’azienda, senza certificare veridicità o conformità del prodotto."
+      ]
+    }
+  }
+}

@@ -26,7 +26,7 @@ final class Api
                         break;
                     }
                 }
-                if (!$field && str_contains($e->getMessage(), 'nome del prodotto')) {
+                if (!$field && str_contains($e->getMessage(), __('product name', 'giuliomax-product-passport'))) {
                     $field = 'name';
                 }
                 return new \WP_Error('gmpp_invalid', $e->getMessage(), ['status' => 422,'field' => $field]);
@@ -39,7 +39,7 @@ final class Api
     {
         $row = Passport::get($id);
         if (!Store::can($row, $cap)) {
-            throw new \DomainException('Passaporto non accessibile.');
+            throw new \DomainException(__('Passport is not accessible.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
         } return $row;
     }
     public function routes(): void
@@ -108,14 +108,14 @@ final class Api
         $this->route('/passports/(?P<id>\d+)/duplicate', 'POST', static function ($r) {
             $row = self::access((int)$r['id']);
             $data = $row['data'];
-            $data['name'] = ($data['name'] ?? 'Prodotto') . ' — copia';
+            $data['name'] = ($data['name'] ?? __('Product', 'giuliomax-product-passport')) . ' — copia';
             unset($data['sku'], $data['serial'], $data['batch'], $data['external_id']);
             return Passport::create(['data' => $data,'kind' => $row['kind'],'parent_id' => $row['parent_id']]);
         });
         $this->route('/passports/(?P<id>\d+)/history', 'GET', static function ($r) {
             self::access((int)$r['id']);
             global $wpdb;
-            return ['revisions' => $wpdb->get_results($wpdb->prepare('SELECT id,digest,reason,created_at FROM %i WHERE passport_id=%d ORDER BY id DESC', Store::table('revisions'), (int)$r['id']), ARRAY_A),'events' => $wpdb->get_results($wpdb->prepare('SELECT action,detail,created_at FROM %i WHERE passport_id=%d ORDER BY id DESC LIMIT 100', Store::table('events'), (int)$r['id']), ARRAY_A)];
+            return [__('revisions', 'giuliomax-product-passport') => $wpdb->get_results($wpdb->prepare('SELECT id,digest,reason,created_at FROM %i WHERE passport_id=%d ORDER BY id DESC', Store::table(__('revisions', 'giuliomax-product-passport')), (int)$r['id']), ARRAY_A),'events' => $wpdb->get_results($wpdb->prepare('SELECT action,detail,created_at FROM %i WHERE passport_id=%d ORDER BY id DESC LIMIT 100', Store::table('events'), (int)$r['id']), ARRAY_A)];
         });
         $this->route('/passports/(?P<id>\d+)/restore', 'POST', static function ($r) {
             self::access((int)$r['id'], 'gmpp_review');
@@ -133,16 +133,16 @@ final class Api
             $rows = [];
             $action = (string)$r['action'];
             if (!in_array($action, ['publish','archive','review'], true)) {
-                throw new \InvalidArgumentException('Azione non valida.');
+                throw new \InvalidArgumentException(__('Invalid action.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
             }
             foreach (array_slice((array)$r['rows'], 0, 10000) as $item) {
                 $row = self::access((int)$item['id'], $action === 'review' ? 'gmpp_review' : 'gmpp_publish');
                 $rows[] = ['id' => (int)$row['id'],'version' => (int)$item['version']];
             }
             if (!$rows) {
-                throw new \InvalidArgumentException('Seleziona almeno una scheda.');
+                throw new \InvalidArgumentException(__('Select at least one sheet.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
             }
-            return Jobs::create('bulk', ['rows' => $rows,'action' => $action,'reason' => sanitize_text_field($r['reason'] ?: 'Aggiornamento massivo')], count($rows));
+            return Jobs::create('bulk', ['rows' => $rows,'action' => $action,'reason' => sanitize_text_field($r['reason'] ?: __('Bulk update', 'giuliomax-product-passport'))], count($rows));
         });
         $this->route('/settings', 'GET', static fn()=>['settings' => Store::settings(),'connections' => Connections::status(),'profiles' => Profiles::all(),'clone' => Store::is_clone(),'woo' => function_exists('wc_get_product')], 'gmpp_manage');
         $this->route('/profiles/(?P<profile>generic|furniture|textile)', 'PUT', static fn($r)=>Profiles::save($r['profile'], (array)$r->get_json_params()), 'gmpp_manage');
@@ -153,9 +153,6 @@ final class Api
                 if (isset($s[$key])) {
                     $old[$key] = sanitize_text_field($s[$key]);
                 }
-            }
-            if (isset($s['ui_language'])) {
-                $old['ui_language'] = $s['ui_language'] === 'it' ? 'it' : 'en';
             }
             if (isset($s['email'])) {
                 $old['email'] = sanitize_email($s['email']);
@@ -208,7 +205,7 @@ final class Api
             $key = 'gmpp_import_' . get_current_user_id() . '_' . sanitize_text_field($r['token']);
             $p = get_transient($key);
             if (!$p) {
-                throw new \InvalidArgumentException('Anteprima scaduta. Ripeti la verifica.');
+                throw new \InvalidArgumentException(__('Preview expired. Run the check again.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
             } delete_transient($key);
             return Jobs::create('csv', $p, count($p['rows']));
         });
@@ -219,7 +216,7 @@ final class Api
         $this->route('/jobs/(?P<id>\d+)', 'GET', static function ($r) {
             $j = Store::one('jobs', (int)$r['id']);
             if (!$j || (int)$j['owner'] !== get_current_user_id()) {
-                throw new \DomainException('Operazione non accessibile.');
+                throw new \DomainException(__('Job is not accessible.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
             } unset($j['payload']);
             $j['report'] = Store::decode($j['report']);
             return $j;
@@ -227,7 +224,7 @@ final class Api
         $this->route('/jobs/(?P<id>\d+)/run', 'POST', static function ($r) {
             $j = Store::one('jobs', (int)$r['id']);
             if (!$j || (int)$j['owner'] !== get_current_user_id()) {
-                throw new \DomainException('Operazione non accessibile.');
+                throw new \DomainException(__('Job is not accessible.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
             } Jobs::tick();
             return ['ok' => true];
         });
@@ -241,7 +238,7 @@ final class Api
         $this->route('/requests/(?P<id>\d+)/revoke', 'POST', static function ($r) {
             $req = Store::one('requests', (int)$r['id']);
             if (!$req) {
-                throw new \OutOfBoundsException('Richiesta non trovata.');
+                throw new \OutOfBoundsException(__('Request not found.', 'giuliomax-product-passport')); // phpcs:ignore WordPress.Security.EscapeOutput.ExceptionNotEscaped -- Returned as structured data; HTML callers escape the message.
             } self::access((int)$req['passport_id'], 'gmpp_review');
             global $wpdb;
             $wpdb->update(Store::table('requests'), ['state' => 'revoked'], ['id' => (int)$r['id']]);
@@ -263,7 +260,7 @@ final class Api
         register_rest_route('gmpp/v1', '/public/(?P<uuid>[a-f0-9-]{36})', ['methods' => 'GET','permission_callback' => '__return_true','callback' => static function ($r) {
             $snap = Passport::published($r['uuid']);
             if (!$snap) {
-                return new \WP_Error('not_found', 'Scheda non disponibile.', ['status' => 404]);
+                return new \WP_Error('not_found', __('Sheet not available.', 'giuliomax-product-passport'), ['status' => 404]);
             } return new \WP_REST_Response($snap, 200, ['Cache-Control' => 'no-cache','X-Content-Type-Options' => 'nosniff']);
         }]);
     }

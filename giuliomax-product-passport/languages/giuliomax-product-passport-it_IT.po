@@ -1,0 +1,2779 @@
+# Giuliomax Product Passport. GPL-2.0-or-later.
+msgid ""
+msgstr "Project-Id-Version: Giuliomax Product Passport 1.1.1\nReport-Msgid-Bugs-To: https://github.com/Giulio001/eu-passport/issues\nPOT-Creation-Date: 2026-10-30 00:00+0000\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nX-Domain: giuliomax-product-passport\nLanguage: it_IT\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: assets/admin.js:213
+msgid "\nFictional test data."
+msgstr "\nDati fittizi di collaudo."
+
+#: assets/admin.js:141
+msgid " Empty fields should clear existing values"
+msgstr " I campi vuoti devono cancellare i valori esistenti"
+
+#: assets/admin.js:138
+msgid " Enable real supplier email (verified production only)"
+msgstr " Abilita invii email aziendali reali ai fornitori (solo su produzione verificata)"
+
+#: assets/admin.js:198
+msgid " affected sheets"
+msgstr " schede interessate"
+
+#: assets/admin.js:230
+msgid " affected sheets; nothing published automatically."
+msgstr " schede interessate; nessuna pubblicazione automatica."
+
+#: src/Passport.php:21
+msgid " characters."
+msgstr " caratteri."
+
+#: assets/admin.js:205
+msgid " documents · "
+msgstr " documenti · "
+
+#: assets/admin.js:206
+msgid " existing identities preserved."
+msgstr " identità già presenti conservate."
+
+#: assets/admin.js:187
+msgid " items will inherit data and documents from sheet #"
+msgstr " esemplari erediteranno dati e documenti dalla scheda #"
+
+#: src/Jobs.php:59
+msgid " missing."
+msgstr " mancante."
+
+#: assets/admin.js:206
+msgid " new sheets; "
+msgstr " nuove schede; "
+
+#: assets/admin.js:205
+msgid " revisions"
+msgstr " revisioni"
+
+#: assets/admin.js:204 assets/admin.js:232
+msgid " rows · "
+msgstr " righe · "
+
+#: assets/admin.js:232
+msgid " rows. Invalid rows will be skipped and included in the report."
+msgstr " righe. Le righe con errori saranno saltate e riportate nel rapporto."
+
+#: assets/designer.js:21
+msgid " saved · reusable across your products"
+msgstr " salvati · riutilizzabili sui tuoi prodotti"
+
+#: assets/admin.js:244
+msgid " selected"
+msgstr " selezionati"
+
+#: assets/admin.js:211
+msgid " sheets to review."
+msgstr " schede da rivalutare."
+
+#: assets/admin.js:205
+msgid " sheets · "
+msgstr " schede · "
+
+#: assets/admin.js:161
+msgid " sheets? The current revision will remain in history."
+msgstr " schede? La revisione attuale viene conservata nello storico."
+
+#: assets/admin.js:78
+msgid " · sheet copy"
+msgstr " · copia della scheda"
+
+#: assets/designer.js:24
+msgid " · unpublished draft"
+msgstr " · bozza non pubblicata"
+
+#: src/Schema.php:13
+msgid ". Ask your host to enable it, then reactivate the plugin."
+msgstr ". Chiedi al tuo hosting di abilitarla, poi riattiva il plugin."
+
+#: assets/designer.js:33
+msgid ". Publish a revision from the product editor to show it to customers."
+msgstr ". Pubblica una revisione dal prodotto per mostrarlo ai clienti."
+
+#: assets/designer.js:24
+msgid "01 / STYLE"
+msgstr "01 / STILE"
+
+#: assets/admin.js:138
+msgid "01 · Your company"
+msgstr "01 · La tua azienda"
+
+#: assets/designer.js:24
+msgid "02 / SECTIONS"
+msgstr "02 / SEZIONI"
+
+#: assets/admin.js:138
+msgid "02 · Your workflow"
+msgstr "02 · Come lavori"
+
+#: assets/designer.js:24
+msgid "03 / PREVIEW CONTENT"
+msgstr "03 / CONTENUTI IN ANTEPRIMA"
+
+#: assets/admin.js:138
+msgid "03 · Printing and email"
+msgstr "03 · Stampa ed email"
+
+#: src/Passport.php:21
+msgid ": use at most "
+msgstr ": usa al massimo "
+
+#: src/Passport.php:320
+msgid "; company details and document versions preserved."
+msgstr "; dati aziendali e versioni dei documenti conservati."
+
+#: src/Jobs.php:91
+msgid "A file can contain up to 20,000 rows."
+msgstr "Massimo 20.000 righe per file."
+
+#: assets/admin.js:134
+msgid "A home for your manuals."
+msgstr "Il posto giusto per i tuoi manuali."
+
+#: src/Passport.php:212
+msgid "A manual in the main sheet language is missing."
+msgstr "Manca un manuale nella lingua principale della scheda."
+
+#: src/Passport.php:113
+msgid "A model cannot inherit from another passport."
+msgstr "Un modello non può ereditare da un altro passaporto."
+
+#: src/Designs.php:20
+msgid "A neutral starting point: add sections and choose your style."
+msgstr "Una base neutra: aggiungi le sezioni e scegli il tuo stile."
+
+#: src/Documents.php:58
+msgid "A reviewer must update shared documents."
+msgstr "Un revisore deve aggiornare i documenti condivisi."
+
+#: assets/designer.js:21
+msgid "A sheet that feels like your brand."
+msgstr "Una scheda che ti somiglia."
+
+#: assets/designer.js:26
+msgid "A story, a detail, something useful…"
+msgstr "Una storia, un dettaglio, un’informazione utile…"
+
+#: assets/designer.js:33
+msgid "A template can contain up to 20 sections."
+msgstr "Massimo 20 sezioni per template."
+
+#: assets/admin.js:78
+msgid "A visual template for your content. The published page changes only with a new revision."
+msgstr "Un template grafico per presentare i tuoi contenuti. La pagina pubblicata cambia solo con una nuova revisione."
+
+#: assets/designer.js:24
+msgid "Accent"
+msgstr "Accento"
+
+#: assets/admin.js:138
+msgid "Accent colour"
+msgstr "Colore di accento"
+
+#: assets/admin.js:193
+msgid "Accept into draft"
+msgstr "Accetta nella bozza"
+
+#: src/Admin.php:58 src/Admin.php:89
+msgid "Access denied."
+msgstr "Accesso negato."
+
+#: assets/admin.js:138
+msgid "Action text keeps high contrast even with a light accent."
+msgstr "Il testo delle azioni resta ad alto contrasto anche con un colore chiaro."
+
+#: assets/admin.js:134 assets/admin.js:67
+msgid "Actions"
+msgstr "Azioni"
+
+#: assets/admin.js:134
+msgid "Actual file language"
+msgstr "Lingua reale del file"
+
+#: assets/designer.js:33
+msgid "Add a section"
+msgstr "Aggiungi una sezione"
+
+#: src/Passport.php:202
+msgid "Add care instructions if available."
+msgstr "Aggiungi le istruzioni di cura, se disponibili."
+
+#: assets/admin.js:57
+msgid "Add what matters"
+msgstr "Aggiungi ciò che serve"
+
+#: assets/admin.js:138
+msgid "Address"
+msgstr "Indirizzo"
+
+#: assets/admin.js:65
+msgid "All"
+msgstr "Tutti"
+
+#: assets/designer.js:14
+msgid "All changes saved"
+msgstr "Tutto salvato"
+
+#: assets/designer.js:26 assets/designer.js:37
+msgid "Always available"
+msgstr "Sempre disponibile"
+
+#: src/Jobs.php:105
+msgid "Ambiguous SKU: use UUID as the reconciliation key."
+msgstr "SKU ambiguo: usa UUID come chiave di riconciliazione."
+
+#: src/Connections.php:13
+msgid "An identifier scheme recognized by the profile, an endpoint and resolution testing. A local UUID has no automatic regulatory recognition."
+msgstr "Schema identificativo riconosciuto dal profilo, endpoint e prova di risoluzione. UUID locale privo di riconoscimento normativo automatico."
+
+#: assets/admin.js:64
+msgid "An organised catalogue independent of sales pages."
+msgstr "Un catalogo ordinato, indipendente dalle pagine di vendita."
+
+#: src/Documents.php:73
+msgid "Another user updated this document. Reload before uploading a new version."
+msgstr "Il documento è stato aggiornato da un altro utente. Ricarica prima di caricare una nuova versione."
+
+#: src/Jobs.php:155
+msgid "Another worker acquired this job."
+msgstr "Operazione acquisita da un altro processo."
+
+#: assets/designer.js:24
+msgid "Apply saves only the design to this product draft."
+msgstr "Il pulsante Applica salva solo il design nella bozza di questo prodotto."
+
+#: assets/admin.js:209
+msgid "Apply selected values to draft"
+msgstr "Applica i valori selezionati alla bozza"
+
+#: assets/designer.js:24
+msgid "Apply to draft"
+msgstr "Applica alla bozza"
+
+#: assets/admin.js:161
+msgid "Archive"
+msgstr "Archiviare"
+
+#: assets/admin.js:66
+msgid "Archive selected"
+msgstr "Archivia selezionati"
+
+#: assets/admin.js:250
+msgid "Archive too large (max 50 MB)."
+msgstr "Archivio troppo grande (max 50 MB)."
+
+#: assets/designer.js:26
+msgid "Automatic heading"
+msgstr "Titolo automatico"
+
+#: assets/admin.js:138
+msgid "Available templates: generic, furniture and textile. All are voluntary; no regulated profile is operational."
+msgstr "Modelli disponibili: generico, arredo e tessile. Tutti volontari; nessun profilo regolamentato è dichiarato operativo."
+
+#: assets/admin.js:84
+msgid "Back to list"
+msgstr "Torna all’elenco"
+
+#: assets/designer.js:33
+msgid "Back to product →"
+msgstr "Torna al prodotto →"
+
+#: assets/designer.js:24
+msgid "Background"
+msgstr "Sfondo"
+
+#: assets/admin.js:67 assets/admin.js:71 src/Designs.php:204 src/Pdf.php:18 src/PublicPage.php:134
+msgid "Batch"
+msgstr "Lotto"
+
+#: assets/admin.js:202
+msgid "Batch processed."
+msgstr "Lotto elaborato."
+
+#: src/Admin.php:31
+msgid "Batch reference"
+msgstr "Codice lotto"
+
+#: assets/admin.js:213
+msgid "Beech wood and fabric. Fictional data."
+msgstr "Legno di faggio e tessuto. Dati fittizi."
+
+#: src/Designs.php:146
+msgid "Beech wood frame with an upholstered seat. The company supplies the actual product information."
+msgstr "Struttura in legno di faggio. Seduta rivestita in tessuto. Le informazioni effettive vengono compilate dall’azienda."
+
+#: assets/admin.js:84
+msgid "Before sharing"
+msgstr "Prima di condividere"
+
+#: assets/admin.js:141
+msgid "Bring in your catalogue. Keep control of your data."
+msgstr "Il catalogo entra. I tuoi dati restano tuoi."
+
+#: src/Api.php:145
+msgid "Bulk update"
+msgstr "Aggiornamento massivo"
+
+#: assets/admin.js:175
+msgid "Bulk update confirmed"
+msgstr "Aggiornamento massivo confermato"
+
+#: assets/block.js:8
+msgid "Button"
+msgstr "Pulsante"
+
+#: assets/admin.js:141
+msgid "CSV file"
+msgstr "File CSV"
+
+#: src/Jobs.php:31
+msgid "CSV headers are missing."
+msgstr "CSV senza intestazioni."
+
+#: src/Jobs.php:35
+msgid "CSV headers must be unique."
+msgstr "Le intestazioni CSV devono essere univoche."
+
+#: assets/admin.js:147 assets/admin.js:71
+msgid "Cancel"
+msgstr "Annulla"
+
+#: assets/admin.js:12
+msgid "Cancelled"
+msgstr "Annullato"
+
+#: assets/designer.js:7 src/Admin.php:31
+msgid "Care and maintenance"
+msgstr "Cura e manutenzione"
+
+#: assets/admin.js:141
+msgid "Catalogue SKU (when unique)"
+msgstr "SKU nel catalogo (se univoco)"
+
+#: assets/admin.js:77
+msgid "Changes stay in draft until a new revision is published."
+msgstr "Le modifiche restano in bozza fino alla pubblicazione di una nuova revisione."
+
+#: assets/admin.js:141
+msgid "Check preview"
+msgstr "Controlla anteprima"
+
+#: src/Documents.php:37
+msgid "Choose a non-empty file up to 10 MB."
+msgstr "Usa un file non vuoto di massimo 10 MB."
+
+#: assets/admin.js:57
+msgid "Choose a product"
+msgstr "Scegli il prodotto"
+
+#: assets/admin.js:76
+msgid "Choose an image from the media library"
+msgstr "Scegli immagine dalla libreria"
+
+#: assets/designer.js:24
+msgid "Choose product photo"
+msgstr "Scegli foto prodotto"
+
+#: assets/admin.js:164 assets/designer.js:33
+msgid "Choose the product photo"
+msgstr "Scegli la foto del prodotto"
+
+#: assets/designer.js:21
+msgid "Choose your starting point"
+msgstr "Scegli il punto di partenza"
+
+#: src/Designs.php:146
+msgid "Clean lines, materials to understand and simple ways to make them last. All product information in one place."
+msgstr "Linee essenziali, materiali da conoscere e piccoli gesti per farli durare. Tutte le informazioni del prodotto, in un unico posto."
+
+#: assets/admin.js:213
+msgid "Clean with a soft, slightly damp cloth."
+msgstr "Pulisci con un panno morbido leggermente umido."
+
+#: assets/admin.js:155 assets/designer.js:31
+msgid "Close"
+msgstr "Chiudi"
+
+#: src/Designs.php:146
+msgid "Collection"
+msgstr "Collezione"
+
+#: assets/admin.js:65
+msgid "Columns"
+msgstr "Colonne"
+
+#: src/Passport.php:285
+msgid "Commercial archive"
+msgstr "Archiviazione commerciale"
+
+#: assets/admin.js:210
+msgid "Commercial data copied to the draft."
+msgstr "Dati commerciali acquisiti nella bozza."
+
+#: assets/designer.js:24
+msgid "Compact"
+msgstr "Compatta"
+
+#: src/Designs.php:19
+msgid "Compact and precise, with documents at hand."
+msgstr "Compatto e preciso, con i documenti subito disponibili."
+
+#: assets/designer.js:24
+msgid "Compact header"
+msgstr "Testata compatta"
+
+#: assets/admin.js:138
+msgid "Company name"
+msgstr "Nome azienda"
+
+#: src/Designs.php:242
+msgid "Company-declared data. This is not a certification."
+msgstr "Dato dichiarato dall’azienda. Non è una certificazione."
+
+#: src/Woo.php:52
+msgid "Compare commercial data: no changes are applied automatically."
+msgstr "Confronta i dati commerciali: nessuna modifica viene applicata automaticamente."
+
+#: assets/admin.js:209
+msgid "Compare commercial updates"
+msgstr "Confronta aggiornamenti commerciali"
+
+#: src/PublicPage.php:246
+msgid "Complete only the requested fields. Your response will be reviewed."
+msgstr "Compila solo i dati richiesti. La risposta verrà sottoposta a revisione."
+
+#: src/Passport.php:195
+msgid "Complete the data required by your template: "
+msgstr "Completa il dato richiesto dal tuo modello: "
+
+#: src/Suppliers.php:86
+msgid "Complete the requested information before the deadline:\n"
+msgstr "Completa le informazioni richieste entro la scadenza:\n"
+
+#: assets/admin.js:77
+msgid "Complete the sheet"
+msgstr "Completa la scheda"
+
+#: assets/admin.js:12
+msgid "Completed"
+msgstr "Completato"
+
+#: assets/admin.js:138
+msgid "Configure your company, appearance and workflow."
+msgstr "Configura azienda, aspetto e modalità di lavoro."
+
+#: assets/admin.js:161
+msgid "Confirm impact"
+msgstr "Conferma impatto"
+
+#: assets/admin.js:232
+msgid "Confirm import"
+msgstr "Conferma importazione"
+
+#: assets/admin.js:161
+msgid "Confirm operation"
+msgstr "Conferma operazione"
+
+#: assets/admin.js:205
+msgid "Confirm restore"
+msgstr "Conferma ripristino"
+
+#: src/Passport.php:265
+msgid "Conflict: reload the sheet before publishing."
+msgstr "Conflitto: ricarica la scheda prima di pubblicare."
+
+#: src/Passport.php:181
+msgid "Conflict: the sheet has changed or the reference is already in use. Reload before saving."
+msgstr "Conflitto: la scheda è stata modificata oppure il riferimento è già utilizzato. Ricarica prima di salvare."
+
+#: src/Designs.php:256 src/PublicPage.php:168
+msgid "Contact support"
+msgstr "Contatta l’assistenza"
+
+#: assets/designer.js:24
+msgid "Contemporary"
+msgstr "Contemporanei"
+
+#: assets/designer.js:26
+msgid "Content comes from product data. Empty sections are hidden on the public page."
+msgstr "Il contenuto arriva dai dati del prodotto. Le sezioni vuote non vengono mostrate al pubblico."
+
+#: assets/admin.js:147
+msgid "Continue now"
+msgstr "Continua ora"
+
+#: assets/admin.js:141
+msgid "Controlled imports and portable archives, with no arbitrary remote downloads."
+msgstr "Importazioni controllate e archivi portabili, senza scaricare file da indirizzi remoti."
+
+#: assets/admin.js:172
+msgid "Copy created with a new identity. Enter its reference."
+msgstr "Copia creata con una nuova identità. Inserisci il suo riferimento."
+
+#: assets/admin.js:190 assets/admin.js:84
+msgid "Copy link"
+msgstr "Copia collegamento"
+
+#: assets/admin.js:190
+msgid "Copy this link and send it to the supplier. It is not stored in plain text: create a new request and revoke the previous one to replace it."
+msgstr "Copia questo collegamento e invialo al fornitore. Non viene conservato in chiaro: per sostituirlo crea una nuova richiesta e revoca la precedente."
+
+#: assets/designer.js:24
+msgid "Corners"
+msgstr "Angoli"
+
+#: assets/admin.js:232
+msgid "Create"
+msgstr "Crea"
+
+#: assets/admin.js:67
+msgid "Create a passport"
+msgstr "Crea un passaporto"
+
+#: assets/admin.js:58
+msgid "Create a sheet"
+msgstr "Crea una scheda"
+
+#: assets/admin.js:71
+msgid "Create and complete"
+msgstr "Crea e completa"
+
+#: assets/admin.js:141
+msgid "Create and update"
+msgstr "Crea e aggiorna"
+
+#: assets/admin.js:57
+msgid "Create it, import CSV or link a WooCommerce product."
+msgstr "Crealo, importalo da CSV o collegalo a WooCommerce."
+
+#: assets/admin.js:187
+msgid "Create items"
+msgstr "Crea esemplari"
+
+#: assets/admin.js:82
+msgid "Create items in bulk"
+msgstr "Crea esemplari in serie"
+
+#: assets/admin.js:141
+msgid "Create only"
+msgstr "Solo crea"
+
+#: src/Woo.php:75
+msgid "Create or link a digital sheet"
+msgstr "Crea o collega scheda digitale"
+
+#: assets/admin.js:189
+msgid "Create private link"
+msgstr "Crea collegamento riservato"
+
+#: assets/admin.js:212
+msgid "Create sample catalogue data"
+msgstr "Crea esempi nel catalogo"
+
+#: assets/admin.js:71
+msgid "Create the first connection."
+msgstr "Crea il primo collegamento."
+
+#: assets/admin.js:54
+msgid "Create useful product sheets, share documents and put support one scan away."
+msgstr "Crea schede utili, condividi documenti e porta l’assistenza a una scansione di distanza."
+
+#: assets/admin.js:138 assets/admin.js:58
+msgid "Create your first passport"
+msgstr "Crea il primo passaporto"
+
+#: assets/admin.js:78
+msgid "Current classic layout"
+msgstr "Classico attuale"
+
+#: src/Designs.php:90
+msgid "Custom template not found."
+msgstr "Template personalizzato non trovato."
+
+#: assets/designer.js:7
+msgid "Custom text"
+msgstr "Testo personalizzato"
+
+#: assets/designer.js:24
+msgid "Customize"
+msgstr "Personalizza"
+
+#: assets/designer.js:21
+msgid "Customize a template and save it here to reuse it."
+msgstr "Personalizza un template e salvalo qui per riutilizzarlo."
+
+#: assets/admin.js:78
+msgid "Customize design"
+msgstr "Personalizza il design"
+
+#: src/Admin.php:31 src/Pdf.php:18
+msgid "Data date"
+msgstr "Data del dato"
+
+#: assets/admin.js:79
+msgid "Data quality and provenance"
+msgstr "Qualità e provenienza dei dati"
+
+#: assets/admin.js:134 src/PublicPage.php:179
+msgid "Date"
+msgstr "Data"
+
+#: assets/admin.js:134
+msgid "Declaration"
+msgstr "Dichiarazione"
+
+#: src/Designs.php:180
+msgid "Declared environmental data"
+msgstr "Dati ambientali dichiarati"
+
+#: src/PublicPage.php:179
+msgid "Declared environmental information"
+msgstr "Informazioni ambientali dichiarate"
+
+#: src/Admin.php:31
+msgid "Declared environmental value"
+msgstr "Valore ambientale dichiarato"
+
+#: assets/admin.js:138
+msgid "Default text for new sheets"
+msgstr "Testi iniziali per le nuove schede"
+
+#: assets/admin.js:138
+msgid "Define which data is required before publishing a sheet. These are internal company rules, not certification criteria."
+msgstr "Definisci quali dati richiedere prima di pubblicare una scheda. Sono regole interne dell’azienda, senza valore di certificazione."
+
+#: assets/designer.js:21
+msgid "Delete"
+msgstr "Elimina"
+
+#: assets/designer.js:33
+msgid "Delete from library"
+msgstr "Elimina dalla libreria"
+
+#: assets/designer.js:33
+msgid "Delete this template?"
+msgstr "Eliminare il template?"
+
+#: assets/designer.js:7 src/Admin.php:31 src/Pdf.php:18
+msgid "Description"
+msgstr "Descrizione"
+
+#: assets/admin.js:49 src/Admin.php:25
+msgid "Design & templates"
+msgstr "Design e template"
+
+#: assets/designer.js:33
+msgid "Design applied to the draft for "
+msgstr "Design applicato alla bozza di "
+
+#: assets/designer.js:21
+msgid "Design changes the appearance. You stay in control of data, documents and publishing."
+msgstr "Il design cambia l’aspetto. Dati, documenti e pubblicazione rimangono sotto il tuo controllo."
+
+#: src/Designs.php:166
+msgid "Design preview"
+msgstr "Anteprima design"
+
+#: assets/admin.js:179 assets/designer.js:24
+msgid "Desktop"
+msgstr "Desktop"
+
+#: src/Designs.php:180
+msgid "Details"
+msgstr "In dettaglio"
+
+#: assets/admin.js:12
+msgid "Discontinued"
+msgstr "Fuori produzione"
+
+#: assets/block.js:8
+msgid "Display"
+msgstr "Mostra"
+
+#: assets/admin.js:134
+msgid "Document"
+msgstr "Documento"
+
+#: assets/admin.js:134
+msgid "Document library"
+msgstr "Libreria documenti"
+
+#: src/Documents.php:55
+msgid "Document not found."
+msgstr "Documento non trovato."
+
+#: src/Portable.php:101
+msgid "Document not verified."
+msgstr "Documento non verificato."
+
+#: assets/admin.js:230
+msgid "Document saved. "
+msgstr "Documento conservato. "
+
+#: assets/admin.js:49 assets/admin.js:78 assets/admin.js:80 src/Admin.php:25
+msgid "Documents"
+msgstr "Documenti"
+
+#: assets/admin.js:134
+msgid "Download"
+msgstr "Scarica"
+
+#: src/PublicPage.php:199
+msgid "Download PDF"
+msgstr "Scarica la scheda PDF"
+
+#: assets/admin.js:141
+msgid "Download portable ZIP archive"
+msgstr "Scarica archivio portabile ZIP"
+
+#: assets/admin.js:12
+msgid "Draft"
+msgstr "Bozza"
+
+#: assets/designer.js:33
+msgid "Draft photo updated. The published sheet is unchanged."
+msgstr "Foto aggiornata nella bozza. La scheda pubblicata è invariata."
+
+#: assets/admin.js:179
+msgid "Draft preview"
+msgstr "Anteprima della bozza"
+
+#: src/PublicPage.php:87
+msgid "Draft preview · visible only to authorized users"
+msgstr "Anteprima della bozza · visibile solo agli utenti autorizzati"
+
+#: assets/admin.js:46 assets/admin.js:83
+msgid "Draft saved"
+msgstr "Bozza salvata"
+
+#: assets/admin.js:229
+msgid "Draft saved. The public version is unchanged."
+msgstr "Bozza salvata. La versione pubblica è invariata."
+
+#: assets/admin.js:209
+msgid "Draft: "
+msgstr "Bozza: "
+
+#: assets/admin.js:56
+msgid "Drafts to complete"
+msgstr "Bozze da completare"
+
+#: assets/designer.js:26
+msgid "Drag"
+msgstr "Trascina"
+
+#: assets/designer.js:26
+msgid "Drag to reorder"
+msgstr "Trascina per riordinare"
+
+#: assets/designer.js:24
+msgid "Drag to reorder or use the arrows. Click a section to customize it."
+msgstr "Trascina per riordinare o usa le frecce. Clicca una sezione per personalizzarla."
+
+#: assets/admin.js:67
+msgid "Duplicate"
+msgstr "Duplica"
+
+#: src/Jobs.php:63
+msgid "Duplicate key in the file."
+msgstr "Chiave ripetuta nel file."
+
+#: src/Designs.php:146
+msgid "Dust with a soft cloth. Refer to the product manual for complete instructions."
+msgstr "Rimuovere la polvere con un panno morbido. Per le istruzioni complete, consultare il manuale del prodotto."
+
+#: src/Connections.php:11
+msgid "EU DPP registry"
+msgstr "Registro europeo DPP"
+
+#: assets/admin.js:213
+msgid "EXAMPLE · Alba Natural"
+msgstr "ESEMPIO · Alba naturale"
+
+#: assets/admin.js:213
+msgid "EXAMPLE · Alba Walnut"
+msgstr "ESEMPIO · Alba noce"
+
+#: assets/admin.js:213
+msgid "EXAMPLE · Alba chair"
+msgstr "ESEMPIO · Sedia Alba"
+
+#: assets/admin.js:213
+msgid "EXAMPLE · Manual "
+msgstr "ESEMPIO · Manuale "
+
+#: assets/admin.js:213
+msgid "EXAMPLE · Spare foot"
+msgstr "ESEMPIO · Piedino di ricambio"
+
+#: assets/admin.js:213
+msgid "EXAMPLE — manual "
+msgstr "ESEMPIO / EXAMPLE — manuale "
+
+#: assets/admin.js:138
+msgid "Editable information templates"
+msgstr "Modelli informativi personalizzabili"
+
+#: assets/designer.js:24 src/Designs.php:17
+msgid "Editorial"
+msgstr "Editoriali"
+
+#: src/Designs.php:17
+msgid "Elegant typography with a catalogue feel."
+msgstr "Tipografia elegante e ritmo da catalogo."
+
+#: assets/admin.js:192
+msgid "Email handed to the company mail transport."
+msgstr "Email affidata al trasporto aziendale."
+
+#: assets/admin.js:138
+msgid "Email is disabled initially. WP-Cron depends on visits: configure system cron for reliable jobs or run "
+msgstr "Gli invii sono disabilitati inizialmente. WP-Cron dipende dalle visite: per code affidabili configura il cron di sistema oppure "
+
+#: src/Portable.php:11
+msgid "Enable the PHP zip extension to create portable archives."
+msgstr "Abilita l’estensione PHP zip per creare archivi portabili."
+
+#: assets/designer.js:7 src/Designs.php:180 src/Pdf.php:18 src/PublicPage.php:159
+msgid "End of life"
+msgstr "Una seconda vita"
+
+#: src/Admin.php:31
+msgid "End of life and disposal"
+msgstr "Fine vita e smaltimento"
+
+#: src/Documents.php:62
+msgid "Enter a document title up to 255 characters."
+msgstr "Inserisci un titolo del documento di massimo 255 caratteri."
+
+#: src/Passport.php:254
+msgid "Enter a reason for this revision."
+msgstr "Indica una motivazione per la revisione."
+
+#: assets/admin.js:187
+msgid "Enter at least one serial number."
+msgstr "Inserisci almeno un seriale."
+
+#: assets/admin.js:82
+msgid "Enter available translations only. Documents always show their actual language."
+msgstr "Inserisci solo le traduzioni disponibili. I documenti mantengono sempre la loro lingua effettiva."
+
+#: assets/admin.js:55
+msgid "Enter company details once. New sheets can reuse them."
+msgstr "Inserisci il nome e i contatti una sola volta. Li riutilizzeremo nelle nuove schede."
+
+#: assets/admin.js:138
+msgid "Enter once. Reuse later."
+msgstr "Una volta sola. Poi si riutilizza."
+
+#: assets/admin.js:104 src/Passport.php:190
+msgid "Enter the product name."
+msgstr "Inserisci il nome del prodotto."
+
+#: src/Passport.php:199
+msgid "Enter your company name in Settings."
+msgstr "Inserisci il nome dell’azienda nelle impostazioni."
+
+#: assets/designer.js:7
+msgid "Environmental data"
+msgstr "Dati ambientali"
+
+#: assets/admin.js:79
+msgid "Environmental data and evidence"
+msgstr "Dati ambientali ed evidenze"
+
+#: src/Pdf.php:18
+msgid "Environmental value"
+msgstr "Valore ambientale"
+
+#: assets/admin.js:84
+msgid "Essential information is present."
+msgstr "I dati essenziali sono presenti."
+
+#: assets/admin.js:134
+msgid "Evidence"
+msgstr "Evidenza"
+
+#: src/Portable.php:78
+msgid "Existing identities are preserved without overwriting; new data is imported."
+msgstr "Le identità esistenti vengono conservate senza sovrascrittura; i nuovi dati vengono importati."
+
+#: src/Designs.php:230 src/PublicPage.php:188
+msgid "Expiry date passed"
+msgstr "Data di scadenza superata"
+
+#: src/Passport.php:74
+msgid "Explain why the data is not applicable."
+msgstr "Indica il motivo del dato non applicabile."
+
+#: src/Suppliers.php:75
+msgid "Explicitly enable company email on a verified production site."
+msgstr "Abilita esplicitamente l’email aziendale su un sito di produzione verificato."
+
+#: assets/admin.js:141
+msgid "Export and transfer"
+msgstr "Esporta e trasferisci"
+
+#: assets/admin.js:141
+msgid "Export published content only (JSON)"
+msgstr "Esporta solo contenuti pubblicati (JSON)"
+
+#: assets/admin.js:138
+msgid "External connections"
+msgstr "Connessioni esterne"
+
+#: src/Admin.php:31
+msgid "External identifier (unverified)"
+msgstr "Identificatore esterno (non verificato)"
+
+#: src/Connections.php:13
+msgid "External identifier and resolver"
+msgstr "Identificatore e resolver esterno"
+
+#: assets/admin.js:138
+msgid "External manufacturer passports"
+msgstr "Passaporti esterni del produttore"
+
+#: src/Connections.php:12
+msgid "External preservation"
+msgstr "Conservazione esterna"
+
+#: assets/admin.js:134
+msgid "File (max 10 MB)"
+msgstr "File (max 10 MB)"
+
+#: assets/admin.js:134
+msgid "Files use protected storage. Public documents are downloadable once a published revision references them."
+msgstr "Il file viene conservato in un deposito protetto. I documenti pubblici sono scaricabili quando associati a una revisione pubblicata."
+
+#: src/Designs.php:146
+msgid "Finish"
+msgstr "Finitura"
+
+#: assets/admin.js:182
+msgid "First publication"
+msgstr "Prima pubblicazione"
+
+#: src/Designs.php:146
+msgid "Follow the warnings and instructions in the manual."
+msgstr "Seguire le avvertenze e le istruzioni riportate nel manuale."
+
+#: assets/admin.js:67
+msgid "From WooCommerce"
+msgstr "Da WooCommerce"
+
+#: assets/admin.js:57
+msgid "From product to sheet in three steps"
+msgstr "Da prodotto a scheda, in tre passaggi"
+
+#: src/Designs.php:20
+msgid "From scratch"
+msgstr "Da zero"
+
+#: assets/block.js:8
+msgid "Full sheet"
+msgstr "Scheda completa"
+
+#: assets/admin.js:138 src/Connections.php:27
+msgid "Furniture"
+msgstr "Arredo"
+
+#: assets/admin.js:71
+msgid "Furniture · voluntary"
+msgstr "Arredo · volontario"
+
+#: src/Admin.php:31
+msgid "GTIN (if available)"
+msgstr "GTIN (se disponibile)"
+
+#: assets/admin.js:138
+msgid "Generic"
+msgstr "Generico"
+
+#: src/Connections.php:27
+msgid "Generic product"
+msgstr "Prodotto generico"
+
+#: assets/admin.js:71
+msgid "Generic product · voluntary"
+msgstr "Prodotto generico · volontario"
+
+#: src/Designs.php:180
+msgid "Get in touch"
+msgstr "Parliamone"
+
+#: src/Schema.php:13
+msgid "Giuliomax Product Passport requires the PHP extension "
+msgstr "Giuliomax Product Passport richiede l’estensione PHP "
+
+#: assets/block.js:4
+msgid "Giuliomax product sheet"
+msgstr "Scheda prodotto Giuliomax"
+
+#: assets/designer.js:32 src/Designs.php:105
+msgid "Give your template a name."
+msgstr "Dai un nome al template."
+
+#: assets/admin.js:34
+msgid "Go to field"
+msgstr "Vai al campo"
+
+#: assets/designer.js:21
+msgid "Go to products ↗"
+msgstr "Vai ai prodotti ↗"
+
+#: src/Designs.php:180 src/Pdf.php:27
+msgid "Good to know"
+msgstr "Da sapere"
+
+#: assets/admin.js:134
+msgid "Guide"
+msgstr "Guida"
+
+#: assets/designer.js:24
+msgid "Headings"
+msgstr "Titoli"
+
+#: assets/admin.js:78
+msgid "Identification and relationships"
+msgstr "Identificazione e relazioni"
+
+#: assets/admin.js:249
+msgid "Ignore"
+msgstr "Ignora"
+
+#: assets/designer.js:24
+msgid "Image alongside the title"
+msgstr "Immagine affiancata"
+
+#: assets/designer.js:24
+msgid "Image below the title"
+msgstr "Immagine sotto al titolo"
+
+#: assets/admin.js:67
+msgid "Import / export"
+msgstr "Importa / esporta"
+
+#: assets/admin.js:141
+msgid "Import CSV"
+msgstr "Importa CSV"
+
+#: assets/admin.js:200
+msgid "Import added to the queue. Use Continue now to run it."
+msgstr "Importazione aggiunta alla coda. Usa Continua ora per eseguirla."
+
+#: src/Portable.php:191
+msgid "Import completed. Check the domain, documents and contacts before distributing QR codes."
+msgstr "Importazione completata. Controlla dominio, documenti e contatti prima di distribuire i QR."
+
+#: src/Portable.php:185
+msgid "Imported revision: "
+msgstr "Importazione revisione: "
+
+#: assets/admin.js:138
+msgid "Importer"
+msgstr "Importatore"
+
+#: assets/admin.js:71
+msgid "Individual item"
+msgstr "Singolo esemplare"
+
+#: src/PublicPage.php:219
+msgid "Information and manuals"
+msgstr "Informazioni e manuali"
+
+#: src/PublicPage.php:246 src/PublicPage.php:250
+msgid "Information request"
+msgstr "Richiesta informazioni"
+
+#: assets/admin.js:71
+msgid "Information template"
+msgstr "Modello informativo"
+
+#: assets/admin.js:49
+msgid "Information that lasts"
+msgstr "Informazioni che restano"
+
+#: assets/admin.js:182
+msgid "Information update"
+msgstr "Aggiornamento informazioni"
+
+#: assets/admin.js:76
+msgid "Inherited from the parent sheet. Editing creates a local override."
+msgstr "Ereditato dalla scheda padre. Una modifica crea un valore specifico."
+
+#: assets/admin.js:78
+msgid "Inherits from sheet"
+msgstr "Eredita dalla scheda"
+
+#: src/Portable.php:70
+msgid "Integrity check failed: "
+msgstr "Integrità non verificata: "
+
+#: src/Admin.php:31
+msgid "Internal data owner"
+msgstr "Responsabile interno del dato"
+
+#: assets/admin.js:79
+msgid "Internal reviewer"
+msgstr "Responsabile interno"
+
+#: assets/admin.js:79
+msgid "Internally reviewed"
+msgstr "Verificato internamente"
+
+#: src/Documents.php:46
+msgid "Invalid PDF."
+msgstr "PDF non valido."
+
+#: src/Portable.php:49
+msgid "Invalid ZIP archive."
+msgstr "ZIP non valido."
+
+#: src/Api.php:136
+msgid "Invalid action."
+msgstr "Azione non valida."
+
+#: src/Portable.php:41
+msgid "Invalid archive or archive larger than 50 MB."
+msgstr "Archivio non valido o superiore a 50 MB."
+
+#: src/Designs.php:32
+msgid "Invalid design setting."
+msgstr "Impostazione grafica non valida."
+
+#: src/Portable.php:90
+msgid "Invalid document identity."
+msgstr "Identità documento non valida."
+
+#: src/Suppliers.php:78
+msgid "Invalid email address."
+msgstr "Email non valida."
+
+#: src/Documents.php:43
+msgid "Invalid format: use PDF, PNG, JPG or plain text with matching extension and content."
+msgstr "Formato non valido: usa PDF, PNG, JPG o testo semplice con estensione e contenuto coerenti."
+
+#: src/Passport.php:103
+msgid "Invalid identifier."
+msgstr "Identificatore non valido."
+
+#: src/Passport.php:138
+msgid "Invalid inheritance relationship."
+msgstr "Relazione di eredità non valida."
+
+#: src/Portable.php:65
+msgid "Invalid manifest."
+msgstr "Manifest non valido."
+
+#: src/Suppliers.php:84
+msgid "Invalid request link."
+msgstr "Collegamento della richiesta non valido."
+
+#: src/Passport.php:301
+msgid "Invalid revision."
+msgstr "Revisione non valida."
+
+#: src/Designs.php:43
+msgid "Invalid section content."
+msgstr "Contenuto della sezione non valido."
+
+#: src/Documents.php:29
+msgid "Invalid upload."
+msgstr "Caricamento non valido."
+
+#: assets/admin.js:67
+msgid "Item"
+msgstr "Esemplare"
+
+#: src/Api.php:219 src/Api.php:227
+msgid "Job is not accessible."
+msgstr "Operazione non accessibile."
+
+#: assets/admin.js:204
+msgid "Job report #"
+msgstr "Rapporto operazione #"
+
+#: assets/admin.js:82
+msgid "Keep translation in draft"
+msgstr "Memorizza traduzione nella bozza"
+
+#: assets/admin.js:232
+msgid "Key"
+msgstr "Chiave"
+
+#: src/Jobs.php:59
+msgid "Key "
+msgstr "Chiave "
+
+#: src/Designs.php:204
+msgid "Know your product"
+msgstr "Conosci il tuo prodotto"
+
+#: assets/admin.js:138
+msgid "Label height (mm)"
+msgstr "Altezza etichetta (mm)"
+
+#: assets/admin.js:138
+msgid "Label width (mm)"
+msgstr "Larghezza etichetta (mm)"
+
+#: assets/admin.js:134
+msgid "Language"
+msgstr "Lingua"
+
+#: src/Designs.php:193 src/PublicPage.php:121
+msgid "Languages"
+msgstr "Lingue / Languages"
+
+#: assets/admin.js:65 assets/admin.js:67
+msgid "Last updated"
+msgstr "Ultima modifica"
+
+#: assets/admin.js:79
+msgid "Leave unknown values blank. A completed field is not a certification."
+msgstr "Un valore sconosciuto va lasciato vuoto. Un dato compilato non equivale a una certificazione."
+
+#: assets/admin.js:190
+msgid "Link"
+msgstr "Collegamento"
+
+#: assets/admin.js:216
+msgid "Link / compare"
+msgstr "Collega / confronta"
+
+#: assets/admin.js:178 assets/admin.js:191
+msgid "Link copied."
+msgstr "Collegamento copiato."
+
+#: assets/admin.js:190
+msgid "Link created"
+msgstr "Collegamento creato"
+
+#: assets/admin.js:207
+msgid "Link from WooCommerce"
+msgstr "Collega da WooCommerce"
+
+#: assets/designer.js:24
+msgid "Live preview"
+msgstr "Anteprima dal vivo"
+
+#: assets/admin.js:138
+msgid "Load sample data"
+msgstr "Carica dati di esempio"
+
+#: src/Admin.php:53
+msgid "Loading passports…"
+msgstr "Caricamento dei passaporti…"
+
+#: assets/admin.js:141
+msgid "Local export does not replace an external continuity service. Maintain your domain and redirects for distributed QR codes."
+msgstr "L’export locale non sostituisce un servizio esterno di continuità. Mantieni dominio e redirect per i QR già distribuiti."
+
+#: assets/admin.js:138
+msgid "Logo (image URL)"
+msgstr "Logo (URL immagine)"
+
+#: assets/designer.js:24
+msgid "Logo, photos, contacts and manuals come from your product content. The template adapts to the available data."
+msgstr "Logo, foto, contatti e manuali arrivano dai contenuti del prodotto. Il template si adatta ai dati disponibili."
+
+#: src/Designs.php:180
+msgid "Made to last"
+msgstr "Fatto per durare"
+
+#: assets/admin.js:80
+msgid "Manage library"
+msgstr "Gestisci la libreria"
+
+#: assets/admin.js:134 src/PublicPage.php:147
+msgid "Manual"
+msgstr "Manuale"
+
+#: assets/designer.js:7 src/Designs.php:209
+msgid "Manuals and documents"
+msgstr "Manuali e documenti"
+
+#: assets/designer.js:26
+msgid "Manuals, warnings and support remain available when present."
+msgstr "Manuali, avvertenze e assistenza rimangono raggiungibili quando sono presenti."
+
+#: assets/admin.js:138
+msgid "Manufacturer"
+msgstr "Produttore"
+
+#: src/PublicPage.php:193
+msgid "Manufacturer passport"
+msgstr "Passaporto del produttore"
+
+#: assets/admin.js:249
+msgid "Map columns"
+msgstr "Associa colonne"
+
+#: assets/designer.js:7 src/Pdf.php:18
+msgid "Materials"
+msgstr "Materiali"
+
+#: assets/admin.js:79
+msgid "Materials and care"
+msgstr "Materiali e cura"
+
+#: src/Admin.php:31 src/Designs.php:180 src/PublicPage.php:159
+msgid "Materials and composition"
+msgstr "Materiali e composizione"
+
+#: assets/admin.js:57
+msgid "Materials, manuals, care and spare parts without repeating data."
+msgstr "Materiali, manuali, cura e ricambi, senza ripetere i dati."
+
+#: src/Admin.php:31
+msgid "Measurement method"
+msgstr "Metodo di misurazione"
+
+#: src/Pdf.php:18 src/PublicPage.php:179
+msgid "Method"
+msgstr "Metodo / Method"
+
+#: assets/admin.js:79
+msgid "Missing"
+msgstr "Mancante"
+
+#: assets/admin.js:179
+msgid "Mobile"
+msgstr "Mobile"
+
+#: assets/admin.js:138 assets/admin.js:141
+msgid "Mode"
+msgstr "Modalità"
+
+#: assets/admin.js:67 assets/admin.js:71
+msgid "Model"
+msgstr "Modello"
+
+#: assets/admin.js:71
+msgid "Model variant"
+msgstr "Variante di un modello"
+
+#: assets/admin.js:65
+msgid "Most recent"
+msgstr "Più recenti"
+
+#: assets/designer.js:26
+msgid "Move down"
+msgstr "Sposta giù"
+
+#: assets/designer.js:26
+msgid "Move up"
+msgstr "Sposta su"
+
+#: src/Designs.php:65
+msgid "My template"
+msgstr "Il mio template"
+
+#: assets/admin.js:232 assets/admin.js:65
+msgid "Name"
+msgstr "Nome"
+
+#: assets/designer.js:24
+msgid "Name or reference"
+msgstr "Nome o riferimento"
+
+#: src/Designs.php:146 src/Designs.php:18
+msgid "Natural"
+msgstr "Naturale"
+
+#: src/Designs.php:211
+msgid "Need a hand?"
+msgstr "Serve una mano?"
+
+#: src/Designs.php:146
+msgid "Need help with assembly or care? We are here to help."
+msgstr "Un dubbio sul montaggio o sulla cura? Siamo qui per aiutarti."
+
+#: assets/admin.js:79
+msgid "Needs review"
+msgstr "Da verificare"
+
+#: assets/admin.js:59 assets/admin.js:67
+msgid "New passport"
+msgstr "Nuovo passaporto"
+
+#: assets/admin.js:134
+msgid "New version"
+msgstr "Nuova versione"
+
+#: assets/admin.js:197
+msgid "New version of "
+msgstr "Nuova versione di "
+
+#: assets/admin.js:67
+msgid "Next"
+msgstr "Successiva"
+
+#: assets/admin.js:58
+msgid "No WooCommerce or external account required."
+msgstr "Non serve WooCommerce né un account esterno."
+
+#: assets/admin.js:80
+msgid "No documents available. Upload a manual to the document library."
+msgstr "Nessun documento disponibile. Carica un manuale dalla libreria documenti."
+
+#: assets/admin.js:204
+msgid "No errors in the processed rows."
+msgstr "Nessun errore nelle righe elaborate."
+
+#: src/Store.php:24
+msgid "No open transaction."
+msgstr "Nessuna transazione aperta."
+
+#: assets/admin.js:67
+msgid "No products found"
+msgstr "Nessun prodotto trovato"
+
+#: assets/admin.js:216
+msgid "No products found."
+msgstr "Nessun prodotto trovato."
+
+#: assets/admin.js:67
+msgid "No sheets yet"
+msgstr "Nessuna scheda, per ora"
+
+#: assets/admin.js:79
+msgid "Not applicable"
+msgstr "Non applicabile"
+
+#: assets/admin.js:138
+msgid "Not configured"
+msgstr "Non configurata"
+
+#: src/Pdf.php:18
+msgid "Notice"
+msgstr "Avviso"
+
+#: src/Designs.php:146
+msgid "One chair, many stories."
+msgstr "Una sedia, molte storie."
+
+#: assets/admin.js:133
+msgid "One document, many products."
+msgstr "Un documento, molti prodotti."
+
+#: assets/admin.js:54
+msgid "One product. All its information."
+msgstr "Un prodotto. Tutte le sue informazioni."
+
+#: assets/admin.js:82
+msgid "One serial number per line"
+msgstr "Un numero di serie per riga"
+
+#: src/Passport.php:70
+msgid "Only a reviewer can mark data as internally verified."
+msgstr "Solo un revisore può dichiarare un dato verificato internamente."
+
+#: src/Documents.php:49
+msgid "Only a reviewer can upload private documents."
+msgstr "Solo un revisore può caricare documenti riservati."
+
+#: src/Designs.php:81
+msgid "Only users with management permissions can edit the template library."
+msgstr "Solo il responsabile può modificare la libreria dei template."
+
+#: assets/admin.js:67
+msgid "Open"
+msgstr "Apri"
+
+#: assets/designer.js:21
+msgid "Open and customize"
+msgstr "Apri e personalizza"
+
+#: assets/admin.js:84
+msgid "Open history"
+msgstr "Apri lo storico"
+
+#: assets/admin.js:78
+msgid "Open parent"
+msgstr "Apri il genitore"
+
+#: src/PublicPage.php:217
+msgid "Open product sheet"
+msgstr "Apri la scheda prodotto"
+
+#: assets/admin.js:84
+msgid "Open public sheet"
+msgstr "Apri la scheda pubblica"
+
+#: assets/admin.js:134
+msgid "Optional expiry"
+msgstr "Scadenza facoltativa"
+
+#: assets/admin.js:212
+msgid "Optional sample data"
+msgstr "Dati di esempio facoltativi"
+
+#: src/Admin.php:31
+msgid "Original manufacturer passport"
+msgstr "Passaporto originale del produttore"
+
+#: assets/admin.js:49 src/Admin.php:25
+msgid "Overview"
+msgstr "Panoramica"
+
+#: src/Designs.php:270
+msgid "PDF copy"
+msgstr "Copia PDF"
+
+#: assets/admin.js:138
+msgid "Page margin (mm)"
+msgstr "Margine foglio (mm)"
+
+#: assets/designer.js:24
+msgid "Page opening"
+msgstr "Apertura della pagina"
+
+#: assets/admin.js:71
+msgid "Parent product"
+msgstr "Prodotto padre"
+
+#: src/I18n.php:15 src/Schema.php:123
+msgid "Passport author"
+msgstr "Compilatore passaporti"
+
+#: src/Api.php:42 src/Jobs.php:78
+msgid "Passport is not accessible."
+msgstr "Passaporto non accessibile."
+
+#: src/Passport.php:127
+msgid "Passport not found."
+msgstr "Passaporto non trovato."
+
+#: src/I18n.php:15 src/Schema.php:125
+msgid "Passport publisher"
+msgstr "Responsabile passaporti"
+
+#: src/I18n.php:15 src/Schema.php:124
+msgid "Passport reviewer"
+msgstr "Revisore passaporti"
+
+#: assets/admin.js:49 src/Admin.php:25
+msgid "Passports"
+msgstr "Passaporti"
+
+#: src/Jobs.php:160
+msgid "Permissions revoked."
+msgstr "Permessi revocati."
+
+#: assets/admin.js:141
+msgid "Persistent UUID"
+msgstr "UUID persistente"
+
+#: assets/admin.js:78
+msgid "Persistent identity: "
+msgstr "Identità persistente: "
+
+#: assets/admin.js:138 assets/designer.js:24
+msgid "Phone"
+msgstr "Telefono"
+
+#: assets/admin.js:198
+msgid "Prepare drafts for review"
+msgstr "Prepara bozze da revisionare"
+
+#: assets/admin.js:79
+msgid "Present"
+msgstr "Presente"
+
+#: assets/admin.js:83 assets/designer.js:24
+msgid "Preview"
+msgstr "Anteprima"
+
+#: assets/admin.js:82
+msgid "Preview and create items"
+msgstr "Anteprima e crea esemplari"
+
+#: assets/designer.js:24
+msgid "Preview content"
+msgstr "Mostra in anteprima"
+
+#: src/Api.php:208
+msgid "Preview expired. Run the check again."
+msgstr "Anteprima scaduta. Ripeti la verifica."
+
+#: assets/designer.js:24
+msgid "Preview size"
+msgstr "Dimensione anteprima"
+
+#: assets/designer.js:28
+msgid "Preview unavailable"
+msgstr "Anteprima non disponibile"
+
+#: assets/designer.js:28
+msgid "Preview updated"
+msgstr "Anteprima aggiornata"
+
+#: src/Designs.php:191
+msgid "Preview with sample content"
+msgstr "Anteprima con contenuti di esempio"
+
+#: assets/admin.js:67
+msgid "Previous"
+msgstr "Precedente"
+
+#: assets/admin.js:138 assets/admin.js:78
+msgid "Primary language"
+msgstr "Lingua principale"
+
+#: src/Admin.php:96
+msgid "Print / save PDF"
+msgstr "Stampa / salva PDF"
+
+#: assets/admin.js:84
+msgid "Print label"
+msgstr "Stampa etichetta"
+
+#: assets/admin.js:66
+msgid "Print labels"
+msgstr "Stampa etichette"
+
+#: assets/admin.js:134
+msgid "Private"
+msgstr "Riservato"
+
+#: assets/admin.js:134
+msgid "Private files always require authorisation and are excluded from public sheets and PDF."
+msgstr "I file riservati passano sempre dal controllo dei permessi e non vengono inseriti nella pagina pubblica o nel PDF."
+
+#: assets/admin.js:134
+msgid "Private to reviewers"
+msgstr "Riservato ai revisori"
+
+#: assets/admin.js:80
+msgid "Private — excluded from public content"
+msgstr "Riservato — escluso dalla scheda pubblica"
+
+#: assets/admin.js:67 assets/admin.js:78 src/Api.php:111
+msgid "Product"
+msgstr "Prodotto"
+
+#: src/Pdf.php:18 src/PublicPage.php:150 src/PublicPage.php:159
+msgid "Product care"
+msgstr "Cura del prodotto"
+
+#: src/Passport.php:283
+msgid "Product discontinued. Support information remains available."
+msgstr "Prodotto fuori produzione. Le informazioni di assistenza restano disponibili."
+
+#: src/PublicPage.php:186
+msgid "Product documents"
+msgstr "Documenti del prodotto"
+
+#: src/Admin.php:31
+msgid "Product family"
+msgstr "Famiglia di prodotti"
+
+#: src/Admin.php:31
+msgid "Product image"
+msgstr "Immagine prodotto"
+
+#: src/Designs.php:189 src/PublicPage.php:117
+msgid "Product information"
+msgstr "Informazioni prodotto"
+
+#: src/Woo.php:69
+msgid "Product information and manuals"
+msgstr "Informazioni e manuali del prodotto"
+
+#: src/Suppliers.php:86
+msgid "Product information request"
+msgstr "Richiesta informazioni prodotto"
+
+#: src/Admin.php:96
+msgid "Product labels"
+msgstr "Etichette prodotto"
+
+#: src/Admin.php:31
+msgid "Product name"
+msgstr "Nome del prodotto"
+
+#: src/Woo.php:34
+msgid "Product not found."
+msgstr "Prodotto non trovato."
+
+#: src/Designs.php:202 src/PublicPage.php:125
+msgid "Product notice"
+msgstr "Avviso sul prodotto"
+
+#: src/Admin.php:19
+msgid "Product sheets publish the company contacts and product information selected by the operator. Internal editorial records retain user IDs, timestamps and reasons. Supplier proposal links expire and are stored as hashes. Private documents stay in the database and require authorization. No telemetry or AI requests are sent. Supplier emails use the site mail transport only after explicit administrative enablement. External image URLs selected by an operator may disclose visitor IP addresses to the image host. Data is retained on uninstall. Define retention periods, restrict hosting and backup access, and avoid unnecessary personal information in public sheets."
+msgstr "Le schede pubblicano i contatti aziendali e le informazioni di prodotto scelti dall’operatore. I registri editoriali interni conservano ID utente, date e motivazioni. I collegamenti alle proposte dei fornitori scadono e sono conservati come hash. I documenti riservati rimangono nel database e richiedono autorizzazione. Non vengono inviati dati di telemetria o richieste AI. Le email ai fornitori utilizzano il trasporto del sito solo dopo esplicita abilitazione amministrativa. Gli URL di immagini esterne scelti dall’operatore possono comunicare l’indirizzo IP del visitatore al relativo host. I dati vengono conservati alla disinstallazione. Definisci i tempi di conservazione, limita l’accesso a hosting e backup ed evita dati personali non necessari nelle schede pubbliche."
+
+#: src/Jobs.php:202
+msgid "Progress not saved: this batch will be resumed."
+msgstr "Avanzamento non salvato: il lotto verrà ripreso."
+
+#: assets/admin.js:194
+msgid "Proposal added to the draft. Publishing requires a new revision."
+msgstr "Proposta inserita nella bozza. La pubblicazione richiede una nuova revisione."
+
+#: assets/admin.js:193
+msgid "Proposals and requests"
+msgstr "Proposte e richieste"
+
+#: src/Connections.php:12
+msgid "Provider contract, specifications and credentials; continuity and restore verification."
+msgstr "Contratto con un prestatore, specifiche e credenziali; verifica della continuità e del ripristino."
+
+#: assets/admin.js:134 assets/admin.js:80
+msgid "Public"
+msgstr "Pubblico"
+
+#: assets/admin.js:161
+msgid "Publish"
+msgstr "Pubblicare"
+
+#: assets/admin.js:182
+msgid "Publish a new revision"
+msgstr "Pubblica una nuova revisione"
+
+#: assets/admin.js:182
+msgid "Publish and show QR"
+msgstr "Pubblica e mostra QR"
+
+#: assets/admin.js:83
+msgid "Publish revision"
+msgstr "Pubblica revisione"
+
+#: assets/admin.js:66
+msgid "Publish selected"
+msgstr "Pubblica selezionati"
+
+#: assets/admin.js:84
+msgid "Publish the first revision to activate the public link and download its QR."
+msgstr "Pubblica la prima revisione per attivare il collegamento pubblico e scaricare il QR."
+
+#: assets/admin.js:57
+msgid "Publish the sheet and download the product QR."
+msgstr "Pubblica la scheda e scarica il QR da applicare al prodotto."
+
+#: assets/admin.js:12 assets/admin.js:56
+msgid "Published"
+msgstr "Pubblicate"
+
+#: assets/admin.js:184
+msgid "Published revisions"
+msgstr "Revisioni pubblicate"
+
+#: src/Passport.php:251 src/Passport.php:279
+msgid "Publishing permission is required."
+msgstr "Permesso di pubblicazione richiesto."
+
+#: src/Designs.php:16
+msgid "Put your product first. Clean, spacious and contemporary."
+msgstr "Un prodotto al centro. Pulito, ampio, contemporaneo."
+
+#: assets/block.js:8
+msgid "QR code"
+msgstr "QR code"
+
+#: giuliomax-product-passport.php:56
+msgid "Queue processed."
+msgstr "Coda elaborata."
+
+#: assets/admin.js:12
+msgid "Queued"
+msgstr "In coda"
+
+#: assets/admin.js:141
+msgid "Queued operations"
+msgstr "Operazioni in coda"
+
+#: assets/admin.js:182
+msgid "Reason"
+msgstr "Motivazione"
+
+#: assets/admin.js:79
+msgid "Reason (required for not applicable)"
+msgstr "Motivazione (necessaria se non applicabile)"
+
+#: assets/admin.js:184
+msgid "Recent activity"
+msgstr "Attività recenti"
+
+#: assets/admin.js:58
+msgid "Recent sheets"
+msgstr "Ultime schede"
+
+#: assets/admin.js:190
+msgid "Recipient email"
+msgstr "Email destinatario"
+
+#: assets/admin.js:141
+msgid "Reconciliation key"
+msgstr "Chiave di riconciliazione"
+
+#: assets/designer.js:24
+msgid "Redo change"
+msgstr "Ripristina modifica"
+
+#: assets/admin.js:65 src/Pdf.php:18
+msgid "Reference"
+msgstr "Riferimento"
+
+#: src/Admin.php:31 src/PublicPage.php:134
+msgid "Reference / SKU"
+msgstr "Riferimento / SKU"
+
+#: assets/admin.js:141
+msgid "Refresh progress"
+msgstr "Aggiorna avanzamento"
+
+#: assets/admin.js:193
+msgid "Reject"
+msgstr "Rifiuta"
+
+#: src/PublicPage.php:236
+msgid "Reload the page before submitting."
+msgstr "Ricarica la pagina prima di inviare."
+
+#: assets/admin.js:255
+msgid "Reload the page or check your permissions."
+msgstr "Ricarica la pagina o controlla i permessi."
+
+#: assets/designer.js:26
+msgid "Remove section"
+msgstr "Rimuovi sezione"
+
+#: src/Designs.php:146
+msgid "Replaceable feet and components. Contact support with the product reference."
+msgstr "Piedini e componenti sostituibili. Contatta l’assistenza indicando il riferimento del prodotto."
+
+#: assets/admin.js:213
+msgid "Replaceable feet."
+msgstr "Piedini sostituibili."
+
+#: assets/admin.js:147
+msgid "Report"
+msgstr "Rapporto"
+
+#: assets/admin.js:138
+msgid "Representative"
+msgstr "Incaricato"
+
+#: src/Api.php:241 src/Suppliers.php:55
+msgid "Request not found."
+msgstr "Richiesta non trovata."
+
+#: assets/admin.js:189 assets/admin.js:84
+msgid "Request supplier data"
+msgstr "Richiedi dati al fornitore"
+
+#: assets/admin.js:138
+msgid "Required fields"
+msgstr "Campi richiesti"
+
+#: src/Suppliers.php:47
+msgid "Response already received."
+msgstr "Risposta già acquisita."
+
+#: src/PublicPage.php:239
+msgid "Response received"
+msgstr "Risposta ricevuta"
+
+#: assets/admin.js:84
+msgid "Responses and requests"
+msgstr "Risposte e richieste"
+
+#: assets/designer.js:21
+msgid "Responsive. No code or external fonts required."
+msgstr "Responsive, senza codice e senza font esterni."
+
+#: assets/admin.js:141
+msgid "Restore an archive"
+msgstr "Ripristina un archivio"
+
+#: assets/admin.js:78
+msgid "Restore inheritance for these fields"
+msgstr "Ripristina eredità per questi campi"
+
+#: src/Passport.php:318
+msgid "Restore not confirmed."
+msgstr "Ripristino non confermato."
+
+#: assets/admin.js:185
+msgid "Restore prepared as a draft. Review it before publishing."
+msgstr "Ripristino preparato in bozza. Verifica prima di pubblicare."
+
+#: src/Passport.php:311
+msgid "Restore revision "
+msgstr "Ripristino revisione "
+
+#: assets/admin.js:184
+msgid "Restore to a new draft"
+msgstr "Ripristina in una nuova bozza"
+
+#: assets/admin.js:232
+msgid "Result"
+msgstr "Esito"
+
+#: assets/admin.js:138
+msgid "Retailer"
+msgstr "Rivenditore"
+
+#: assets/admin.js:57
+msgid "Review and share"
+msgstr "Controlla e condividi"
+
+#: assets/admin.js:79
+msgid "Review date"
+msgstr "Data del controllo"
+
+#: src/Jobs.php:187 src/Suppliers.php:13 src/Suppliers.php:59
+msgid "Review permission is required."
+msgstr "Permesso di revisione richiesto."
+
+#: assets/admin.js:67 src/Passport.php:320
+msgid "Revision "
+msgstr "Revisione "
+
+#: assets/admin.js:183
+msgid "Revision published. The QR is ready."
+msgstr "Revisione pubblicata. Il QR è pronto."
+
+#: assets/admin.js:184
+msgid "Revisions and activity"
+msgstr "Revisioni e attività"
+
+#: assets/admin.js:84
+msgid "Revisions and requests"
+msgstr "Revisioni e richieste"
+
+#: assets/admin.js:193
+msgid "Revoke link"
+msgstr "Revoca collegamento"
+
+#: assets/admin.js:138
+msgid "Role"
+msgstr "Ruolo"
+
+#: assets/designer.js:24
+msgid "Rounded"
+msgstr "Arrotondati"
+
+#: assets/admin.js:232
+msgid "Row"
+msgstr "Riga"
+
+#: assets/admin.js:204
+msgid "Row "
+msgstr "Riga "
+
+#: assets/admin.js:12
+msgid "Running"
+msgstr "In corso"
+
+#: assets/admin.js:67
+msgid "SKU"
+msgstr "SKU"
+
+#: assets/designer.js:7 src/Designs.php:180 src/Pdf.php:18 src/PublicPage.php:159
+msgid "Safety"
+msgstr "Sicurezza"
+
+#: src/Admin.php:31
+msgid "Safety and warnings"
+msgstr "Sicurezza e avvertenze"
+
+#: src/Admin.php:31
+msgid "Safety or discontinuation notice"
+msgstr "Avviso di sicurezza o fuori produzione"
+
+#: assets/designer.js:24 assets/designer.js:33
+msgid "Sample content"
+msgstr "Contenuti di esempio"
+
+#: assets/designer.js:24
+msgid "Sample content is not added to your catalogue."
+msgstr "I testi di esempio non vengono aggiunti al catalogo."
+
+#: assets/designer.js:24
+msgid "Sample content · no changes to products"
+msgstr "Contenuti di esempio · nessuna modifica ai prodotti"
+
+#: assets/admin.js:213
+msgid "Samples created as drafts. Items are in the job queue."
+msgstr "Esempi creati in bozza. Gli esemplari sono nella coda operazioni."
+
+#: assets/designer.js:24
+msgid "Save a copy"
+msgstr "Salva una copia"
+
+#: assets/admin.js:138
+msgid "Save a new template version"
+msgstr "Salva nuova versione del modello"
+
+#: assets/designer.js:24
+msgid "Save as template"
+msgstr "Salva come template"
+
+#: assets/admin.js:83
+msgid "Save draft"
+msgstr "Salva bozza"
+
+#: src/Designs.php:115
+msgid "Save not confirmed: the library has changed. Reload before trying again."
+msgstr "Salvataggio non confermato: la libreria è cambiata. Ricarica prima di riprovare."
+
+#: assets/admin.js:138
+msgid "Save settings"
+msgstr "Salva impostazioni"
+
+#: assets/designer.js:24
+msgid "Save template"
+msgstr "Salva template"
+
+#: assets/admin.js:207 assets/admin.js:65 assets/admin.js:71 assets/admin.js:78
+msgid "Search"
+msgstr "Cerca"
+
+#: assets/admin.js:78
+msgid "Search compatible products or spare parts"
+msgstr "Cerca ricambi o prodotti compatibili"
+
+#: assets/admin.js:65
+msgid "Search name or reference…"
+msgstr "Cerca nome o riferimento…"
+
+#: assets/admin.js:71
+msgid "Search parent product"
+msgstr "Cerca il prodotto padre"
+
+#: assets/admin.js:207 assets/admin.js:65 assets/designer.js:24
+msgid "Search products"
+msgstr "Cerca un prodotto"
+
+#: assets/designer.js:26
+msgid "Section heading"
+msgstr "Titolo della sezione"
+
+#: assets/designer.js:26
+msgid "Section text"
+msgstr "Testo della sezione"
+
+#: assets/admin.js:138
+msgid "Sector"
+msgstr "Settore"
+
+#: assets/admin.js:67
+msgid "Select "
+msgstr "Seleziona "
+
+#: assets/admin.js:205
+msgid "Select a ZIP archive."
+msgstr "Seleziona un archivio ZIP."
+
+#: src/Designs.php:95
+msgid "Select a custom template."
+msgstr "Seleziona un template personalizzato."
+
+#: assets/admin.js:117 assets/admin.js:71
+msgid "Select a product"
+msgstr "Seleziona un prodotto"
+
+#: assets/admin.js:67
+msgid "Select all rows"
+msgstr "Seleziona tutte le righe"
+
+#: src/Passport.php:119
+msgid "Select an accessible parent of the correct type."
+msgstr "Seleziona un genitore accessibile del tipo corretto."
+
+#: src/Jobs.php:14
+msgid "Select an import mode and reconciliation key."
+msgstr "Scegli modalità e chiave di riconciliazione."
+
+#: src/Suppliers.php:17
+msgid "Select at least one field to request."
+msgstr "Scegli almeno un campo da richiedere."
+
+#: assets/admin.js:160 src/Api.php:143
+msgid "Select at least one sheet."
+msgstr "Seleziona almeno una scheda."
+
+#: assets/admin.js:78
+msgid "Select local overrides to remove, then save the draft."
+msgstr "Seleziona i valori da rimuovere dalla variante, poi salva la bozza."
+
+#: assets/admin.js:176
+msgid "Select published sheets to print."
+msgstr "Seleziona le schede pubblicate da stampare."
+
+#: assets/admin.js:80
+msgid "Select shared documents. Publication freezes their current exact versions."
+msgstr "Seleziona i documenti condivisi. La pubblicazione conserverà la versione esatta attuale."
+
+#: assets/admin.js:190
+msgid "Send email"
+msgstr "Invia email"
+
+#: assets/admin.js:190
+msgid "Send using company email"
+msgstr "Invio tramite email aziendale"
+
+#: src/Designs.php:146
+msgid "Separate components according to local guidance. Contact us for available spare parts."
+msgstr "Separare i componenti secondo le indicazioni locali. Contattaci per conoscere i ricambi disponibili."
+
+#: src/Designs.php:204 src/Pdf.php:18 src/PublicPage.php:134
+msgid "Serial"
+msgstr "Seriale / Serial"
+
+#: src/Admin.php:31
+msgid "Serial number"
+msgstr "Numero di serie"
+
+#: assets/admin.js:55
+msgid "Set up your company"
+msgstr "Configura l’azienda"
+
+#: assets/admin.js:49 src/Admin.php:25
+msgid "Settings"
+msgstr "Impostazioni"
+
+#: assets/admin.js:231
+msgid "Settings saved. They apply to new revisions."
+msgstr "Impostazioni salvate. Si applicheranno alle nuove revisioni."
+
+#: src/Jobs.php:189
+msgid "Shared document review"
+msgstr "Revisione documento condiviso"
+
+#: assets/admin.js:199
+msgid "Shared document update"
+msgstr "Aggiornamento documento condiviso"
+
+#: assets/admin.js:78
+msgid "Sheet design"
+msgstr "Design della scheda"
+
+#: assets/block.js:7
+msgid "Sheet identifier (UUID)"
+msgstr "Identificatore della scheda (UUID)"
+
+#: src/Woo.php:51
+msgid "Sheet is not accessible."
+msgstr "Scheda non accessibile."
+
+#: src/PublicPage.php:64
+msgid "Sheet not available yet."
+msgstr "Scheda non ancora disponibile."
+
+#: src/Api.php:263
+msgid "Sheet not available."
+msgstr "Scheda non disponibile."
+
+#: assets/admin.js:179 assets/designer.js:24
+msgid "Sheet preview"
+msgstr "Anteprima della scheda"
+
+#: assets/admin.js:84
+msgid "Sheet review"
+msgstr "Controllo della scheda"
+
+#: assets/designer.js:33
+msgid "Sheets that already use this template keep their design."
+msgstr "Le schede a cui è già stato applicato mantengono il proprio design."
+
+#: assets/designer.js:24
+msgid "Slightly rounded"
+msgstr "Appena morbidi"
+
+#: assets/designer.js:24
+msgid "Soft"
+msgstr "Morbidi"
+
+#: assets/admin.js:65
+msgid "Sort"
+msgstr "Ordina"
+
+#: assets/admin.js:134 assets/admin.js:79 src/Pdf.php:18 src/PublicPage.php:179
+msgid "Source"
+msgstr "Fonte"
+
+#: src/Admin.php:31
+msgid "Source / evidence"
+msgstr "Fonte / evidenza"
+
+#: assets/designer.js:24
+msgid "Spacing"
+msgstr "Spaziatura"
+
+#: assets/designer.js:24
+msgid "Spacious"
+msgstr "Ariosa"
+
+#: assets/designer.js:7 src/Pdf.php:18 src/PublicPage.php:153
+msgid "Spare parts"
+msgstr "Ricambi"
+
+#: src/Admin.php:31 src/Designs.php:180 src/PublicPage.php:159
+msgid "Spare parts and compatibility"
+msgstr "Ricambi e compatibilità"
+
+#: assets/admin.js:81
+msgid "Spare parts and support"
+msgstr "Ricambi e assistenza"
+
+#: assets/admin.js:209 assets/designer.js:7 src/PublicPage.php:141
+msgid "Specifications"
+msgstr "Caratteristiche"
+
+#: assets/designer.js:24
+msgid "Square"
+msgstr "Netti"
+
+#: assets/admin.js:138
+msgid "Standalone catalogue"
+msgstr "Catalogo autonomo"
+
+#: assets/designer.js:21
+msgid "Start with a ready-made design or a blank page. Your content does the rest."
+msgstr "Parti da un design pronto o da una pagina vuota. Al resto pensano i tuoi contenuti."
+
+#: assets/admin.js:71
+msgid "Start with the essentials. Complete the sheet before publishing."
+msgstr "Parti dai dati essenziali. Potrai completare la scheda prima di pubblicarla."
+
+#: assets/admin.js:55
+msgid "Start with your company"
+msgstr "Partiamo dalla tua azienda"
+
+#: assets/admin.js:65 assets/admin.js:67 assets/admin.js:79
+msgid "Status"
+msgstr "Stato"
+
+#: src/Designs.php:16
+msgid "Studio"
+msgstr "Studio"
+
+#: src/PublicPage.php:250
+msgid "Submit for review"
+msgstr "Invia per revisione"
+
+#: src/Admin.php:31
+msgid "Successor product"
+msgstr "Prodotto successore"
+
+#: src/Suppliers.php:65
+msgid "Supplier proposal "
+msgstr "Proposta fornitore "
+
+#: assets/designer.js:7 src/Pdf.php:18 src/PublicPage.php:156 src/PublicPage.php:159
+msgid "Support"
+msgstr "Assistenza"
+
+#: src/Admin.php:31
+msgid "Support details and instructions"
+msgstr "Contatti e istruzioni di assistenza"
+
+#: assets/admin.js:138
+msgid "Support email"
+msgstr "Email assistenza"
+
+#: src/Admin.php:31
+msgid "Support page"
+msgstr "Pagina assistenza"
+
+#: assets/designer.js:24
+msgid "Surfaces"
+msgstr "Superfici"
+
+#: assets/designer.js:24
+msgid "Tablet"
+msgstr "Tablet"
+
+#: src/Designs.php:19
+msgid "Technical essentials"
+msgstr "Essenziale tecnico"
+
+#: assets/designer.js:33
+msgid "Template deleted. Existing sheets keep their design."
+msgstr "Template eliminato. Le schede esistenti conservano il proprio design."
+
+#: assets/designer.js:24
+msgid "Template name"
+msgstr "Nome del template"
+
+#: src/Profiles.php:28
+msgid "Template not available."
+msgstr "Modello non disponibile."
+
+#: assets/designer.js:32
+msgid "Template saved. Published sheets are unchanged."
+msgstr "Template salvato. Le schede pubblicate sono rimaste invariate."
+
+#: assets/designer.js:32
+msgid "Template saved. You still have new unsaved changes."
+msgstr "Template salvato. Restano nuove modifiche da salvare."
+
+#: assets/admin.js:165
+msgid "Template selected. Save the draft or customize the design before publishing."
+msgstr "Template scelto. Salva la bozza o personalizza il design prima di pubblicare."
+
+#: assets/admin.js:211
+msgid "Template updated"
+msgstr "Modello aggiornato"
+
+#: src/Profiles.php:42
+msgid "Template updated. Published revisions keep their previous data; review new requirements before republishing."
+msgstr "Modello aggiornato. Le revisioni pubblicate conservano i dati precedenti; verifica le nuove richieste prima di ripubblicare."
+
+#: src/Admin.php:96
+msgid "Test a scan at the actual size before printing the full batch."
+msgstr "Controlla una scansione di prova alla dimensione effettiva prima di stampare l’intero lotto."
+
+#: assets/admin.js:138
+msgid "Test environment or site clone detected. Production submissions are blocked."
+msgstr "Ambiente di prova o copia del sito rilevata. Gli invii di produzione sono bloccati."
+
+#: assets/designer.js:24
+msgid "Text contrast automatically adapts to your selected colors."
+msgstr "Il contrasto del testo si adatta automaticamente ai colori scelti."
+
+#: assets/admin.js:138 src/Connections.php:27
+msgid "Textile"
+msgstr "Tessile"
+
+#: assets/admin.js:71
+msgid "Textiles · voluntary"
+msgstr "Tessile · volontario"
+
+#: src/PublicPage.php:239
+msgid "Thank you. Your response was received."
+msgstr "Grazie, risposta ricevuta."
+
+#: assets/designer.js:24
+msgid "The PDF remains a text copy. This editor customizes the web page."
+msgstr "Il PDF rimane una copia testuale. Questo editor personalizza la pagina web."
+
+#: src/Qr.php:11
+msgid "The address is too long for a readable label. Use a shorter resolver domain."
+msgstr "Indirizzo troppo lungo per un’etichetta leggibile. Usa un dominio resolver più breve."
+
+#: assets/admin.js:141
+msgid "The administrative archive contains drafts and private files. Store it securely."
+msgstr "L’archivio amministrativo contiene bozze e documenti riservati: conservalo in un posto sicuro."
+
+#: src/Jobs.php:72
+msgid "The column count does not match the header."
+msgstr "Numero di colonne diverso dall’intestazione."
+
+#: src/PublicPage.php:239
+msgid "The company will review the information before publication."
+msgstr "I dati saranno revisionati dall’azienda prima della pubblicazione."
+
+#: src/Store.php:15
+msgid "The database could not start a safe save. Try again."
+msgstr "Il database non ha potuto avviare un salvataggio sicuro. Riprova."
+
+#: src/Store.php:28
+msgid "The database did not confirm the save. Reload before trying again."
+msgstr "Il database non ha confermato il salvataggio. Ricarica prima di riprovare."
+
+#: src/Jobs.php:172
+msgid "The key was created after preview: review the import again."
+msgstr "La chiave è stata creata dopo l’anteprima: rivedi l’importazione."
+
+#: src/Designs.php:100
+msgid "The library already contains 40 templates. Remove unused templates first."
+msgstr "La libreria contiene già 40 template. Rimuovi quelli inutilizzati."
+
+#: src/Designs.php:86
+msgid "The library has changed. Reload before saving."
+msgstr "La libreria è cambiata. Ricarica prima di salvare."
+
+#: assets/admin.js:22 assets/designer.js:9
+msgid "The operation could not be completed."
+msgstr "Operazione non riuscita."
+
+#: src/Designs.php:180
+msgid "The product"
+msgstr "Il prodotto"
+
+#: src/Suppliers.php:62
+msgid "The proposal was already handled or is not available yet."
+msgstr "La proposta è già stata gestita o non è ancora disponibile."
+
+#: assets/admin.js:198
+msgid "The public page keeps the files from the published revision. Prepare new drafts, review them and publish approved revisions."
+msgstr "La pagina pubblica conserva i file della revisione pubblicata. Prepara le nuove bozze, controllale e pubblica le revisioni approvate."
+
+#: assets/admin.js:182
+msgid "The public version will contain the current data and documents. Previous revisions are retained."
+msgstr "La versione pubblica comprenderà i dati e i documenti attuali. Le revisioni precedenti saranno conservate."
+
+#: src/Jobs.php:81
+msgid "The sheet already exists."
+msgstr "La scheda esiste già."
+
+#: src/Jobs.php:84
+msgid "The sheet to update was not found."
+msgstr "Scheda da aggiornare non trovata."
+
+#: assets/admin.js:189
+msgid "The supplier sees only the product name and selected fields. Their response remains a proposal for review."
+msgstr "Il fornitore vedrà solo il nome del prodotto e i campi selezionati. La risposta resterà una proposta da revisionare."
+
+#: src/Profiles.php:32
+msgid "The template has changed. Reload before saving."
+msgstr "Il modello è stato aggiornato. Ricarica prima di salvare."
+
+#: assets/admin.js:220
+msgid "There are unsaved changes. Leave the draft?"
+msgstr "Ci sono modifiche non salvate. Vuoi uscire dalla bozza?"
+
+#: assets/admin.js:59
+msgid "These sheets are voluntary. Publishing or completing fields does not establish product regulatory compliance."
+msgstr "Le schede sono volontarie. La pubblicazione e la compilazione dei campi non attestano la conformità normativa del prodotto."
+
+#: src/Pdf.php:35
+msgid "This copy captures the indicated revision. Open the link for updates."
+msgstr "Questa copia fotografa la revisione indicata. Consulta il collegamento per gli aggiornamenti."
+
+#: assets/admin.js:212
+msgid "This creates clearly marked EXAMPLE drafts: a chair, two variants, a spare part, a batch and three serial-numbered items. Nothing is published automatically."
+msgstr "Verranno create schede chiaramente contrassegnate ESEMPIO: una sedia, due varianti, un ricambio, un lotto e tre seriali. Nessuna pubblicazione automatica."
+
+#: src/PublicPage.php:230 src/Suppliers.php:36
+msgid "This link has expired, been revoked or already been used."
+msgstr "Collegamento scaduto, revocato o già utilizzato."
+
+#: src/Schema.php:17
+msgid "This version supports single-site WordPress installations. Multisite requires a separate migration for each site."
+msgstr "Questa versione supporta installazioni WordPress singole. Il multisito richiede una migrazione dedicata per ogni sito."
+
+#: assets/admin.js:134
+msgid "Title"
+msgstr "Titolo"
+
+#: assets/admin.js:56
+msgid "Total sheets"
+msgstr "Schede totali"
+
+#: assets/admin.js:82
+msgid "Translation language"
+msgstr "Lingua della traduzione"
+
+#: assets/admin.js:186
+msgid "Translation prepared. Save the draft to keep it."
+msgstr "Traduzione preparata. Salva la bozza per conservarla."
+
+#: assets/admin.js:82
+msgid "Translations"
+msgstr "Traduzioni"
+
+#: assets/admin.js:134 assets/admin.js:65 assets/admin.js:67 assets/admin.js:71
+msgid "Type"
+msgstr "Tipo"
+
+#: assets/admin.js:141
+msgid "UTF-8 · comma, semicolon or tab · up to 20,000 rows. SKU and UUID are separate keys."
+msgstr "UTF-8 · virgola, punto e virgola o tabulazione · massimo 20.000 righe. SKU e UUID sono chiavi distinte."
+
+#: assets/admin.js:255
+msgid "Unable to load the panel"
+msgstr "Impossibile caricare il pannello"
+
+#: src/Store.php:70
+msgid "Unable to save: duplicate identifier or invalid data."
+msgstr "Impossibile salvare: identificatore duplicato o dati non validi."
+
+#: assets/designer.js:24
+msgid "Undo change"
+msgstr "Annulla modifica"
+
+#: src/Admin.php:31 src/Pdf.php:18
+msgid "Unit"
+msgstr "Unità di misura"
+
+#: src/Portable.php:60
+msgid "Unsafe archive: invalid paths or sizes."
+msgstr "Archivio non sicuro: percorsi o dimensioni non validi."
+
+#: assets/admin.js:46 assets/designer.js:14
+msgid "Unsaved changes"
+msgstr "Modifiche da salvare"
+
+#: src/Portable.php:75
+msgid "Unsupported format version."
+msgstr "Versione del formato non supportata."
+
+#: src/Jobs.php:192
+msgid "Unsupported job type."
+msgstr "Tipo di operazione non supportato."
+
+#: src/Store.php:48
+msgid "Unsupported table."
+msgstr "Tabella non supportata."
+
+#: assets/admin.js:58 assets/admin.js:67
+msgid "Untitled"
+msgstr "Senza titolo"
+
+#: src/Designs.php:199
+msgid "Untranslated information remains in its original language: "
+msgstr "Le informazioni non tradotte restano nella lingua originale:  "
+
+#: src/PublicPage.php:119
+msgid "Untranslated information remains in the original language: "
+msgstr "Le informazioni non tradotte restano nella lingua originale: "
+
+#: assets/admin.js:232
+msgid "Update"
+msgstr "Aggiorna"
+
+#: assets/admin.js:141
+msgid "Update only"
+msgstr "Solo aggiorna"
+
+#: src/Designs.php:269 src/PublicPage.php:198
+msgid "Updated on "
+msgstr "Aggiornata il  "
+
+#: assets/designer.js:28
+msgid "Updating preview…"
+msgstr "Aggiornamento anteprima…"
+
+#: assets/admin.js:134
+msgid "Upload a document"
+msgstr "Carica un documento"
+
+#: assets/admin.js:134
+msgid "Upload and retain version"
+msgstr "Carica e conserva versione"
+
+#: assets/admin.js:133
+msgid "Upload manuals and declarations once. Previous versions remain in history."
+msgstr "Carica manuali e dichiarazioni una sola volta. Le versioni precedenti restano nello storico."
+
+#: src/Jobs.php:11
+msgid "Use a UTF-8 CSV file up to 12 MB."
+msgstr "Usa CSV UTF-8 fino a 12 MB."
+
+#: assets/designer.js:33
+msgid "Use existing product data or add a text block."
+msgstr "Usa i dati già inseriti o aggiungi un blocco di testo."
+
+#: assets/admin.js:164 assets/designer.js:33
+msgid "Use this image"
+msgstr "Usa questa immagine"
+
+#: assets/admin.js:78
+msgid "Use this template"
+msgstr "Usa questo template"
+
+#: src/PublicPage.php:145
+msgid "Useful information"
+msgstr "Informazioni utili"
+
+#: assets/admin.js:189
+msgid "Valid for (days)"
+msgstr "Validità (giorni)"
+
+#: assets/admin.js:141
+msgid "Validate archive"
+msgstr "Verifica archivio"
+
+#: assets/admin.js:67
+msgid "Variant"
+msgstr "Variante"
+
+#: assets/admin.js:216
+msgid "Variant #"
+msgstr "Variante #"
+
+#: assets/admin.js:71
+msgid "Variant, batch or item"
+msgstr "Variante, lotto o esemplare"
+
+#: src/Connections.php:11
+msgid "Verified organization with EU Login, credentials, applicable API specifications and registration/receipt testing. Submissions are unavailable in this release."
+msgstr "Organizzazione verificata con EU Login, credenziali, specifiche API applicabili e test di registrazione/ricevute. Nessun invio disponibile in questa versione."
+
+#: assets/admin.js:134
+msgid "Version"
+msgstr "Versione"
+
+#: assets/designer.js:24
+msgid "Very rounded"
+msgstr "Molto arrotondati"
+
+#: assets/admin.js:57
+msgid "View all passports"
+msgstr "Vedi tutti i passaporti"
+
+#: assets/admin.js:134
+msgid "View impact"
+msgstr "Vedi impatto"
+
+#: src/PublicPage.php:196
+msgid "View successor product"
+msgstr "Consulta il prodotto successore"
+
+#: src/Designs.php:264
+msgid "View the original manufacturer passport"
+msgstr "Consulta il passaporto originale del produttore"
+
+#: src/PublicPage.php:193
+msgid "View the original passport"
+msgstr "Consulta il passaporto originale"
+
+#: src/Designs.php:267
+msgid "View the successor product"
+msgstr "Consulta il prodotto successore"
+
+#: assets/admin.js:134
+msgid "Visibility"
+msgstr "Visibilità"
+
+#: assets/admin.js:78
+msgid "Visual template"
+msgstr "Template grafico"
+
+#: src/PublicPage.php:198
+msgid "Voluntary digital product sheet. Information supplied by the company."
+msgstr "Scheda digitale volontaria. Le informazioni sono fornite dall’azienda."
+
+#: src/Pdf.php:17
+msgid "Voluntary digital sheet · Revision "
+msgstr "Scheda digitale volontaria · Revisione "
+
+#: src/Designs.php:269
+msgid "Voluntary digital sheet. Information supplied by the company."
+msgstr "Scheda digitale volontaria. Informazioni fornite dall’azienda."
+
+#: src/Connections.php:27
+msgid "Voluntary information template. No certification or validated regulated sector profile."
+msgstr "Modello informativo volontario. Nessuna attestazione o profilo settoriale regolamentato."
+
+#: assets/admin.js:84
+msgid "Voluntary sheet · no automatic certification."
+msgstr "Scheda volontaria · nessuna certificazione automatica."
+
+#: src/Suppliers.php:40
+msgid "Wait before trying again."
+msgstr "Attendi prima di riprovare."
+
+#: src/Designs.php:18
+msgid "Warm tones and soft shapes for materials and craftsmanship."
+msgstr "Toni caldi e forme morbide per materiali e artigianato."
+
+#: src/Woo.php:27
+msgid "WooCommerce is not active."
+msgstr "WooCommerce non è attivo."
+
+#: assets/admin.js:207
+msgid "WooCommerce is not active. The standalone catalogue remains available."
+msgstr "WooCommerce non è attivo. Il catalogo autonomo resta disponibile."
+
+#: src/Woo.php:19
+msgid "WooCommerce permission is required."
+msgstr "Permesso WooCommerce richiesto."
+
+#: src/Woo.php:30
+msgid "WooCommerce product is not accessible."
+msgstr "Prodotto WooCommerce non accessibile."
+
+#: assets/admin.js:209
+msgid "WooCommerce: "
+msgstr "WooCommerce: "
+
+#: assets/designer.js:24
+msgid "Workspace"
+msgstr "Area di lavoro"
+
+#: src/Passport.php:161
+msgid "You cannot edit this passport."
+msgstr "Non puoi modificare questo passaporto."
+
+#: src/Designs.php:154
+msgid "You cannot preview this draft."
+msgstr "Non puoi visualizzare questa bozza."
+
+#: src/Documents.php:26
+msgid "You cannot upload documents."
+msgstr "Non puoi caricare documenti."
+
+#: assets/designer.js:20
+msgid "You have unsaved changes. Discard them?"
+msgstr "Ci sono modifiche non salvate. Vuoi abbandonarle?"
+
+#: assets/designer.js:19
+msgid "Your"
+msgstr "Il tuo"
+
+#: assets/admin.js:58
+msgid "Your catalogue starts here"
+msgstr "Il tuo catalogo inizia qui"
+
+#: assets/designer.js:21
+msgid "Your next design starts here."
+msgstr "Il prossimo design sarà il tuo."
+
+#: assets/admin.js:64
+msgid "Your passports"
+msgstr "I tuoi passaporti"
+
+#: src/Designs.php:180
+msgid "Your product documents"
+msgstr "Tutto quello che serve"
+
+#: src/Designs.php:146
+msgid "Your product guide"
+msgstr "Guida al tuo prodotto"
+
+#: src/PublicPage.php:131
+msgid "Your product, documented"
+msgstr "La storia del tuo prodotto"
+
+#: assets/designer.js:21
+msgid "Your templates"
+msgstr "I tuoi template"
+
+#: assets/admin.js:141
+msgid "ZIP archive"
+msgstr "Archivio ZIP"
+
+#: src/Api.php:29
+msgid "product name"
+msgstr "nome del prodotto"
+
+#: assets/designer.js:19
+msgid "product."
+msgstr "prodotto."
+
+#: src/Api.php:118 src/Documents.php:104 src/Passport.php:233 src/Passport.php:262 src/Passport.php:299 src/Passport.php:338 src/Portable.php:14 src/Portable.php:159 src/Portable.php:185 src/Portable.php:78 src/Store.php:47
+msgid "revisions"
+msgstr "revisioni"
+
+#: assets/admin.js:138 assets/admin.js:248 assets/admin.js:249 assets/admin.js:65 assets/admin.js:66 assets/admin.js:78 assets/admin.js:79 assets/designer.js:22 assets/designer.js:25
+msgid "selected"
+msgstr "selezionati"
+
+#: assets/admin.js:67
+msgid "sheets"
+msgstr "schede"
+
+#: assets/admin.js:79
+msgid "“Internally reviewed” means a company review, not certification of truth or product compliance."
+msgstr "“Verificato internamente” indica il controllo svolto dall’azienda, senza certificare veridicità o conformità del prodotto."
+
+#: assets/designer.js:24
+msgid "← Templates"
+msgstr "← Template"
+
+#: assets/designer.js:24
+msgid "＋ Add"
+msgstr "＋ Aggiungi"

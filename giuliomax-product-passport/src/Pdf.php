@@ -6,12 +6,16 @@ defined('ABSPATH') || exit;
 /** Small deterministic PDF writer. Text/QR only, no remote fetching or executable content. */
 final class Pdf
 {
-    public static function render(array $snapshot): string
+    public static function render(array $snapshot, ?string $language = null): string
+    {
+        return I18n::with_language($language ?? $snapshot['data']['language'] ?? 'en', fn()=>self::render_text($snapshot));
+    }
+    private static function render_text(array $snapshot): string
     {
         $d = $snapshot['data'];
         $c = $snapshot['company'];
-        $lines = [$d['name'] ?? '',$c['company'] ?? '', 'Scheda digitale volontaria · Revisione ' . ($snapshot['revision'] ?? '') . ' · ' . ($snapshot['published_at'] ?? ''),Passport::url($snapshot['uuid']),''];
-        $labels = ['description' => 'Descrizione','sku' => 'Riferimento','gtin' => 'GTIN','batch' => 'Lotto','serial' => 'Seriale','materials' => 'Materiali','care' => 'Cura del prodotto','safety' => 'Sicurezza','end_of_life' => 'Fine vita','spares' => 'Ricambi','support' => 'Assistenza','notice' => 'Avviso','method' => 'Metodo','environmental_value' => 'Valore ambientale','unit' => 'Unità','source' => 'Fonte','data_date' => 'Data del dato'];
+        $lines = [$d['name'] ?? '',$c['company'] ?? '', __('Voluntary digital sheet · Revision ', 'giuliomax-product-passport') . ($snapshot['revision'] ?? '') . ' · ' . ($snapshot['published_at'] ?? ''),Passport::url($snapshot['uuid']),''];
+        $labels = ['description' => __('Description', 'giuliomax-product-passport'),'sku' => __('Reference', 'giuliomax-product-passport'),'gtin' => 'GTIN','batch' => __('Batch', 'giuliomax-product-passport'),'serial' => __('Serial', 'giuliomax-product-passport'),'materials' => __('Materials', 'giuliomax-product-passport'),'care' => __('Product care', 'giuliomax-product-passport'),'safety' => __('Safety', 'giuliomax-product-passport'),'end_of_life' => __('End of life', 'giuliomax-product-passport'),'spares' => __('Spare parts', 'giuliomax-product-passport'),'support' => __('Support', 'giuliomax-product-passport'),'notice' => __('Notice', 'giuliomax-product-passport'),'method' => __('Method', 'giuliomax-product-passport'),'environmental_value' => __('Environmental value', 'giuliomax-product-passport'),'unit' => __('Unit', 'giuliomax-product-passport'),'source' => __('Source', 'giuliomax-product-passport'),'data_date' => __('Data date', 'giuliomax-product-passport')];
         foreach ($labels as $key => $label) {
             if (isset($d[$key]) && $d[$key] !== '') {
                 $lines[] = $label . ': ' . $d[$key];
@@ -20,7 +24,7 @@ final class Pdf
         }
         foreach ($d['design']['sections'] ?? [] as $section) {
             if ($section['type'] === 'custom' && !empty($section['text'])) {
-                $lines[] = ($section['title'] ?: 'Da sapere') . ': ' . $section['text'];
+                $lines[] = ($section['title'] ?: __('Good to know', 'giuliomax-product-passport')) . ': ' . $section['text'];
                 $lines[] = '';
             }
         }
@@ -28,7 +32,7 @@ final class Pdf
             $lines[] = $doc['title'] . ' · ' . $doc['language'] . ' · v' . $doc['version'];
             $lines[] = Documents::url((int)$doc['version_id']);
         }
-        $lines[] = 'Questa copia fotografa la revisione indicata. Consulta il collegamento per gli aggiornamenti.';
+        $lines[] = __('This copy captures the indicated revision. Open the link for updates.', 'giuliomax-product-passport');
         $wrapped = [];
         foreach ($lines as $line) {
             $line = str_replace(["\r","\t"], ['',' '], $line);
