@@ -6,7 +6,7 @@ Plugin WordPress per creare **schede digitali volontarie** di prodotto con manua
 
 ## Installa e crea il primo passaporto
 
-1. Scarica [lo ZIP installabile](dist/giuliomax-product-passport-1.1.0.zip).
+1. Scarica [lo ZIP installabile](dist/giuliomax-product-passport-1.1.1.zip).
 2. In WordPress: **Plugin → Aggiungi plugin → Carica plugin**, seleziona lo ZIP e attivalo.
 3. Apri **Product Passport → Impostazioni** e inserisci almeno il nome azienda. Scegli modalità, settore, lingua e contatti. Logo, contatti aggiuntivi e dati di esempio sono facoltativi.
 4. In **Documenti**, carica il manuale indicando la lingua effettiva, il tipo e la versione. Un documento può servire più prodotti. PDF, PNG, JPEG e testo semplice; massimo 10 MB per file.
@@ -15,6 +15,10 @@ Plugin WordPress per creare **schede digitali volontarie** di prodotto con manua
 7. Scansiona una stampa di prova, alla dimensione effettiva, prima di produrre molte etichette.
 
 Il cliente apre la scheda dal browser, senza app o account. Il QR identifica la scheda, non la pagina commerciale. Per un esempio completo e una valutazione del caso d’uso leggere [la guida pratica](docs/GUIDA-PRATICA.md).
+
+## Lingua e traduzioni
+
+Il plugin usa l’inglese come lingua originale e le traduzioni standard WordPress: POT, PO, MO e JSON per JavaScript. È incluso il catalogo italiano. La lingua segue quella del sito/profilo WordPress; i contenuti prodotto rimangono separati e non vengono tradotti automaticamente. [Guida alle traduzioni](docs/TRANSLATING.md).
 
 ## Design della scheda
 

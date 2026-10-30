@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.1 — 30 ottobre 2026
+
+Inglese come lingua originale di tutte le interfacce e dei messaggi, compresi Design Studio, Gutenberg, richieste fornitori e PDF. Traduzioni standard WordPress POT/PO/MO e JSON JavaScript; catalogo italiano incluso, preferenze sito/utente rispettate. Eliminato il dizionario inglese personalizzato. Dati prodotto, lingue degli allegati e revisioni esistenti conservati.
+
 ## 1.1.0 — 30 ottobre 2026
 
 Libreria di template grafici Studio, Editoriale, Naturale, Essenziale tecnico e base Da zero. Editor a sezioni con riordino trascinabile o tramite frecce, blocchi di testo, colori con contrasto automatico, tipografia, testata e spaziatura. Anteprima pubblica reale a 1080/768/390 px, dati di esempio o prodotto effettivo, salvataggio e duplicazione dei template, applicazione alla bozza. Configurazioni congelate nelle revisioni e conservate nel ripristino/export; layout classico mantenuto per le schede esistenti. PDF sempre testuale, con i nuovi blocchi di testo inclusi.

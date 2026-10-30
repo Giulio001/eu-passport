@@ -62,7 +62,7 @@ keys=sorted(mo);ids=b'';values=b'';original=[];translated=[]
 for key in keys:
     a=key.encode();b=mo[key].encode();original.append((len(a),len(ids)));translated.append((len(b),len(values)));ids+=a+b'\0';values+=b+b'\0'
 size=len(keys);start=28+size*16
-binary=struct.pack('<7I',0x950412de,0,size,28,28+size*8,0,0)
+binary=struct.pack('<7I',0x950412de,0,size,28,28+size*8,0,start)
 binary+=b''.join(struct.pack('<2I',length,start+offset) for length,offset in original)
 binary+=b''.join(struct.pack('<2I',length,start+len(ids)+offset) for length,offset in translated)
 (LANG/f'{DOMAIN}-{LOCALE}.mo').write_bytes(binary+ids+values)

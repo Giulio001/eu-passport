@@ -2,23 +2,23 @@
 msgid ""
 msgstr "Project-Id-Version: Giuliomax Product Passport 1.1.1\nReport-Msgid-Bugs-To: https://github.com/Giulio001/eu-passport/issues\nPOT-Creation-Date: 2026-10-30 00:00+0000\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nX-Domain: giuliomax-product-passport\n"
 
-#: assets/admin.js:213
+#: assets/admin.js:215
 msgid "\nFictional test data."
 msgstr ""
 
-#: assets/admin.js:141
+#: assets/admin.js:143
 msgid " Empty fields should clear existing values"
 msgstr ""
 
-#: assets/admin.js:138
+#: assets/admin.js:140
 msgid " Enable real supplier email (verified production only)"
 msgstr ""
 
-#: assets/admin.js:198
+#: assets/admin.js:200
 msgid " affected sheets"
 msgstr ""
 
-#: assets/admin.js:230
+#: assets/admin.js:232
 msgid " affected sheets; nothing published automatically."
 msgstr ""
 
@@ -26,15 +26,15 @@ msgstr ""
 msgid " characters."
 msgstr ""
 
-#: assets/admin.js:205
+#: assets/admin.js:207
 msgid " documents · "
 msgstr ""
 
-#: assets/admin.js:206
+#: assets/admin.js:208
 msgid " existing identities preserved."
 msgstr ""
 
-#: assets/admin.js:187
+#: assets/admin.js:189
 msgid " items will inherit data and documents from sheet #"
 msgstr ""
 
@@ -42,19 +42,19 @@ msgstr ""
 msgid " missing."
 msgstr ""
 
-#: assets/admin.js:206
+#: assets/admin.js:208
 msgid " new sheets; "
 msgstr ""
 
-#: assets/admin.js:205
+#: assets/admin.js:207
 msgid " revisions"
 msgstr ""
 
-#: assets/admin.js:204 assets/admin.js:232
+#: assets/admin.js:206 assets/admin.js:234
 msgid " rows · "
 msgstr ""
 
-#: assets/admin.js:232
+#: assets/admin.js:234
 msgid " rows. Invalid rows will be skipped and included in the report."
 msgstr ""
 
@@ -62,23 +62,23 @@ msgstr ""
 msgid " saved · reusable across your products"
 msgstr ""
 
-#: assets/admin.js:244
+#: assets/admin.js:246
 msgid " selected"
 msgstr ""
 
-#: assets/admin.js:211
+#: assets/admin.js:213
 msgid " sheets to review."
 msgstr ""
 
-#: assets/admin.js:205
+#: assets/admin.js:207
 msgid " sheets · "
 msgstr ""
 
-#: assets/admin.js:161
+#: assets/admin.js:163
 msgid " sheets? The current revision will remain in history."
 msgstr ""
 
-#: assets/admin.js:78
+#: assets/admin.js:80
 msgid " · sheet copy"
 msgstr ""
 
@@ -98,7 +98,7 @@ msgstr ""
 msgid "01 / STYLE"
 msgstr ""
 
-#: assets/admin.js:138
+#: assets/admin.js:140
 msgid "01 · Your company"
 msgstr ""
 
@@ -106,7 +106,7 @@ msgstr ""
 msgid "02 / SECTIONS"
 msgstr ""
 
-#: assets/admin.js:138
+#: assets/admin.js:140
 msgid "02 · Your workflow"
 msgstr ""
 
@@ -114,7 +114,7 @@ msgstr ""
 msgid "03 / PREVIEW CONTENT"
 msgstr ""
 
-#: assets/admin.js:138
+#: assets/admin.js:140
 msgid "03 · Printing and email"
 msgstr ""
 
@@ -130,7 +130,7 @@ msgstr ""
 msgid "A file can contain up to 20,000 rows."
 msgstr ""
 
-#: assets/admin.js:134
+#: assets/admin.js:136
 msgid "A home for your manuals."
 msgstr ""
 
@@ -162,7 +162,7 @@ msgstr ""
 msgid "A template can contain up to 20 sections."
 msgstr ""
 
-#: assets/admin.js:78
+#: assets/admin.js:80
 msgid "A visual template for your content. The published page changes only with a new revision."
 msgstr ""
 
@@ -170,11 +170,11 @@ msgstr ""
 msgid "Accent"
 msgstr ""
 
-#: assets/admin.js:138
+#: assets/admin.js:140
 msgid "Accent colour"
 msgstr ""
 
-#: assets/admin.js:193
+#: assets/admin.js:195
 msgid "Accept into draft"
 msgstr ""
 
@@ -182,15 +182,15 @@ msgstr ""
 msgid "Access denied."
 msgstr ""
 
-#: assets/admin.js:138
+#: assets/admin.js:140
 msgid "Action text keeps high contrast even with a light accent."
 msgstr ""
 
-#: assets/admin.js:134 assets/admin.js:67
+#: assets/admin.js:136 assets/admin.js:69
 msgid "Actions"
 msgstr ""
 
-#: assets/admin.js:134
+#: assets/admin.js:136
 msgid "Actual file language"
 msgstr ""
 
@@ -202,15 +202,15 @@ msgstr ""
 msgid "Add care instructions if available."
 msgstr ""
 
-#: assets/admin.js:57
+#: assets/admin.js:59
 msgid "Add what matters"
 msgstr ""
 
-#: assets/admin.js:138
+#: assets/admin.js:140
 msgid "Address"
 msgstr ""
 
-#: assets/admin.js:65
+#: assets/admin.js:67
 msgid "All"
 msgstr ""
 
@@ -230,7 +230,7 @@ msgstr ""
 msgid "An identifier scheme recognized by the profile, an endpoint and resolution testing. A local UUID has no automatic regulatory recognition."
 msgstr ""
 
-#: assets/admin.js:64
+#: assets/admin.js:66
 msgid "An organised catalogue independent of sales pages."
 msgstr ""
 
@@ -246,7 +246,7 @@ msgstr ""
 msgid "Apply saves only the design to this product draft."
 msgstr ""
 
-#: assets/admin.js:209
+#: assets/admin.js:211
 msgid "Apply selected values to draft"
 msgstr ""
 
@@ -254,15 +254,15 @@ msgstr ""
 msgid "Apply to draft"
 msgstr ""
 
-#: assets/admin.js:161
+#: assets/admin.js:163
 msgid "Archive"
 msgstr ""
 
-#: assets/admin.js:66
+#: assets/admin.js:68
 msgid "Archive selected"
 msgstr ""
 
-#: assets/admin.js:250
+#: assets/admin.js:252
 msgid "Archive too large (max 50 MB)."
 msgstr ""
 
@@ -270,11 +270,11 @@ msgstr ""
 msgid "Automatic heading"
 msgstr ""
 
-#: assets/admin.js:138
+#: assets/admin.js:140
 msgid "Available templates: generic, furniture and textile. All are voluntary; no regulated profile is operational."
 msgstr ""
 
-#: assets/admin.js:84
+#: assets/admin.js:86
 msgid "Back to list"
 msgstr ""
 
@@ -286,11 +286,11 @@ msgstr ""
 msgid "Background"
 msgstr ""
 
-#: assets/admin.js:67 assets/admin.js:71 src/Designs.php:204 src/Pdf.php:18 src/PublicPage.php:134
+#: assets/admin.js:69 assets/admin.js:73 src/Designs.php:204 src/Pdf.php:18 src/PublicPage.php:134
 msgid "Batch"
 msgstr ""
 
-#: assets/admin.js:202
+#: assets/admin.js:204
 msgid "Batch processed."
 msgstr ""
 
@@ -298,7 +298,7 @@ msgstr ""
 msgid "Batch reference"
 msgstr ""
 
-#: assets/admin.js:213
+#: assets/admin.js:215
 msgid "Beech wood and fabric. Fictional data."
 msgstr ""
 
@@ -306,11 +306,11 @@ msgstr ""
 msgid "Beech wood frame with an upholstered seat. The company supplies the actual product information."
 msgstr ""
 
-#: assets/admin.js:84
+#: assets/admin.js:86
 msgid "Before sharing"
 msgstr ""
 
-#: assets/admin.js:141
+#: assets/admin.js:143
 msgid "Bring in your catalogue. Keep control of your data."
 msgstr ""
 
@@ -318,7 +318,7 @@ msgstr ""
 msgid "Bulk update"
 msgstr ""
 
-#: assets/admin.js:175
+#: assets/admin.js:177
 msgid "Bulk update confirmed"
 msgstr ""
 
@@ -326,7 +326,7 @@ msgstr ""
 msgid "Button"
 msgstr ""
 
-#: assets/admin.js:141
+#: assets/admin.js:143
 msgid "CSV file"
 msgstr ""
 
@@ -338,7 +338,7 @@ msgstr ""
 msgid "CSV headers must be unique."
 msgstr ""
 
-#: assets/admin.js:147 assets/admin.js:71
+#: assets/admin.js:149 assets/admin.js:73
 msgid "Cancel"
 msgstr ""
 
@@ -350,15 +350,15 @@ msgstr ""
 msgid "Care and maintenance"
 msgstr ""
 
-#: assets/admin.js:141
+#: assets/admin.js:143
 msgid "Catalogue SKU (when unique)"
 msgstr ""
 
-#: assets/admin.js:77
+#: assets/admin.js:79
 msgid "Changes stay in draft until a new revision is published."
 msgstr ""
 
-#: assets/admin.js:141
+#: assets/admin.js:143
 msgid "Check preview"
 msgstr ""
 
@@ -366,11 +366,11 @@ msgstr ""
 msgid "Choose a non-empty file up to 10 MB."
 msgstr ""
 
-#: assets/admin.js:57
+#: assets/admin.js:59
 msgid "Choose a product"
 msgstr ""
 
-#: assets/admin.js:76
+#: assets/admin.js:78
 msgid "Choose an image from the media library"
 msgstr ""
 
@@ -378,7 +378,7 @@ msgstr ""
 msgid "Choose product photo"
 msgstr ""
 
-#: assets/admin.js:164 assets/designer.js:33
+#: assets/admin.js:166 assets/designer.js:33
 msgid "Choose the product photo"
 msgstr ""
 
@@ -390,11 +390,11 @@ msgstr ""
 msgid "Clean lines, materials to understand and simple ways to make them last. All product information in one place."
 msgstr ""
 
-#: assets/admin.js:213
+#: assets/admin.js:215
 msgid "Clean with a soft, slightly damp cloth."
 msgstr ""
 
-#: assets/admin.js:155 assets/designer.js:31
+#: assets/admin.js:157 assets/designer.js:31
 msgid "Close"
 msgstr ""
 
@@ -402,7 +402,7 @@ msgstr ""
 msgid "Collection"
 msgstr ""
 
-#: assets/admin.js:65
+#: assets/admin.js:67
 msgid "Columns"
 msgstr ""
 
@@ -410,7 +410,7 @@ msgstr ""
 msgid "Commercial archive"
 msgstr ""
 
-#: assets/admin.js:210
+#: assets/admin.js:212
 msgid "Commercial data copied to the draft."
 msgstr ""
 
@@ -426,7 +426,7 @@ msgstr ""
 msgid "Compact header"
 msgstr ""
 
-#: assets/admin.js:138
+#: assets/admin.js:140
 msgid "Company name"
 msgstr ""
 
@@ -438,7 +438,7 @@ msgstr ""
 msgid "Compare commercial data: no changes are applied automatically."
 msgstr ""
 
-#: assets/admin.js:209
+#: assets/admin.js:211
 msgid "Compare commercial updates"
 msgstr ""
 
@@ -454,7 +454,7 @@ msgstr ""
 msgid "Complete the requested information before the deadline:\n"
 msgstr ""
 
-#: assets/admin.js:77
+#: assets/admin.js:79
 msgid "Complete the sheet"
 msgstr ""
 
@@ -462,23 +462,23 @@ msgstr ""
 msgid "Completed"
 msgstr ""
 
-#: assets/admin.js:138
+#: assets/admin.js:140
 msgid "Configure your company, appearance and workflow."
 msgstr ""
 
-#: assets/admin.js:161
+#: assets/admin.js:163
 msgid "Confirm impact"
 msgstr ""
 
-#: assets/admin.js:232
+#: assets/admin.js:234
 msgid "Confirm import"
 msgstr ""
 
-#: assets/admin.js:161
+#: assets/admin.js:163
 msgid "Confirm operation"
 msgstr ""
 
-#: assets/admin.js:205
+#: assets/admin.js:207
 msgid "Confirm restore"
 msgstr ""
 
@@ -502,23 +502,23 @@ msgstr ""
 msgid "Content comes from product data. Empty sections are hidden on the public page."
 msgstr ""
 
-#: assets/admin.js:147
+#: assets/admin.js:149
 msgid "Continue now"
 msgstr ""
 
-#: assets/admin.js:141
+#: assets/admin.js:143
 msgid "Controlled imports and portable archives, with no arbitrary remote downloads."
 msgstr ""
 
-#: assets/admin.js:172
+#: assets/admin.js:174
 msgid "Copy created with a new identity. Enter its reference."
 msgstr ""
 
-#: assets/admin.js:190 assets/admin.js:84
+#: assets/admin.js:192 assets/admin.js:86
 msgid "Copy link"
 msgstr ""
 
-#: assets/admin.js:190
+#: assets/admin.js:192
 msgid "Copy this link and send it to the supplier. It is not stored in plain text: create a new request and revoke the previous one to replace it."
 msgstr ""
 
@@ -526,39 +526,39 @@ msgstr ""
 msgid "Corners"
 msgstr ""
 
-#: assets/admin.js:232
+#: assets/admin.js:234
 msgid "Create"
 msgstr ""
 
-#: assets/admin.js:67
+#: assets/admin.js:69
 msgid "Create a passport"
 msgstr ""
 
-#: assets/admin.js:58
+#: assets/admin.js:60
 msgid "Create a sheet"
 msgstr ""
 
-#: assets/admin.js:71
+#: assets/admin.js:73
 msgid "Create and complete"
 msgstr ""
 
-#: assets/admin.js:141
+#: assets/admin.js:143
 msgid "Create and update"
 msgstr ""
 
-#: assets/admin.js:57
+#: assets/admin.js:59
 msgid "Create it, import CSV or link a WooCommerce product."
 msgstr ""
 
-#: assets/admin.js:187
+#: assets/admin.js:189
 msgid "Create items"
 msgstr ""
 
-#: assets/admin.js:82
+#: assets/admin.js:84
 msgid "Create items in bulk"
 msgstr ""
 
-#: assets/admin.js:141
+#: assets/admin.js:143
 msgid "Create only"
 msgstr ""
 
@@ -566,27 +566,27 @@ msgstr ""
 msgid "Create or link a digital sheet"
 msgstr ""
 
-#: assets/admin.js:189
+#: assets/admin.js:191
 msgid "Create private link"
 msgstr ""
 
-#: assets/admin.js:212
+#: assets/admin.js:214
 msgid "Create sample catalogue data"
 msgstr ""
 
-#: assets/admin.js:71
+#: assets/admin.js:73
 msgid "Create the first connection."
 msgstr ""
 
-#: assets/admin.js:54
+#: assets/admin.js:56
 msgid "Create useful product sheets, share documents and put support one scan away."
 msgstr ""
 
-#: assets/admin.js:138 assets/admin.js:58
+#: assets/admin.js:140 assets/admin.js:60
 msgid "Create your first passport"
 msgstr ""
 
-#: assets/admin.js:78
+#: assets/admin.js:80
 msgid "Current classic layout"
 msgstr ""
 
@@ -606,7 +606,7 @@ msgstr ""
 msgid "Customize a template and save it here to reuse it."
 msgstr ""
 
-#: assets/admin.js:78
+#: assets/admin.js:80
 msgid "Customize design"
 msgstr ""
 
@@ -614,15 +614,15 @@ msgstr ""
 msgid "Data date"
 msgstr ""
 
-#: assets/admin.js:79
+#: assets/admin.js:81
 msgid "Data quality and provenance"
 msgstr ""
 
-#: assets/admin.js:134 src/PublicPage.php:179
+#: assets/admin.js:136 src/PublicPage.php:179
 msgid "Date"
 msgstr ""
 
-#: assets/admin.js:134
+#: assets/admin.js:136
 msgid "Declaration"
 msgstr ""
 
@@ -638,11 +638,11 @@ msgstr ""
 msgid "Declared environmental value"
 msgstr ""
 
-#: assets/admin.js:138
+#: assets/admin.js:140
 msgid "Default text for new sheets"
 msgstr ""
 
-#: assets/admin.js:138
+#: assets/admin.js:140
 msgid "Define which data is required before publishing a sheet. These are internal company rules, not certification criteria."
 msgstr ""
 
@@ -662,7 +662,7 @@ msgstr ""
 msgid "Description"
 msgstr ""
 
-#: assets/admin.js:49 src/Admin.php:25
+#: assets/admin.js:51 src/Admin.php:25
 msgid "Design & templates"
 msgstr ""
 
@@ -678,7 +678,7 @@ msgstr ""
 msgid "Design preview"
 msgstr ""
 
-#: assets/admin.js:179 assets/designer.js:24
+#: assets/admin.js:181 assets/designer.js:24
 msgid "Desktop"
 msgstr ""
 
@@ -694,11 +694,11 @@ msgstr ""
 msgid "Display"
 msgstr ""
 
-#: assets/admin.js:134
+#: assets/admin.js:136
 msgid "Document"
 msgstr ""
 
-#: assets/admin.js:134
+#: assets/admin.js:136
 msgid "Document library"
 msgstr ""
 
@@ -710,15 +710,15 @@ msgstr ""
 msgid "Document not verified."
 msgstr ""
 
-#: assets/admin.js:230
+#: assets/admin.js:232
 msgid "Document saved. "
 msgstr ""
 
-#: assets/admin.js:49 assets/admin.js:78 assets/admin.js:80 src/Admin.php:25
+#: assets/admin.js:51 assets/admin.js:80 assets/admin.js:82 src/Admin.php:25
 msgid "Documents"
 msgstr ""
 
-#: assets/admin.js:134
+#: assets/admin.js:136
 msgid "Download"
 msgstr ""
 
@@ -726,7 +726,7 @@ msgstr ""
 msgid "Download PDF"
 msgstr ""
 
-#: assets/admin.js:141
+#: assets/admin.js:143
 msgid "Download portable ZIP archive"
 msgstr ""
 
@@ -738,7 +738,7 @@ msgstr ""
 msgid "Draft photo updated. The published sheet is unchanged."
 msgstr ""
 
-#: assets/admin.js:179
+#: assets/admin.js:181
 msgid "Draft preview"
 msgstr ""
 
@@ -746,19 +746,19 @@ msgstr ""
 msgid "Draft preview · visible only to authorized users"
 msgstr ""
 
-#: assets/admin.js:46 assets/admin.js:83
+#: assets/admin.js:48 assets/admin.js:85
 msgid "Draft saved"
 msgstr ""
 
-#: assets/admin.js:229
+#: assets/admin.js:231
 msgid "Draft saved. The public version is unchanged."
 msgstr ""
 
-#: assets/admin.js:209
+#: assets/admin.js:211
 msgid "Draft: "
 msgstr ""
 
-#: assets/admin.js:56
+#: assets/admin.js:58
 msgid "Drafts to complete"
 msgstr ""
 
@@ -774,7 +774,7 @@ msgstr ""
 msgid "Drag to reorder or use the arrows. Click a section to customize it."
 msgstr ""
 
-#: assets/admin.js:67
+#: assets/admin.js:69
 msgid "Duplicate"
 msgstr ""
 
@@ -790,31 +790,31 @@ msgstr ""
 msgid "EU DPP registry"
 msgstr ""
 
-#: assets/admin.js:213
+#: assets/admin.js:215
 msgid "EXAMPLE · Alba Natural"
 msgstr ""
 
-#: assets/admin.js:213
+#: assets/admin.js:215
 msgid "EXAMPLE · Alba Walnut"
 msgstr ""
 
-#: assets/admin.js:213
+#: assets/admin.js:215
 msgid "EXAMPLE · Alba chair"
 msgstr ""
 
-#: assets/admin.js:213
+#: assets/admin.js:215
 msgid "EXAMPLE · Manual "
 msgstr ""
 
-#: assets/admin.js:213
+#: assets/admin.js:215
 msgid "EXAMPLE · Spare foot"
 msgstr ""
 
-#: assets/admin.js:213
+#: assets/admin.js:215
 msgid "EXAMPLE — manual "
 msgstr ""
 
-#: assets/admin.js:138
+#: assets/admin.js:140
 msgid "Editable information templates"
 msgstr ""
 
@@ -826,11 +826,11 @@ msgstr ""
 msgid "Elegant typography with a catalogue feel."
 msgstr ""
 
-#: assets/admin.js:192
+#: assets/admin.js:194
 msgid "Email handed to the company mail transport."
 msgstr ""
 
-#: assets/admin.js:138
+#: assets/admin.js:140
 msgid "Email is disabled initially. WP-Cron depends on visits: configure system cron for reliable jobs or run "
 msgstr ""
 
@@ -854,23 +854,23 @@ msgstr ""
 msgid "Enter a reason for this revision."
 msgstr ""
 
-#: assets/admin.js:187
+#: assets/admin.js:189
 msgid "Enter at least one serial number."
 msgstr ""
 
-#: assets/admin.js:82
+#: assets/admin.js:84
 msgid "Enter available translations only. Documents always show their actual language."
 msgstr ""
 
-#: assets/admin.js:55
+#: assets/admin.js:57
 msgid "Enter company details once. New sheets can reuse them."
 msgstr ""
 
-#: assets/admin.js:138
+#: assets/admin.js:140
 msgid "Enter once. Reuse later."
 msgstr ""
 
-#: assets/admin.js:104 src/Passport.php:190
+#: assets/admin.js:106 src/Passport.php:190
 msgid "Enter the product name."
 msgstr ""
 
@@ -882,7 +882,7 @@ msgstr ""
 msgid "Environmental data"
 msgstr ""
 
-#: assets/admin.js:79
+#: assets/admin.js:81
 msgid "Environmental data and evidence"
 msgstr ""
 
@@ -890,11 +890,11 @@ msgstr ""
 msgid "Environmental value"
 msgstr ""
 
-#: assets/admin.js:84
+#: assets/admin.js:86
 msgid "Essential information is present."
 msgstr ""
 
-#: assets/admin.js:134
+#: assets/admin.js:136
 msgid "Evidence"
 msgstr ""
 
@@ -914,15 +914,15 @@ msgstr ""
 msgid "Explicitly enable company email on a verified production site."
 msgstr ""
 
-#: assets/admin.js:141
+#: assets/admin.js:143
 msgid "Export and transfer"
 msgstr ""
 
-#: assets/admin.js:141
+#: assets/admin.js:143
 msgid "Export published content only (JSON)"
 msgstr ""
 
-#: assets/admin.js:138
+#: assets/admin.js:140
 msgid "External connections"
 msgstr ""
 
@@ -934,7 +934,7 @@ msgstr ""
 msgid "External identifier and resolver"
 msgstr ""
 
-#: assets/admin.js:138
+#: assets/admin.js:140
 msgid "External manufacturer passports"
 msgstr ""
 
@@ -942,11 +942,11 @@ msgstr ""
 msgid "External preservation"
 msgstr ""
 
-#: assets/admin.js:134
+#: assets/admin.js:136
 msgid "File (max 10 MB)"
 msgstr ""
 
-#: assets/admin.js:134
+#: assets/admin.js:136
 msgid "Files use protected storage. Public documents are downloadable once a published revision references them."
 msgstr ""
 
@@ -954,7 +954,7 @@ msgstr ""
 msgid "Finish"
 msgstr ""
 
-#: assets/admin.js:182
+#: assets/admin.js:184
 msgid "First publication"
 msgstr ""
 
@@ -962,11 +962,11 @@ msgstr ""
 msgid "Follow the warnings and instructions in the manual."
 msgstr ""
 
-#: assets/admin.js:67
+#: assets/admin.js:69
 msgid "From WooCommerce"
 msgstr ""
 
-#: assets/admin.js:57
+#: assets/admin.js:59
 msgid "From product to sheet in three steps"
 msgstr ""
 
@@ -978,11 +978,11 @@ msgstr ""
 msgid "Full sheet"
 msgstr ""
 
-#: assets/admin.js:138 src/Connections.php:27
+#: assets/admin.js:140 src/Connections.php:27
 msgid "Furniture"
 msgstr ""
 
-#: assets/admin.js:71
+#: assets/admin.js:73
 msgid "Furniture · voluntary"
 msgstr ""
 
@@ -990,7 +990,7 @@ msgstr ""
 msgid "GTIN (if available)"
 msgstr ""
 
-#: assets/admin.js:138
+#: assets/admin.js:140
 msgid "Generic"
 msgstr ""
 
@@ -998,7 +998,7 @@ msgstr ""
 msgid "Generic product"
 msgstr ""
 
-#: assets/admin.js:71
+#: assets/admin.js:73
 msgid "Generic product · voluntary"
 msgstr ""
 
@@ -1018,7 +1018,7 @@ msgstr ""
 msgid "Give your template a name."
 msgstr ""
 
-#: assets/admin.js:34
+#: assets/admin.js:36
 msgid "Go to field"
 msgstr ""
 
@@ -1030,7 +1030,7 @@ msgstr ""
 msgid "Good to know"
 msgstr ""
 
-#: assets/admin.js:134
+#: assets/admin.js:136
 msgid "Guide"
 msgstr ""
 
@@ -1038,11 +1038,11 @@ msgstr ""
 msgid "Headings"
 msgstr ""
 
-#: assets/admin.js:78
+#: assets/admin.js:80
 msgid "Identification and relationships"
 msgstr ""
 
-#: assets/admin.js:249
+#: assets/admin.js:251
 msgid "Ignore"
 msgstr ""
 
@@ -1054,15 +1054,15 @@ msgstr ""
 msgid "Image below the title"
 msgstr ""
 
-#: assets/admin.js:67
+#: assets/admin.js:69
 msgid "Import / export"
 msgstr ""
 
-#: assets/admin.js:141
+#: assets/admin.js:143
 msgid "Import CSV"
 msgstr ""
 
-#: assets/admin.js:200
+#: assets/admin.js:202
 msgid "Import added to the queue. Use Continue now to run it."
 msgstr ""
 
@@ -1074,11 +1074,11 @@ msgstr ""
 msgid "Imported revision: "
 msgstr ""
 
-#: assets/admin.js:138
+#: assets/admin.js:140
 msgid "Importer"
 msgstr ""
 
-#: assets/admin.js:71
+#: assets/admin.js:73
 msgid "Individual item"
 msgstr ""
 
@@ -1090,23 +1090,23 @@ msgstr ""
 msgid "Information request"
 msgstr ""
 
-#: assets/admin.js:71
+#: assets/admin.js:73
 msgid "Information template"
 msgstr ""
 
-#: assets/admin.js:49
+#: assets/admin.js:51
 msgid "Information that lasts"
 msgstr ""
 
-#: assets/admin.js:182
+#: assets/admin.js:184
 msgid "Information update"
 msgstr ""
 
-#: assets/admin.js:76
+#: assets/admin.js:78
 msgid "Inherited from the parent sheet. Editing creates a local override."
 msgstr ""
 
-#: assets/admin.js:78
+#: assets/admin.js:80
 msgid "Inherits from sheet"
 msgstr ""
 
@@ -1118,11 +1118,11 @@ msgstr ""
 msgid "Internal data owner"
 msgstr ""
 
-#: assets/admin.js:79
+#: assets/admin.js:81
 msgid "Internal reviewer"
 msgstr ""
 
-#: assets/admin.js:79
+#: assets/admin.js:81
 msgid "Internally reviewed"
 msgstr ""
 
@@ -1186,7 +1186,7 @@ msgstr ""
 msgid "Invalid upload."
 msgstr ""
 
-#: assets/admin.js:67
+#: assets/admin.js:69
 msgid "Item"
 msgstr ""
 
@@ -1194,15 +1194,15 @@ msgstr ""
 msgid "Job is not accessible."
 msgstr ""
 
-#: assets/admin.js:204
+#: assets/admin.js:206
 msgid "Job report #"
 msgstr ""
 
-#: assets/admin.js:82
+#: assets/admin.js:84
 msgid "Keep translation in draft"
 msgstr ""
 
-#: assets/admin.js:232
+#: assets/admin.js:234
 msgid "Key"
 msgstr ""
 
@@ -1214,15 +1214,15 @@ msgstr ""
 msgid "Know your product"
 msgstr ""
 
-#: assets/admin.js:138
+#: assets/admin.js:140
 msgid "Label height (mm)"
 msgstr ""
 
-#: assets/admin.js:138
+#: assets/admin.js:140
 msgid "Label width (mm)"
 msgstr ""
 
-#: assets/admin.js:134
+#: assets/admin.js:136
 msgid "Language"
 msgstr ""
 
@@ -1230,31 +1230,31 @@ msgstr ""
 msgid "Languages"
 msgstr ""
 
-#: assets/admin.js:65 assets/admin.js:67
+#: assets/admin.js:67 assets/admin.js:69
 msgid "Last updated"
 msgstr ""
 
-#: assets/admin.js:79
+#: assets/admin.js:81
 msgid "Leave unknown values blank. A completed field is not a certification."
 msgstr ""
 
-#: assets/admin.js:190
+#: assets/admin.js:192
 msgid "Link"
 msgstr ""
 
-#: assets/admin.js:216
+#: assets/admin.js:218
 msgid "Link / compare"
 msgstr ""
 
-#: assets/admin.js:178 assets/admin.js:191
+#: assets/admin.js:180 assets/admin.js:193
 msgid "Link copied."
 msgstr ""
 
-#: assets/admin.js:190
+#: assets/admin.js:192
 msgid "Link created"
 msgstr ""
 
-#: assets/admin.js:207
+#: assets/admin.js:209
 msgid "Link from WooCommerce"
 msgstr ""
 
@@ -1262,7 +1262,7 @@ msgstr ""
 msgid "Live preview"
 msgstr ""
 
-#: assets/admin.js:138
+#: assets/admin.js:140
 msgid "Load sample data"
 msgstr ""
 
@@ -1270,11 +1270,11 @@ msgstr ""
 msgid "Loading passports…"
 msgstr ""
 
-#: assets/admin.js:141
+#: assets/admin.js:143
 msgid "Local export does not replace an external continuity service. Maintain your domain and redirects for distributed QR codes."
 msgstr ""
 
-#: assets/admin.js:138
+#: assets/admin.js:140
 msgid "Logo (image URL)"
 msgstr ""
 
@@ -1286,11 +1286,11 @@ msgstr ""
 msgid "Made to last"
 msgstr ""
 
-#: assets/admin.js:80
+#: assets/admin.js:82
 msgid "Manage library"
 msgstr ""
 
-#: assets/admin.js:134 src/PublicPage.php:147
+#: assets/admin.js:136 src/PublicPage.php:147
 msgid "Manual"
 msgstr ""
 
@@ -1302,7 +1302,7 @@ msgstr ""
 msgid "Manuals, warnings and support remain available when present."
 msgstr ""
 
-#: assets/admin.js:138
+#: assets/admin.js:140
 msgid "Manufacturer"
 msgstr ""
 
@@ -1310,7 +1310,7 @@ msgstr ""
 msgid "Manufacturer passport"
 msgstr ""
 
-#: assets/admin.js:249
+#: assets/admin.js:251
 msgid "Map columns"
 msgstr ""
 
@@ -1318,7 +1318,7 @@ msgstr ""
 msgid "Materials"
 msgstr ""
 
-#: assets/admin.js:79
+#: assets/admin.js:81
 msgid "Materials and care"
 msgstr ""
 
@@ -1326,7 +1326,7 @@ msgstr ""
 msgid "Materials and composition"
 msgstr ""
 
-#: assets/admin.js:57
+#: assets/admin.js:59
 msgid "Materials, manuals, care and spare parts without repeating data."
 msgstr ""
 
@@ -1338,27 +1338,27 @@ msgstr ""
 msgid "Method"
 msgstr ""
 
-#: assets/admin.js:79
+#: assets/admin.js:81
 msgid "Missing"
 msgstr ""
 
-#: assets/admin.js:179
+#: assets/admin.js:181
 msgid "Mobile"
 msgstr ""
 
-#: assets/admin.js:138 assets/admin.js:141
+#: assets/admin.js:140 assets/admin.js:143
 msgid "Mode"
 msgstr ""
 
-#: assets/admin.js:67 assets/admin.js:71
+#: assets/admin.js:69 assets/admin.js:73
 msgid "Model"
 msgstr ""
 
-#: assets/admin.js:71
+#: assets/admin.js:73
 msgid "Model variant"
 msgstr ""
 
-#: assets/admin.js:65
+#: assets/admin.js:67
 msgid "Most recent"
 msgstr ""
 
@@ -1374,7 +1374,7 @@ msgstr ""
 msgid "My template"
 msgstr ""
 
-#: assets/admin.js:232 assets/admin.js:65
+#: assets/admin.js:234 assets/admin.js:67
 msgid "Name"
 msgstr ""
 
@@ -1394,35 +1394,35 @@ msgstr ""
 msgid "Need help with assembly or care? We are here to help."
 msgstr ""
 
-#: assets/admin.js:79
+#: assets/admin.js:81
 msgid "Needs review"
 msgstr ""
 
-#: assets/admin.js:59 assets/admin.js:67
+#: assets/admin.js:61 assets/admin.js:69
 msgid "New passport"
 msgstr ""
 
-#: assets/admin.js:134
+#: assets/admin.js:136
 msgid "New version"
 msgstr ""
 
-#: assets/admin.js:197
+#: assets/admin.js:199
 msgid "New version of "
 msgstr ""
 
-#: assets/admin.js:67
+#: assets/admin.js:69
 msgid "Next"
 msgstr ""
 
-#: assets/admin.js:58
+#: assets/admin.js:60
 msgid "No WooCommerce or external account required."
 msgstr ""
 
-#: assets/admin.js:80
+#: assets/admin.js:82
 msgid "No documents available. Upload a manual to the document library."
 msgstr ""
 
-#: assets/admin.js:204
+#: assets/admin.js:206
 msgid "No errors in the processed rows."
 msgstr ""
 
@@ -1430,23 +1430,23 @@ msgstr ""
 msgid "No open transaction."
 msgstr ""
 
-#: assets/admin.js:67
+#: assets/admin.js:69
 msgid "No products found"
 msgstr ""
 
-#: assets/admin.js:216
+#: assets/admin.js:218
 msgid "No products found."
 msgstr ""
 
-#: assets/admin.js:67
+#: assets/admin.js:69
 msgid "No sheets yet"
 msgstr ""
 
-#: assets/admin.js:79
+#: assets/admin.js:81
 msgid "Not applicable"
 msgstr ""
 
-#: assets/admin.js:138
+#: assets/admin.js:140
 msgid "Not configured"
 msgstr ""
 
@@ -1458,15 +1458,15 @@ msgstr ""
 msgid "One chair, many stories."
 msgstr ""
 
-#: assets/admin.js:133
+#: assets/admin.js:135
 msgid "One document, many products."
 msgstr ""
 
-#: assets/admin.js:54
+#: assets/admin.js:56
 msgid "One product. All its information."
 msgstr ""
 
-#: assets/admin.js:82
+#: assets/admin.js:84
 msgid "One serial number per line"
 msgstr ""
 
@@ -1482,7 +1482,7 @@ msgstr ""
 msgid "Only users with management permissions can edit the template library."
 msgstr ""
 
-#: assets/admin.js:67
+#: assets/admin.js:69
 msgid "Open"
 msgstr ""
 
@@ -1490,11 +1490,11 @@ msgstr ""
 msgid "Open and customize"
 msgstr ""
 
-#: assets/admin.js:84
+#: assets/admin.js:86
 msgid "Open history"
 msgstr ""
 
-#: assets/admin.js:78
+#: assets/admin.js:80
 msgid "Open parent"
 msgstr ""
 
@@ -1502,15 +1502,15 @@ msgstr ""
 msgid "Open product sheet"
 msgstr ""
 
-#: assets/admin.js:84
+#: assets/admin.js:86
 msgid "Open public sheet"
 msgstr ""
 
-#: assets/admin.js:134
+#: assets/admin.js:136
 msgid "Optional expiry"
 msgstr ""
 
-#: assets/admin.js:212
+#: assets/admin.js:214
 msgid "Optional sample data"
 msgstr ""
 
@@ -1518,7 +1518,7 @@ msgstr ""
 msgid "Original manufacturer passport"
 msgstr ""
 
-#: assets/admin.js:49 src/Admin.php:25
+#: assets/admin.js:51 src/Admin.php:25
 msgid "Overview"
 msgstr ""
 
@@ -1526,7 +1526,7 @@ msgstr ""
 msgid "PDF copy"
 msgstr ""
 
-#: assets/admin.js:138
+#: assets/admin.js:140
 msgid "Page margin (mm)"
 msgstr ""
 
@@ -1534,7 +1534,7 @@ msgstr ""
 msgid "Page opening"
 msgstr ""
 
-#: assets/admin.js:71
+#: assets/admin.js:73
 msgid "Parent product"
 msgstr ""
 
@@ -1558,7 +1558,7 @@ msgstr ""
 msgid "Passport reviewer"
 msgstr ""
 
-#: assets/admin.js:49 src/Admin.php:25
+#: assets/admin.js:51 src/Admin.php:25
 msgid "Passports"
 msgstr ""
 
@@ -1566,31 +1566,31 @@ msgstr ""
 msgid "Permissions revoked."
 msgstr ""
 
-#: assets/admin.js:141
+#: assets/admin.js:143
 msgid "Persistent UUID"
 msgstr ""
 
-#: assets/admin.js:78
+#: assets/admin.js:80
 msgid "Persistent identity: "
 msgstr ""
 
-#: assets/admin.js:138 assets/designer.js:24
+#: assets/admin.js:140 assets/designer.js:24
 msgid "Phone"
 msgstr ""
 
-#: assets/admin.js:198
+#: assets/admin.js:200
 msgid "Prepare drafts for review"
 msgstr ""
 
-#: assets/admin.js:79
+#: assets/admin.js:81
 msgid "Present"
 msgstr ""
 
-#: assets/admin.js:83 assets/designer.js:24
+#: assets/admin.js:85 assets/designer.js:24
 msgid "Preview"
 msgstr ""
 
-#: assets/admin.js:82
+#: assets/admin.js:84
 msgid "Preview and create items"
 msgstr ""
 
@@ -1618,11 +1618,11 @@ msgstr ""
 msgid "Preview with sample content"
 msgstr ""
 
-#: assets/admin.js:67
+#: assets/admin.js:69
 msgid "Previous"
 msgstr ""
 
-#: assets/admin.js:138 assets/admin.js:78
+#: assets/admin.js:140 assets/admin.js:80
 msgid "Primary language"
 msgstr ""
 
@@ -1630,31 +1630,31 @@ msgstr ""
 msgid "Print / save PDF"
 msgstr ""
 
-#: assets/admin.js:84
+#: assets/admin.js:86
 msgid "Print label"
 msgstr ""
 
-#: assets/admin.js:66
+#: assets/admin.js:68
 msgid "Print labels"
 msgstr ""
 
-#: assets/admin.js:134
+#: assets/admin.js:136
 msgid "Private"
 msgstr ""
 
-#: assets/admin.js:134
+#: assets/admin.js:136
 msgid "Private files always require authorisation and are excluded from public sheets and PDF."
 msgstr ""
 
-#: assets/admin.js:134
+#: assets/admin.js:136
 msgid "Private to reviewers"
 msgstr ""
 
-#: assets/admin.js:80
+#: assets/admin.js:82
 msgid "Private — excluded from public content"
 msgstr ""
 
-#: assets/admin.js:67 assets/admin.js:78 src/Api.php:111
+#: assets/admin.js:69 assets/admin.js:80 src/Api.php:111
 msgid "Product"
 msgstr ""
 
@@ -1714,11 +1714,11 @@ msgstr ""
 msgid "Progress not saved: this batch will be resumed."
 msgstr ""
 
-#: assets/admin.js:194
+#: assets/admin.js:196
 msgid "Proposal added to the draft. Publishing requires a new revision."
 msgstr ""
 
-#: assets/admin.js:193
+#: assets/admin.js:195
 msgid "Proposals and requests"
 msgstr ""
 
@@ -1726,43 +1726,43 @@ msgstr ""
 msgid "Provider contract, specifications and credentials; continuity and restore verification."
 msgstr ""
 
-#: assets/admin.js:134 assets/admin.js:80
+#: assets/admin.js:136 assets/admin.js:82
 msgid "Public"
 msgstr ""
 
-#: assets/admin.js:161
+#: assets/admin.js:163
 msgid "Publish"
 msgstr ""
 
-#: assets/admin.js:182
+#: assets/admin.js:184
 msgid "Publish a new revision"
 msgstr ""
 
-#: assets/admin.js:182
+#: assets/admin.js:184
 msgid "Publish and show QR"
 msgstr ""
 
-#: assets/admin.js:83
+#: assets/admin.js:85
 msgid "Publish revision"
 msgstr ""
 
-#: assets/admin.js:66
+#: assets/admin.js:68
 msgid "Publish selected"
 msgstr ""
 
-#: assets/admin.js:84
+#: assets/admin.js:86
 msgid "Publish the first revision to activate the public link and download its QR."
 msgstr ""
 
-#: assets/admin.js:57
+#: assets/admin.js:59
 msgid "Publish the sheet and download the product QR."
 msgstr ""
 
-#: assets/admin.js:12 assets/admin.js:56
+#: assets/admin.js:12 assets/admin.js:58
 msgid "Published"
 msgstr ""
 
-#: assets/admin.js:184
+#: assets/admin.js:186
 msgid "Published revisions"
 msgstr ""
 
@@ -1786,31 +1786,31 @@ msgstr ""
 msgid "Queued"
 msgstr ""
 
-#: assets/admin.js:141
+#: assets/admin.js:143
 msgid "Queued operations"
 msgstr ""
 
-#: assets/admin.js:182
+#: assets/admin.js:184
 msgid "Reason"
 msgstr ""
 
-#: assets/admin.js:79
+#: assets/admin.js:81
 msgid "Reason (required for not applicable)"
 msgstr ""
 
-#: assets/admin.js:184
+#: assets/admin.js:186
 msgid "Recent activity"
 msgstr ""
 
-#: assets/admin.js:58
+#: assets/admin.js:60
 msgid "Recent sheets"
 msgstr ""
 
-#: assets/admin.js:190
+#: assets/admin.js:192
 msgid "Recipient email"
 msgstr ""
 
-#: assets/admin.js:141
+#: assets/admin.js:143
 msgid "Reconciliation key"
 msgstr ""
 
@@ -1818,7 +1818,7 @@ msgstr ""
 msgid "Redo change"
 msgstr ""
 
-#: assets/admin.js:65 src/Pdf.php:18
+#: assets/admin.js:67 src/Pdf.php:18
 msgid "Reference"
 msgstr ""
 
@@ -1826,11 +1826,11 @@ msgstr ""
 msgid "Reference / SKU"
 msgstr ""
 
-#: assets/admin.js:141
+#: assets/admin.js:143
 msgid "Refresh progress"
 msgstr ""
 
-#: assets/admin.js:193
+#: assets/admin.js:195
 msgid "Reject"
 msgstr ""
 
@@ -1838,7 +1838,7 @@ msgstr ""
 msgid "Reload the page before submitting."
 msgstr ""
 
-#: assets/admin.js:255
+#: assets/admin.js:257
 msgid "Reload the page or check your permissions."
 msgstr ""
 
@@ -1850,15 +1850,15 @@ msgstr ""
 msgid "Replaceable feet and components. Contact support with the product reference."
 msgstr ""
 
-#: assets/admin.js:213
+#: assets/admin.js:215
 msgid "Replaceable feet."
 msgstr ""
 
-#: assets/admin.js:147
+#: assets/admin.js:149
 msgid "Report"
 msgstr ""
 
-#: assets/admin.js:138
+#: assets/admin.js:140
 msgid "Representative"
 msgstr ""
 
@@ -1866,11 +1866,11 @@ msgstr ""
 msgid "Request not found."
 msgstr ""
 
-#: assets/admin.js:189 assets/admin.js:84
+#: assets/admin.js:191 assets/admin.js:86
 msgid "Request supplier data"
 msgstr ""
 
-#: assets/admin.js:138
+#: assets/admin.js:140
 msgid "Required fields"
 msgstr ""
 
@@ -1882,7 +1882,7 @@ msgstr ""
 msgid "Response received"
 msgstr ""
 
-#: assets/admin.js:84
+#: assets/admin.js:86
 msgid "Responses and requests"
 msgstr ""
 
@@ -1890,11 +1890,11 @@ msgstr ""
 msgid "Responsive. No code or external fonts required."
 msgstr ""
 
-#: assets/admin.js:141
+#: assets/admin.js:143
 msgid "Restore an archive"
 msgstr ""
 
-#: assets/admin.js:78
+#: assets/admin.js:80
 msgid "Restore inheritance for these fields"
 msgstr ""
 
@@ -1902,7 +1902,7 @@ msgstr ""
 msgid "Restore not confirmed."
 msgstr ""
 
-#: assets/admin.js:185
+#: assets/admin.js:187
 msgid "Restore prepared as a draft. Review it before publishing."
 msgstr ""
 
@@ -1910,23 +1910,23 @@ msgstr ""
 msgid "Restore revision "
 msgstr ""
 
-#: assets/admin.js:184
+#: assets/admin.js:186
 msgid "Restore to a new draft"
 msgstr ""
 
-#: assets/admin.js:232
+#: assets/admin.js:234
 msgid "Result"
 msgstr ""
 
-#: assets/admin.js:138
+#: assets/admin.js:140
 msgid "Retailer"
 msgstr ""
 
-#: assets/admin.js:57
+#: assets/admin.js:59
 msgid "Review and share"
 msgstr ""
 
-#: assets/admin.js:79
+#: assets/admin.js:81
 msgid "Review date"
 msgstr ""
 
@@ -1934,27 +1934,27 @@ msgstr ""
 msgid "Review permission is required."
 msgstr ""
 
-#: assets/admin.js:67 src/Passport.php:320
+#: assets/admin.js:69 src/Passport.php:320
 msgid "Revision "
 msgstr ""
 
-#: assets/admin.js:183
+#: assets/admin.js:185
 msgid "Revision published. The QR is ready."
 msgstr ""
 
-#: assets/admin.js:184
+#: assets/admin.js:186
 msgid "Revisions and activity"
 msgstr ""
 
-#: assets/admin.js:84
+#: assets/admin.js:86
 msgid "Revisions and requests"
 msgstr ""
 
-#: assets/admin.js:193
+#: assets/admin.js:195
 msgid "Revoke link"
 msgstr ""
 
-#: assets/admin.js:138
+#: assets/admin.js:140
 msgid "Role"
 msgstr ""
 
@@ -1962,11 +1962,11 @@ msgstr ""
 msgid "Rounded"
 msgstr ""
 
-#: assets/admin.js:232
+#: assets/admin.js:234
 msgid "Row"
 msgstr ""
 
-#: assets/admin.js:204
+#: assets/admin.js:206
 msgid "Row "
 msgstr ""
 
@@ -1974,7 +1974,7 @@ msgstr ""
 msgid "Running"
 msgstr ""
 
-#: assets/admin.js:67
+#: assets/admin.js:69
 msgid "SKU"
 msgstr ""
 
@@ -2002,7 +2002,7 @@ msgstr ""
 msgid "Sample content · no changes to products"
 msgstr ""
 
-#: assets/admin.js:213
+#: assets/admin.js:215
 msgid "Samples created as drafts. Items are in the job queue."
 msgstr ""
 
@@ -2010,7 +2010,7 @@ msgstr ""
 msgid "Save a copy"
 msgstr ""
 
-#: assets/admin.js:138
+#: assets/admin.js:140
 msgid "Save a new template version"
 msgstr ""
 
@@ -2018,7 +2018,7 @@ msgstr ""
 msgid "Save as template"
 msgstr ""
 
-#: assets/admin.js:83
+#: assets/admin.js:85
 msgid "Save draft"
 msgstr ""
 
@@ -2026,7 +2026,7 @@ msgstr ""
 msgid "Save not confirmed: the library has changed. Reload before trying again."
 msgstr ""
 
-#: assets/admin.js:138
+#: assets/admin.js:140
 msgid "Save settings"
 msgstr ""
 
@@ -2034,23 +2034,23 @@ msgstr ""
 msgid "Save template"
 msgstr ""
 
-#: assets/admin.js:207 assets/admin.js:65 assets/admin.js:71 assets/admin.js:78
+#: assets/admin.js:209 assets/admin.js:67 assets/admin.js:73 assets/admin.js:80
 msgid "Search"
 msgstr ""
 
-#: assets/admin.js:78
+#: assets/admin.js:80
 msgid "Search compatible products or spare parts"
 msgstr ""
 
-#: assets/admin.js:65
+#: assets/admin.js:67
 msgid "Search name or reference…"
 msgstr ""
 
-#: assets/admin.js:71
+#: assets/admin.js:73
 msgid "Search parent product"
 msgstr ""
 
-#: assets/admin.js:207 assets/admin.js:65 assets/designer.js:24
+#: assets/admin.js:209 assets/admin.js:67 assets/designer.js:24
 msgid "Search products"
 msgstr ""
 
@@ -2062,15 +2062,15 @@ msgstr ""
 msgid "Section text"
 msgstr ""
 
-#: assets/admin.js:138
+#: assets/admin.js:140
 msgid "Sector"
 msgstr ""
 
-#: assets/admin.js:67
+#: assets/admin.js:69
 msgid "Select "
 msgstr ""
 
-#: assets/admin.js:205
+#: assets/admin.js:207
 msgid "Select a ZIP archive."
 msgstr ""
 
@@ -2078,11 +2078,11 @@ msgstr ""
 msgid "Select a custom template."
 msgstr ""
 
-#: assets/admin.js:117 assets/admin.js:71
+#: assets/admin.js:119 assets/admin.js:73
 msgid "Select a product"
 msgstr ""
 
-#: assets/admin.js:67
+#: assets/admin.js:69
 msgid "Select all rows"
 msgstr ""
 
@@ -2098,27 +2098,27 @@ msgstr ""
 msgid "Select at least one field to request."
 msgstr ""
 
-#: assets/admin.js:160 src/Api.php:143
+#: assets/admin.js:162 src/Api.php:143
 msgid "Select at least one sheet."
 msgstr ""
 
-#: assets/admin.js:78
+#: assets/admin.js:80
 msgid "Select local overrides to remove, then save the draft."
 msgstr ""
 
-#: assets/admin.js:176
+#: assets/admin.js:178
 msgid "Select published sheets to print."
 msgstr ""
 
-#: assets/admin.js:80
+#: assets/admin.js:82
 msgid "Select shared documents. Publication freezes their current exact versions."
 msgstr ""
 
-#: assets/admin.js:190
+#: assets/admin.js:192
 msgid "Send email"
 msgstr ""
 
-#: assets/admin.js:190
+#: assets/admin.js:192
 msgid "Send using company email"
 msgstr ""
 
@@ -2134,15 +2134,15 @@ msgstr ""
 msgid "Serial number"
 msgstr ""
 
-#: assets/admin.js:55
+#: assets/admin.js:57
 msgid "Set up your company"
 msgstr ""
 
-#: assets/admin.js:49 src/Admin.php:25
+#: assets/admin.js:51 src/Admin.php:25
 msgid "Settings"
 msgstr ""
 
-#: assets/admin.js:231
+#: assets/admin.js:233
 msgid "Settings saved. They apply to new revisions."
 msgstr ""
 
@@ -2150,11 +2150,11 @@ msgstr ""
 msgid "Shared document review"
 msgstr ""
 
-#: assets/admin.js:199
+#: assets/admin.js:201
 msgid "Shared document update"
 msgstr ""
 
-#: assets/admin.js:78
+#: assets/admin.js:80
 msgid "Sheet design"
 msgstr ""
 
@@ -2174,11 +2174,11 @@ msgstr ""
 msgid "Sheet not available."
 msgstr ""
 
-#: assets/admin.js:179 assets/designer.js:24
+#: assets/admin.js:181 assets/designer.js:24
 msgid "Sheet preview"
 msgstr ""
 
-#: assets/admin.js:84
+#: assets/admin.js:86
 msgid "Sheet review"
 msgstr ""
 
@@ -2194,11 +2194,11 @@ msgstr ""
 msgid "Soft"
 msgstr ""
 
-#: assets/admin.js:65
+#: assets/admin.js:67
 msgid "Sort"
 msgstr ""
 
-#: assets/admin.js:134 assets/admin.js:79 src/Pdf.php:18 src/PublicPage.php:179
+#: assets/admin.js:136 assets/admin.js:81 src/Pdf.php:18 src/PublicPage.php:179
 msgid "Source"
 msgstr ""
 
@@ -2222,11 +2222,11 @@ msgstr ""
 msgid "Spare parts and compatibility"
 msgstr ""
 
-#: assets/admin.js:81
+#: assets/admin.js:83
 msgid "Spare parts and support"
 msgstr ""
 
-#: assets/admin.js:209 assets/designer.js:7 src/PublicPage.php:141
+#: assets/admin.js:211 assets/designer.js:7 src/PublicPage.php:141
 msgid "Specifications"
 msgstr ""
 
@@ -2234,7 +2234,7 @@ msgstr ""
 msgid "Square"
 msgstr ""
 
-#: assets/admin.js:138
+#: assets/admin.js:140
 msgid "Standalone catalogue"
 msgstr ""
 
@@ -2242,15 +2242,15 @@ msgstr ""
 msgid "Start with a ready-made design or a blank page. Your content does the rest."
 msgstr ""
 
-#: assets/admin.js:71
+#: assets/admin.js:73
 msgid "Start with the essentials. Complete the sheet before publishing."
 msgstr ""
 
-#: assets/admin.js:55
+#: assets/admin.js:57
 msgid "Start with your company"
 msgstr ""
 
-#: assets/admin.js:65 assets/admin.js:67 assets/admin.js:79
+#: assets/admin.js:67 assets/admin.js:69 assets/admin.js:81
 msgid "Status"
 msgstr ""
 
@@ -2278,7 +2278,7 @@ msgstr ""
 msgid "Support details and instructions"
 msgstr ""
 
-#: assets/admin.js:138
+#: assets/admin.js:140
 msgid "Support email"
 msgstr ""
 
@@ -2318,11 +2318,11 @@ msgstr ""
 msgid "Template saved. You still have new unsaved changes."
 msgstr ""
 
-#: assets/admin.js:165
+#: assets/admin.js:167
 msgid "Template selected. Save the draft or customize the design before publishing."
 msgstr ""
 
-#: assets/admin.js:211
+#: assets/admin.js:213
 msgid "Template updated"
 msgstr ""
 
@@ -2334,7 +2334,7 @@ msgstr ""
 msgid "Test a scan at the actual size before printing the full batch."
 msgstr ""
 
-#: assets/admin.js:138
+#: assets/admin.js:140
 msgid "Test environment or site clone detected. Production submissions are blocked."
 msgstr ""
 
@@ -2342,11 +2342,11 @@ msgstr ""
 msgid "Text contrast automatically adapts to your selected colors."
 msgstr ""
 
-#: assets/admin.js:138 src/Connections.php:27
+#: assets/admin.js:140 src/Connections.php:27
 msgid "Textile"
 msgstr ""
 
-#: assets/admin.js:71
+#: assets/admin.js:73
 msgid "Textiles · voluntary"
 msgstr ""
 
@@ -2362,7 +2362,7 @@ msgstr ""
 msgid "The address is too long for a readable label. Use a shorter resolver domain."
 msgstr ""
 
-#: assets/admin.js:141
+#: assets/admin.js:143
 msgid "The administrative archive contains drafts and private files. Store it securely."
 msgstr ""
 
@@ -2394,7 +2394,7 @@ msgstr ""
 msgid "The library has changed. Reload before saving."
 msgstr ""
 
-#: assets/admin.js:22 assets/designer.js:9
+#: assets/admin.js:24 assets/designer.js:9
 msgid "The operation could not be completed."
 msgstr ""
 
@@ -2406,11 +2406,11 @@ msgstr ""
 msgid "The proposal was already handled or is not available yet."
 msgstr ""
 
-#: assets/admin.js:198
+#: assets/admin.js:200
 msgid "The public page keeps the files from the published revision. Prepare new drafts, review them and publish approved revisions."
 msgstr ""
 
-#: assets/admin.js:182
+#: assets/admin.js:184
 msgid "The public version will contain the current data and documents. Previous revisions are retained."
 msgstr ""
 
@@ -2422,7 +2422,7 @@ msgstr ""
 msgid "The sheet to update was not found."
 msgstr ""
 
-#: assets/admin.js:189
+#: assets/admin.js:191
 msgid "The supplier sees only the product name and selected fields. Their response remains a proposal for review."
 msgstr ""
 
@@ -2430,11 +2430,11 @@ msgstr ""
 msgid "The template has changed. Reload before saving."
 msgstr ""
 
-#: assets/admin.js:220
+#: assets/admin.js:222
 msgid "There are unsaved changes. Leave the draft?"
 msgstr ""
 
-#: assets/admin.js:59
+#: assets/admin.js:61
 msgid "These sheets are voluntary. Publishing or completing fields does not establish product regulatory compliance."
 msgstr ""
 
@@ -2442,7 +2442,7 @@ msgstr ""
 msgid "This copy captures the indicated revision. Open the link for updates."
 msgstr ""
 
-#: assets/admin.js:212
+#: assets/admin.js:214
 msgid "This creates clearly marked EXAMPLE drafts: a chair, two variants, a spare part, a batch and three serial-numbered items. Nothing is published automatically."
 msgstr ""
 
@@ -2454,35 +2454,35 @@ msgstr ""
 msgid "This version supports single-site WordPress installations. Multisite requires a separate migration for each site."
 msgstr ""
 
-#: assets/admin.js:134
+#: assets/admin.js:136
 msgid "Title"
 msgstr ""
 
-#: assets/admin.js:56
+#: assets/admin.js:58
 msgid "Total sheets"
 msgstr ""
 
-#: assets/admin.js:82
+#: assets/admin.js:84
 msgid "Translation language"
 msgstr ""
 
-#: assets/admin.js:186
+#: assets/admin.js:188
 msgid "Translation prepared. Save the draft to keep it."
 msgstr ""
 
-#: assets/admin.js:82
+#: assets/admin.js:84
 msgid "Translations"
 msgstr ""
 
-#: assets/admin.js:134 assets/admin.js:65 assets/admin.js:67 assets/admin.js:71
+#: assets/admin.js:136 assets/admin.js:67 assets/admin.js:69 assets/admin.js:73
 msgid "Type"
 msgstr ""
 
-#: assets/admin.js:141
+#: assets/admin.js:143
 msgid "UTF-8 · comma, semicolon or tab · up to 20,000 rows. SKU and UUID are separate keys."
 msgstr ""
 
-#: assets/admin.js:255
+#: assets/admin.js:257
 msgid "Unable to load the panel"
 msgstr ""
 
@@ -2502,7 +2502,7 @@ msgstr ""
 msgid "Unsafe archive: invalid paths or sizes."
 msgstr ""
 
-#: assets/admin.js:46 assets/designer.js:14
+#: assets/admin.js:48 assets/designer.js:14
 msgid "Unsaved changes"
 msgstr ""
 
@@ -2518,7 +2518,7 @@ msgstr ""
 msgid "Unsupported table."
 msgstr ""
 
-#: assets/admin.js:58 assets/admin.js:67
+#: assets/admin.js:60 assets/admin.js:69
 msgid "Untitled"
 msgstr ""
 
@@ -2530,11 +2530,11 @@ msgstr ""
 msgid "Untranslated information remains in the original language: "
 msgstr ""
 
-#: assets/admin.js:232
+#: assets/admin.js:234
 msgid "Update"
 msgstr ""
 
-#: assets/admin.js:141
+#: assets/admin.js:143
 msgid "Update only"
 msgstr ""
 
@@ -2546,15 +2546,15 @@ msgstr ""
 msgid "Updating preview…"
 msgstr ""
 
-#: assets/admin.js:134
+#: assets/admin.js:136
 msgid "Upload a document"
 msgstr ""
 
-#: assets/admin.js:134
+#: assets/admin.js:136
 msgid "Upload and retain version"
 msgstr ""
 
-#: assets/admin.js:133
+#: assets/admin.js:135
 msgid "Upload manuals and declarations once. Previous versions remain in history."
 msgstr ""
 
@@ -2566,11 +2566,11 @@ msgstr ""
 msgid "Use existing product data or add a text block."
 msgstr ""
 
-#: assets/admin.js:164 assets/designer.js:33
+#: assets/admin.js:166 assets/designer.js:33
 msgid "Use this image"
 msgstr ""
 
-#: assets/admin.js:78
+#: assets/admin.js:80
 msgid "Use this template"
 msgstr ""
 
@@ -2578,23 +2578,23 @@ msgstr ""
 msgid "Useful information"
 msgstr ""
 
-#: assets/admin.js:189
+#: assets/admin.js:191
 msgid "Valid for (days)"
 msgstr ""
 
-#: assets/admin.js:141
+#: assets/admin.js:143
 msgid "Validate archive"
 msgstr ""
 
-#: assets/admin.js:67
+#: assets/admin.js:69
 msgid "Variant"
 msgstr ""
 
-#: assets/admin.js:216
+#: assets/admin.js:218
 msgid "Variant #"
 msgstr ""
 
-#: assets/admin.js:71
+#: assets/admin.js:73
 msgid "Variant, batch or item"
 msgstr ""
 
@@ -2602,7 +2602,7 @@ msgstr ""
 msgid "Verified organization with EU Login, credentials, applicable API specifications and registration/receipt testing. Submissions are unavailable in this release."
 msgstr ""
 
-#: assets/admin.js:134
+#: assets/admin.js:136
 msgid "Version"
 msgstr ""
 
@@ -2610,11 +2610,11 @@ msgstr ""
 msgid "Very rounded"
 msgstr ""
 
-#: assets/admin.js:57
+#: assets/admin.js:59
 msgid "View all passports"
 msgstr ""
 
-#: assets/admin.js:134
+#: assets/admin.js:136
 msgid "View impact"
 msgstr ""
 
@@ -2634,11 +2634,11 @@ msgstr ""
 msgid "View the successor product"
 msgstr ""
 
-#: assets/admin.js:134
+#: assets/admin.js:136
 msgid "Visibility"
 msgstr ""
 
-#: assets/admin.js:78
+#: assets/admin.js:80
 msgid "Visual template"
 msgstr ""
 
@@ -2658,7 +2658,7 @@ msgstr ""
 msgid "Voluntary information template. No certification or validated regulated sector profile."
 msgstr ""
 
-#: assets/admin.js:84
+#: assets/admin.js:86
 msgid "Voluntary sheet · no automatic certification."
 msgstr ""
 
@@ -2674,7 +2674,7 @@ msgstr ""
 msgid "WooCommerce is not active."
 msgstr ""
 
-#: assets/admin.js:207
+#: assets/admin.js:209
 msgid "WooCommerce is not active. The standalone catalogue remains available."
 msgstr ""
 
@@ -2686,7 +2686,7 @@ msgstr ""
 msgid "WooCommerce product is not accessible."
 msgstr ""
 
-#: assets/admin.js:209
+#: assets/admin.js:211
 msgid "WooCommerce: "
 msgstr ""
 
@@ -2714,7 +2714,7 @@ msgstr ""
 msgid "Your"
 msgstr ""
 
-#: assets/admin.js:58
+#: assets/admin.js:60
 msgid "Your catalogue starts here"
 msgstr ""
 
@@ -2722,7 +2722,7 @@ msgstr ""
 msgid "Your next design starts here."
 msgstr ""
 
-#: assets/admin.js:64
+#: assets/admin.js:66
 msgid "Your passports"
 msgstr ""
 
@@ -2742,7 +2742,7 @@ msgstr ""
 msgid "Your templates"
 msgstr ""
 
-#: assets/admin.js:141
+#: assets/admin.js:143
 msgid "ZIP archive"
 msgstr ""
 
@@ -2758,15 +2758,15 @@ msgstr ""
 msgid "revisions"
 msgstr ""
 
-#: assets/admin.js:138 assets/admin.js:248 assets/admin.js:249 assets/admin.js:65 assets/admin.js:66 assets/admin.js:78 assets/admin.js:79 assets/designer.js:22 assets/designer.js:25
+#: assets/admin.js:140 assets/admin.js:250 assets/admin.js:251 assets/admin.js:67 assets/admin.js:68 assets/admin.js:80 assets/admin.js:81 assets/designer.js:22 assets/designer.js:25
 msgid "selected"
 msgstr ""
 
-#: assets/admin.js:67
+#: assets/admin.js:69
 msgid "sheets"
 msgstr ""
 
-#: assets/admin.js:79
+#: assets/admin.js:81
 msgid "“Internally reviewed” means a company review, not certification of truth or product compliance."
 msgstr ""
 

@@ -17,7 +17,9 @@
     const options = {method,headers,credentials:'same-origin'};
     if (body instanceof FormData) options.body = body;
     else if (body !== undefined) { headers['Content-Type']='application/json'; options.body=JSON.stringify(body); }
-    const response = await fetch(GMPP.api + path, options);
+    const requestUrl = new URL(GMPP.api + path);
+    requestUrl.searchParams.set('_locale', 'user');
+    const response = await fetch(requestUrl, options);
     const data = await response.json();
     if (!response.ok) { const error=new Error(data.message || t(wp.i18n.__("The operation could not be completed.", 'giuliomax-product-passport')));error.field=data.data?.field;throw error; }
     return data;

@@ -54,4 +54,4 @@ Revisioni, ripristino ed export dei prodotti conservano la configurazione grafic
 
 L’editor personalizza la **pagina web**. Il PDF rimane la copia testuale datata già prevista dal plugin; comprende anche il testo dei blocchi personalizzati, ma non replica la grafica. Le etichette QR mantengono le impostazioni di stampa dedicate.
 
-L’editor del design è in italiano. Le pagine pubbliche mantengono il supporto dei contenuti multilingua già presente; i titoli personalizzati e i testi dei blocchi devono essere controllati dall’operatore. Massimo 20 sezioni per design e 40 template personalizzati nella libreria: sono limiti tecnici di questa versione.
+L’editor del design usa l’inglese come lingua originale; il catalogo italiano si carica secondo la lingua WordPress del sito o dell’utente. Le pagine pubbliche mantengono il supporto dei contenuti multilingua già presente; i titoli personalizzati e i testi dei blocchi devono essere controllati dall’operatore. Massimo 20 sezioni per design e 40 template personalizzati nella libreria: sono limiti tecnici di questa versione.
