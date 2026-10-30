@@ -66,7 +66,7 @@ try {
   await page.locator('#gde-product-search').fill('Browser edited draft');await page.locator('[data-do="search-product"]').click();await page.locator('#gde-product option[value="'+result.fixture.id+'"]').waitFor({state:'attached'});await page.locator('#gde-product').selectOption(String(result.fixture.id));
   await page.locator('[data-do="apply"]').waitFor();await page.locator('[data-do="apply"]').click();await page.getByRole('status').filter({hasText:'Design applicato alla bozza'}).waitFor();
   const designed=await page.evaluate(async id=>{const r=await fetch(GMPP.api+'passports/'+id,{headers:{'X-WP-Nonce':GMPP.nonce}});return r.json();},result.fixture.id);
-  if(designed.data.design.name!=='Design del mio atelier'||!designed.data.design.sections.some(s=>s.type==='custom'&&s.text.includes('Conserva questa guida')))throw new Error('Designer did not apply custom section to draft');
+  if(designed.data.design.name!=='Design del mio atelier'||!designed.data.design.sections.some(s=>s.type==='custom'&&s.text.includes('Conserva questa guida')))throw new Error('Designer did not apply custom section to draft: '+JSON.stringify(designed.data.design));
   await page.locator('[data-do="device"][data-view="mobile"]').click();if(await page.locator('#gde-frame').evaluate(el=>el.contentWindow.innerWidth)!==390)throw new Error('Phone preview is not a real 390px viewport');
   await page.locator('[data-do="device"][data-view="desktop"]').click();await page.screenshot({path:repo+'/test-results/designer-desktop.png',fullPage:true});
   const designerAxe=await new AxeBuilder({page}).include('#gmpp-app').exclude('#gde-frame').withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze();
