@@ -2798,7 +2798,7 @@ msgstr "prodotto."
 msgid "revisions"
 msgstr "revisioni"
 
-#: assets/admin.js:250 assets/admin.js:68 assets/admin.js:80 assets/designer.js:22 assets/designer.js:25
+#: assets/admin.js:250 assets/admin.js:68 assets/admin.js:80
 msgid "selected"
 msgstr "selezionati"
 
