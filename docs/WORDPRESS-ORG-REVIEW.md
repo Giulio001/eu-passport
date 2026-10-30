@@ -31,6 +31,8 @@ Consultati la [pagina italiana di invio](https://it.wordpress.org/plugins/develo
 
 ## Plugin Check e annotazioni
 
+L’esecuzione completa [41030472725](https://github.com/Giulio001/eu-passport/actions/runs/41030472725) è superata su entrambe le combinazioni. Plugin Check 2.1.0 rileva zero errori e conserva gli avvisi motivati sotto. I JSON sono in `docs/qa-1.0.1/`.
+
 Il workflow esegue il Plugin Check ufficiale senza escludere categorie e senza usare analisi AI. Arresta la verifica in presenza di errori; conserva il rapporto completo fra gli artifact.
 
 Le annotazioni nel codice riguardano casi circoscritti: CSV su stream in memoria, streaming di ZIP/PDF/QR/JSON generati localmente, corpo HTML già costruito con escaping contestuale, query con frammenti fissi e valori associati a placeholder, lettura di parametri pubblici o di navigazione senza mutazioni. Non sono disabilitazioni generali dei controlli.

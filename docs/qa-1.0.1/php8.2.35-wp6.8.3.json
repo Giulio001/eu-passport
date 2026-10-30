@@ -1,0 +1,236 @@
+{
+  "workflow": "https://github.com/Giulio001/eu-passport/actions/runs/41030472725",
+  "commit": "2537f0dcd6769401aa9fae031a25c57c3a91ebc6",
+  "php": "8.2.35",
+  "wordpress": "6.8.3",
+  "backend": [
+    {
+      "name": "Install and repeat migration without WooCommerce",
+      "ok": true
+    },
+    {
+      "name": "Standalone first publication",
+      "ok": true
+    },
+    {
+      "name": "Draft isolation from public API and snapshots",
+      "ok": true
+    },
+    {
+      "name": "Private documents and internal data excluded",
+      "ok": true
+    },
+    {
+      "name": "Public manual accessible only after publication",
+      "ok": true
+    },
+    {
+      "name": "Company changes do not alter publication",
+      "ok": true
+    },
+    {
+      "name": "Variant batch serial inheritance with reversible overrides",
+      "ok": true
+    },
+    {
+      "name": "Identity uniqueness and read-only uuid",
+      "ok": true
+    },
+    {
+      "name": "Concurrent update rejected",
+      "ok": true
+    },
+    {
+      "name": "Shared document impact and stable historical version",
+      "ok": true
+    },
+    {
+      "name": "Supplier scoped proposals never auto publish",
+      "ok": true
+    },
+    {
+      "name": "Expired supplier token denied",
+      "ok": true
+    },
+    {
+      "name": "Role permissions and object ownership",
+      "ok": true
+    },
+    {
+      "name": "Malicious fields and unsafe files rejected",
+      "ok": true
+    },
+    {
+      "name": "CSV UTF-8 mapping errors and repeat idempotence",
+      "ok": true
+    },
+    {
+      "name": "CSV empty keep versus clear",
+      "ok": true
+    },
+    {
+      "name": "Queue resume without repeated committed rows",
+      "ok": true
+    },
+    {
+      "name": "Connections never claim active without receipts",
+      "ok": true
+    },
+    {
+      "name": "PNG and SVG QR generated locally",
+      "ok": true
+    },
+    {
+      "name": "PDF long content paginates and is private-safe",
+      "ok": true
+    },
+    {
+      "name": "Portable archive validates, preserves identity and is idempotent",
+      "ok": true
+    },
+    {
+      "name": "Draft inaccessible without authentication",
+      "ok": true
+    },
+    {
+      "name": "Not applicable needs reason and unknown numeric value stays empty",
+      "ok": true
+    },
+    {
+      "name": "Restore keeps pinned historical documents and company",
+      "ok": true
+    },
+    {
+      "name": "Full export and restore into an empty catalogue",
+      "ok": true
+    },
+    {
+      "name": "Supplier email uses test mail catcher with explicit opt-in",
+      "ok": true
+    },
+    {
+      "name": "Template changes are versioned without changing published data",
+      "ok": true
+    },
+    {
+      "name": "Long QR payload remains locally encodable",
+      "ok": true
+    },
+    {
+      "name": "Binary documents retain their exact bytes",
+      "ok": true
+    },
+    {
+      "name": "Queue schedules continuation independently from hourly watchdog",
+      "ok": true
+    },
+    {
+      "name": "Expired queue lease resumes from committed cursor",
+      "ok": true
+    },
+    {
+      "name": "CSV isolates ambiguous references and malformed records",
+      "ok": true
+    },
+    {
+      "name": "CSV preserves quoted header names",
+      "ok": true
+    },
+    {
+      "name": "REST import confirmation preserves mixed-case preview token",
+      "ok": true
+    },
+    {
+      "name": "REST jobs list uses valid SQL identifiers",
+      "ok": true
+    },
+    {
+      "name": "A compiler can preview an owned public draft document only",
+      "ok": true
+    },
+    {
+      "name": "Shared document concurrent upload is rejected atomically",
+      "ok": true
+    },
+    {
+      "name": "Variants inherit instead of freezing model defaults",
+      "ok": true
+    },
+    {
+      "name": "Archiving preserves safety recalls and requires publication rights",
+      "ok": true
+    },
+    {
+      "name": "Changing a reviewed value invalidates its internal review",
+      "ok": true
+    },
+    {
+      "name": "Invalid portable archive returns a meaningful error",
+      "ok": true
+    }
+  ],
+  "woo": {
+    "tests": [
+      {
+        "name": "Create from WooCommerce product API",
+        "ok": true
+      },
+      {
+        "name": "WooCommerce rename suggests without overwriting draft or public",
+        "ok": true
+      },
+      {
+        "name": "WooCommerce product deletion keeps published QR",
+        "ok": true
+      },
+      {
+        "name": "Variable product and variation inheritance",
+        "ok": true
+      },
+      {
+        "name": "WooCommerce deactivation retains standalone data",
+        "ok": true
+      },
+      {
+        "name": "Action Scheduler schedules a successor while current action is running",
+        "ok": true
+      }
+    ],
+    "woo": "10.3.6",
+    "wordpress": "6.8.3",
+    "php": "8.2.35"
+  },
+  "browser": {
+    "errors": [],
+    "overflow": false,
+    "adminOverflow": false,
+    "privateStatus": 404,
+    "englishPanel": true,
+    "namedParent": true,
+    "translationAutosave": true
+  },
+  "accessibility": {
+    "adminAxe": {
+      "violations": [],
+      "passes": 13
+    },
+    "editorAxe": {
+      "violations": [],
+      "passes": 14
+    },
+    "publicAxe": {
+      "violations": [],
+      "passes": 20
+    }
+  },
+  "plugin_check": {
+    "version": "2.1.0",
+    "errors": 0,
+    "warnings": 105,
+    "codes": {
+      "WordPress.Security.NonceVerification.Recommended": 2,
+      "WordPress.DB.DirectDatabaseQuery.DirectQuery": 52,
+      "WordPress.DB.DirectDatabaseQuery.NoCaching": 51
+    }
+  }
+}

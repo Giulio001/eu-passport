@@ -2,7 +2,7 @@
 
 Giuliomax Product Passport serve a mettere le informazioni utili di un prodotto in un posto stabile: il cliente scansiona un QR e trova manuale, manutenzione, materiali, ricambi e assistenza. Il vantaggio principale è organizzare informazioni che altrimenti finiscono in PDF sparsi, email e pagine commerciali destinate a cambiare.
 
-La release 1.0.0 è un gestore di **schede digitali volontarie**. Non trasforma automaticamente un catalogo in passaporti regolamentati, non certifica la sostenibilità e non registra dati nel registro europeo.
+La release 1.0.1 è un gestore di **schede digitali volontarie**. Non trasforma automaticamente un catalogo in passaporti regolamentati, non certifica la sostenibilità e non registra dati nel registro europeo.
 
 ## Esempio concreto: un’azienda che vende sedie
 
@@ -11,7 +11,7 @@ L’azienda produce la sedia Alba in due finiture. Il manuale di montaggio vale 
 1. **Configura l’azienda.** In Impostazioni inserisci “Atelier Alba”, email di assistenza, lingua italiana e settore arredo. Puoi aggiungere logo e colore. Il nome azienda basta per iniziare; il resto non deve bloccare l’attivazione.
 2. **Carica i documenti.** In Documenti carica il manuale italiano indicando lingua `it`, tipo manuale, versione `1`. Carica separatamente il documento inglese con lingua `en`. Non chiamare “inglese” un file che contiene soltanto testo italiano.
 3. **Crea il modello.** In Passaporti scegli Nuovo passaporto, nome “Sedia Alba” e riferimento “ALBA”. Compila materiali, cura, sicurezza pertinente, ricambi e assistenza. Seleziona i due manuali.
-4. **Crea le varianti.** Crea “Sedia Alba naturale” e “Sedia Alba noce” come varianti, indicando il numero della scheda padre. Ereditano i dati del modello. Compila solo i valori differenti. I campi ereditati sono segnalati; puoi rimuovere un override e tornare al valore del padre.
+4. **Crea le varianti.** Crea “Sedia Alba naturale” e “Sedia Alba noce” come varianti, cercando il nome o riferimento della scheda padre e selezionandola. Ereditano i dati del modello. Compila solo i valori differenti. I campi ereditati sono segnalati; puoi rimuovere un override e tornare al valore del padre.
 5. **Controlla e pubblica.** Salva la bozza, guarda l’anteprima e pubblica con motivazione “Prima pubblicazione”. Gli avvisi editoriali aiutano a completare la scheda; non sono una verifica legale del prodotto. Puoi rendere alcuni campi obbligatori per la tua azienda modificando il modello informativo in Impostazioni.
 6. **Stampa il QR.** Nella scheda trovi SVG, PNG e stampa etichetta. Mettilo sul prodotto, sulla confezione o sul materiale di supporto in base alle esigenze concrete e agli eventuali requisiti applicabili. Prima stampa un campione e scansionalo.
 
@@ -61,8 +61,12 @@ Una prova utile è far gestire alcuni prodotti reali a un piccolo produttore: os
 
 ## Confini da conoscere prima dell’uso reale
 
-La conformità specifica del prodotto resta da verificare. Non sono operativi registro UE, prestatore di continuità o resolver esterno riconosciuto. Il PDF è una copia datata, non un sostituto automaticamente equivalente al passaporto dinamico. Le lingue dei contenuti devono essere inserite dall’azienda. I documenti riservati sono protetti dall’applicazione ma un amministratore del database può accedervi: backup e hosting devono essere protetti.
+La conformità specifica del prodotto resta da verificare. Non sono operativi registro UE, prestatore di continuità o resolver esterno riconosciuto. Il PDF è una copia datata, non un sostituto automaticamente equivalente al passaporto dinamico. Le lingue dei contenuti devono essere inserite dall’azienda. Nell’editor apri Traduzioni, scegli la lingua, compila i testi e usa Salva bozza: i testi vengono conservati anche quando cambi lingua prima di salvare. I documenti riservati sono protetti dall’applicazione ma un amministratore del database può accedervi: backup e hosting devono essere protetti.
 
 Il rapporto di test elenca versioni realmente eseguite e verifiche residue. Prima di un’adozione aziendale verifica il plugin sullo staging del sito e prova export, ripristino e scansione dell’etichetta sul tuo hosting.
 
 La lingua del pannello si sceglie nelle impostazioni ed è italiana inizialmente. È disponibile un catalogo inglese per il percorso amministrativo; i dati di prodotto non vengono tradotti quando cambi lingua del pannello. Testi di errore del server e alcune indicazioni specialistiche possono restare in italiano. Le stringhe sono raccolte nel catalogo e nel template di traduzione per le integrazioni successive.
+
+## Installazione e WordPress.org
+
+Scarica lo ZIP runtime `giuliomax-product-passport-1.0.1.zip`, non lo ZIP generale del repository GitHub. Lo ZIP runtime contiene la cartella del solo plugin ed è caricabile da WordPress. Il readme della directory è inglese, come richiesto da WordPress.org; la guida d’uso resta italiana. L’approvazione della directory richiede una revisione manuale separata e non è stata ottenuta con il push su GitHub.

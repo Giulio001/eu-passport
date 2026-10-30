@@ -1,0 +1,842 @@
+[
+  {
+    "file": "src/Admin.php",
+    "line": 41,
+    "column": 484,
+    "type": "WARNING",
+    "code": "WordPress.Security.NonceVerification.Recommended",
+    "message": "Processing form data without nonce verification."
+  },
+  {
+    "file": "src/Admin.php",
+    "line": 41,
+    "column": 812,
+    "type": "WARNING",
+    "code": "WordPress.Security.NonceVerification.Recommended",
+    "message": "Processing form data without nonce verification."
+  },
+  {
+    "file": "src/Admin.php",
+    "line": 58,
+    "column": 22,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Admin.php",
+    "line": 58,
+    "column": 22,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Documents.php",
+    "line": 17,
+    "column": 14,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Documents.php",
+    "line": 17,
+    "column": 14,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Documents.php",
+    "line": 72,
+    "column": 17,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Documents.php",
+    "line": 72,
+    "column": 17,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Documents.php",
+    "line": 85,
+    "column": 17,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Documents.php",
+    "line": 85,
+    "column": 17,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Documents.php",
+    "line": 104,
+    "column": 22,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Documents.php",
+    "line": 104,
+    "column": 22,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Documents.php",
+    "line": 126,
+    "column": 18,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Documents.php",
+    "line": 126,
+    "column": 18,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Suppliers.php",
+    "line": 30,
+    "column": 16,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Suppliers.php",
+    "line": 30,
+    "column": 16,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Suppliers.php",
+    "line": 45,
+    "column": 15,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Suppliers.php",
+    "line": 45,
+    "column": 15,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Suppliers.php",
+    "line": 68,
+    "column": 9,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Suppliers.php",
+    "line": 68,
+    "column": 9,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Profiles.php",
+    "line": 41,
+    "column": 21,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Profiles.php",
+    "line": 41,
+    "column": 21,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Store.php",
+    "line": 13,
+    "column": 34,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Store.php",
+    "line": 13,
+    "column": 34,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Store.php",
+    "line": 26,
+    "column": 34,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Store.php",
+    "line": 26,
+    "column": 34,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Store.php",
+    "line": 38,
+    "column": 17,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Store.php",
+    "line": 38,
+    "column": 17,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Store.php",
+    "line": 40,
+    "column": 17,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Store.php",
+    "line": 40,
+    "column": 17,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Store.php",
+    "line": 55,
+    "column": 16,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Store.php",
+    "line": 55,
+    "column": 16,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Store.php",
+    "line": 61,
+    "column": 16,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Store.php",
+    "line": 61,
+    "column": 16,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Store.php",
+    "line": 67,
+    "column": 15,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Api.php",
+    "line": 70,
+    "column": 27,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Api.php",
+    "line": 70,
+    "column": 27,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Api.php",
+    "line": 71,
+    "column": 21,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Api.php",
+    "line": 71,
+    "column": 21,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Api.php",
+    "line": 93,
+    "column": 20,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Api.php",
+    "line": 93,
+    "column": 20,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Api.php",
+    "line": 114,
+    "column": 36,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Api.php",
+    "line": 114,
+    "column": 36,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Api.php",
+    "line": 181,
+    "column": 21,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Api.php",
+    "line": 181,
+    "column": 21,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Api.php",
+    "line": 213,
+    "column": 20,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Api.php",
+    "line": 213,
+    "column": 20,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Api.php",
+    "line": 232,
+    "column": 13,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Api.php",
+    "line": 232,
+    "column": 13,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Api.php",
+    "line": 243,
+    "column": 13,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Api.php",
+    "line": 243,
+    "column": 13,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Api.php",
+    "line": 250,
+    "column": 21,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Api.php",
+    "line": 250,
+    "column": 21,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Portable.php",
+    "line": 14,
+    "column": 165,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Portable.php",
+    "line": 14,
+    "column": 165,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Portable.php",
+    "line": 19,
+    "column": 18,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Portable.php",
+    "line": 19,
+    "column": 18,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Portable.php",
+    "line": 92,
+    "column": 33,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Portable.php",
+    "line": 92,
+    "column": 33,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Portable.php",
+    "line": 104,
+    "column": 33,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Portable.php",
+    "line": 104,
+    "column": 33,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Portable.php",
+    "line": 109,
+    "column": 25,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Portable.php",
+    "line": 109,
+    "column": 25,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Portable.php",
+    "line": 115,
+    "column": 25,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Portable.php",
+    "line": 115,
+    "column": 25,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Portable.php",
+    "line": 147,
+    "column": 21,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Portable.php",
+    "line": 147,
+    "column": 21,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Portable.php",
+    "line": 156,
+    "column": 25,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Portable.php",
+    "line": 156,
+    "column": 25,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Portable.php",
+    "line": 187,
+    "column": 25,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Portable.php",
+    "line": 187,
+    "column": 25,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Jobs.php",
+    "line": 103,
+    "column": 17,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Jobs.php",
+    "line": 103,
+    "column": 17,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Jobs.php",
+    "line": 131,
+    "column": 9,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Jobs.php",
+    "line": 131,
+    "column": 9,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Jobs.php",
+    "line": 132,
+    "column": 16,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Jobs.php",
+    "line": 132,
+    "column": 16,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Jobs.php",
+    "line": 137,
+    "column": 22,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Jobs.php",
+    "line": 137,
+    "column": 22,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Jobs.php",
+    "line": 152,
+    "column": 25,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Jobs.php",
+    "line": 152,
+    "column": 25,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Jobs.php",
+    "line": 157,
+    "column": 25,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Jobs.php",
+    "line": 157,
+    "column": 25,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Jobs.php",
+    "line": 196,
+    "column": 29,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Jobs.php",
+    "line": 196,
+    "column": 29,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Jobs.php",
+    "line": 200,
+    "column": 31,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Jobs.php",
+    "line": 200,
+    "column": 31,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Jobs.php",
+    "line": 208,
+    "column": 25,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Jobs.php",
+    "line": 208,
+    "column": 25,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Jobs.php",
+    "line": 212,
+    "column": 17,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Jobs.php",
+    "line": 212,
+    "column": 17,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Jobs.php",
+    "line": 216,
+    "column": 17,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Jobs.php",
+    "line": 216,
+    "column": 17,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Passport.php",
+    "line": 176,
+    "column": 19,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Passport.php",
+    "line": 176,
+    "column": 19,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Passport.php",
+    "line": 260,
+    "column": 19,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Passport.php",
+    "line": 260,
+    "column": 19,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Passport.php",
+    "line": 284,
+    "column": 17,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Passport.php",
+    "line": 284,
+    "column": 17,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Passport.php",
+    "line": 313,
+    "column": 17,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Passport.php",
+    "line": 313,
+    "column": 17,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Woo.php",
+    "line": 47,
+    "column": 21,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Woo.php",
+    "line": 47,
+    "column": 21,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  },
+  {
+    "file": "src/Woo.php",
+    "line": 67,
+    "column": 16,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.DirectQuery",
+    "message": "Use of a direct database call is discouraged."
+  },
+  {
+    "file": "src/Woo.php",
+    "line": 67,
+    "column": 16,
+    "type": "WARNING",
+    "code": "WordPress.DB.DirectDatabaseQuery.NoCaching",
+    "message": "Direct database call without caching detected. Consider using wp_cache_get() / wp_cache_set() or wp_cache_delete()."
+  }
+]
