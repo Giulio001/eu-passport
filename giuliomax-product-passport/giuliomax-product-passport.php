@@ -41,7 +41,6 @@ add_action('plugins_loaded', static function () {
     if (get_option('gmpp_schema') !== Schema::VERSION) {
         Schema::activate();
     }
-    load_plugin_textdomain('giuliomax-product-passport', false, dirname(plugin_basename(GMPP_FILE)) . '/languages');
     (new Admin())->hooks();
     (new PublicPage())->hooks();
     (new Api())->hooks();

@@ -18,7 +18,7 @@ final class Passport
         }
         foreach (['name' => 255,'sku' => 190,'serial' => 190,'batch' => 190] as $field => $limit) {
             if (isset($out[$field]) && mb_strlen($out[$field]) > $limit) {
-                throw new \InvalidArgumentException((Admin::labels()[$field] ?? $field) . ': usa al massimo ' . $limit . ' caratteri.');
+                throw new \InvalidArgumentException(esc_html((Admin::labels()[$field] ?? $field) . ': usa al massimo ' . $limit . ' caratteri.'));
             }
         }
         foreach (self::URL as $key) {
@@ -173,7 +173,7 @@ final class Passport
         foreach ((array)($input['reset'] ?? []) as $key) {
             unset($data[sanitize_key($key)]);
         }
-        $result = $wpdb->query($wpdb->prepare('UPDATE ' . Store::table('passports') . ' SET data=%s,title=%s,sku=%s,identity_key=%s,lock_version=lock_version+1,updated_at=%s WHERE id=%d AND lock_version=%d', Store::json($data), $data['name'] ?? $row['title'], $data['sku'] ?? '', self::identity($data, $row['kind'], (int)$row['parent_id'], $row['uuid']), current_time('mysql', true), $id, $version));
+        $result = $wpdb->query($wpdb->prepare('UPDATE %i SET data=%s,title=%s,sku=%s,identity_key=%s,lock_version=lock_version+1,updated_at=%s WHERE id=%d AND lock_version=%d', Store::table('passports'), Store::json($data), $data['name'] ?? $row['title'], $data['sku'] ?? '', self::identity($data, $row['kind'], (int)$row['parent_id'], $row['uuid']), current_time('mysql', true), $id, $version));
         if (!$result) {
             throw new \RuntimeException('Conflitto: la scheda è stata modificata oppure il riferimento è già utilizzato. Ricarica prima di salvare.');
         }
@@ -257,7 +257,7 @@ final class Passport
             }
             $json = Store::json(self::snapshot($row));
             $rev = Store::insert('revisions', ['passport_id' => $id,'snapshot' => $json,'digest' => hash('sha256', $json),'author' => get_current_user_id(),'reason' => sanitize_textarea_field($reason),'created_at' => current_time('mysql', true)]);
-            $ok = $wpdb->query($wpdb->prepare('UPDATE ' . Store::table('passports') . " SET published_revision=%d,state='published',lock_version=lock_version+1 WHERE id=%d AND lock_version=%d", $rev, $id, $version));
+            $ok = $wpdb->query($wpdb->prepare('UPDATE %i SET published_revision=%d,state=\'published\',lock_version=lock_version+1 WHERE id=%d AND lock_version=%d', Store::table('passports'), $rev, $id, $version));
             if (!$ok) {
                 throw new \RuntimeException('Conflitto: ricarica la scheda prima di pubblicare.');
             }

@@ -20,7 +20,10 @@ final class PublicPage
         header('Content-Type: text/html; charset=UTF-8');
         header('X-Content-Type-Options: nosniff');
         header('Referrer-Policy: same-origin');
-        echo '<!doctype html><html lang="' . esc_attr($language) . '"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>' . esc_html($title) . '</title><link rel="stylesheet" href="' . esc_url(plugins_url('assets/style.css', GMPP_FILE)) . '"></head><body class="gmpp-public" style="--gmpp-accent:' . esc_attr(sanitize_hex_color($accent) ?: '#135f54') . '">' . $body . '</body></html>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Body rendered with escaping below.
+        wp_enqueue_style('gmpp-public', plugins_url('assets/style.css', GMPP_FILE), [], GMPP_VERSION);
+        echo '<!doctype html><html lang="' . esc_attr($language) . '"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>' . esc_html($title) . '</title>';
+        wp_print_styles('gmpp-public');
+        echo '</head><body class="gmpp-public" style="--gmpp-accent:' . esc_attr(sanitize_hex_color($accent) ?: '#135f54') . '">' . $body . '</body></html>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Body is rendered with context escaping by body() or the supplier form below.
     }
     public function route(): void
     {
@@ -53,7 +56,7 @@ final class PublicPage
             echo esc_html__('Scheda non ancora disponibile.', 'giuliomax-product-passport');
             exit;
         }
-        $format = sanitize_key($_GET['format'] ?? '');
+        $format = sanitize_key(wp_unslash($_GET['format'] ?? ''));
         if (in_array($format, ['svg','png'], true)) {
             header('Content-Type: ' . ($format === 'svg' ? 'image/svg+xml' : 'image/png'));
             header('Content-Disposition: attachment; filename="product-' . $uuid . '.' . $format . '"');
@@ -68,7 +71,7 @@ final class PublicPage
             }
             header('Content-Type: application/pdf');
             header('Content-Disposition: attachment; filename="product-' . $uuid . '.pdf"');
-            echo Pdf::render($snapshot);
+            echo Pdf::render($snapshot); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Generated PDF bytes, sent with application/pdf; not HTML.
             exit;
         } // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
         $body = $this->body($snapshot, $lang, true);
@@ -212,12 +215,12 @@ final class PublicPage
             echo esc_html__('Collegamento scaduto, revocato o già utilizzato.', 'giuliomax-product-passport');
             return;
         }
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
             try {
                 if (!wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['_wpnonce'] ?? '')), 'gmpp_supplier_' . $request['id']) || !empty($_POST['website'])) {
                     throw new \InvalidArgumentException('Ricarica la pagina prima di inviare.');
                 }
-                Suppliers::respond($token, wp_unslash((array)($_POST['values'] ?? [])));
+                Suppliers::respond($token, array_map('sanitize_textarea_field', (array)wp_unslash($_POST['values'] ?? [])));
                 $this->document('Risposta ricevuta', '<main class="gmpp-sheet"><h1>Grazie, risposta ricevuta.</h1><p>I dati saranno revisionati dall’azienda prima della pubblicazione.</p></main>');
                 return;
             } catch (\Throwable $e) {

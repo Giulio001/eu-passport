@@ -64,11 +64,19 @@ jobs:
       - name: WordPress.org Plugin Check
         run: |
           wp plugin install plugin-check --activate --path="$RUNNER_TEMP/wp"
-          wp plugin check giuliomax-product-passport --path="$RUNNER_TEMP/wp" --format=json > "$RUNNER_TEMP/plugin-check.json" || true
+          wp plugin check giuliomax-product-passport --path="$RUNNER_TEMP/wp" --format=strict-json --fields=file,line,column,type,code,message > "$RUNNER_TEMP/plugin-check.json" || true
           node - "$RUNNER_TEMP/plugin-check.json" <<'JS'
-          const fs=require('fs');const r=JSON.parse(fs.readFileSync(process.argv[2]));console.log(JSON.stringify(r,null,2));const rows=Array.isArray(r)?r:Object.values(r).flat();if(rows.some(x=>String(x.type||x.severity).toLowerCase()==='error'))process.exit(1);
+          const fs=require('fs');const raw=fs.readFileSync(process.argv[2],'utf8');const r=raw.startsWith('Success:')?[]:JSON.parse(raw);console.log(JSON.stringify(r,null,2));const rows=Array.isArray(r)?r:Object.values(r).flat();if(rows.some(x=>String(x.type||x.severity).toLowerCase()==='error'))process.exit(1);
           JS
+      - name: Install the distribution ZIP
+        if: always()
+        run: |
+          python3 scripts/package.py
+          wp plugin deactivate giuliomax-product-passport --path="$RUNNER_TEMP/wp"
+          wp plugin delete giuliomax-product-passport --path="$RUNNER_TEMP/wp"
+          wp plugin install dist/giuliomax-product-passport-1.0.1.zip --activate --path="$RUNNER_TEMP/wp"
       - name: Browser regression suite
+        if: always()
         env:
           QA_WP: ${{ matrix.wordpress }}
           QA_PHP: ${{ matrix.php }}

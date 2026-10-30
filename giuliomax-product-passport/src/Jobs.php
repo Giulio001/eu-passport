@@ -23,15 +23,15 @@ final class Jobs
                 $delimiter = $candidate;
             }
         }
-        $stream = fopen('php://temp', 'w+');
-        fwrite($stream, $csv);
+        $stream = fopen('php://temp', 'w+'); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fopen -- In-memory CSV stream; no filesystem path is opened.
+        fwrite($stream, $csv); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fwrite -- In-memory CSV stream; no filesystem path is opened.
         rewind($stream);
         $headers = fgetcsv($stream, 0, $delimiter, '"', '');
         if (!$headers) {
             throw new \InvalidArgumentException('CSV senza intestazioni.');
         }
         if (count(array_unique($headers)) !== count($headers)) {
-            fclose($stream);
+            fclose($stream); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fclose -- In-memory CSV stream; no filesystem path is opened.
             throw new \InvalidArgumentException('Le intestazioni CSV devono essere univoche.');
         }
         $map = $map ?: array_combine($headers, $headers);
@@ -91,7 +91,7 @@ final class Jobs
                 throw new \InvalidArgumentException('Massimo 20.000 righe per file.');
             }
         }
-        fclose($stream);
+        fclose($stream); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fclose -- In-memory CSV stream; no filesystem path is opened.
         return ['headers' => $headers,'delimiter' => $delimiter,'rows' => $rows,'mode' => $mode,'key' => $key,'clear' => $clear];
     }
     private static function find(string $key, string $value): ?array
@@ -100,7 +100,7 @@ final class Jobs
             return Store::uuid($value);
         }
         global $wpdb;
-        $rows = $wpdb->get_results($wpdb->prepare('SELECT * FROM ' . Store::table('passports') . ' WHERE sku=%s LIMIT 2', $value), ARRAY_A);
+        $rows = $wpdb->get_results($wpdb->prepare('SELECT * FROM %i WHERE sku=%s LIMIT 2', Store::table('passports'), $value), ARRAY_A);
         if (count($rows) > 1) {
             throw new \InvalidArgumentException('SKU ambiguo: usa UUID come chiave di riconciliazione.');
         }
@@ -126,13 +126,13 @@ final class Jobs
     {
         global $wpdb;
         $table = Store::table('jobs');
-        $wpdb->query($wpdb->prepare("UPDATE $table SET state='queued',lease_token='' WHERE state='running' AND updated_at<%s", gmdate('Y-m-d H:i:s', time() - 300)));
-        $ids = $wpdb->get_col("SELECT id FROM $table WHERE state='queued' ORDER BY id LIMIT 3");
+        $wpdb->query($wpdb->prepare("UPDATE %i SET state='queued',lease_token='' WHERE state='running' AND updated_at<%s", $table, gmdate('Y-m-d H:i:s', time() - 300)));
+        $ids = $wpdb->get_col($wpdb->prepare("SELECT id FROM %i WHERE state='queued' ORDER BY id LIMIT 3", $table));
         $previous = get_current_user_id();
         try {
             foreach ($ids as $id) {
                 $lease = wp_generate_uuid4();
-                if (!$wpdb->query($wpdb->prepare("UPDATE $table SET state='running',lease_token=%s,updated_at=%s WHERE id=%d AND state='queued'", $lease, gmdate('Y-m-d H:i:s'), $id))) {
+                if (!$wpdb->query($wpdb->prepare("UPDATE %i SET state='running',lease_token=%s,updated_at=%s WHERE id=%d AND state='queued'", $table, $lease, gmdate('Y-m-d H:i:s'), $id))) {
                     continue;
                 }
                 // Read progress only after acquiring the lease. A queued record may
@@ -147,7 +147,7 @@ final class Jobs
                     Store::begin();
                     try {
                         // This write locks the job while the row and cursor commit.
-                        $wpdb->query($wpdb->prepare("UPDATE $table SET updated_at=%s WHERE id=%d AND lease_token=%s AND state='running'", gmdate('Y-m-d H:i:s'), $id, $lease));
+                        $wpdb->query($wpdb->prepare("UPDATE %i SET updated_at=%s WHERE id=%d AND lease_token=%s AND state='running'", $table, gmdate('Y-m-d H:i:s'), $id, $lease));
                         $live = Store::one('jobs', (int)$id);
                         if (!$live || $live['lease_token'] !== $lease || $live['state'] !== 'running' || (int)$live['cursor'] !== $cursor) {
                             throw new \RuntimeException('Operazione acquisita da un altro processo.');
@@ -211,7 +211,7 @@ final class Jobs
             }
         } finally {
             wp_set_current_user($previous);
-            if ($wpdb->get_var("SELECT id FROM $table WHERE state IN ('queued','running') LIMIT 1")) {
+            if ($wpdb->get_var($wpdb->prepare("SELECT id FROM %i WHERE state IN ('queued','running') LIMIT 1", $table))) {
                 self::schedule();
             }
         }

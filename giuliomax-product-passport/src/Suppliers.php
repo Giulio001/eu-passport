@@ -27,7 +27,7 @@ final class Suppliers
             return null;
         }
         global $wpdb;
-        return $wpdb->get_row($wpdb->prepare('SELECT * FROM ' . Store::table('requests') . " WHERE token_hash=%s AND state='open' AND expires_at>%s", hash('sha256', $token), gmdate('Y-m-d H:i:s')), ARRAY_A) ?: null;
+        return $wpdb->get_row($wpdb->prepare('SELECT * FROM %i WHERE token_hash=%s AND state=\'open\' AND expires_at>%s', Store::table('requests'), hash('sha256', $token), gmdate('Y-m-d H:i:s')), ARRAY_A) ?: null;
     }
     public static function respond(string $token, array $values): void
     {
@@ -42,7 +42,7 @@ final class Suppliers
         set_transient($key, (int)get_transient($key) + 1, HOUR_IN_SECONDS);
         $values = array_intersect_key(Passport::clean($values), array_flip(Store::decode($row['fields'])));
         global $wpdb;
-        $ok = $wpdb->query($wpdb->prepare('UPDATE ' . Store::table('requests') . " SET proposal=%s,state='answered' WHERE id=%d AND state='open'", Store::json($values), (int)$row['id']));
+        $ok = $wpdb->query($wpdb->prepare('UPDATE %i SET proposal=%s,state=\'answered\' WHERE id=%d AND state=\'open\'', Store::table('requests'), Store::json($values), (int)$row['id']));
         if (!$ok) {
             throw new \RuntimeException('Risposta già acquisita.');
         }

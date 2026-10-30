@@ -44,7 +44,7 @@ final class Woo
         }
         $data['attributes'] = $attributes;
         global $wpdb;
-        $existing = $wpdb->get_var($wpdb->prepare('SELECT id FROM ' . Store::table('passports') . ' WHERE wc_id=%d', $id));
+        $existing = $wpdb->get_var($wpdb->prepare('SELECT id FROM %i WHERE wc_id=%d', Store::table('passports'), $id));
         if ($existing) {
             $row = Passport::get((int)$existing);
             if (!Store::can($row)) {
@@ -64,7 +64,7 @@ final class Woo
         if (!$product || !is_callable([$product,'get_id'])) {
             return;
         }
-        $row = $wpdb->get_row($wpdb->prepare('SELECT uuid,published_revision FROM ' . Store::table('passports') . ' WHERE wc_id=%d', $product->get_id()), ARRAY_A);
+        $row = $wpdb->get_row($wpdb->prepare('SELECT uuid,published_revision FROM %i WHERE wc_id=%d', Store::table('passports'), $product->get_id()), ARRAY_A);
         if ($row && $row['published_revision']) {
             echo '<p><a class="button" href="' . esc_url(Passport::url($row['uuid'])) . '">' . esc_html__('Informazioni e manuali del prodotto', 'giuliomax-product-passport') . '</a></p>';
         }

@@ -67,9 +67,8 @@ final class Api
             $table = Store::table('passports');
             $sort = in_array($r['sort'], ['title','id','updated_at','sku'], true) ? $r['sort'] : 'id';
             $dir = $r['direction'] === 'asc' ? 'ASC' : 'DESC';
-            $total = (int)$wpdb->get_var($args ? $wpdb->prepare("SELECT COUNT(*) FROM $table WHERE $where", ...$args) : "SELECT COUNT(*) FROM $table WHERE $where");
-            $query = "SELECT id,uuid,title,sku,kind,parent_id,state,lock_version,published_revision,updated_at,wc_id FROM $table WHERE $where ORDER BY $sort $dir LIMIT %d OFFSET %d";
-            $rows = $wpdb->get_results($wpdb->prepare($query, ...array_merge($args, [$limit,($page - 1) * $limit])), ARRAY_A);
+            $total = (int)$wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM %i WHERE $where", $table, ...$args)); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared,PluginCheck.Security.DirectDB.UnescapedDBParameter -- WHERE contains fixed fragments only; all filter values use placeholders.
+            $rows = $wpdb->get_results($wpdb->prepare("SELECT id,uuid,title,sku,kind,parent_id,state,lock_version,published_revision,updated_at,wc_id FROM %i WHERE $where ORDER BY %i $dir LIMIT %d OFFSET %d", ...array_merge([$table], $args, [$sort,$limit,($page - 1) * $limit])), ARRAY_A); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared,PluginCheck.Security.DirectDB.UnescapedDBParameter -- Fixed WHERE fragments, bound values and identifiers; direction is ASC or DESC only.
             return ['rows' => $rows,'total' => $total,'page' => $page,'pages' => (int)ceil($total / $limit)];
         });
         $this->route('/choices', 'GET', static function ($r) {
@@ -91,8 +90,7 @@ final class Api
                 $args[] = $term;
                 $args[] = $term;
             }
-            $query = 'SELECT id,title,sku,kind FROM ' . Store::table('passports') . ' WHERE ' . $where . ' ORDER BY title,id LIMIT 50';
-            return $wpdb->get_results($args ? $wpdb->prepare($query, ...$args) : $query, ARRAY_A);
+            return $wpdb->get_results($wpdb->prepare("SELECT id,title,sku,kind FROM %i WHERE $where ORDER BY title,id LIMIT 50", Store::table('passports'), ...$args), ARRAY_A); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared,PluginCheck.Security.DirectDB.UnescapedDBParameter -- WHERE contains fixed fragments and generated placeholders; each value and identifier is bound.
         });
         $this->route('/passports', 'POST', static function ($r) {
             $input = (array)$r->get_json_params();
@@ -113,7 +111,7 @@ final class Api
         $this->route('/passports/(?P<id>\d+)/history', 'GET', static function ($r) {
             self::access((int)$r['id']);
             global $wpdb;
-            return ['revisions' => $wpdb->get_results($wpdb->prepare('SELECT id,digest,reason,created_at FROM ' . Store::table('revisions') . ' WHERE passport_id=%d ORDER BY id DESC', (int)$r['id']), ARRAY_A),'events' => $wpdb->get_results($wpdb->prepare('SELECT action,detail,created_at FROM ' . Store::table('events') . ' WHERE passport_id=%d ORDER BY id DESC LIMIT 100', (int)$r['id']), ARRAY_A)];
+            return ['revisions' => $wpdb->get_results($wpdb->prepare('SELECT id,digest,reason,created_at FROM %i WHERE passport_id=%d ORDER BY id DESC', Store::table('revisions'), (int)$r['id']), ARRAY_A),'events' => $wpdb->get_results($wpdb->prepare('SELECT action,detail,created_at FROM %i WHERE passport_id=%d ORDER BY id DESC LIMIT 100', Store::table('events'), (int)$r['id']), ARRAY_A)];
         });
         $this->route('/passports/(?P<id>\d+)/restore', 'POST', static function ($r) {
             self::access((int)$r['id'], 'gmpp_review');
@@ -180,7 +178,7 @@ final class Api
         }, 'gmpp_manage');
         $this->route('/documents', 'GET', static function () {
             global $wpdb;
-            $rows = $wpdb->get_col('SELECT id FROM ' . Store::table('documents') . ' ORDER BY id DESC LIMIT 1000');
+            $rows = $wpdb->get_col($wpdb->prepare('SELECT id FROM %i ORDER BY id DESC LIMIT 1000', Store::table('documents')));
             $docs = [];
             foreach ($rows as $id) {
                 $doc = Documents::current((int)$id);
@@ -212,7 +210,7 @@ final class Api
         });
         $this->route('/jobs', 'GET', static function () {
             global $wpdb;
-            return $wpdb->get_results($wpdb->prepare('SELECT id,kind,state,`cursor`,total,updated_at FROM ' . Store::table('jobs') . ' WHERE owner=%d ORDER BY id DESC LIMIT 20', get_current_user_id()), ARRAY_A);
+            return $wpdb->get_results($wpdb->prepare('SELECT id,kind,state,`cursor`,total,updated_at FROM %i WHERE owner=%d ORDER BY id DESC LIMIT 20', Store::table('jobs'), get_current_user_id()), ARRAY_A);
         });
         $this->route('/jobs/(?P<id>\d+)', 'GET', static function ($r) {
             $j = Store::one('jobs', (int)$r['id']);
@@ -249,7 +247,7 @@ final class Api
         $this->route('/passports/(?P<id>\d+)/requests', 'GET', static function ($r) {
             self::access((int)$r['id'], 'gmpp_review');
             global $wpdb;
-            $rows = $wpdb->get_results($wpdb->prepare('SELECT id,fields,proposal,state,expires_at FROM ' . Store::table('requests') . ' WHERE passport_id=%d ORDER BY id DESC', (int)$r['id']), ARRAY_A);
+            $rows = $wpdb->get_results($wpdb->prepare('SELECT id,fields,proposal,state,expires_at FROM %i WHERE passport_id=%d ORDER BY id DESC', Store::table('requests'), (int)$r['id']), ARRAY_A);
             return array_map(static function ($row) {
                 $row['proposal'] = Store::decode($row['proposal']);
                 return $row;

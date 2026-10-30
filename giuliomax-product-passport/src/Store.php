@@ -10,7 +10,8 @@ final class Store
     {
         global $wpdb;
         $level = self::$depth;
-        if ($wpdb->query($level === 0 ? 'START TRANSACTION' : 'SAVEPOINT gmpp_tx_' . $level) === false) {
+        $result = $level === 0 ? $wpdb->query('START TRANSACTION') : $wpdb->query($wpdb->prepare('SAVEPOINT %i', 'gmpp_tx_' . $level));
+        if ($result === false) {
             throw new \RuntimeException('Il database non ha potuto avviare un salvataggio sicuro. Riprova.');
         }
         self::$depth++;
@@ -19,7 +20,11 @@ final class Store
     {
         global $wpdb;
         $level = self::$depth - 1;
-        if ($level < 0 || $wpdb->query($level === 0 ? 'COMMIT' : 'RELEASE SAVEPOINT gmpp_tx_' . $level) === false) {
+        if ($level < 0) {
+            throw new \LogicException('Nessuna transazione aperta.');
+        }
+        $result = $level === 0 ? $wpdb->query('COMMIT') : $wpdb->query($wpdb->prepare('RELEASE SAVEPOINT %i', 'gmpp_tx_' . $level));
+        if ($result === false) {
             throw new \RuntimeException('Il database non ha confermato il salvataggio. Ricarica prima di riprovare.');
         }
         self::$depth--;
@@ -29,24 +34,31 @@ final class Store
         global $wpdb;
         if (self::$depth > 0) {
             $level = --self::$depth;
-            $wpdb->query($level === 0 ? 'ROLLBACK' : 'ROLLBACK TO SAVEPOINT gmpp_tx_' . $level);
+            if ($level === 0) {
+                $wpdb->query('ROLLBACK');
+            } else {
+                $wpdb->query($wpdb->prepare('ROLLBACK TO SAVEPOINT %i', 'gmpp_tx_' . $level));
+            }
         }
     }
     public static function table(string $name): string
     {
         global $wpdb;
+        if (!in_array($name, ['passports','revisions','documents','document_versions','requests','jobs','events'], true)) {
+            throw new \InvalidArgumentException('Tabella non supportata.');
+        }
         return $wpdb->prefix . 'gmpp_' . $name;
     }
     public static function one(string $table, int $id): ?array
     {
         global $wpdb;
-        $row = $wpdb->get_row($wpdb->prepare('SELECT * FROM ' . self::table($table) . ' WHERE id=%d', $id), ARRAY_A);
+        $row = $wpdb->get_row($wpdb->prepare('SELECT * FROM %i WHERE id=%d', self::table($table), $id), ARRAY_A);
         return $row ?: null;
     }
     public static function uuid(string $uuid): ?array
     {
         global $wpdb;
-        return $wpdb->get_row($wpdb->prepare('SELECT * FROM ' . self::table('passports') . ' WHERE uuid=%s', $uuid), ARRAY_A) ?: null;
+        return $wpdb->get_row($wpdb->prepare('SELECT * FROM %i WHERE uuid=%s', self::table('passports'), $uuid), ARRAY_A) ?: null;
     }
     public static function insert(string $table, array $data): int
     {
@@ -55,7 +67,7 @@ final class Store
         $ok = $wpdb->insert(self::table($table), $data);
         $wpdb->suppress_errors($old);
         if (!$ok) {
-            throw new \RuntimeException(__('Impossibile salvare: identificatore duplicato o dati non validi.', 'giuliomax-product-passport'));
+            throw new \RuntimeException(esc_html__('Impossibile salvare: identificatore duplicato o dati non validi.', 'giuliomax-product-passport'));
         } return (int)$wpdb->insert_id;
     }
     public static function event(int $id, string $action, string $detail = ''): void

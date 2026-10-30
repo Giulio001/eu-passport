@@ -11,12 +11,12 @@ final class Portable
             throw new \RuntimeException('Abilita l’estensione PHP zip per creare archivi portabili.');
         }
         global $wpdb;
-        $archive = ['format' => 'gmpp-portable','version' => 1,'created_at' => gmdate('c'),'origin' => home_url('/'),'settings' => Store::settings(),'passports' => $wpdb->get_results('SELECT * FROM ' . Store::table('passports') . ' ORDER BY id', ARRAY_A),'revisions' => $wpdb->get_results('SELECT * FROM ' . Store::table('revisions') . ' ORDER BY id', ARRAY_A),'documents' => $wpdb->get_results('SELECT * FROM ' . Store::table('documents') . ' ORDER BY id', ARRAY_A),'versions' => []];
+        $archive = ['format' => 'gmpp-portable','version' => 1,'created_at' => gmdate('c'),'origin' => home_url('/'),'settings' => Store::settings(),'passports' => $wpdb->get_results($wpdb->prepare('SELECT * FROM %i ORDER BY id', Store::table('passports')), ARRAY_A),'revisions' => $wpdb->get_results($wpdb->prepare('SELECT * FROM %i ORDER BY id', Store::table('revisions')), ARRAY_A),'documents' => $wpdb->get_results($wpdb->prepare('SELECT * FROM %i ORDER BY id', Store::table('documents')), ARRAY_A),'versions' => []];
         $tmp = wp_tempnam('gmpp-export');
         $zip = new \ZipArchive();
         $zip->open($tmp, \ZipArchive::OVERWRITE);
         $checks = [];
-        foreach ($wpdb->get_results('SELECT * FROM ' . Store::table('document_versions') . ' ORDER BY id', ARRAY_A) as $v) {
+        foreach ($wpdb->get_results($wpdb->prepare('SELECT * FROM %i ORDER BY id', Store::table('document_versions')), ARRAY_A) as $v) {
             $name = 'documents/' . $v['id'] . '.bin';
             $zip->addFromString($name, $v['content']);
             $checks[$name] = hash('sha256', $v['content']);
@@ -89,7 +89,7 @@ final class Portable
                     if (!wp_is_uuid($d['uuid'])) {
                         throw new \InvalidArgumentException('Identità documento non valida.');
                     }
-                    $existing = $wpdb->get_var($wpdb->prepare('SELECT id FROM ' . Store::table('documents') . ' WHERE uuid=%s', $d['uuid']));
+                    $existing = $wpdb->get_var($wpdb->prepare('SELECT id FROM %i WHERE uuid=%s', Store::table('documents'), $d['uuid']));
                     $docs[$d['id']] = $existing ? (int)$existing : Store::insert('documents', ['uuid' => $d['uuid'],'title' => sanitize_text_field($d['title']),'owner' => get_current_user_id()]);
                     if (!$existing) {
                         $new_docs[$d['id']] = true;
@@ -101,7 +101,7 @@ final class Portable
                         throw new \InvalidArgumentException('Documento non verificato.');
                     }
                     $meta = Store::decode($v['metadata']);
-                    $existing = $wpdb->get_var($wpdb->prepare('SELECT id FROM ' . Store::table('document_versions') . ' WHERE document_id=%d AND digest=%s AND metadata=%s', $docs[$v['document_id']], $v['digest'], $v['metadata']));
+                    $existing = $wpdb->get_var($wpdb->prepare('SELECT id FROM %i WHERE document_id=%d AND digest=%s AND metadata=%s', Store::table('document_versions'), $docs[$v['document_id']], $v['digest'], $v['metadata']));
                     $document = Store::one('documents', $docs[$v['document_id']]);
                     $old_current = $document['current_version'];
                     $created = $existing ? Documents::version((int)$existing) : Documents::store_bytes($content, $meta['filename'], array_replace($meta, ['document_id' => $docs[$v['document_id']]]))['document'];

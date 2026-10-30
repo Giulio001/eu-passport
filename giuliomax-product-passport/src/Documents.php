@@ -14,7 +14,7 @@ final class Documents
     public static function version(int $id): ?array
     {
         global $wpdb;
-        $v = $wpdb->get_row($wpdb->prepare('SELECT id,document_id,metadata,digest,created_at FROM ' . Store::table('document_versions') . ' WHERE id=%d', $id), ARRAY_A);
+        $v = $wpdb->get_row($wpdb->prepare('SELECT id,document_id,metadata,digest,created_at FROM %i WHERE id=%d', Store::table('document_versions'), $id), ARRAY_A);
         if (!$v) {
             return null;
         }
@@ -82,7 +82,7 @@ final class Documents
     public static function affected(int $document): array
     {
         global $wpdb;
-        $rows = $wpdb->get_results('SELECT id,title,data,parent_id FROM ' . Store::table('passports'), ARRAY_A);
+        $rows = $wpdb->get_results($wpdb->prepare('SELECT id,title,data,parent_id FROM %i', Store::table('passports')), ARRAY_A);
         $out = [];
         // Resolve inheritance so a shared model document also reports affected items.
         foreach ($rows as $row) {
@@ -101,7 +101,7 @@ final class Documents
         }
         global $wpdb;
         $like = '%' . $wpdb->esc_like('"version_id":' . $version . ',') . '%';
-        return (bool)$wpdb->get_var($wpdb->prepare('SELECT r.id FROM ' . Store::table('revisions') . ' r INNER JOIN ' . Store::table('passports') . ' p ON p.published_revision=r.id WHERE r.snapshot LIKE %s LIMIT 1', $like));
+        return (bool)$wpdb->get_var($wpdb->prepare('SELECT r.id FROM %i r INNER JOIN %i p ON p.published_revision=r.id WHERE r.snapshot LIKE %s LIMIT 1', Store::table('revisions'), Store::table('passports'), $like));
     }
     public static function can_read(int $id): bool
     {
@@ -123,7 +123,7 @@ final class Documents
             exit;
         }
         global $wpdb;
-        $bytes = $wpdb->get_var($wpdb->prepare('SELECT content FROM ' . Store::table('document_versions') . ' WHERE id=%d', $id));
+        $bytes = $wpdb->get_var($wpdb->prepare('SELECT content FROM %i WHERE id=%d', Store::table('document_versions'), $id));
         nocache_headers();
         header('X-Content-Type-Options: nosniff');
         header('Content-Security-Policy: sandbox');

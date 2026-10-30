@@ -38,7 +38,7 @@ final class Profiles
         update_option('gmpp_profiles', $saved, false);
         global $wpdb;
         $like = '%' . $wpdb->esc_like('"template":"' . $id . '"') . '%';
-        $affected = $wpdb->get_results($wpdb->prepare('SELECT id,title,lock_version FROM ' . Store::table('passports') . ' WHERE data LIKE %s', $like), ARRAY_A);
+        $affected = $wpdb->get_results($wpdb->prepare('SELECT id,title,lock_version FROM %i WHERE data LIKE %s', Store::table('passports'), $like), ARRAY_A);
         return ['profile' => self::get($id),'affected' => $affected,'previous' => $current,'message' => 'Modello aggiornato. Le revisioni pubblicate conservano i dati precedenti; verifica le nuove richieste prima di ripubblicare.'];
     }
 }
