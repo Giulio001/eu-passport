@@ -1,0 +1,1129 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Giuliomax Product Passport 1.0.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "\nDati fittizi di collaudo."
+msgstr ""
+
+msgid " selezionati"
+msgstr ""
+
+msgid " · Scadenza "
+msgstr ""
+
+msgid " · v"
+msgstr ""
+
+msgid "01 · La tua azienda"
+msgstr ""
+
+msgid "02 · Come lavori"
+msgstr ""
+
+msgid "03 · Stampa ed email"
+msgstr ""
+
+msgid "Abilita invii email aziendali reali ai fornitori (solo su produzione verificata)"
+msgstr ""
+
+msgid "Accetta nella bozza"
+msgstr ""
+
+msgid "Aggiorna avanzamento"
+msgstr ""
+
+msgid "Aggiornamento documento condiviso"
+msgstr ""
+
+msgid "Aggiornamento informazioni"
+msgstr ""
+
+msgid "Aggiornamento massivo confermato"
+msgstr ""
+
+msgid "Aggiungi ciò che serve"
+msgstr ""
+
+msgid "Altezza etichetta (mm)"
+msgstr ""
+
+msgid "Annulla"
+msgstr ""
+
+msgid "Annullato"
+msgstr ""
+
+msgid "Anteprima"
+msgstr ""
+
+msgid "Anteprima della bozza"
+msgstr ""
+
+msgid "Anteprima e crea esemplari"
+msgstr ""
+
+msgid "Applica i valori selezionati alla bozza"
+msgstr ""
+
+msgid "Apri"
+msgstr ""
+
+msgid "Apri il genitore"
+msgstr ""
+
+msgid "Apri la scheda pubblica"
+msgstr ""
+
+msgid "Apri lo storico"
+msgstr ""
+
+msgid "Archivia selezionati"
+msgstr ""
+
+msgid "Archivio ZIP"
+msgstr ""
+
+msgid "Archivio troppo grande (max 50 MB)."
+msgstr ""
+
+msgid "Arredo"
+msgstr ""
+
+msgid "Arredo · volontario"
+msgstr ""
+
+msgid "Associa colonne"
+msgstr ""
+
+msgid "Attività recenti"
+msgstr ""
+
+msgid "Avviso di sicurezza o fuori produzione"
+msgstr ""
+
+msgid "Azioni"
+msgstr ""
+
+msgid "Bozza"
+msgstr ""
+
+msgid "Bozza salvata"
+msgstr ""
+
+msgid "Bozza salvata. La versione pubblica è invariata."
+msgstr ""
+
+msgid "Bozza:"
+msgstr ""
+
+msgid "Bozze da completare"
+msgstr ""
+
+msgid "Campi richiesti"
+msgstr ""
+
+msgid "Carica dati di esempio"
+msgstr ""
+
+msgid "Carica e conserva versione"
+msgstr ""
+
+msgid "Carica manuali e dichiarazioni una sola volta. Le versioni precedenti restano nello storico."
+msgstr ""
+
+msgid "Carica un documento"
+msgstr ""
+
+msgid "Catalogo autonomo"
+msgstr ""
+
+msgid "Cerca"
+msgstr ""
+
+msgid "Cerca nome o riferimento…"
+msgstr ""
+
+msgid "Cerca un prodotto"
+msgstr ""
+
+msgid "Chiave"
+msgstr ""
+
+msgid "Chiave di riconciliazione"
+msgstr ""
+
+msgid "Chiudi"
+msgstr ""
+
+msgid "Ci sono modifiche non salvate. Vuoi uscire dalla bozza?"
+msgstr ""
+
+msgid "Clean with a soft, slightly damp cloth."
+msgstr ""
+
+msgid "Codice lotto"
+msgstr ""
+
+msgid "Collega / confronta"
+msgstr ""
+
+msgid "Collega da WooCommerce"
+msgstr ""
+
+msgid "Collegamento"
+msgstr ""
+
+msgid "Collegamento copiato."
+msgstr ""
+
+msgid "Collegamento creato"
+msgstr ""
+
+msgid "Colonne"
+msgstr ""
+
+msgid "Colore di accento"
+msgstr ""
+
+msgid "Completa la scheda"
+msgstr ""
+
+msgid "Completato"
+msgstr ""
+
+msgid "Conferma impatto"
+msgstr ""
+
+msgid "Conferma importazione"
+msgstr ""
+
+msgid "Conferma operazione"
+msgstr ""
+
+msgid "Conferma ripristino"
+msgstr ""
+
+msgid "Configura azienda, aspetto e modalità di lavoro."
+msgstr ""
+
+msgid "Configura l’azienda"
+msgstr ""
+
+msgid "Confronta aggiornamenti commerciali"
+msgstr ""
+
+msgid "Connessioni esterne"
+msgstr ""
+
+msgid "Contatti e istruzioni di assistenza"
+msgstr ""
+
+msgid "Continua ora"
+msgstr ""
+
+msgid "Controlla anteprima"
+msgstr ""
+
+msgid "Controlla e condividi"
+msgstr ""
+
+msgid "Controlla le prime"
+msgstr ""
+
+msgid "Controllo della scheda"
+msgstr ""
+
+msgid "Copia collegamento"
+msgstr ""
+
+msgid "Copia creata con una nuova identità. Inserisci il suo riferimento."
+msgstr ""
+
+msgid "Copia questo collegamento e invialo al fornitore. Non viene conservato in chiaro: per sostituirlo crea una nuova richiesta e revoca la precedente."
+msgstr ""
+
+msgid "Crea collegamento riservato"
+msgstr ""
+
+msgid "Crea e aggiorna"
+msgstr ""
+
+msgid "Crea e completa"
+msgstr ""
+
+msgid "Crea esempi nel catalogo"
+msgstr ""
+
+msgid "Crea esemplari"
+msgstr ""
+
+msgid "Crea esemplari in serie"
+msgstr ""
+
+msgid "Crea gli esemplari"
+msgstr ""
+
+msgid "Crea il primo collegamento."
+msgstr ""
+
+msgid "Crea il primo passaporto"
+msgstr ""
+
+msgid "Crea schede utili, condividi documenti e porta l’assistenza a una scansione di distanza."
+msgstr ""
+
+msgid "Crea un passaporto"
+msgstr ""
+
+msgid "Crea una scheda"
+msgstr ""
+
+msgid "Crealo, importalo da CSV o collegalo a WooCommerce."
+msgstr ""
+
+msgid "Cura e manutenzione"
+msgstr ""
+
+msgid "Da WooCommerce"
+msgstr ""
+
+msgid "Da prodotto a scheda, in tre passaggi"
+msgstr ""
+
+msgid "Da verificare"
+msgstr ""
+
+msgid "Data"
+msgstr ""
+
+msgid "Data del controllo"
+msgstr ""
+
+msgid "Data del dato"
+msgstr ""
+
+msgid "Dati ambientali ed evidenze"
+msgstr ""
+
+msgid "Dati commerciali acquisiti nella bozza."
+msgstr ""
+
+msgid "Dati di esempio facoltativi"
+msgstr ""
+
+msgid "Definisci quali dati richiedere prima di pubblicare una scheda. Sono regole interne dell’azienda, senza valore di certificazione."
+msgstr ""
+
+msgid "Descrizione"
+msgstr ""
+
+msgid "Desktop"
+msgstr ""
+
+msgid "Dichiarazione"
+msgstr ""
+
+msgid "Documenti"
+msgstr ""
+
+msgid "Documento"
+msgstr ""
+
+msgid "Documento conservato."
+msgstr ""
+
+msgid "Duplica"
+msgstr ""
+
+msgid "ESEMPIO / EXAMPLE — manuale "
+msgstr ""
+
+msgid "ESEMPIO · Alba naturale"
+msgstr ""
+
+msgid "ESEMPIO · Alba noce"
+msgstr ""
+
+msgid "ESEMPIO · Manuale "
+msgstr ""
+
+msgid "ESEMPIO · Piedino di ricambio"
+msgstr ""
+
+msgid "ESEMPIO · Sedia Alba"
+msgstr ""
+
+msgid "EXAMPLE · Alba chair"
+msgstr ""
+
+msgid "Email affidata al trasporto aziendale."
+msgstr ""
+
+msgid "Email assistenza"
+msgstr ""
+
+msgid "Email destinatario"
+msgstr ""
+
+msgid "Eredita dalla scheda"
+msgstr ""
+
+msgid "Ereditato dalla scheda padre. Una modifica crea un valore specifico."
+msgstr ""
+
+msgid "Esempi creati in bozza. Gli esemplari sono nella coda operazioni."
+msgstr ""
+
+msgid "Esito"
+msgstr ""
+
+msgid "Esporta e trasferisci"
+msgstr ""
+
+msgid "Esporta solo contenuti pubblicati (JSON)"
+msgstr ""
+
+msgid "Evidenza"
+msgstr ""
+
+msgid "Famiglia di prodotti"
+msgstr ""
+
+msgid "File (max 10 MB)"
+msgstr ""
+
+msgid "File CSV"
+msgstr ""
+
+msgid "Fine vita e smaltimento"
+msgstr ""
+
+msgid "Fonte"
+msgstr ""
+
+msgid "Fonte / evidenza"
+msgstr ""
+
+msgid "Fuori produzione"
+msgstr ""
+
+msgid "GTIN (se disponibile)"
+msgstr ""
+
+msgid "Generico"
+msgstr ""
+
+msgid "Gestisci la libreria"
+msgstr ""
+
+msgid "Giuliomax"
+msgstr ""
+
+msgid "Gli invii sono disabilitati inizialmente. WP-Cron dipende dalle visite: per code affidabili configura il cron di sistema oppure"
+msgstr ""
+
+msgid "Guida"
+msgstr ""
+
+msgid "I campi vuoti devono cancellare i valori esistenti"
+msgstr ""
+
+msgid "I dati essenziali sono presenti."
+msgstr ""
+
+msgid "I file riservati passano sempre dal controllo dei permessi e non vengono inseriti nella pagina pubblica o nel PDF."
+msgstr ""
+
+msgid "I tuoi passaporti"
+msgstr ""
+
+msgid "Identificatore esterno (non verificato)"
+msgstr ""
+
+msgid "Identificazione e relazioni"
+msgstr ""
+
+msgid "Identità persistente:"
+msgstr ""
+
+msgid "Ignora"
+msgstr ""
+
+msgid "Il catalogo entra. I tuoi dati restano tuoi."
+msgstr ""
+
+msgid "Il file viene conservato in un deposito protetto. I documenti pubblici sono scaricabili quando associati a una revisione pubblicata."
+msgstr ""
+
+msgid "Il fornitore vedrà solo il nome del prodotto e i campi selezionati. La risposta resterà una proposta da revisionare."
+msgstr ""
+
+msgid "Il posto giusto per i tuoi manuali."
+msgstr ""
+
+msgid "Il testo delle azioni resta ad alto contrasto anche con un colore chiaro."
+msgstr ""
+
+msgid "Il tuo catalogo inizia qui"
+msgstr ""
+
+msgid "Immagine prodotto"
+msgstr ""
+
+msgid "Importa / esporta"
+msgstr ""
+
+msgid "Importa CSV"
+msgstr ""
+
+msgid "Importatore"
+msgstr ""
+
+msgid "Importazioni controllate e archivi portabili, senza scaricare file da indirizzi remoti."
+msgstr ""
+
+msgid "Impossibile caricare il pannello"
+msgstr ""
+
+msgid "Impostazioni"
+msgstr ""
+
+msgid "Impostazioni salvate. Si applicheranno alle nuove revisioni."
+msgstr ""
+
+msgid "In coda"
+msgstr ""
+
+msgid "In corso"
+msgstr ""
+
+msgid "Incaricato"
+msgstr ""
+
+msgid "Indirizzo"
+msgstr ""
+
+msgid "Informazioni che restano"
+msgstr ""
+
+msgid "Inserisci almeno un seriale."
+msgstr ""
+
+msgid "Inserisci il nome del prodotto."
+msgstr ""
+
+msgid "Inserisci il nome e i contatti una sola volta. Li riutilizzeremo nelle nuove schede."
+msgstr ""
+
+msgid "Inserisci solo le traduzioni disponibili. I documenti mantengono sempre la loro lingua effettiva."
+msgstr ""
+
+msgid "Invia email"
+msgstr ""
+
+msgid "Invio tramite email aziendale"
+msgstr ""
+
+msgid "KB"
+msgstr ""
+
+msgid "La pagina pubblica conserva i file della revisione pubblicata. Prepara le nuove bozze, controllale e pubblica le revisioni approvate."
+msgstr ""
+
+msgid "La versione pubblica comprenderà i dati e i documenti attuali. Le revisioni precedenti saranno conservate."
+msgstr ""
+
+msgid "Larghezza etichetta (mm)"
+msgstr ""
+
+msgid "Le modifiche restano in bozza fino alla pubblicazione di una nuova revisione."
+msgstr ""
+
+msgid "Le schede sono volontarie. La pubblicazione e la compilazione dei campi non attestano la conformità normativa del prodotto."
+msgstr ""
+
+msgid "Legno di faggio e tessuto. Dati fittizi."
+msgstr ""
+
+msgid "Libreria documenti"
+msgstr ""
+
+msgid "Lingua"
+msgstr ""
+
+msgid "Lingua della traduzione"
+msgstr ""
+
+msgid "Lingua principale"
+msgstr ""
+
+msgid "Lingua reale del file"
+msgstr ""
+
+msgid "Logo (URL immagine)"
+msgstr ""
+
+msgid "Lotto"
+msgstr ""
+
+msgid "Lotto elaborato."
+msgstr ""
+
+msgid "L’archivio amministrativo contiene bozze e documenti riservati: conservalo in un posto sicuro."
+msgstr ""
+
+msgid "L’export locale non sostituisce un servizio esterno di continuità. Mantieni dominio e redirect per i QR già distribuiti."
+msgstr ""
+
+msgid "Mancante"
+msgstr ""
+
+msgid "Manuale"
+msgstr ""
+
+msgid "Margine foglio (mm)"
+msgstr ""
+
+msgid "Materiali e composizione"
+msgstr ""
+
+msgid "Materiali e cura"
+msgstr ""
+
+msgid "Materiali, manuali, cura e ricambi, senza ripetere i dati."
+msgstr ""
+
+msgid "Memorizza traduzione nella bozza"
+msgstr ""
+
+msgid "Metodo di misurazione"
+msgstr ""
+
+msgid "Mobile"
+msgstr ""
+
+msgid "Modalità"
+msgstr ""
+
+msgid "Modelli disponibili: generico, arredo e tessile. Tutti volontari; nessun profilo regolamentato è dichiarato operativo."
+msgstr ""
+
+msgid "Modelli informativi personalizzabili"
+msgstr ""
+
+msgid "Modello"
+msgstr ""
+
+msgid "Modello aggiornato"
+msgstr ""
+
+msgid "Modello informativo"
+msgstr ""
+
+msgid "Modifiche da salvare"
+msgstr ""
+
+msgid "Motivazione"
+msgstr ""
+
+msgid "Motivazione (necessaria se non applicabile)"
+msgstr ""
+
+msgid "Nessun prodotto trovato"
+msgstr ""
+
+msgid "Nessuna scheda, per ora"
+msgstr ""
+
+msgid "Nome"
+msgstr ""
+
+msgid "Nome azienda"
+msgstr ""
+
+msgid "Nome del prodotto"
+msgstr ""
+
+msgid "Non applicabile"
+msgstr ""
+
+msgid "Non configurata"
+msgstr ""
+
+msgid "Non serve WooCommerce né un account esterno."
+msgstr ""
+
+msgid "Numero della scheda padre (dall’elenco)"
+msgstr ""
+
+msgid "Numero di serie"
+msgstr ""
+
+msgid "Nuova versione"
+msgstr ""
+
+msgid "Nuova versione di "
+msgstr ""
+
+msgid "Nuovo passaporto"
+msgstr ""
+
+msgid "Operazione non riuscita."
+msgstr ""
+
+msgid "Operazioni in coda"
+msgstr ""
+
+msgid "Ordina"
+msgstr ""
+
+msgid "P"
+msgstr ""
+
+msgid "PDF"
+msgstr ""
+
+msgid "PNG"
+msgstr ""
+
+msgid "Pagina assistenza"
+msgstr ""
+
+msgid "Panoramica"
+msgstr ""
+
+msgid "Parti dai dati essenziali. Potrai completare la scheda prima di pubblicarla."
+msgstr ""
+
+msgid "Partiamo dalla tua azienda"
+msgstr ""
+
+msgid "Passaporti"
+msgstr ""
+
+msgid "Passaporti esterni del produttore"
+msgstr ""
+
+msgid "Passaporto originale del produttore"
+msgstr ""
+
+msgid "Piedini sostituibili."
+msgstr ""
+
+msgid "Più recenti"
+msgstr ""
+
+msgid "Precedente"
+msgstr ""
+
+msgid "Prepara bozze da revisionare"
+msgstr ""
+
+msgid "Presente"
+msgstr ""
+
+msgid "Prima di condividere"
+msgstr ""
+
+msgid "Prima pubblicazione"
+msgstr ""
+
+msgid "Prodotto"
+msgstr ""
+
+msgid "Prodotto generico · volontario"
+msgstr ""
+
+msgid "Prodotto successore"
+msgstr ""
+
+msgid "Product Passport"
+msgstr ""
+
+msgid "Produttore"
+msgstr ""
+
+msgid "Proposta inserita nella bozza. La pubblicazione richiede una nuova revisione."
+msgstr ""
+
+msgid "Proposte e richieste"
+msgstr ""
+
+msgid "Pubblica e mostra QR"
+msgstr ""
+
+msgid "Pubblica la prima revisione per attivare il collegamento pubblico e scaricare il QR."
+msgstr ""
+
+msgid "Pubblica la scheda e scarica il QR da applicare al prodotto."
+msgstr ""
+
+msgid "Pubblica revisione"
+msgstr ""
+
+msgid "Pubblica selezionati"
+msgstr ""
+
+msgid "Pubblica una nuova revisione"
+msgstr ""
+
+msgid "Pubblicate"
+msgstr ""
+
+msgid "Pubblicato"
+msgstr ""
+
+msgid "Pubblico"
+msgstr ""
+
+msgid "Pulisci con un panno morbido leggermente umido."
+msgstr ""
+
+msgid "Qualità e provenienza dei dati"
+msgstr ""
+
+msgid "Rapporto"
+msgstr ""
+
+msgid "Rapporto operazione #"
+msgstr ""
+
+msgid "Responsabile interno"
+msgstr ""
+
+msgid "Responsabile interno del dato"
+msgstr ""
+
+msgid "Revisione pubblicata. Il QR è pronto."
+msgstr ""
+
+msgid "Revisioni e attività"
+msgstr ""
+
+msgid "Revisioni e richieste"
+msgstr ""
+
+msgid "Revisioni pubblicate"
+msgstr ""
+
+msgid "Revoca collegamento"
+msgstr ""
+
+msgid "Ricambi / prodotti compatibili (numeri delle schede separati da virgole)"
+msgstr ""
+
+msgid "Ricambi e assistenza"
+msgstr ""
+
+msgid "Ricambi e compatibilità"
+msgstr ""
+
+msgid "Ricarica la pagina o controlla i permessi."
+msgstr ""
+
+msgid "Richiedi dati al fornitore"
+msgstr ""
+
+msgid "Richiesta #"
+msgstr ""
+
+msgid "Riferimento"
+msgstr ""
+
+msgid "Riferimento / SKU"
+msgstr ""
+
+msgid "Rifiuta"
+msgstr ""
+
+msgid "Riga"
+msgstr ""
+
+msgid "Ripristina eredità per questi campi"
+msgstr ""
+
+msgid "Ripristina in una nuova bozza"
+msgstr ""
+
+msgid "Ripristina un archivio"
+msgstr ""
+
+msgid "Ripristino preparato in bozza. Verifica prima di pubblicare."
+msgstr ""
+
+msgid "Riservato ai revisori"
+msgstr ""
+
+msgid "Riservato — escluso dalla scheda pubblica"
+msgstr ""
+
+msgid "Risposte e richieste"
+msgstr ""
+
+msgid "Rivenditore"
+msgstr ""
+
+msgid "Ruolo"
+msgstr ""
+
+msgid "SKU nel catalogo (se univoco)"
+msgstr ""
+
+msgid "SVG"
+msgstr ""
+
+msgid "Salva bozza"
+msgstr ""
+
+msgid "Salva impostazioni"
+msgstr ""
+
+msgid "Salva nuova versione del modello"
+msgstr ""
+
+msgid "Scadenza facoltativa"
+msgstr ""
+
+msgid "Scadenza:"
+msgstr ""
+
+msgid "Scarica archivio portabile ZIP"
+msgstr ""
+
+msgid "Scegli il prodotto"
+msgstr ""
+
+msgid "Scheda volontaria · nessuna certificazione automatica."
+msgstr ""
+
+msgid "Schede totali"
+msgstr ""
+
+msgid "Seleziona "
+msgstr ""
+
+msgid "Seleziona almeno una scheda."
+msgstr ""
+
+msgid "Seleziona i documenti condivisi. La pubblicazione conserverà la versione esatta attuale."
+msgstr ""
+
+msgid "Seleziona i valori da rimuovere dalla variante, poi salva la bozza."
+msgstr ""
+
+msgid "Seleziona le schede pubblicate da stampare."
+msgstr ""
+
+msgid "Seleziona tutte le righe"
+msgstr ""
+
+msgid "Seleziona un archivio ZIP."
+msgstr ""
+
+msgid "Senza titolo"
+msgstr ""
+
+msgid "Settore"
+msgstr ""
+
+msgid "Sicurezza e avvertenze"
+msgstr ""
+
+msgid "Singolo esemplare"
+msgstr ""
+
+msgid "Solo aggiorna"
+msgstr ""
+
+msgid "Solo crea"
+msgstr ""
+
+msgid "Stampa etichetta"
+msgstr ""
+
+msgid "Stampa etichette"
+msgstr ""
+
+msgid "Stato"
+msgstr ""
+
+msgid "Successiva"
+msgstr ""
+
+msgid "Telefono"
+msgstr ""
+
+msgid "Tessile"
+msgstr ""
+
+msgid "Tessile · volontario"
+msgstr ""
+
+msgid "Testi iniziali per le nuove schede"
+msgstr ""
+
+msgid "Tipo"
+msgstr ""
+
+msgid "Titolo"
+msgstr ""
+
+msgid "Torna all’elenco"
+msgstr ""
+
+msgid "Traduzione preparata. Salva la bozza per conservarla."
+msgstr ""
+
+msgid "Traduzioni"
+msgstr ""
+
+msgid "Tutti"
+msgstr ""
+
+msgid "UTF-8 · virgola, punto e virgola o tabulazione · massimo 20.000 righe. SKU e UUID sono chiavi distinte."
+msgstr ""
+
+msgid "UUID persistente"
+msgstr ""
+
+msgid "Ultima modifica"
+msgstr ""
+
+msgid "Ultime schede"
+msgstr ""
+
+msgid "Un catalogo ordinato, indipendente dalle pagine di vendita."
+msgstr ""
+
+msgid "Un documento, molti prodotti."
+msgstr ""
+
+msgid "Un numero di serie per riga"
+msgstr ""
+
+msgid "Un prodotto. Tutte le sue informazioni."
+msgstr ""
+
+msgid "Un valore sconosciuto va lasciato vuoto. Un dato compilato non equivale a una certificazione."
+msgstr ""
+
+msgid "Una volta sola. Poi si riutilizza."
+msgstr ""
+
+msgid "Unità di misura"
+msgstr ""
+
+msgid "Validità (giorni)"
+msgstr ""
+
+msgid "Valore ambientale dichiarato"
+msgstr ""
+
+msgid "Variante"
+msgstr ""
+
+msgid "Variante #"
+msgstr ""
+
+msgid "Variante di un modello"
+msgstr ""
+
+msgid "Variante, lotto o esemplare"
+msgstr ""
+
+msgid "Vedi impatto"
+msgstr ""
+
+msgid "Vedi tutti i passaporti"
+msgstr ""
+
+msgid "Verifica archivio"
+msgstr ""
+
+msgid "Verificato internamente"
+msgstr ""
+
+msgid "Verranno create schede chiaramente contrassegnate ESEMPIO: una sedia, due varianti, un ricambio, un lotto e tre seriali. Nessuna pubblicazione automatica."
+msgstr ""
+
+msgid "Versione"
+msgstr ""
+
+msgid "Visibilità"
+msgstr ""
+
+msgid "WooCommerce:"
+msgstr ""
+
+msgid "de"
+msgstr ""
+
+msgid "documenti ·"
+msgstr ""
+
+msgid "en"
+msgstr ""
+
+msgid "errori"
+msgstr ""
+
+msgid "errori isolati"
+msgstr ""
+
+msgid "es"
+msgstr ""
+
+msgid "esemplari erediteranno dati e documenti dalla scheda #"
+msgstr ""
+
+msgid "fr"
+msgstr ""
+
+msgid "gmpp-toast "
+msgstr ""
+
+msgid "identità già presenti conservate."
+msgstr ""
+
+msgid "it"
+msgstr ""
+
+msgid "nuove schede;"
+msgstr ""
+
+msgid "revisioni"
+msgstr ""
+
+msgid "righe ·"
+msgstr ""
+
+msgid "righe. Le righe con errori saranno saltate e riportate nel rapporto."
+msgstr ""
+
+msgid "schede da rivalutare."
+msgstr ""
+
+msgid "schede interessate"
+msgstr ""
+
+msgid "schede interessate; nessuna pubblicazione automatica."
+msgstr ""
+
+msgid "schede ·"
+msgstr ""
+
+msgid "schede? La revisione attuale viene conservata nello storico."
+msgstr ""
+
+msgid "wp gmpp jobs"
+msgstr ""
+
+msgid "· versione"
+msgstr ""
+
+msgid "· volontario"
+msgstr ""
+
+msgid "“Verificato internamente” indica il controllo svolto dall’azienda, senza certificare veridicità o conformità del prodotto."
+msgstr ""

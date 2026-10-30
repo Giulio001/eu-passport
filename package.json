@@ -1,0 +1,28 @@
+{
+  "name": "giuliomax-product-passport",
+  "version": "1.0.1",
+  "description": "WordPress product information sheets with immutable publications and local QR",
+  "scripts": {
+    "test": "node tests/run.mjs",
+    "test:browser": "QA_BROWSER=1 node tests/run.mjs",
+    "build": "python3 scripts/package.py",
+    "lint": "node --check giuliomax-product-passport/assets/admin.js && php-wasm-cli -r 'foreach(new RecursiveIteratorIterator(new RecursiveDirectoryIterator(\"giuliomax-product-passport\")) as $f){if($f->getExtension()===\"php\")token_get_all(file_get_contents($f->getPathname()),TOKEN_PARSE);}'",
+    "test:qr": "node tests/qr-check.cjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "GPL-2.0-or-later",
+  "type": "commonjs",
+  "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
+    "@php-wasm/cli": "3.1.61",
+    "@playwright/test": "1.64.1",
+    "@sparticuz/chromium": "153.0.0",
+    "@wp-playground/cli": "3.1.61",
+    "@zxing/library": "0.23.0",
+    "acorn": "8.19.0",
+    "pngjs": "7.0.0",
+    "sharp": "0.35.5"
+  },
+  "private": true
+}

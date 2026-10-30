@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<ruleset name="Giuliomax runtime">
+  <description>PSR-12 layout with WordPress snake_case names and bootstrap guards. SQL and HTML templates may exceed 120 columns.</description>
+  <file>giuliomax-product-passport</file>
+  <arg name="extensions" value="php"/>
+  <exclude-pattern>*/vendor/*</exclude-pattern>
+  <rule ref="PSR12">
+    <exclude name="PSR1.Methods.CamelCapsMethodName"/>
+    <exclude name="PSR1.Files.SideEffects"/>
+    <exclude name="Generic.Files.LineLength"/>
+  </rule>
+</ruleset>
