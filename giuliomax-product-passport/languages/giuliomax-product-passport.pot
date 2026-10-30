@@ -30,6 +30,10 @@ msgstr ""
 msgid " documents · "
 msgstr ""
 
+#: assets/admin.js:206
+msgid " errors"
+msgstr ""
+
 #: assets/admin.js:208
 msgid " existing identities preserved."
 msgstr ""
@@ -48,6 +52,10 @@ msgstr ""
 
 #: assets/admin.js:207
 msgid " revisions"
+msgstr ""
+
+#: assets/admin.js:234
+msgid " row errors"
 msgstr ""
 
 #: assets/admin.js:206 assets/admin.js:234
@@ -622,6 +630,10 @@ msgstr ""
 msgid "Date"
 msgstr ""
 
+#: assets/admin.js:195
+msgid "Deadline: "
+msgstr ""
+
 #: assets/admin.js:136
 msgid "Declaration"
 msgstr ""
@@ -900,6 +912,10 @@ msgstr ""
 
 #: src/Portable.php:78
 msgid "Existing identities are preserved without overwriting; new data is imported."
+msgstr ""
+
+#: assets/admin.js:136
+msgid "Expires: "
 msgstr ""
 
 #: src/Designs.php:230 src/PublicPage.php:188
@@ -1710,6 +1726,10 @@ msgstr ""
 msgid "Product sheets publish the company contacts and product information selected by the operator. Internal editorial records retain user IDs, timestamps and reasons. Supplier proposal links expire and are stored as hashes. Private documents stay in the database and require authorization. No telemetry or AI requests are sent. Supplier emails use the site mail transport only after explicit administrative enablement. External image URLs selected by an operator may disclose visitor IP addresses to the image host. Data is retained on uninstall. Define retention periods, restrict hosting and backup access, and avoid unnecessary personal information in public sheets."
 msgstr ""
 
+#: assets/admin.js:149
+msgid "Progress"
+msgstr ""
+
 #: src/Jobs.php:202
 msgid "Progress not saved: this batch will be resumed."
 msgstr ""
@@ -1776,6 +1796,10 @@ msgstr ""
 
 #: assets/block.js:8
 msgid "QR code"
+msgstr ""
+
+#: assets/admin.js:86
+msgid "QR code for the published sheet"
 msgstr ""
 
 #: giuliomax-product-passport.php:56
@@ -1862,6 +1886,10 @@ msgstr ""
 msgid "Representative"
 msgstr ""
 
+#: assets/admin.js:195
+msgid "Request #"
+msgstr ""
+
 #: src/Api.php:241 src/Suppliers.php:55
 msgid "Request not found."
 msgstr ""
@@ -1932,6 +1960,10 @@ msgstr ""
 
 #: src/Jobs.php:187 src/Suppliers.php:13 src/Suppliers.php:59
 msgid "Review permission is required."
+msgstr ""
+
+#: assets/admin.js:234
+msgid "Review the first "
 msgstr ""
 
 #: assets/admin.js:69 src/Passport.php:320
@@ -2156,6 +2188,10 @@ msgstr ""
 
 #: assets/admin.js:80
 msgid "Sheet design"
+msgstr ""
+
+#: assets/designer.js:24
+msgid "Sheet design preview"
 msgstr ""
 
 #: assets/block.js:7
@@ -2602,7 +2638,7 @@ msgstr ""
 msgid "Verified organization with EU Login, credentials, applicable API specifications and registration/receipt testing. Submissions are unavailable in this release."
 msgstr ""
 
-#: assets/admin.js:136
+#: assets/admin.js:136 assets/admin.js:140
 msgid "Version"
 msgstr ""
 
@@ -2640,6 +2676,10 @@ msgstr ""
 
 #: assets/admin.js:80
 msgid "Visual template"
+msgstr ""
+
+#: assets/admin.js:140
+msgid "Voluntary"
 msgstr ""
 
 #: src/PublicPage.php:198
@@ -2758,7 +2798,7 @@ msgstr ""
 msgid "revisions"
 msgstr ""
 
-#: assets/admin.js:140 assets/admin.js:250 assets/admin.js:251 assets/admin.js:67 assets/admin.js:68 assets/admin.js:80 assets/admin.js:81 assets/designer.js:22 assets/designer.js:25
+#: assets/admin.js:250 assets/admin.js:68 assets/admin.js:80 assets/designer.js:22 assets/designer.js:25
 msgid "selected"
 msgstr ""
 

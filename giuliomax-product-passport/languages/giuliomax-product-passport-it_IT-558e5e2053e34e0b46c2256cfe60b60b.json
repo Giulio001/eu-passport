@@ -25,6 +25,9 @@
       " documents · ": [
         " documenti · "
       ],
+      " errors": [
+        " errori"
+      ],
       " existing identities preserved.": [
         " identità già presenti conservate."
       ],
@@ -36,6 +39,9 @@
       ],
       " revisions": [
         " revisioni"
+      ],
+      " row errors": [
+        " errori di riga"
       ],
       " rows · ": [
         " righe · "
@@ -271,6 +277,9 @@
       "Date": [
         "Data"
       ],
+      "Deadline: ": [
+        "Scadenza: "
+      ],
       "Declaration": [
         "Dichiarazione"
       ],
@@ -378,6 +387,9 @@
       ],
       "Evidence": [
         "Evidenza"
+      ],
+      "Expires: ": [
+        "Scadenza: "
       ],
       "Export and transfer": [
         "Esporta e trasferisci"
@@ -682,6 +694,9 @@
       "Product": [
         "Prodotto"
       ],
+      "Progress": [
+        "Avanzamento"
+      ],
       "Proposal added to the draft. Publishing requires a new revision.": [
         "Proposta inserita nella bozza. La pubblicazione richiede una nuova revisione."
       ],
@@ -717,6 +732,9 @@
       ],
       "Published revisions": [
         "Revisioni pubblicate"
+      ],
+      "QR code for the published sheet": [
+        "QR della scheda pubblicata"
       ],
       "Queued": [
         "In coda"
@@ -763,6 +781,9 @@
       "Representative": [
         "Incaricato"
       ],
+      "Request #": [
+        "Richiesta #"
+      ],
       "Request supplier data": [
         "Richiedi dati al fornitore"
       ],
@@ -795,6 +816,9 @@
       ],
       "Review date": [
         "Data del controllo"
+      ],
+      "Review the first ": [
+        "Controlla le prime "
       ],
       "Revision ": [
         "Revisione "
@@ -1053,6 +1077,9 @@
       ],
       "Visual template": [
         "Template grafico"
+      ],
+      "Voluntary": [
+        "Volontario"
       ],
       "Voluntary sheet · no automatic certification.": [
         "Scheda volontaria · nessuna certificazione automatica."

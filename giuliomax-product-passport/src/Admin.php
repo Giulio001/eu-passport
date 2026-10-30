@@ -55,7 +55,7 @@ final class Admin
     public function export(): void
     {
         if (!current_user_can('gmpp_manage')) {
-            wp_die(__('Access denied.', 'giuliomax-product-passport'), '', ['response' => 403]);
+            wp_die(esc_html__('Access denied.', 'giuliomax-product-passport'), '', ['response' => 403]);
         }
         check_admin_referer('gmpp_download');
         nocache_headers();
@@ -86,14 +86,14 @@ final class Admin
     public function labels_page(): void
     {
         if (!current_user_can('gmpp_edit')) {
-            wp_die(__('Access denied.', 'giuliomax-product-passport'), '', ['response' => 403]);
+            wp_die(esc_html__('Access denied.', 'giuliomax-product-passport'), '', ['response' => 403]);
         }
         check_admin_referer('gmpp_download');
         nocache_headers();
         header('X-Robots-Tag: noindex');
         $ids = array_slice(array_filter(array_map('absint', explode(',', sanitize_text_field(wp_unslash($_GET['ids'] ?? ''))))), 0, 1000);
         $s = Store::settings();
-        echo ('<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>' . esc_html__('Product labels', 'giuliomax-product-passport') . '</title><style>body{font:12px system-ui;margin:0}button{padding:12px;margin:12px}main{display:flex;flex-wrap:wrap;gap:0;padding:') . (int)$s['label_margin'] . 'mm}.label{box-sizing:border-box;width:' . (int)$s['label_width'] . 'mm;height:' . (int)$s['label_height'] . 'mm;border:1px dashed #bbb;display:flex;align-items:center;padding:3mm;gap:3mm;break-inside:avoid;overflow:hidden}.label svg{width:28mm;height:28mm;flex-shrink:0}.label span{overflow-wrap:anywhere}small{display:block;margin-top:4px}@media print{button,p{display:none}main{padding:0}.label{border-color:transparent}}@page{size:A4;margin:' . (int)$s['label_margin'] . ('mm}</style></head><body><button onclick="window.print()">' . esc_html__('Print / save PDF', 'giuliomax-product-passport') . '</button><p>' . esc_html__('Test a scan at the actual size before printing the full batch.', 'giuliomax-product-passport') . '</p><main>');
+        echo ('<!doctype html><html lang="' . esc_attr(str_replace('_', '-', get_user_locale())) . '"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>' . esc_html__('Product labels', 'giuliomax-product-passport') . '</title><style>body{font:12px system-ui;margin:0}button{padding:12px;margin:12px}main{display:flex;flex-wrap:wrap;gap:0;padding:') . (int)$s['label_margin'] . 'mm}.label{box-sizing:border-box;width:' . (int)$s['label_width'] . 'mm;height:' . (int)$s['label_height'] . 'mm;border:1px dashed #bbb;display:flex;align-items:center;padding:3mm;gap:3mm;break-inside:avoid;overflow:hidden}.label svg{width:28mm;height:28mm;flex-shrink:0}.label span{overflow-wrap:anywhere}small{display:block;margin-top:4px}@media print{button,p{display:none}main{padding:0}.label{border-color:transparent}}@page{size:A4;margin:' . (int)$s['label_margin'] . ('mm}</style></head><body><button onclick="window.print()">' . esc_html__('Print / save PDF', 'giuliomax-product-passport') . '</button><p>' . esc_html__('Test a scan at the actual size before printing the full batch.', 'giuliomax-product-passport') . '</p><main>');
         foreach ($ids as $id) {
             try {
                 $row = Passport::get($id);

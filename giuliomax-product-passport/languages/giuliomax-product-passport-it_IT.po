@@ -30,6 +30,10 @@ msgstr " caratteri."
 msgid " documents · "
 msgstr " documenti · "
 
+#: assets/admin.js:206
+msgid " errors"
+msgstr " errori"
+
 #: assets/admin.js:208
 msgid " existing identities preserved."
 msgstr " identità già presenti conservate."
@@ -49,6 +53,10 @@ msgstr " nuove schede; "
 #: assets/admin.js:207
 msgid " revisions"
 msgstr " revisioni"
+
+#: assets/admin.js:234
+msgid " row errors"
+msgstr " errori di riga"
 
 #: assets/admin.js:206 assets/admin.js:234
 msgid " rows · "
@@ -622,6 +630,10 @@ msgstr "Qualità e provenienza dei dati"
 msgid "Date"
 msgstr "Data"
 
+#: assets/admin.js:195
+msgid "Deadline: "
+msgstr "Scadenza: "
+
 #: assets/admin.js:136
 msgid "Declaration"
 msgstr "Dichiarazione"
@@ -901,6 +913,10 @@ msgstr "Evidenza"
 #: src/Portable.php:78
 msgid "Existing identities are preserved without overwriting; new data is imported."
 msgstr "Le identità esistenti vengono conservate senza sovrascrittura; i nuovi dati vengono importati."
+
+#: assets/admin.js:136
+msgid "Expires: "
+msgstr "Scadenza: "
 
 #: src/Designs.php:230 src/PublicPage.php:188
 msgid "Expiry date passed"
@@ -1710,6 +1726,10 @@ msgstr "Avviso sul prodotto"
 msgid "Product sheets publish the company contacts and product information selected by the operator. Internal editorial records retain user IDs, timestamps and reasons. Supplier proposal links expire and are stored as hashes. Private documents stay in the database and require authorization. No telemetry or AI requests are sent. Supplier emails use the site mail transport only after explicit administrative enablement. External image URLs selected by an operator may disclose visitor IP addresses to the image host. Data is retained on uninstall. Define retention periods, restrict hosting and backup access, and avoid unnecessary personal information in public sheets."
 msgstr "Le schede pubblicano i contatti aziendali e le informazioni di prodotto scelti dall’operatore. I registri editoriali interni conservano ID utente, date e motivazioni. I collegamenti alle proposte dei fornitori scadono e sono conservati come hash. I documenti riservati rimangono nel database e richiedono autorizzazione. Non vengono inviati dati di telemetria o richieste AI. Le email ai fornitori utilizzano il trasporto del sito solo dopo esplicita abilitazione amministrativa. Gli URL di immagini esterne scelti dall’operatore possono comunicare l’indirizzo IP del visitatore al relativo host. I dati vengono conservati alla disinstallazione. Definisci i tempi di conservazione, limita l’accesso a hosting e backup ed evita dati personali non necessari nelle schede pubbliche."
 
+#: assets/admin.js:149
+msgid "Progress"
+msgstr "Avanzamento"
+
 #: src/Jobs.php:202
 msgid "Progress not saved: this batch will be resumed."
 msgstr "Avanzamento non salvato: il lotto verrà ripreso."
@@ -1777,6 +1797,10 @@ msgstr "Un prodotto al centro. Pulito, ampio, contemporaneo."
 #: assets/block.js:8
 msgid "QR code"
 msgstr "QR code"
+
+#: assets/admin.js:86
+msgid "QR code for the published sheet"
+msgstr "QR della scheda pubblicata"
 
 #: giuliomax-product-passport.php:56
 msgid "Queue processed."
@@ -1862,6 +1886,10 @@ msgstr "Rapporto"
 msgid "Representative"
 msgstr "Incaricato"
 
+#: assets/admin.js:195
+msgid "Request #"
+msgstr "Richiesta #"
+
 #: src/Api.php:241 src/Suppliers.php:55
 msgid "Request not found."
 msgstr "Richiesta non trovata."
@@ -1933,6 +1961,10 @@ msgstr "Data del controllo"
 #: src/Jobs.php:187 src/Suppliers.php:13 src/Suppliers.php:59
 msgid "Review permission is required."
 msgstr "Permesso di revisione richiesto."
+
+#: assets/admin.js:234
+msgid "Review the first "
+msgstr "Controlla le prime "
 
 #: assets/admin.js:69 src/Passport.php:320
 msgid "Revision "
@@ -2157,6 +2189,10 @@ msgstr "Aggiornamento documento condiviso"
 #: assets/admin.js:80
 msgid "Sheet design"
 msgstr "Design della scheda"
+
+#: assets/designer.js:24
+msgid "Sheet design preview"
+msgstr "Anteprima del design della scheda"
 
 #: assets/block.js:7
 msgid "Sheet identifier (UUID)"
@@ -2602,7 +2638,7 @@ msgstr "Variante, lotto o esemplare"
 msgid "Verified organization with EU Login, credentials, applicable API specifications and registration/receipt testing. Submissions are unavailable in this release."
 msgstr "Organizzazione verificata con EU Login, credenziali, specifiche API applicabili e test di registrazione/ricevute. Nessun invio disponibile in questa versione."
 
-#: assets/admin.js:136
+#: assets/admin.js:136 assets/admin.js:140
 msgid "Version"
 msgstr "Versione"
 
@@ -2641,6 +2677,10 @@ msgstr "Visibilità"
 #: assets/admin.js:80
 msgid "Visual template"
 msgstr "Template grafico"
+
+#: assets/admin.js:140
+msgid "Voluntary"
+msgstr "Volontario"
 
 #: src/PublicPage.php:198
 msgid "Voluntary digital product sheet. Information supplied by the company."
@@ -2758,7 +2798,7 @@ msgstr "prodotto."
 msgid "revisions"
 msgstr "revisioni"
 
-#: assets/admin.js:140 assets/admin.js:250 assets/admin.js:251 assets/admin.js:67 assets/admin.js:68 assets/admin.js:80 assets/admin.js:81 assets/designer.js:22 assets/designer.js:25
+#: assets/admin.js:250 assets/admin.js:68 assets/admin.js:80 assets/designer.js:22 assets/designer.js:25
 msgid "selected"
 msgstr "selezionati"
 
