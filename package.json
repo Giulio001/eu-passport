@@ -6,7 +6,7 @@
     "test": "node tests/run.mjs",
     "test:browser": "QA_BROWSER=1 node tests/run.mjs",
     "build": "python3 scripts/package.py",
-    "lint": "node --check giuliomax-product-passport/assets/admin.js && php-wasm-cli -r 'foreach(new RecursiveIteratorIterator(new RecursiveDirectoryIterator(\"giuliomax-product-passport\")) as $f){if($f->getExtension()===\"php\")token_get_all(file_get_contents($f->getPathname()),TOKEN_PARSE);}'",
+    "lint": "node --check giuliomax-product-passport/assets/admin.js && node --check giuliomax-product-passport/assets/designer.js && node --check giuliomax-product-passport/assets/block.js && php-wasm-cli -r 'foreach(new RecursiveIteratorIterator(new RecursiveDirectoryIterator(\"giuliomax-product-passport\")) as $f){if($f->getExtension()===\"php\")token_get_all(file_get_contents($f->getPathname()),TOKEN_PARSE);}'",
     "test:qr": "node tests/qr-check.cjs"
   },
   "keywords": [],

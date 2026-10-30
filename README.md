@@ -18,7 +18,9 @@ Il cliente apre la scheda dal browser, senza app o account. Il QR identifica la 
 
 ## Design della scheda
 
-Quattro template grafici pronti e una base vuota; editor a sezioni con colori, tipografia, riordino e anteprima reale su desktop, tablet e telefono. I design si salvano nella libreria e si applicano alle bozze senza modificare le revisioni pubblicate. Apri **Product Passport → Design e template**, oppure **Personalizza il design** da un prodotto. [Guida Design Studio](docs/DESIGN-STUDIO.md).
+Quattro template grafici pronti e una base vuota; editor a sezioni con colori, tipografia, riordino e anteprima reale su desktop, tablet e telefono. I design si salvano nella libreria e si applicano alle bozze senza modificare le revisioni pubblicate. Apri **Product Passport → Design e template**, oppure **Personalizza il design** da un prodotto. [Guida Design Studio](docs/DESIGN-STUDIO.md) · [Collaudo della 1.1.0](docs/DESIGN-TEST-REPORT.md).
+
+![Galleria dei template grafici](docs/screenshots/template-gallery.png)
 
 ## Funzioni
 

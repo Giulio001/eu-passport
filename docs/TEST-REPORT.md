@@ -1,4 +1,6 @@
-# Rapporto di verifica — 30 ottobre 2026
+# Rapporto storico 1.0.1 — 30 ottobre 2026
+
+Per la versione corrente 1.1.0 e il nuovo editor grafico vedere [DESIGN-TEST-REPORT.md](DESIGN-TEST-REPORT.md). Questo documento conserva l’evidenza della revisione precedente.
 
 Versione 1.0.1. La revisione corrente aggiunge 41 controlli funzionali eseguiti su PHP nativo e MariaDB 11.4.13 in GitHub Actions, oltre ai test browser su Playground. Il controllo ufficiale Plugin Check 2.1.0 non rileva errori. Il workflow conserva i rapporti grezzi, prova l’installazione dello ZIP e verifica WooCommerce/Action Scheduler. Vedere anche WORDPRESS-ORG-REVIEW.md.
 

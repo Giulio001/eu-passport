@@ -67,8 +67,9 @@ try {
   await page.locator('[data-do="apply"]').waitFor();await page.locator('[data-do="apply"]').click();await page.getByRole('status').filter({hasText:'Design applicato alla bozza'}).waitFor();
   const designed=await page.evaluate(async id=>{const r=await fetch(GMPP.api+'passports/'+id,{headers:{'X-WP-Nonce':GMPP.nonce}});return r.json();},result.fixture.id);
   if(designed.data.design.name!=='Design del mio atelier'||!designed.data.design.sections.some(s=>s.type==='custom'&&s.text.includes('Conserva questa guida')))throw new Error('Designer did not apply custom section to draft: '+JSON.stringify(designed.data.design));
+  await page.frameLocator('#gde-frame').getByRole('heading',{name:'Browser edited draft',exact:true}).waitFor();
   await page.locator('[data-do="device"][data-view="mobile"]').click();if(await page.locator('#gde-frame').evaluate(el=>el.contentWindow.innerWidth)!==390)throw new Error('Phone preview is not a real 390px viewport');
-  await page.locator('[data-do="device"][data-view="desktop"]').click();await page.screenshot({path:repo+'/test-results/designer-desktop.png',fullPage:true});
+  await page.locator('[data-do="device"][data-view="desktop"]').click();await page.evaluate(()=>window.scrollTo(0,0));await page.screenshot({path:repo+'/test-results/designer-desktop.png',fullPage:true});
   const designerAxe=await new AxeBuilder({page}).include('#gmpp-app').exclude('#gde-frame').withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze();
   await page.setViewportSize({width:390,height:844});await page.locator('[data-do="panel"][data-panel="preview"]').click();await page.locator('[data-do="device"][data-view="mobile"]').click();await page.screenshot({path:repo+'/test-results/designer-mobile.png',fullPage:true});const designerOverflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth);await page.setViewportSize({width:1440,height:1000});
   const templates=await page.evaluate(async()=>{const r=await fetch(GMPP.api+'designs',{headers:{'X-WP-Nonce':GMPP.nonce}});return (await r.json()).presets;});

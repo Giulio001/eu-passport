@@ -212,14 +212,15 @@ final class Designs
                                                                                                             ?><div class="gd-monogram" aria-hidden="true"><span><?php echo esc_html(mb_substr($data['name'], 0, 1)); ?></span><small><?php echo esc_html($data['sku'] ?? ''); ?></small></div><?php
                                                                                                      endif; ?></div></section>
             <div class="gd-sections">
-            <?php foreach ($design['sections'] as $index => $section) :
+            <?php $visible = 0; foreach ($design['sections'] as $index => $section) :
                 $type = $section['type'];
                 $text = $type === 'custom' ? $section['text'] : ($data[$type] ?? '');
                 $available = $type === 'documents' ? !empty($data['documents']) : ($type === 'attributes' ? !empty($data['attributes']) : ($type === 'environmental' ? !empty($data['environmental_value']) : ($type === 'support' ? (!empty($text) || !empty($company['email']) || !empty($company['phone']) || !empty($data['support_url'])) : ($type === 'spares' ? (!empty($text) || !empty($data['compatible'])) : is_string($text) && $text !== ''))));
                 if (!$available) {
                     continue;
                 }
-                ?><section class="gd-section gd-section-<?php echo esc_attr($type); ?>" id="gd-<?php echo esc_attr($type === 'custom' ? 'custom-' . $index : $type); ?>"><div class="gd-section-heading"><span class="gd-section-number" aria-hidden="true"><?php echo esc_html(str_pad((string)($index + 1), 2, '0', STR_PAD_LEFT)); ?></span><h2><?php echo esc_html($section['title'] ?: $labels[$type]); ?></h2></div><div class="gd-section-body">
+                ++$visible;
+                ?><section class="gd-section gd-section-<?php echo esc_attr($type); ?>" id="gd-<?php echo esc_attr($type === 'custom' ? 'custom-' . $index : $type); ?>"><div class="gd-section-heading"><span class="gd-section-number" aria-hidden="true"><?php echo esc_html(str_pad((string)$visible, 2, '0', STR_PAD_LEFT)); ?></span><h2><?php echo esc_html($section['title'] ?: $labels[$type]); ?></h2></div><div class="gd-section-body">
                 <?php if ($type === 'documents') :
                     ?><div class="gd-documents"><?php foreach ($data['documents'] as $doc) :
     ?><a class="gd-document" href="<?php echo esc_url(!empty($doc['version_id']) ? Documents::url((int)$doc['version_id']) : '#gd-documents'); ?>"><span class="gd-file-icon" aria-hidden="true">↗</span><span><strong><?php echo esc_html($doc['title']); ?></strong><small><?php echo esc_html(strtoupper($doc['language']) . ' · v' . $doc['version'] . ' · ' . strtoupper(pathinfo($doc['filename'], PATHINFO_EXTENSION))); ?></small><?php if (!empty($doc['expires']) && $doc['expires'] < gmdate('Y-m-d')) :

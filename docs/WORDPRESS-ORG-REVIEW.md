@@ -1,6 +1,6 @@
 # Revisione per WordPress.org — 30 ottobre 2026
 
-Candidato: Giuliomax Product Passport 1.0.1. Questo documento registra la verifica tecnica del pacchetto e i limiti della consegna. Non è un’approvazione del Plugin Review Team né un certificato di conformità del prodotto dell’azienda.
+Candidato: Giuliomax Product Passport 1.1.0. Questo documento registra la verifica tecnica del pacchetto e i limiti della consegna. Non è un’approvazione del Plugin Review Team né un certificato di conformità del prodotto dell’azienda.
 
 ## Fonti e ambito
 
@@ -44,3 +44,7 @@ Gli avvisi generici sulle query dirette e sull’assenza di cache vengono conser
 L’account WordPress.org, il nome contributore dichiarato e lo slug definitivo devono essere confermati dal titolare nel flusso di invio. Non sono stati usati account o credenziali WordPress.org. La manutenzione del plugin, la risposta alle segnalazioni e le release successive restano responsabilità del maintainer.
 
 Il plugin conserva dati editoriali e documenti alla disinstallazione per proteggere i riferimenti già stampati. L’operatore deve definire conservazione, accesso ai backup e informativa. Un hosting compatibile, dati corretti e diritti sui documenti caricati sono necessari nell’uso concreto. Per i limiti ESPR e delle discipline settoriali leggere REGULATORY-MATRIX.md.
+
+## Estensione 1.1.0: template grafici
+
+La nuova libreria usa configurazioni con campi consentiti, colori sanificati e testo semplice. Nessun HTML, CSS o JavaScript arbitrario. Il renderer applica escaping contestuale; l’iframe dell’anteprima disabilita gli script. Foto e file usano le API del sito, senza servizi obbligatori esterni. Le copie dei design si congelano nella revisione pubblicata; i contenuti pregressi rimangono nel layout classico. I risultati del nuovo collaudo sono in DESIGN-TEST-REPORT.md.
