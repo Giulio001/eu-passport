@@ -18,6 +18,12 @@ final class Pdf
                 $lines[] = '';
             }
         }
+        foreach ($d['design']['sections'] ?? [] as $section) {
+            if ($section['type'] === 'custom' && !empty($section['text'])) {
+                $lines[] = ($section['title'] ?: 'Da sapere') . ': ' . $section['text'];
+                $lines[] = '';
+            }
+        }
         foreach ($d['documents'] ?? [] as $doc) {
             $lines[] = $doc['title'] . ' · ' . $doc['language'] . ' · v' . $doc['version'];
             $lines[] = Documents::url((int)$doc['version_id']);

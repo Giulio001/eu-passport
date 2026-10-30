@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Giuliomax Product Passport
  * Description: Schede prodotto, documenti versionati e QR locali, anche senza WooCommerce.
- * Version: 1.0.1
+ * Version: 1.1.0
  * Plugin URI: https://github.com/Giulio001/eu-passport
  * Requires at least: 6.8
  * Requires PHP: 8.2
@@ -18,7 +18,7 @@ namespace Giuliomax\Passport;
 defined('ABSPATH') || exit;
 define('GMPP_FILE', __FILE__);
 define('GMPP_DIR', __DIR__ . '/');
-define('GMPP_VERSION', '1.0.1');
+define('GMPP_VERSION', '1.1.0');
 spl_autoload_register(static function ($class) {
     $prefix = __NAMESPACE__ . '\\';
     if (str_starts_with($class, $prefix)) {

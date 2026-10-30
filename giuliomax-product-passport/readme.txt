@@ -4,7 +4,7 @@ Tags: product passport, qr code, manuals, product information, woocommerce
 Requires at least: 6.8
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: 1.0.1
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -76,6 +76,9 @@ Readable source and test tools: https://github.com/Giulio001/eu-passport
 All runtime assets and the local QR encoder are included. No JavaScript/CSS CDN or build step is required on the customer's site. Node dependencies in the repository are development-only test tools. The complete QR license is included in vendor/LICENSE-qrcode.txt. Italian usage and regulatory guidance is available in the repository documentation.
 
 == Changelog ==
+
+= 1.1.0 =
+Visual templates: four ready-made styles, a blank starting point, reusable custom designs, section ordering, accessible color contrast and responsive live preview. Designs are saved into drafts and frozen on publication. Existing sheets retain their current appearance.
 
 = 1.0.1 =
 Functional and security review: automatic resumable queue leases, robust CSV preview, owned draft document access, named product selection, translation capture on draft save, preservation of safety notices, parameterized SQL identifiers and WordPress.org packaging corrections.

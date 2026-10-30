@@ -47,6 +47,7 @@ jobs:
           find giuliomax-product-passport -name '*.php' -print0 | xargs -0 -n1 php -l
           node --check giuliomax-product-passport/assets/admin.js
           node --check giuliomax-product-passport/assets/block.js
+          node --check giuliomax-product-passport/assets/designer.js
           phpcs --standard=phpcs.xml
       - name: Install WordPress on MariaDB
         env:
@@ -74,12 +75,12 @@ jobs:
         if: always()
         run: |
           python3 scripts/package.py
-          if git ls-files --error-unmatch dist/giuliomax-product-passport-1.0.1.zip > /dev/null 2>&1; then
-            git diff --exit-code -- dist/giuliomax-product-passport-1.0.1.zip dist/SHA256SUMS
+          if git ls-files --error-unmatch dist/giuliomax-product-passport-1.1.0.zip > /dev/null 2>&1; then
+            git diff --exit-code -- dist/giuliomax-product-passport-1.1.0.zip dist/SHA256SUMS
           fi
           wp plugin deactivate giuliomax-product-passport --path="$RUNNER_TEMP/wp"
           wp plugin delete giuliomax-product-passport --path="$RUNNER_TEMP/wp"
-          wp plugin install dist/giuliomax-product-passport-1.0.1.zip --activate --path="$RUNNER_TEMP/wp"
+          wp plugin install dist/giuliomax-product-passport-1.1.0.zip --activate --path="$RUNNER_TEMP/wp"
       - name: WooCommerce and Action Scheduler regressions
         if: always()
         env:
@@ -112,3 +113,6 @@ jobs:
             test-results/backend.json
             test-results/browser.json
             test-results/qr-decode.json
+            test-results/design.json
+            test-results/*design*.png
+            test-results/gallery*.png

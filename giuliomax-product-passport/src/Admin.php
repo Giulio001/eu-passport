@@ -22,7 +22,7 @@ final class Admin
     public function menu(): void
     {
         add_menu_page('Product Passport', 'Product Passport', 'gmpp_edit', 'gmpp', [$this,'page'], 'dashicons-id', 57);
-        foreach (['gmpp' => 'Panoramica','gmpp-passports' => 'Passaporti','gmpp-documents' => 'Documenti','gmpp-settings' => 'Impostazioni'] as $slug => $label) {
+        foreach (['gmpp' => 'Panoramica','gmpp-passports' => 'Passaporti','gmpp-documents' => 'Documenti','gmpp-designs' => 'Design e template','gmpp-settings' => 'Impostazioni'] as $slug => $label) {
             add_submenu_page('gmpp', $label, $label, $slug === 'gmpp-settings' ? 'gmpp_manage' : 'gmpp_edit', $slug, [$this,'page']);
         }
     }
@@ -36,7 +36,11 @@ final class Admin
             return;
         }
         wp_enqueue_style('gmpp-admin', plugins_url('assets/style.css', GMPP_FILE), [], GMPP_VERSION);
-        wp_enqueue_script('gmpp-admin', plugins_url('assets/admin.js', GMPP_FILE), ['wp-i18n'], GMPP_VERSION, true);
+        $designer = sanitize_key(wp_unslash($_GET['page'] ?? '')) === 'gmpp-designs'; // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only asset selection.
+        if ($designer) {
+            wp_enqueue_style('gmpp-designer', plugins_url('assets/designer.css', GMPP_FILE), [], GMPP_VERSION);
+        }
+        wp_enqueue_script('gmpp-admin', plugins_url($designer ? 'assets/designer.js' : 'assets/admin.js', GMPP_FILE), ['wp-i18n'], GMPP_VERSION, true);
         wp_set_script_translations('gmpp-admin', 'giuliomax-product-passport', GMPP_DIR . 'languages');
         wp_localize_script('gmpp-admin', 'GMPP', ['version' => GMPP_VERSION,'ui_language' => Store::settings()['ui_language'], 'english' => Store::decode((string)file_get_contents(GMPP_DIR . 'languages/en.json')), 'api' => rest_url('gmpp/v1/'),'nonce' => wp_create_nonce('wp_rest'),'preview_nonce' => wp_create_nonce('gmpp_preview'),'download_nonce' => wp_create_nonce('gmpp_download'),'admin' => admin_url('admin-post.php'),'home' => home_url('/'),'page' => sanitize_key(wp_unslash($_GET['page'] ?? 'gmpp')),'settings' => array_intersect_key(Store::settings(), array_flip(['company','language','sector','mode','accent'])),'labels' => self::labels(),'caps' => ['manage' => current_user_can('gmpp_manage'),'review' => current_user_can('gmpp_review'),'publish' => current_user_can('gmpp_publish')],'wc' => absint($_GET['wc'] ?? 0)]); // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only admin routing and product selector; all writes use REST nonce and capability checks.
     }

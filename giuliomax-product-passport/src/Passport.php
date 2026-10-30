@@ -26,6 +26,9 @@ final class Passport
                 $out[$key] = esc_url_raw((string)$input[$key], ['https','http']);
             }
         }
+        if (array_key_exists('design', $input)) {
+            $out['design'] = is_array($input['design']) ? Designs::clean($input['design']) : null;
+        }
         if (isset($input['language'])) {
             $out['language'] = self::language($input['language']);
         }
@@ -301,6 +304,7 @@ final class Passport
         try {
             $snap = Store::decode($rev['snapshot']);
             $data = $snap['data'];
+            $data['design'] = $data['design'] ?? null;
             $data['documents'] = array_column($data['documents'], 'document_id');
             $data['compatible'] = [];
         // A restore is a tracked draft; publication must be explicitly reviewed again.

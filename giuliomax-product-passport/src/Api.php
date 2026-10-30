@@ -44,6 +44,10 @@ final class Api
     }
     public function routes(): void
     {
+        $this->route('/designs', 'GET', static fn()=>Designs::library());
+        $this->route('/designs', 'POST', static fn($r)=>Designs::save((array)$r->get_json_params()), 'gmpp_manage');
+        $this->route('/designs', 'DELETE', static fn($r)=>Designs::save((array)$r->get_json_params(), true), 'gmpp_manage');
+        $this->route('/designs/preview', 'POST', static fn($r)=>Designs::preview((array)$r->get_json_params()));
         $this->route('/passports', 'GET', static function ($r) {
             global $wpdb;
             $page = max(1, (int)$r['page']);

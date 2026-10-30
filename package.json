@@ -1,6 +1,6 @@
 {
   "name": "giuliomax-product-passport",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "WordPress product information sheets with immutable publications and local QR",
   "scripts": {
     "test": "node tests/run.mjs",

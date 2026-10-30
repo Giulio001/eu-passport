@@ -9,6 +9,13 @@ final class PublicPage
     {
         add_action('template_redirect', [$this,'route'], 0);
         add_shortcode('gmpp_passport', [$this,'shortcode']);
+        add_action('wp_enqueue_scripts', static function () {
+            global $post;
+            if ($post && (has_shortcode($post->post_content, 'gmpp_passport') || has_block('giuliomax/product-passport', $post))) {
+                wp_enqueue_style('gmpp-public', plugins_url('assets/style.css', GMPP_FILE), [], GMPP_VERSION);
+                Designs::assets();
+            }
+        });
         add_action('init', function () {
             wp_register_script('gmpp-block', plugins_url('assets/block.js', GMPP_FILE), ['wp-blocks','wp-element','wp-block-editor','wp-components'], GMPP_VERSION, true);
             register_block_type('giuliomax/product-passport', ['api_version' => 3,'editor_script' => 'gmpp-block','attributes' => ['uuid' => ['type' => 'string','default' => ''],'view' => ['type' => 'string','default' => 'button']],'render_callback' => fn($a)=>$this->shortcode($a)]);
@@ -22,7 +29,7 @@ final class PublicPage
         header('Referrer-Policy: same-origin');
         wp_enqueue_style('gmpp-public', plugins_url('assets/style.css', GMPP_FILE), [], GMPP_VERSION);
         echo '<!doctype html><html lang="' . esc_attr($language) . '"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>' . esc_html($title) . '</title>';
-        wp_print_styles('gmpp-public');
+        wp_print_styles(['gmpp-public','gmpp-design']);
         echo '</head><body class="gmpp-public" style="--gmpp-accent:' . esc_attr(sanitize_hex_color($accent) ?: '#135f54') . '">' . $body . '</body></html>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Body is rendered with context escaping by body() or the supplier form below.
     }
     public function route(): void
@@ -83,6 +90,10 @@ final class PublicPage
     }
     public function body(array $snap, string $lang, bool $full = false): string
     {
+        if (is_array($snap['data']['design'] ?? null)) {
+            Designs::assets();
+            return Designs::render($snap, $lang);
+        }
         $d = $snap['data'];
         $company = $snap['company'];
         $base = $d['language'] ?? 'it';
