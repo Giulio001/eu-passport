@@ -2,11 +2,11 @@
 
 Plugin WordPress per creare **schede digitali volontarie** di prodotto con manuali, materiali, manutenzione, ricambi e assistenza raggiungibili da un QR. Funziona con un catalogo autonomo e può acquisire prodotti da WooCommerce. Non richiede servizi esterni, Composer o npm sul sito dell’utilizzatore.
 
-**Questa release non certifica la conformità UE e non registra passaporti nel registro europeo.** I modelli generico, arredo e tessile sono modelli informativi modificabili. Per i confini normativi leggere [la matrice](docs/REGULATORY-MATRIX.md).
+**Questa release non certifica la conformità UE e non registra passaporti nel registro europeo.** I modelli generico, arredo e tessile sono modelli informativi modificabili. Per i confini normativi leggere [la matrice](docs/REGULATORY-MATRIX.md). La verifica delle regole di distribuzione è documentata nella [revisione WordPress.org](docs/WORDPRESS-ORG-REVIEW.md); il plugin non è ancora stato inviato o approvato dalla directory.
 
 ## Installa e crea il primo passaporto
 
-1. Scarica [lo ZIP installabile](dist/giuliomax-product-passport-1.0.0.zip).
+1. Scarica [lo ZIP installabile](dist/giuliomax-product-passport-1.0.1.zip).
 2. In WordPress: **Plugin → Aggiungi plugin → Carica plugin**, seleziona lo ZIP e attivalo.
 3. Apri **Product Passport → Impostazioni** e inserisci almeno il nome azienda. Scegli modalità, settore, lingua e contatti. Logo, contatti aggiuntivi e dati di esempio sono facoltativi.
 4. In **Documenti**, carica il manuale indicando la lingua effettiva, il tipo e la versione. Un documento può servire più prodotti. PDF, PNG, JPEG e testo semplice; massimo 10 MB per file.
@@ -77,7 +77,7 @@ npm run test:browser
 npm run build
 ```
 
-I test eseguono un WordPress temporaneo con PHP WebAssembly e integrazione SQLite. Le credenziali e gli utenti nei test sono fittizi. Il file `tests/harness.php` fornisce privilegi amministrativi nell’ambiente di prova: **non copiarlo mai in un sito reale**. Non è incluso nello ZIP.
+GitHub Actions esegue la suite funzionale anche su PHP nativo e MariaDB 11.4. I test browser usano un WordPress temporaneo con PHP WebAssembly e integrazione SQLite. Il controllo ufficiale Plugin Check e l’installazione dello ZIP fanno parte del workflow. Le credenziali e gli utenti nei test sono fittizi. Il file `tests/harness.php` fornisce privilegi amministrativi nell’ambiente di prova: **non copiarlo mai in un sito reale**. Non è incluso nello ZIP.
 
 Per WooCommerce e benchmark: istruzioni nel rapporto di verifica. Per integrare gestionali: [API](docs/API.md).
 

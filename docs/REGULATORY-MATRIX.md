@@ -1,6 +1,6 @@
-# Matrice normativa e confini — 29 ottobre 2026
+# Matrice normativa e confini — 30 ottobre 2026
 
-Versione software: 1.0.0. Questa release gestisce schede digitali volontarie. **Nessun profilo regolamentato è dichiarato operativo.** La matrice distingue i comportamenti tecnici dalle prove di conformità ancora necessarie. Non è un parere di conformità per uno specifico prodotto.
+Versione software: 1.0.1. Questa release gestisce schede digitali volontarie. **Nessun profilo regolamentato è dichiarato operativo.** La matrice distingue i comportamenti tecnici dalle prove di conformità ancora necessarie. Non è un parere di conformità per uno specifico prodotto.
 
 Il dossier allegato è stato letto come base progettuale. I riferimenti seguenti sono stati ricontrollati su EUR-Lex, Commissione europea e CEN-CENELEC. Alcuni indirizzi EUR-Lex hanno restituito una verifica anti-bot; sono stati utilizzati i testi indicizzati ufficiali e, dove disponibili, PDF e versioni consolidate. Non è stata svolta una ricognizione esaustiva di tutti gli atti delegati, delle norme nazionali o delle modifiche di ogni categoria. Per questo non esiste nel software un calendario universale di obblighi.
 

@@ -5,4 +5,4 @@
 - **Da verificare nell’ambiente del sito:** transazioni/limiti sul database hosting, cache/CDN, stampa fisica, recapito email, combinazione tema/plugin e piano di continuità dominio/hosting.
 - **Limiti di release:** un’azienda per sito, niente multisito, PDF testuale con traslitterazione, inglese amministrativo parziale per messaggi specialistici, dimensioni tecniche documentate nel rapporto.
 
-Il ramo di consegna è `feat/product-passport`. Non è stata eseguita pubblicazione WordPress.org o distribuzione su siti reali. L’installatore ZIP è collaudato separatamente dal mount dei sorgenti usato nei test.
+La consegna viene pubblicata sul ramo `main` dopo le verifiche del workflow. Non è stata eseguita pubblicazione WordPress.org o distribuzione su siti reali. L’installatore ZIP è collaudato separatamente dal mount dei sorgenti usato nei test.
