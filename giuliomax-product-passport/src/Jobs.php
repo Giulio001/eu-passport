@@ -115,7 +115,9 @@ final class Jobs
     private static function schedule(): void
     {
         if (function_exists('as_schedule_single_action')) {
-            if (!as_has_scheduled_action('gmpp_jobs_continue', [], 'gmpp')) {
+            // Only pending actions count: the currently executing action must
+            // not suppress scheduling the next batch.
+            if (!as_get_scheduled_actions(['hook' => 'gmpp_jobs_continue','args' => [],'group' => 'gmpp','status' => 'pending','per_page' => 1], 'ids')) {
                 as_schedule_single_action(time() + 5, 'gmpp_jobs_continue', [], 'gmpp');
             }
         } elseif (!wp_next_scheduled('gmpp_jobs_continue')) {

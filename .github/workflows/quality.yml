@@ -14,8 +14,10 @@ jobs:
         include:
           - php: '8.2'
             wordpress: '6.8.3'
+            woo: '10.3.6'
           - php: '8.3'
             wordpress: '7.1.4'
+            woo: '11.0.0'
     services:
       mariadb:
         image: mariadb:11.4
@@ -75,6 +77,16 @@ jobs:
           wp plugin deactivate giuliomax-product-passport --path="$RUNNER_TEMP/wp"
           wp plugin delete giuliomax-product-passport --path="$RUNNER_TEMP/wp"
           wp plugin install dist/giuliomax-product-passport-1.0.1.zip --activate --path="$RUNNER_TEMP/wp"
+      - name: WooCommerce and Action Scheduler regressions
+        if: always()
+        env:
+          QA_WOO: ${{ matrix.woo }}
+        run: |
+          wp plugin install woocommerce --version="$QA_WOO" --activate --path="$RUNNER_TEMP/wp"
+          php tests/woo.php > "$RUNNER_TEMP/woo.json"
+          node - "$RUNNER_TEMP/woo.json" <<'JS'
+          const r=JSON.parse(require('fs').readFileSync(process.argv[2]));console.log(JSON.stringify(r,null,2));if(r.tests.some(t=>!t.ok))process.exit(1);
+          JS
       - name: Browser regression suite
         if: always()
         env:
@@ -92,6 +104,7 @@ jobs:
           name: qa-php${{ matrix.php }}-wp${{ matrix.wordpress }}
           path: |
             ${{ runner.temp }}/backend.json
+            ${{ runner.temp }}/woo.json
             ${{ runner.temp }}/plugin-check.json
             test-results/backend.json
             test-results/browser.json

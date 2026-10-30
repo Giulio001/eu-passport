@@ -28,7 +28,7 @@ final class PublicPage
     public function route(): void
     {
         if (isset($_GET['gmpp_document'])) {
-            Documents::download(absint($_GET['gmpp_document']));
+            Documents::download(absint($_GET['gmpp_document'])); // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Read-only download; Documents::can_read checks publication or authenticated ownership.
         }
         if (isset($_GET['gmpp_supplier'])) {
             $this->supplier(sanitize_text_field(wp_unslash($_GET['gmpp_supplier'])));
@@ -215,7 +215,7 @@ final class PublicPage
             echo esc_html__('Collegamento scaduto, revocato o già utilizzato.', 'giuliomax-product-passport');
             return;
         }
-        if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
+        if (sanitize_key(wp_unslash($_SERVER['REQUEST_METHOD'] ?? '')) === 'post') {
             try {
                 if (!wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['_wpnonce'] ?? '')), 'gmpp_supplier_' . $request['id']) || !empty($_POST['website'])) {
                     throw new \InvalidArgumentException('Ricarica la pagina prima di inviare.');

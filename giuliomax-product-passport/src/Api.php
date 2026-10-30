@@ -67,8 +67,8 @@ final class Api
             $table = Store::table('passports');
             $sort = in_array($r['sort'], ['title','id','updated_at','sku'], true) ? $r['sort'] : 'id';
             $dir = $r['direction'] === 'asc' ? 'ASC' : 'DESC';
-            $total = (int)$wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM %i WHERE $where", $table, ...$args)); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared,PluginCheck.Security.DirectDB.UnescapedDBParameter -- WHERE contains fixed fragments only; all filter values use placeholders.
-            $rows = $wpdb->get_results($wpdb->prepare("SELECT id,uuid,title,sku,kind,parent_id,state,lock_version,published_revision,updated_at,wc_id FROM %i WHERE $where ORDER BY %i $dir LIMIT %d OFFSET %d", ...array_merge([$table], $args, [$sort,$limit,($page - 1) * $limit])), ARRAY_A); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared,PluginCheck.Security.DirectDB.UnescapedDBParameter -- Fixed WHERE fragments, bound values and identifiers; direction is ASC or DESC only.
+            $total = (int)$wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM %i WHERE $where", $table, ...$args)); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared,PluginCheck.Security.DirectDB.UnescapedDBParameter,WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber -- WHERE contains fixed fragments only; all filter values use placeholders.
+            $rows = $wpdb->get_results($wpdb->prepare("SELECT id,uuid,title,sku,kind,parent_id,state,lock_version,published_revision,updated_at,wc_id FROM %i WHERE $where ORDER BY %i $dir LIMIT %d OFFSET %d", ...array_merge([$table], $args, [$sort,$limit,($page - 1) * $limit])), ARRAY_A); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared,PluginCheck.Security.DirectDB.UnescapedDBParameter,WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber -- Fixed WHERE fragments, bound values and identifiers; direction is ASC or DESC only.
             return ['rows' => $rows,'total' => $total,'page' => $page,'pages' => (int)ceil($total / $limit)];
         });
         $this->route('/choices', 'GET', static function ($r) {
@@ -90,7 +90,7 @@ final class Api
                 $args[] = $term;
                 $args[] = $term;
             }
-            return $wpdb->get_results($wpdb->prepare("SELECT id,title,sku,kind FROM %i WHERE $where ORDER BY title,id LIMIT 50", Store::table('passports'), ...$args), ARRAY_A); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared,PluginCheck.Security.DirectDB.UnescapedDBParameter -- WHERE contains fixed fragments and generated placeholders; each value and identifier is bound.
+            return $wpdb->get_results($wpdb->prepare("SELECT id,title,sku,kind FROM %i WHERE $where ORDER BY title,id LIMIT 50", Store::table('passports'), ...$args), ARRAY_A); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared,PluginCheck.Security.DirectDB.UnescapedDBParameter,WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber -- WHERE contains fixed fragments and generated placeholders; each value and identifier is bound.
         });
         $this->route('/passports', 'POST', static function ($r) {
             $input = (array)$r->get_json_params();

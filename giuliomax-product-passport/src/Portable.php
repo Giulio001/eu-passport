@@ -197,7 +197,7 @@ final class Portable
             if ($opened) {
                 $zip->close();
             }
-            @unlink($tmp);
+            wp_delete_file($tmp);
         }
     }
 }
